@@ -79,16 +79,154 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapQuyenChoRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapQuyenChoRole.designer.cs">
+      <DependentUpon>CapQuyenChoRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapQuyenChoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapQuyenChoUser.designer.cs">
+      <DependentUpon>CapQuyenChoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChinhSuaRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaRole.designer.cs">
+      <DependentUpon>ChinhSuaRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChinhSuaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaUser.designer.cs">
+      <DependentUpon>ChinhSuaUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GanRoleChoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GanRoleChoUser.designer.cs">
+      <DependentUpon>GanRoleChoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyQuyen.designer.cs">
+      <DependentUpon>QuanLyQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyQuyenRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyQuyenRole.designer.cs">
+      <DependentUpon>QuanLyQuyenRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyQuyenUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyQuyenUser.designer.cs">
+      <DependentUpon>QuanLyQuyenUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyRole.designer.cs">
+      <DependentUpon>QuanLyRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyUser.designer.cs">
+      <DependentUpon>QuanLyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyUserRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyUserRole.designer.cs">
+      <DependentUpon>QuanLyUserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemRole.designer.cs">
+      <DependentUpon>ThemRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemUser.designer.cs">
+      <DependentUpon>ThemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinQuyen.designer.cs">
+      <DependentUpon>ThongTinQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinQuyenCuaRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinQuyenCuaRole.designer.cs">
+      <DependentUpon>ThongTinQuyenCuaRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinQuyenCuaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinQuyenCuaUser.designer.cs">
+      <DependentUpon>ThongTinQuyenCuaUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThuHoiQuyenTuRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuHoiQuyenTuRole.designer.cs">
+      <DependentUpon>ThuHoiQuyenTuRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThuHoiQuyenTuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuHoiQuyenTuUser.designer.cs">
+      <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemDanhSachUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemDanhSachUser.designer.cs">
+      <DependentUpon>XemDanhSachUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CapQuyenChoRole.resx">
+      <DependentUpon>CapQuyenChoRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapQuyenChoUser.resx">
+      <DependentUpon>CapQuyenChoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChinhSuaRole.resx">
+      <DependentUpon>ChinhSuaRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChinhSuaUser.resx">
+      <DependentUpon>ChinhSuaUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GanRoleChoUser.resx">
+      <DependentUpon>GanRoleChoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +237,48 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyQuyen.resx">
+      <DependentUpon>QuanLyQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyQuyenRole.resx">
+      <DependentUpon>QuanLyQuyenRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyQuyenUser.resx">
+      <DependentUpon>QuanLyQuyenUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyRole.resx">
+      <DependentUpon>QuanLyRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyUser.resx">
+      <DependentUpon>QuanLyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyUserRole.resx">
+      <DependentUpon>QuanLyUserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemRole.resx">
+      <DependentUpon>ThemRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemUser.resx">
+      <DependentUpon>ThemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinQuyen.resx">
+      <DependentUpon>ThongTinQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinQuyenCuaRole.resx">
+      <DependentUpon>ThongTinQuyenCuaRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinQuyenCuaUser.resx">
+      <DependentUpon>ThongTinQuyenCuaUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuHoiQuyenTuRole.resx">
+      <DependentUpon>ThuHoiQuyenTuRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuHoiQuyenTuUser.resx">
+      <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemDanhSachUser.resx">
+      <DependentUpon>XemDanhSachUser.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>

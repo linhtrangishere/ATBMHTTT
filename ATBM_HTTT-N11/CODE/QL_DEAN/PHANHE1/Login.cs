@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PHANHE1;
 using Oracle.ManagedDataAccess.Client;
+
 namespace PHANHE1
 {
     public partial class Login : Form
@@ -41,7 +43,8 @@ namespace PHANHE1
                 {
                     OracleConnection conn = new OracleConnection(connectionString);
                     conn.Open();
-                    MessageBox.Show("Connect sucessfully");
+                    Main open = new Main();
+                    open.Show();
                 }
                 catch(Exception ex)
                 {
