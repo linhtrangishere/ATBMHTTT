@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.lblDangNhapHeThong = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.lblTaiKhoan = new System.Windows.Forms.Label();
+            this.labelDangNhapHeThong = new System.Windows.Forms.Label();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.labelTaiKhoan = new System.Windows.Forms.Label();
             this.textBoxTaiKhoan = new System.Windows.Forms.TextBox();
-            this.lblMatKhau = new System.Windows.Forms.Label();
+            this.labelMatKhau = new System.Windows.Forms.Label();
             this.textBoxMatKhau = new System.Windows.Forms.TextBox();
-            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.buttonDangNhap = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.groupBox.Controls.Add(this.lblDangNhapHeThong);
+            this.groupBox.Controls.Add(this.labelDangNhapHeThong);
             this.groupBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox.Location = new System.Drawing.Point(0, -8);
             this.groupBox.Margin = new System.Windows.Forms.Padding(2);
@@ -52,39 +52,39 @@
             this.groupBox.TabIndex = 7;
             this.groupBox.TabStop = false;
             // 
-            // lblDangNhapHeThong
+            // labelDangNhapHeThong
             // 
-            this.lblDangNhapHeThong.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDangNhapHeThong.Location = new System.Drawing.Point(382, 41);
-            this.lblDangNhapHeThong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDangNhapHeThong.Name = "lblDangNhapHeThong";
-            this.lblDangNhapHeThong.Size = new System.Drawing.Size(338, 41);
-            this.lblDangNhapHeThong.TabIndex = 0;
-            this.lblDangNhapHeThong.Text = "Đăng nhập hệ thống";
+            this.labelDangNhapHeThong.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelDangNhapHeThong.Location = new System.Drawing.Point(382, 41);
+            this.labelDangNhapHeThong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDangNhapHeThong.Name = "labelDangNhapHeThong";
+            this.labelDangNhapHeThong.Size = new System.Drawing.Size(338, 41);
+            this.labelDangNhapHeThong.TabIndex = 0;
+            this.labelDangNhapHeThong.Text = "Đăng nhập hệ thống";
             // 
-            // btnThoat
+            // buttonThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(632, 587);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(150, 57);
-            this.btnThoat.TabIndex = 13;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.buttonThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
+            this.buttonThoat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThoat.Location = new System.Drawing.Point(632, 587);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(150, 57);
+            this.buttonThoat.TabIndex = 13;
+            this.buttonThoat.Text = "Thoát";
+            this.buttonThoat.UseVisualStyleBackColor = false;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
-            // lblTaiKhoan
+            // labelTaiKhoan
             // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTaiKhoan.Location = new System.Drawing.Point(314, 246);
-            this.lblTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(123, 32);
-            this.lblTaiKhoan.TabIndex = 14;
-            this.lblTaiKhoan.Text = "Tài khoản";
+            this.labelTaiKhoan.AutoSize = true;
+            this.labelTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTaiKhoan.Location = new System.Drawing.Point(314, 246);
+            this.labelTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTaiKhoan.Name = "labelTaiKhoan";
+            this.labelTaiKhoan.Size = new System.Drawing.Size(123, 32);
+            this.labelTaiKhoan.TabIndex = 14;
+            this.labelTaiKhoan.Text = "Tài khoản";
             // 
             // textBoxTaiKhoan
             // 
@@ -97,16 +97,16 @@
             this.textBoxTaiKhoan.Size = new System.Drawing.Size(473, 48);
             this.textBoxTaiKhoan.TabIndex = 15;
             // 
-            // lblMatKhau
+            // labelMatKhau
             // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMatKhau.Location = new System.Drawing.Point(314, 378);
-            this.lblMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(121, 32);
-            this.lblMatKhau.TabIndex = 16;
-            this.lblMatKhau.Text = "Mật khẩu";
+            this.labelMatKhau.AutoSize = true;
+            this.labelMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelMatKhau.Location = new System.Drawing.Point(314, 378);
+            this.labelMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelMatKhau.Name = "labelMatKhau";
+            this.labelMatKhau.Size = new System.Drawing.Size(121, 32);
+            this.labelMatKhau.TabIndex = 16;
+            this.labelMatKhau.Text = "Mật khẩu";
             // 
             // textBoxMatKhau
             // 
@@ -120,18 +120,18 @@
             this.textBoxMatKhau.Size = new System.Drawing.Size(473, 50);
             this.textBoxMatKhau.TabIndex = 17;
             // 
-            // btnDangNhap
+            // buttonDangNhap
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDangNhap.Location = new System.Drawing.Point(314, 587);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(150, 57);
-            this.btnDangNhap.TabIndex = 18;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonDangNhap.Location = new System.Drawing.Point(314, 587);
+            this.buttonDangNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDangNhap.Name = "buttonDangNhap";
+            this.buttonDangNhap.Size = new System.Drawing.Size(150, 57);
+            this.buttonDangNhap.TabIndex = 18;
+            this.buttonDangNhap.Text = "Đăng nhập";
+            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // Login
             // 
@@ -139,13 +139,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1066, 794);
-            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.buttonDangNhap);
             this.Controls.Add(this.textBoxMatKhau);
-            this.Controls.Add(this.lblMatKhau);
+            this.Controls.Add(this.labelMatKhau);
             this.Controls.Add(this.textBoxTaiKhoan);
-            this.Controls.Add(this.lblTaiKhoan);
+            this.Controls.Add(this.labelTaiKhoan);
             this.Controls.Add(this.groupBox);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.buttonThoat);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -158,12 +158,12 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Label lblDangNhapHeThong;
-        private System.Windows.Forms.Label lblTaiKhoan;
+        private System.Windows.Forms.Button buttonThoat;
+        private System.Windows.Forms.Label labelDangNhapHeThong;
+        private System.Windows.Forms.Label labelTaiKhoan;
         private System.Windows.Forms.TextBox textBoxTaiKhoan;
-        private System.Windows.Forms.Label lblMatKhau;
+        private System.Windows.Forms.Label labelMatKhau;
         private System.Windows.Forms.TextBox textBoxMatKhau;
-        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.Button buttonDangNhap;
     }
 }

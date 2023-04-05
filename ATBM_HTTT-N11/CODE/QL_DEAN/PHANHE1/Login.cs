@@ -17,12 +17,12 @@ namespace PHANHE1
         {
             InitializeComponent();
         }
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void buttonThoat_Click(object sender, EventArgs e)
         {   
             Application.Exit();
         }
 
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        private void buttonDangNhap_Click(object sender, EventArgs e)
         {
             string username = textBoxTaiKhoan.Text;
             string password = textBoxMatKhau.Text;
