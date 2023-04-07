@@ -159,17 +159,35 @@
     <Compile Include="QuanLyRole.designer.cs">
       <DependentUpon>QuanLyRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTable.Designer.cs">
+      <DependentUpon>QuanLyTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLyUser.designer.cs">
       <DependentUpon>QuanLyUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyUserRole.cs">
+    <Compile Include="QuanLyObjects.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyUserRole.designer.cs">
-      <DependentUpon>QuanLyUserRole.cs</DependentUpon>
+    <Compile Include="QuanLyObjects.designer.cs">
+      <DependentUpon>QuanLyObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyView.Designer.cs">
+      <DependentUpon>QuanLyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTable.Designer.cs">
+      <DependentUpon>ThemTable.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemRole.cs">
       <SubType>Form</SubType>
@@ -182,6 +200,12 @@
     </Compile>
     <Compile Include="ThemUser.designer.cs">
       <DependentUpon>ThemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinObjects.Designer.cs">
+      <DependentUpon>ThongTinObjects.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinQuyen.cs">
       <SubType>Form</SubType>
@@ -213,11 +237,29 @@
     <Compile Include="ThuHoiQuyenTuUser.designer.cs">
       <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemDanhSachRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemDanhSachRole.Designer.cs">
+      <DependentUpon>XemDanhSachRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemDanhSachTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemDanhSachTable.Designer.cs">
+      <DependentUpon>XemDanhSachTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemDanhSachUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="XemDanhSachUser.designer.cs">
       <DependentUpon>XemDanhSachUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemDanhSachView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemDanhSachView.Designer.cs">
+      <DependentUpon>XemDanhSachView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CapQuyenChoRole.resx">
       <DependentUpon>CapQuyenChoRole.cs</DependentUpon>
@@ -267,17 +309,29 @@
     <EmbeddedResource Include="QuanLyRole.resx">
       <DependentUpon>QuanLyRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTable.resx">
+      <DependentUpon>QuanLyTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyUser.resx">
       <DependentUpon>QuanLyUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyUserRole.resx">
-      <DependentUpon>QuanLyUserRole.cs</DependentUpon>
+    <EmbeddedResource Include="QuanLyObjects.resx">
+      <DependentUpon>QuanLyObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyView.resx">
+      <DependentUpon>QuanLyView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemRole.resx">
       <DependentUpon>ThemRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemTable.resx">
+      <DependentUpon>ThemTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemUser.resx">
       <DependentUpon>ThemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinObjects.resx">
+      <DependentUpon>ThongTinObjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinQuyen.resx">
       <DependentUpon>ThongTinQuyen.cs</DependentUpon>
@@ -294,8 +348,17 @@
     <EmbeddedResource Include="ThuHoiQuyenTuUser.resx">
       <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XemDanhSachRole.resx">
+      <DependentUpon>XemDanhSachRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemDanhSachTable.resx">
+      <DependentUpon>XemDanhSachTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XemDanhSachUser.resx">
       <DependentUpon>XemDanhSachUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemDanhSachView.resx">
+      <DependentUpon>XemDanhSachView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

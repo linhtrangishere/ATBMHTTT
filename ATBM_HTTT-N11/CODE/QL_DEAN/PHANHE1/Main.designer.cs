@@ -31,9 +31,9 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonDangXuat = new System.Windows.Forms.Button();
             this.buttonQuanLyQuyen = new System.Windows.Forms.Button();
-            this.buttonQuanLyUserRole = new System.Windows.Forms.Button();
+            this.buttonQuanLyObjects = new System.Windows.Forms.Button();
             this.buttonThongTinQuyen = new System.Windows.Forms.Button();
-            this.buttonThongTinUser = new System.Windows.Forms.Button();
+            this.buttonThongTinObjects = new System.Windows.Forms.Button();
             this.panelUsername = new System.Windows.Forms.Panel();
             this.labelNguyenVanA = new System.Windows.Forms.Label();
             this.labelAdmin = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
             this.panelMenu.Controls.Add(this.buttonDangXuat);
             this.panelMenu.Controls.Add(this.buttonQuanLyQuyen);
-            this.panelMenu.Controls.Add(this.buttonQuanLyUserRole);
+            this.panelMenu.Controls.Add(this.buttonQuanLyObjects);
             this.panelMenu.Controls.Add(this.buttonThongTinQuyen);
-            this.panelMenu.Controls.Add(this.buttonThongTinUser);
+            this.panelMenu.Controls.Add(this.buttonThongTinObjects);
             this.panelMenu.Controls.Add(this.panelUsername);
             this.panelMenu.Location = new System.Drawing.Point(0, -10);
             this.panelMenu.Name = "panelMenu";
@@ -81,17 +81,17 @@
             this.buttonQuanLyQuyen.UseVisualStyleBackColor = false;
             this.buttonQuanLyQuyen.Click += new System.EventHandler(this.buttonQuanLyQuyen_Click);
             // 
-            // buttonQuanLyUserRole
+            // buttonQuanLyObjects
             // 
-            this.buttonQuanLyUserRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonQuanLyUserRole.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonQuanLyUserRole.Location = new System.Drawing.Point(-5, 514);
-            this.buttonQuanLyUserRole.Name = "buttonQuanLyUserRole";
-            this.buttonQuanLyUserRole.Size = new System.Drawing.Size(352, 94);
-            this.buttonQuanLyUserRole.TabIndex = 14;
-            this.buttonQuanLyUserRole.Text = "Quản lý User/ Role";
-            this.buttonQuanLyUserRole.UseVisualStyleBackColor = false;
-            this.buttonQuanLyUserRole.Click += new System.EventHandler(this.buttonQuanLyUserRole_Click);
+            this.buttonQuanLyObjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
+            this.buttonQuanLyObjects.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonQuanLyObjects.Location = new System.Drawing.Point(-5, 514);
+            this.buttonQuanLyObjects.Name = "buttonQuanLyObjects";
+            this.buttonQuanLyObjects.Size = new System.Drawing.Size(352, 94);
+            this.buttonQuanLyObjects.TabIndex = 14;
+            this.buttonQuanLyObjects.Text = "Quản lý objects";
+            this.buttonQuanLyObjects.UseVisualStyleBackColor = false;
+            this.buttonQuanLyObjects.Click += new System.EventHandler(this.buttonQuanLyObjects_Click);
             // 
             // buttonThongTinQuyen
             // 
@@ -105,17 +105,17 @@
             this.buttonThongTinQuyen.UseVisualStyleBackColor = false;
             this.buttonThongTinQuyen.Click += new System.EventHandler(this.buttonThongTinQuyen_Click);
             // 
-            // buttonThongTinUser
+            // buttonThongTinObjects
             // 
-            this.buttonThongTinUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinUser.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThongTinUser.Location = new System.Drawing.Point(-5, 244);
-            this.buttonThongTinUser.Name = "buttonThongTinUser";
-            this.buttonThongTinUser.Size = new System.Drawing.Size(352, 94);
-            this.buttonThongTinUser.TabIndex = 12;
-            this.buttonThongTinUser.Text = "Thông tin user";
-            this.buttonThongTinUser.UseVisualStyleBackColor = false;
-            this.buttonThongTinUser.Click += new System.EventHandler(this.buttonThongTinUser_Click);
+            this.buttonThongTinObjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
+            this.buttonThongTinObjects.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThongTinObjects.Location = new System.Drawing.Point(-5, 244);
+            this.buttonThongTinObjects.Name = "buttonThongTinObjects";
+            this.buttonThongTinObjects.Size = new System.Drawing.Size(352, 94);
+            this.buttonThongTinObjects.TabIndex = 12;
+            this.buttonThongTinObjects.Text = "Thông tin objects\r\n";
+            this.buttonThongTinObjects.UseVisualStyleBackColor = false;
+            this.buttonThongTinObjects.Click += new System.EventHandler(this.buttonThongTinObjects_Click);
             // 
             // panelUsername
             // 
@@ -180,9 +180,9 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button buttonDangXuat;
         private System.Windows.Forms.Button buttonQuanLyQuyen;
-        private System.Windows.Forms.Button buttonQuanLyUserRole;
+        private System.Windows.Forms.Button buttonQuanLyObjects;
         private System.Windows.Forms.Button buttonThongTinQuyen;
-        private System.Windows.Forms.Button buttonThongTinUser;
+        private System.Windows.Forms.Button buttonThongTinObjects;
         private System.Windows.Forms.Panel panelUsername;
         private System.Windows.Forms.Label labelNguyenVanA;
         private System.Windows.Forms.Label labelAdmin;

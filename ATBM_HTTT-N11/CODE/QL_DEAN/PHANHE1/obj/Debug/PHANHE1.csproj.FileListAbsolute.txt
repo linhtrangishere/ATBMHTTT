@@ -79,6 +79,13 @@ C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debu
 C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ThuHoiQuyenTuRole.resources
 C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ThuHoiQuyenTuUser.resources
 C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachUser.resources
-C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyUserRole.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ChinhSuaQuyenChoRole.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ChinhSuaQuyenChoUser.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ThongTinObjects.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachRole.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachTable.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachView.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyTable.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyObjects.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyView.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ThemTable.resources

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PHANHE1
 {
-    public partial class QuanLyUserRole : Form
+    public partial class QuanLyObjects : Form
     {
-        public QuanLyUserRole()
+        public QuanLyObjects()
         {
             InitializeComponent();
         }
@@ -64,6 +64,18 @@ namespace PHANHE1
         private void buttonRole_Click(object sender, EventArgs e)
         {
             OpenChildForm(new QuanLyRole());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonTable_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QuanLyTable());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QuanLyView());
             SwitchColorMenu(sender, e);
         }
     }

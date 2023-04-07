@@ -1,12 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PHANHE1
 {
-    public partial class Main : Form
+    public partial class ThongTinObjects : Form
     {
-        public Main()
+        public ThongTinObjects()
         {
             InitializeComponent();
         }
@@ -16,15 +22,12 @@ namespace PHANHE1
         {
             if (formchild != null)
             {
-                formchild.Close(); 
+                formchild.Close();
             }
             formchild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            //childForm.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(childForm);
-            //panelChildForm.Tag = childForm;
-            //childForm.BringToFront();
             childForm.Show();
         }
 
@@ -37,7 +40,7 @@ namespace PHANHE1
             }
             else
             {
-                foreach (Control prebtn in panelMenu.Controls)
+                foreach (Control prebtn in panelObjects.Controls)
                 {
                     if (prebtn.GetType() == typeof(Button))
                     {
@@ -49,63 +52,28 @@ namespace PHANHE1
             }
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonThongTinObjects_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThongTinObjects());
-            SwitchColorMenu(sender, e);
-        }
-
-        private void buttonThongTinQuyen_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThongTinQuyen());
-            SwitchColorMenu(sender, e);
-        }
-
-        private void buttonQuanLyObjects_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new QuanLyObjects());
-            SwitchColorMenu(sender, e);
-        }
-
-        private void buttonQuanLyQuyen_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new QuanLyQuyen());
-            SwitchColorMenu(sender, e);
-        }
-
-        private void buttonDangXuat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panelUsername_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonUser_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new XemDanhSachUser());
+            SwitchColorMenu(sender, e);
         }
 
         private void buttonRole_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new XemDanhSachRole());
+            SwitchColorMenu(sender, e);
+        }
 
+        private void buttonTable_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new XemDanhSachTable());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new XemDanhSachView());
+            SwitchColorMenu(sender, e);
         }
     }
 }
