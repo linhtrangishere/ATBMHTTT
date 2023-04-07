@@ -53,6 +53,10 @@ namespace PHANHE1
             }
 
         }
-        
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

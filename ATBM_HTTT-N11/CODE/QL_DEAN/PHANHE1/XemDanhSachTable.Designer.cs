@@ -62,6 +62,7 @@
             this.buttonXemTatCa.TabIndex = 14;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // dataGridViewXemDanhSachTable
             // 
@@ -72,6 +73,7 @@
             this.dataGridViewXemDanhSachTable.RowTemplate.Height = 24;
             this.dataGridViewXemDanhSachTable.Size = new System.Drawing.Size(935, 350);
             this.dataGridViewXemDanhSachTable.TabIndex = 13;
+            this.dataGridViewXemDanhSachTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewXemDanhSachTable_CellContentClick);
             // 
             // buttonTimKiem
             // 
@@ -84,6 +86,7 @@
             this.buttonTimKiem.TabIndex = 12;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // textBoxTenTable
             // 
@@ -94,6 +97,7 @@
             this.textBoxTenTable.Name = "textBoxTenTable";
             this.textBoxTenTable.Size = new System.Drawing.Size(331, 50);
             this.textBoxTenTable.TabIndex = 9;
+            this.textBoxTenTable.TextChanged += new System.EventHandler(this.textBoxTenTable_TextChanged);
             // 
             // labelTenTable
             // 
@@ -113,6 +117,7 @@
             this.Controls.Add(this.panelXemDanhSachTable);
             this.Name = "XemDanhSachTable";
             this.Text = "XemDanhSachTable";
+            this.Load += new System.EventHandler(this.XemDanhSachTable_Load);
             this.panelXemDanhSachTable.ResumeLayout(false);
             this.panelXemDanhSachTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemDanhSachTable)).EndInit();

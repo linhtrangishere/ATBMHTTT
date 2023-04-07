@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panelXemDanhSachUser = new System.Windows.Forms.Panel();
+            this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.dataGridViewXemDanhSachUser = new System.Windows.Forms.DataGridView();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.panelXemDanhSachUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemDanhSachUser)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,19 @@
             this.panelXemDanhSachUser.Size = new System.Drawing.Size(935, 690);
             this.panelXemDanhSachUser.TabIndex = 2;
             // 
+            // buttonXemTatCa
+            // 
+            this.buttonXemTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.buttonXemTatCa.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonXemTatCa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonXemTatCa.Location = new System.Drawing.Point(380, 230);
+            this.buttonXemTatCa.Name = "buttonXemTatCa";
+            this.buttonXemTatCa.Size = new System.Drawing.Size(200, 70);
+            this.buttonXemTatCa.TabIndex = 14;
+            this.buttonXemTatCa.Text = "Xem tất cả";
+            this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
+            // 
             // dataGridViewXemDanhSachUser
             // 
             this.dataGridViewXemDanhSachUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -60,6 +73,7 @@
             this.dataGridViewXemDanhSachUser.RowTemplate.Height = 24;
             this.dataGridViewXemDanhSachUser.Size = new System.Drawing.Size(935, 350);
             this.dataGridViewXemDanhSachUser.TabIndex = 13;
+            this.dataGridViewXemDanhSachUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewXemDanhSachUser_CellContentClick);
             // 
             // buttonTimKiem
             // 
@@ -72,6 +86,7 @@
             this.buttonTimKiem.TabIndex = 12;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // textBoxUsername
             // 
@@ -82,6 +97,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(331, 50);
             this.textBoxUsername.TabIndex = 9;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // labelUsername
             // 
@@ -93,18 +109,6 @@
             this.labelUsername.TabIndex = 8;
             this.labelUsername.Text = "Username";
             // 
-            // buttonXemTatCa
-            // 
-            this.buttonXemTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.buttonXemTatCa.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonXemTatCa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonXemTatCa.Location = new System.Drawing.Point(380, 230);
-            this.buttonXemTatCa.Name = "buttonXemTatCa";
-            this.buttonXemTatCa.Size = new System.Drawing.Size(200, 70);
-            this.buttonXemTatCa.TabIndex = 14;
-            this.buttonXemTatCa.Text = "Xem tất cả";
-            this.buttonXemTatCa.UseVisualStyleBackColor = false;
-            // 
             // XemDanhSachUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -113,6 +117,7 @@
             this.Controls.Add(this.panelXemDanhSachUser);
             this.Name = "XemDanhSachUser";
             this.Text = "XemDanhSachUser";
+            this.Load += new System.EventHandler(this.XemDanhSachUser_Load);
             this.panelXemDanhSachUser.ResumeLayout(false);
             this.panelXemDanhSachUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemDanhSachUser)).EndInit();

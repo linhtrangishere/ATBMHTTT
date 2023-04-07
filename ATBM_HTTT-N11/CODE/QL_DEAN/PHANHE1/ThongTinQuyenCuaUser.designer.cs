@@ -60,6 +60,7 @@
             this.dataGridViewThongTinQuyenCuaUser.RowTemplate.Height = 24;
             this.dataGridViewThongTinQuyenCuaUser.Size = new System.Drawing.Size(935, 350);
             this.dataGridViewThongTinQuyenCuaUser.TabIndex = 14;
+            this.dataGridViewThongTinQuyenCuaUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThongTinQuyenCuaUser_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -71,6 +72,7 @@
             this.buttonXemTatCa.TabIndex = 13;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -83,6 +85,7 @@
             this.buttonTimKiem.TabIndex = 12;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // textBoxNhapTenUser
             // 
@@ -93,6 +96,7 @@
             this.textBoxNhapTenUser.Name = "textBoxNhapTenUser";
             this.textBoxNhapTenUser.Size = new System.Drawing.Size(331, 50);
             this.textBoxNhapTenUser.TabIndex = 11;
+            this.textBoxNhapTenUser.TextChanged += new System.EventHandler(this.textBoxNhapTenUser_TextChanged);
             // 
             // labelNhapTenUser
             // 
@@ -112,6 +116,7 @@
             this.Controls.Add(this.panelThongTinQuyenCuaUser);
             this.Name = "ThongTinQuyenCuaUser";
             this.Text = "ThongTinQuyenCuaUser";
+            this.Load += new System.EventHandler(this.ThongTinQuyenCuaUser_Load);
             this.panelThongTinQuyenCuaUser.ResumeLayout(false);
             this.panelThongTinQuyenCuaUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinQuyenCuaUser)).EndInit();
