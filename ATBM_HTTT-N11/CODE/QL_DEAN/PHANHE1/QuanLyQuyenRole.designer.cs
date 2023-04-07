@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panelQuanLyQuyenRole = new System.Windows.Forms.Panel();
-            this.dataGridViewQuanLyQuyenRole = new System.Windows.Forms.DataGridView();
             this.panelThemXoaSua = new System.Windows.Forms.Panel();
             this.buttonChinhSuaQuyen = new System.Windows.Forms.Button();
             this.buttonCapQuyen = new System.Windows.Forms.Button();
             this.buttonThuHoiQuyen = new System.Windows.Forms.Button();
+            this.dataGridViewQuanLyQuyenRole = new System.Windows.Forms.DataGridView();
             this.panelQuanLyQuyenRole.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyQuyenRole)).BeginInit();
             this.panelThemXoaSua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyQuyenRole)).BeginInit();
             this.SuspendLayout();
             // 
             // panelQuanLyQuyenRole
@@ -48,16 +48,6 @@
             this.panelQuanLyQuyenRole.Name = "panelQuanLyQuyenRole";
             this.panelQuanLyQuyenRole.Size = new System.Drawing.Size(935, 690);
             this.panelQuanLyQuyenRole.TabIndex = 2;
-            // 
-            // dataGridViewQuanLyQuyenRole
-            // 
-            this.dataGridViewQuanLyQuyenRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewQuanLyQuyenRole.Location = new System.Drawing.Point(0, 337);
-            this.dataGridViewQuanLyQuyenRole.Name = "dataGridViewQuanLyQuyenRole";
-            this.dataGridViewQuanLyQuyenRole.RowHeadersWidth = 51;
-            this.dataGridViewQuanLyQuyenRole.RowTemplate.Height = 24;
-            this.dataGridViewQuanLyQuyenRole.Size = new System.Drawing.Size(935, 350);
-            this.dataGridViewQuanLyQuyenRole.TabIndex = 14;
             // 
             // panelThemXoaSua
             // 
@@ -106,6 +96,16 @@
             this.buttonThuHoiQuyen.UseVisualStyleBackColor = false;
             this.buttonThuHoiQuyen.Click += new System.EventHandler(this.buttonThuHoiQuyen_Click);
             // 
+            // dataGridViewQuanLyQuyenRole
+            // 
+            this.dataGridViewQuanLyQuyenRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewQuanLyQuyenRole.Location = new System.Drawing.Point(0, 337);
+            this.dataGridViewQuanLyQuyenRole.Name = "dataGridViewQuanLyQuyenRole";
+            this.dataGridViewQuanLyQuyenRole.RowHeadersWidth = 51;
+            this.dataGridViewQuanLyQuyenRole.RowTemplate.Height = 24;
+            this.dataGridViewQuanLyQuyenRole.Size = new System.Drawing.Size(935, 350);
+            this.dataGridViewQuanLyQuyenRole.TabIndex = 14;
+            // 
             // QuanLyQuyenRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,8 +115,8 @@
             this.Name = "QuanLyQuyenRole";
             this.Text = "QuanLyQuyenRole";
             this.panelQuanLyQuyenRole.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyQuyenRole)).EndInit();
             this.panelThemXoaSua.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyQuyenRole)).EndInit();
             this.ResumeLayout(false);
 
         }

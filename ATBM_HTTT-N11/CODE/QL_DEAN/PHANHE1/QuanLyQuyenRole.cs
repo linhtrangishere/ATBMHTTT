@@ -54,7 +54,9 @@ namespace PHANHE1
 
         private void buttonChinhSuaQuyen_Click(object sender, EventArgs e)
         {
-            
+            ChinhSuaQuyenChoRole chinhsuaquyenchorole = new ChinhSuaQuyenChoRole();
+            chinhsuaquyenchorole.Show();
+            SwitchColorMenu(sender, e);
         }
     }
 }

@@ -80,3 +80,5 @@ C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debu
 C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ThuHoiQuyenTuUser.resources
 C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachUser.resources
 C:\Users\binhp\Source\Repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyUserRole.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ChinhSuaQuyenChoRole.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ChinhSuaQuyenChoUser.resources

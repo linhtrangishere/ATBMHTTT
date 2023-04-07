@@ -58,5 +58,12 @@ namespace PHANHE1
             thuhoiquyenuser.Show();
             SwitchColorMenu(sender, e);
         }
+
+        private void buttonChinhSuaQuyen_Click(object sender, EventArgs e)
+        {
+            ChinhSuaQuyenChoUser chinhsuaquyenchouser = new ChinhSuaQuyenChoUser();
+            chinhsuaquyenchouser.Show();
+            SwitchColorMenu(sender, e);
+        }
     }
 }

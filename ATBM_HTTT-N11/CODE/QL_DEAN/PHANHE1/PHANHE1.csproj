@@ -91,6 +91,18 @@
     <Compile Include="CapQuyenChoUser.designer.cs">
       <DependentUpon>CapQuyenChoUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChinhSuaQuyenChoRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaQuyenChoRole.Designer.cs">
+      <DependentUpon>ChinhSuaQuyenChoRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChinhSuaQuyenChoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaQuyenChoUser.Designer.cs">
+      <DependentUpon>ChinhSuaQuyenChoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChinhSuaRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapQuyenChoUser.resx">
       <DependentUpon>CapQuyenChoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChinhSuaQuyenChoRole.resx">
+      <DependentUpon>ChinhSuaQuyenChoRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChinhSuaQuyenChoUser.resx">
+      <DependentUpon>ChinhSuaQuyenChoUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChinhSuaRole.resx">
       <DependentUpon>ChinhSuaRole.cs</DependentUpon>

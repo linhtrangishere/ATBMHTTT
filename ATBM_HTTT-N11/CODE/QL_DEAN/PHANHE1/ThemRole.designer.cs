@@ -99,6 +99,7 @@
             this.buttonThem.TabIndex = 18;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // ThemRole
             // 

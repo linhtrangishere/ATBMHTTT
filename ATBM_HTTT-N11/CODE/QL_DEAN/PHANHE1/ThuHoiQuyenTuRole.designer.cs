@@ -57,7 +57,7 @@
             this.labelThuHoiQuyenTuRole.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelThuHoiQuyenTuRole.Location = new System.Drawing.Point(510, 50);
             this.labelThuHoiQuyenTuRole.Name = "labelThuHoiQuyenTuRole";
-            this.labelThuHoiQuyenTuRole.Size = new System.Drawing.Size(400, 50);
+            this.labelThuHoiQuyenTuRole.Size = new System.Drawing.Size(450, 50);
             this.labelThuHoiQuyenTuRole.TabIndex = 0;
             this.labelThuHoiQuyenTuRole.Text = "Thu hồi quyền từ role";
             // 
