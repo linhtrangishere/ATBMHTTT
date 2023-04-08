@@ -116,7 +116,7 @@ namespace PHANHE1
                 
                 if (comboBoxCot.SelectedValue != null && pri[temp] != "SELECT" && pri[temp] != "UPDATE")
                 {
-                    MessageBox.Show("Chỉ được cấp quyền SELECT, DELETE trên cột!");
+                    MessageBox.Show("Chỉ được cấp quyền SELECT, UPDATE trên cột!");
                 }
                 else if(comboBoxCot.SelectedValue == null)
                 {
