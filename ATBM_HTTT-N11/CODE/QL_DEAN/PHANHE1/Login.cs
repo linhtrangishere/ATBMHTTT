@@ -26,9 +26,12 @@ namespace PHANHE1
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
+            
+
             string username = textBoxTaiKhoan.Text;
             string password = textBoxMatKhau.Text;
             connectionString = connectionString + "User ID = " + username + "; Password = " + password + ";";
+            
             if (username == "")
             {
                 MessageBox.Show("Xin vui lòng nhập tên đăng nhập", "Thông báo");
@@ -42,6 +45,7 @@ namespace PHANHE1
                 try
                 {
                     OracleConnection conn = new OracleConnection(connectionString);
+
                     conn.Open();
                     Main open = new Main();
                     open.Show();

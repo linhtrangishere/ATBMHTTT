@@ -12,6 +12,7 @@ namespace PHANHE1
 {
     public partial class QuanLyUser : Form
     {
+
         public QuanLyUser()
         {
             InitializeComponent();
@@ -55,6 +56,11 @@ namespace PHANHE1
             ChinhSuaUser chinhsuauser = new ChinhSuaUser();
             chinhsuauser.Show();
             SwitchColorMenu(sender, e);
+        }
+
+        private void buttonXoaUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

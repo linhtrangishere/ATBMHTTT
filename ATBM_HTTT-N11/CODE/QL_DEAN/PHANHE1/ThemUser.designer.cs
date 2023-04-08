@@ -36,8 +36,6 @@
             this.labelMatKhau = new System.Windows.Forms.Label();
             this.textBoxMatKhau = new System.Windows.Forms.TextBox();
             this.buttonThem = new System.Windows.Forms.Button();
-            this.textBoxNhapLaiMatKhau = new System.Windows.Forms.TextBox();
-            this.labelNhapLaiMatKhau = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +75,7 @@
             // 
             this.labelTaiKhoan.AutoSize = true;
             this.labelTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTaiKhoan.Location = new System.Drawing.Point(420, 190);
+            this.labelTaiKhoan.Location = new System.Drawing.Point(420, 287);
             this.labelTaiKhoan.Name = "labelTaiKhoan";
             this.labelTaiKhoan.Size = new System.Drawing.Size(153, 41);
             this.labelTaiKhoan.TabIndex = 14;
@@ -87,17 +85,18 @@
             // 
             this.textBoxTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(420, 243);
+            this.textBoxTaiKhoan.Location = new System.Drawing.Point(420, 340);
             this.textBoxTaiKhoan.Multiline = true;
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
             this.textBoxTaiKhoan.Size = new System.Drawing.Size(630, 50);
             this.textBoxTaiKhoan.TabIndex = 15;
+            this.textBoxTaiKhoan.TextChanged += new System.EventHandler(this.textBoxTaiKhoan_TextChanged);
             // 
             // labelMatKhau
             // 
             this.labelMatKhau.AutoSize = true;
             this.labelMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMatKhau.Location = new System.Drawing.Point(420, 352);
+            this.labelMatKhau.Location = new System.Drawing.Point(420, 449);
             this.labelMatKhau.Name = "labelMatKhau";
             this.labelMatKhau.Size = new System.Drawing.Size(152, 41);
             this.labelMatKhau.TabIndex = 16;
@@ -107,12 +106,13 @@
             // 
             this.textBoxMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMatKhau.Location = new System.Drawing.Point(420, 405);
+            this.textBoxMatKhau.Location = new System.Drawing.Point(420, 502);
             this.textBoxMatKhau.Multiline = true;
             this.textBoxMatKhau.Name = "textBoxMatKhau";
             this.textBoxMatKhau.PasswordChar = '*';
             this.textBoxMatKhau.Size = new System.Drawing.Size(630, 50);
             this.textBoxMatKhau.TabIndex = 17;
+            this.textBoxMatKhau.TextChanged += new System.EventHandler(this.textBoxMatKhau_TextChanged);
             // 
             // buttonThem
             // 
@@ -124,27 +124,7 @@
             this.buttonThem.TabIndex = 18;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = false;
-            // 
-            // textBoxNhapLaiMatKhau
-            // 
-            this.textBoxNhapLaiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNhapLaiMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxNhapLaiMatKhau.Location = new System.Drawing.Point(420, 567);
-            this.textBoxNhapLaiMatKhau.Multiline = true;
-            this.textBoxNhapLaiMatKhau.Name = "textBoxNhapLaiMatKhau";
-            this.textBoxNhapLaiMatKhau.PasswordChar = '*';
-            this.textBoxNhapLaiMatKhau.Size = new System.Drawing.Size(630, 50);
-            this.textBoxNhapLaiMatKhau.TabIndex = 20;
-            // 
-            // labelNhapLaiMatKhau
-            // 
-            this.labelNhapLaiMatKhau.AutoSize = true;
-            this.labelNhapLaiMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNhapLaiMatKhau.Location = new System.Drawing.Point(420, 514);
-            this.labelNhapLaiMatKhau.Name = "labelNhapLaiMatKhau";
-            this.labelNhapLaiMatKhau.Size = new System.Drawing.Size(277, 41);
-            this.labelNhapLaiMatKhau.TabIndex = 19;
-            this.labelNhapLaiMatKhau.Text = "Nhập lại mật khẩu";
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // ThemUser
             // 
@@ -152,8 +132,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1422, 977);
-            this.Controls.Add(this.textBoxNhapLaiMatKhau);
-            this.Controls.Add(this.labelNhapLaiMatKhau);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.textBoxMatKhau);
             this.Controls.Add(this.labelMatKhau);
@@ -181,8 +159,6 @@
         private System.Windows.Forms.Label labelMatKhau;
         private System.Windows.Forms.TextBox textBoxMatKhau;
         private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.TextBox textBoxNhapLaiMatKhau;
-        private System.Windows.Forms.Label labelNhapLaiMatKhau;
     }
 }
 
