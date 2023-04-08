@@ -114,7 +114,7 @@ namespace PHANHE1
                 int temp = comboBoxCapQuyen.SelectedIndex;
                 string role = comboTenRole.SelectedValue.ToString();
                 
-                if (comboBoxCot.SelectedValue != null && pri[temp] != "SELECT" && pri[temp] != "UPDATE")
+             if (comboBoxCot.SelectedValue != null && pri[temp] != "SELECT" && pri[temp] != "UPDATE")
                 {
                     MessageBox.Show("Chỉ được cấp quyền SELECT, UPDATE trên cột!");
                 }
@@ -122,17 +122,36 @@ namespace PHANHE1
                 {
                     OracleConnection conn = new OracleConnection(connectionString);
                     conn.Open();
-                string text = "GRANT " + pri[temp] + " ON " + table + " TO " + role;
-                Console.WriteLine(text);
-                OracleCommand command = new OracleCommand(text, conn);
-                command.ExecuteNonQuery();
+                    string text = "GRANT " + pri[temp] + " ON " + table + " TO " + role;
+                    Console.WriteLine(text);
+                    OracleCommand command = new OracleCommand(text, conn);
+                    command.ExecuteNonQuery();
 
-                MessageBox.Show("Phân quyền thành công!", "Thông báo");
+                    MessageBox.Show("Phân quyền thành công!", "Thông báo");
 
                 }
                 else
                 {
-
+                    string col = comboBoxCot.SelectedValue.ToString();
+                    OracleConnection conn = new OracleConnection(connectionString);
+                    conn.Open();
+                    string text = "CREATE OR REPLACE VIEW UV_" + role + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
+                    OracleCommand command = new OracleCommand(text, conn);
+                    command.ExecuteNonQuery();
+                string text2 = "";
+                    if (pri[temp] == "SELECT")
+                    {
+                        text2 = "GRANT " + pri[temp] + " ON UV_" + role + "_" + table + "_" + col + " TO " + role;
+                    }
+                    else if(pri[temp] == "UPDATE")
+                    {
+                    text2 = "GRANT " + pri[temp] + "(" + col +") ON UV_" + role + "_" + table + "_" + col + " TO " + role;
+                    }
+                Console.WriteLine(text2);
+                OracleCommand command2 = new OracleCommand(text2, conn);
+                command2.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Phân quyền thành công!", "Thông báo");
                 }
             
           
@@ -146,6 +165,9 @@ namespace PHANHE1
             }
         }
 
-        
+        private void comboTenRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

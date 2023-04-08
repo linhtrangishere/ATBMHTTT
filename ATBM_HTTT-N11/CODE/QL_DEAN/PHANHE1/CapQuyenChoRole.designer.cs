@@ -147,7 +147,6 @@
             this.comboBoxCapQuyen.Size = new System.Drawing.Size(474, 40);
             this.comboBoxCapQuyen.TabIndex = 22;
             this.comboBoxCapQuyen.SelectedIndexChanged += new System.EventHandler(this.comboBoxCapQuyen_SelectedIndexChanged);
-           
             // 
             // comboBoxBang
             // 
@@ -191,6 +190,7 @@
             this.comboTenRole.Name = "comboTenRole";
             this.comboTenRole.Size = new System.Drawing.Size(474, 40);
             this.comboTenRole.TabIndex = 26;
+            this.comboTenRole.SelectedIndexChanged += new System.EventHandler(this.comboTenRole_SelectedIndexChanged);
             // 
             // CapQuyenChoRole
             // 
