@@ -51,9 +51,9 @@
             this.groupBox.Controls.Add(this.labelCapQuyenChoUser);
             this.groupBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox.Location = new System.Drawing.Point(0, -8);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(1069, 130);
             this.groupBox.TabIndex = 7;
             this.groupBox.TabStop = false;
@@ -73,7 +73,7 @@
             this.buttonHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
             this.buttonHuy.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHuy.Location = new System.Drawing.Point(450, 626);
-            this.buttonHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHuy.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHuy.Name = "buttonHuy";
             this.buttonHuy.Size = new System.Drawing.Size(150, 57);
             this.buttonHuy.TabIndex = 13;
@@ -108,7 +108,7 @@
             this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
             this.buttonThem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThem.Location = new System.Drawing.Point(150, 626);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(150, 57);
             this.buttonThem.TabIndex = 18;
@@ -143,7 +143,7 @@
             this.checkBoxWithGrantOption.AutoSize = true;
             this.checkBoxWithGrantOption.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.checkBoxWithGrantOption.Location = new System.Drawing.Point(750, 637);
-            this.checkBoxWithGrantOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxWithGrantOption.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxWithGrantOption.Name = "checkBoxWithGrantOption";
             this.checkBoxWithGrantOption.Size = new System.Drawing.Size(229, 36);
             this.checkBoxWithGrantOption.TabIndex = 23;
@@ -155,7 +155,7 @@
             this.comboBoxCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBoxCot.FormattingEnabled = true;
             this.comboBoxCot.Location = new System.Drawing.Point(315, 531);
-            this.comboBoxCot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCot.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCot.Name = "comboBoxCot";
             this.comboBoxCot.Size = new System.Drawing.Size(474, 40);
             this.comboBoxCot.TabIndex = 27;
@@ -165,7 +165,7 @@
             this.comboBoxBang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBoxBang.FormattingEnabled = true;
             this.comboBoxBang.Location = new System.Drawing.Point(315, 417);
-            this.comboBoxBang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBang.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBang.Name = "comboBoxBang";
             this.comboBoxBang.Size = new System.Drawing.Size(474, 40);
             this.comboBoxBang.TabIndex = 26;
@@ -176,7 +176,7 @@
             this.comboBoxCapQuyen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBoxCapQuyen.FormattingEnabled = true;
             this.comboBoxCapQuyen.Location = new System.Drawing.Point(315, 303);
-            this.comboBoxCapQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCapQuyen.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCapQuyen.Name = "comboBoxCapQuyen";
             this.comboBoxCapQuyen.Size = new System.Drawing.Size(474, 40);
             this.comboBoxCapQuyen.TabIndex = 25;
@@ -191,6 +191,7 @@
             this.comboBoxUserName.Name = "comboBoxUserName";
             this.comboBoxUserName.Size = new System.Drawing.Size(474, 40);
             this.comboBoxUserName.TabIndex = 28;
+            this.comboBoxUserName.SelectedIndexChanged += new System.EventHandler(this.comboBoxUserName_SelectedIndexChanged);
             // 
             // checkBoxCapTrenCot
             // 
@@ -224,7 +225,7 @@
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.buttonHuy);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CapQuyenChoUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CapQuyenChoUser";

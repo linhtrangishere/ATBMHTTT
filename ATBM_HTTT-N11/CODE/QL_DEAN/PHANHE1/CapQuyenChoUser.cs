@@ -148,8 +148,47 @@ namespace PHANHE1
             }
             else
             {
-
+                string col = comboBoxCot.SelectedValue.ToString();
+                OracleConnection conn = new OracleConnection(connectionString);
+                conn.Open();
+                string text = "CREATE OR REPLACE VIEW UV_" + username + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
+                OracleCommand command = new OracleCommand(text, conn);
+                command.ExecuteNonQuery();
+                string text2 = "";
+                if (pri[temp] == "SELECT")
+                {
+                    if (checkBoxWithGrantOption.Checked)
+                    {
+                        text2 = "GRANT " + pri[temp] + " ON UV_" + username + "_" + table + "_" + col + " TO " + username + " WITH GRANT OPTION";
+                    }
+                    else
+                    {
+                        text2 = "GRANT " + pri[temp] + " ON UV_" + username + "_" + table + "_" + col + " TO " + username;
+                    }
+                }
+                else if (pri[temp] == "UPDATE")
+                {
+                    if (checkBoxWithGrantOption.Checked)
+                    {
+                        text2 = "GRANT " + pri[temp] + "(" + col + ") ON UV_" + username + "_" + table + "_" + col + " TO " + username + " WITH GRANT OPTION";
+                    }
+                    else
+                    {
+                        text2 = "GRANT " + pri[temp] + "(" + col + ") ON UV_" + username + "_" + table + "_" + col + " TO " + username;
+                    }    
+                }
+                Console.WriteLine(text2);
+                OracleCommand command2 = new OracleCommand(text2, conn);
+                command2.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Phân quyền thành công!", "Thông báo");
             }
+
+        }
+
+        private void comboBoxUserName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
