@@ -44,28 +44,32 @@
             this.panelQuanLyQuyenRole.BackColor = System.Drawing.Color.White;
             this.panelQuanLyQuyenRole.Controls.Add(this.panelThemXoaSua);
             this.panelQuanLyQuyenRole.Controls.Add(this.dataGridViewQuanLyQuyenRole);
-            this.panelQuanLyQuyenRole.Location = new System.Drawing.Point(0, -10);
+            this.panelQuanLyQuyenRole.Location = new System.Drawing.Point(0, -8);
+            this.panelQuanLyQuyenRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelQuanLyQuyenRole.Name = "panelQuanLyQuyenRole";
-            this.panelQuanLyQuyenRole.Size = new System.Drawing.Size(935, 690);
+            this.panelQuanLyQuyenRole.Size = new System.Drawing.Size(701, 561);
             this.panelQuanLyQuyenRole.TabIndex = 2;
+            this.panelQuanLyQuyenRole.Paint += new System.Windows.Forms.PaintEventHandler(this.panelQuanLyQuyenRole_Paint);
             // 
             // panelThemXoaSua
             // 
             this.panelThemXoaSua.Controls.Add(this.buttonChinhSuaQuyen);
             this.panelThemXoaSua.Controls.Add(this.buttonCapQuyen);
             this.panelThemXoaSua.Controls.Add(this.buttonThuHoiQuyen);
-            this.panelThemXoaSua.Location = new System.Drawing.Point(0, 100);
+            this.panelThemXoaSua.Location = new System.Drawing.Point(0, 81);
+            this.panelThemXoaSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelThemXoaSua.Name = "panelThemXoaSua";
-            this.panelThemXoaSua.Size = new System.Drawing.Size(935, 150);
+            this.panelThemXoaSua.Size = new System.Drawing.Size(701, 122);
             this.panelThemXoaSua.TabIndex = 18;
             // 
             // buttonChinhSuaQuyen
             // 
             this.buttonChinhSuaQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonChinhSuaQuyen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonChinhSuaQuyen.Location = new System.Drawing.Point(642, 28);
+            this.buttonChinhSuaQuyen.Location = new System.Drawing.Point(482, 23);
+            this.buttonChinhSuaQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonChinhSuaQuyen.Name = "buttonChinhSuaQuyen";
-            this.buttonChinhSuaQuyen.Size = new System.Drawing.Size(250, 94);
+            this.buttonChinhSuaQuyen.Size = new System.Drawing.Size(188, 76);
             this.buttonChinhSuaQuyen.TabIndex = 20;
             this.buttonChinhSuaQuyen.Text = "Chỉnh sửa quyền";
             this.buttonChinhSuaQuyen.UseVisualStyleBackColor = false;
@@ -75,9 +79,10 @@
             // 
             this.buttonCapQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonCapQuyen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonCapQuyen.Location = new System.Drawing.Point(42, 28);
+            this.buttonCapQuyen.Location = new System.Drawing.Point(32, 23);
+            this.buttonCapQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCapQuyen.Name = "buttonCapQuyen";
-            this.buttonCapQuyen.Size = new System.Drawing.Size(232, 94);
+            this.buttonCapQuyen.Size = new System.Drawing.Size(174, 76);
             this.buttonCapQuyen.TabIndex = 19;
             this.buttonCapQuyen.Text = "Cấp quyền";
             this.buttonCapQuyen.UseVisualStyleBackColor = false;
@@ -88,9 +93,10 @@
             this.buttonThuHoiQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonThuHoiQuyen.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonThuHoiQuyen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonThuHoiQuyen.Location = new System.Drawing.Point(342, 28);
+            this.buttonThuHoiQuyen.Location = new System.Drawing.Point(256, 23);
+            this.buttonThuHoiQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonThuHoiQuyen.Name = "buttonThuHoiQuyen";
-            this.buttonThuHoiQuyen.Size = new System.Drawing.Size(232, 94);
+            this.buttonThuHoiQuyen.Size = new System.Drawing.Size(174, 76);
             this.buttonThuHoiQuyen.TabIndex = 18;
             this.buttonThuHoiQuyen.Text = "Thu hồi quyền";
             this.buttonThuHoiQuyen.UseVisualStyleBackColor = false;
@@ -99,21 +105,25 @@
             // dataGridViewQuanLyQuyenRole
             // 
             this.dataGridViewQuanLyQuyenRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewQuanLyQuyenRole.Location = new System.Drawing.Point(0, 337);
+            this.dataGridViewQuanLyQuyenRole.Location = new System.Drawing.Point(0, 274);
+            this.dataGridViewQuanLyQuyenRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewQuanLyQuyenRole.Name = "dataGridViewQuanLyQuyenRole";
             this.dataGridViewQuanLyQuyenRole.RowHeadersWidth = 51;
             this.dataGridViewQuanLyQuyenRole.RowTemplate.Height = 24;
-            this.dataGridViewQuanLyQuyenRole.Size = new System.Drawing.Size(935, 350);
+            this.dataGridViewQuanLyQuyenRole.Size = new System.Drawing.Size(701, 284);
             this.dataGridViewQuanLyQuyenRole.TabIndex = 14;
+            this.dataGridViewQuanLyQuyenRole.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQuanLyQuyenRole_CellContentClick);
             // 
             // QuanLyQuyenRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 673);
+            this.ClientSize = new System.Drawing.Size(699, 547);
             this.Controls.Add(this.panelQuanLyQuyenRole);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "QuanLyQuyenRole";
             this.Text = "QuanLyQuyenRole";
+            this.Load += new System.EventHandler(this.QuanLyQuyenRole_Load);
             this.panelQuanLyQuyenRole.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyQuyenRole)).EndInit();

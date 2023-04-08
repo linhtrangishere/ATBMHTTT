@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace PHANHE1
 {
     public partial class QuanLyQuyenRole : Form
     {
+        string connectionString = Login.connectionString;
         public QuanLyQuyenRole()
         {
             InitializeComponent();
@@ -57,6 +59,30 @@ namespace PHANHE1
             ChinhSuaQuyenChoRole chinhsuaquyenchorole = new ChinhSuaQuyenChoRole();
             chinhsuaquyenchorole.Show();
             SwitchColorMenu(sender, e);
+        }
+
+        private void dataGridViewQuanLyQuyenRole_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panelQuanLyQuyenRole_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void QuanLyQuyenRole_Load(object sender, EventArgs e)
+        {
+            OracleConnection conn = new OracleConnection(connectionString);
+            conn.Open();
+            OracleCommand getData = conn.CreateCommand();
+            getData.CommandText = "select * from ROLE_TAB_PRIVS WHERE ROLE LIKE 'RL_%'";
+            getData.CommandType = CommandType.Text;
+            OracleDataReader data = getData.ExecuteReader();
+            DataTable tempDT = new DataTable();
+            tempDT.Load(data);
+            dataGridViewQuanLyQuyenRole.DataSource = tempDT;
+            conn.Close();
         }
     }
 }
