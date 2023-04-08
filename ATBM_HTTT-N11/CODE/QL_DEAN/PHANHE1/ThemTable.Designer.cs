@@ -32,8 +32,6 @@
             this.labelThemBang = new System.Windows.Forms.Label();
             this.labelTenBang = new System.Windows.Forms.Label();
             this.textBoxTenBang = new System.Windows.Forms.TextBox();
-            this.comboBoxKieuDuLieu = new System.Windows.Forms.ComboBox();
-            this.comboBoxTenCot = new System.Windows.Forms.ComboBox();
             this.labelKhoa = new System.Windows.Forms.Label();
             this.labelKieuDuLieu = new System.Windows.Forms.Label();
             this.labelTenCot = new System.Windows.Forms.Label();
@@ -42,7 +40,12 @@
             this.buttonTaoBang = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.dataGridViewThemTable = new System.Windows.Forms.DataGridView();
+            this.tenCot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primaryKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkBox = new System.Windows.Forms.CheckBox();
+            this.textBoxTenCot = new System.Windows.Forms.TextBox();
+            this.textBoxDataType = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
             this.panelThemTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemTable)).BeginInit();
@@ -58,6 +61,7 @@
             this.groupBox.Size = new System.Drawing.Size(1425, 160);
             this.groupBox.TabIndex = 7;
             this.groupBox.TabStop = false;
+            this.groupBox.Enter += new System.EventHandler(this.groupBox_Enter);
             // 
             // labelThemBang
             // 
@@ -67,6 +71,7 @@
             this.labelThemBang.Size = new System.Drawing.Size(300, 50);
             this.labelThemBang.TabIndex = 0;
             this.labelThemBang.Text = "Thêm bảng";
+            this.labelThemBang.Click += new System.EventHandler(this.labelThemBang_Click);
             // 
             // labelTenBang
             // 
@@ -87,24 +92,6 @@
             this.textBoxTenBang.Name = "textBoxTenBang";
             this.textBoxTenBang.Size = new System.Drawing.Size(400, 50);
             this.textBoxTenBang.TabIndex = 15;
-            // 
-            // comboBoxKieuDuLieu
-            // 
-            this.comboBoxKieuDuLieu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxKieuDuLieu.FormattingEnabled = true;
-            this.comboBoxKieuDuLieu.Location = new System.Drawing.Point(219, 417);
-            this.comboBoxKieuDuLieu.Name = "comboBoxKieuDuLieu";
-            this.comboBoxKieuDuLieu.Size = new System.Drawing.Size(400, 49);
-            this.comboBoxKieuDuLieu.TabIndex = 32;
-            // 
-            // comboBoxTenCot
-            // 
-            this.comboBoxTenCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxTenCot.FormattingEnabled = true;
-            this.comboBoxTenCot.Location = new System.Drawing.Point(833, 251);
-            this.comboBoxTenCot.Name = "comboBoxTenCot";
-            this.comboBoxTenCot.Size = new System.Drawing.Size(400, 49);
-            this.comboBoxTenCot.TabIndex = 31;
             // 
             // labelKhoa
             // 
@@ -168,6 +155,7 @@
             this.buttonTaoBang.TabIndex = 38;
             this.buttonTaoBang.Text = "Tạo bảng";
             this.buttonTaoBang.UseVisualStyleBackColor = false;
+            this.buttonTaoBang.Click += new System.EventHandler(this.buttonTaoBang_Click);
             // 
             // buttonThem
             // 
@@ -179,16 +167,41 @@
             this.buttonThem.TabIndex = 37;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // dataGridViewThemTable
             // 
+            this.dataGridViewThemTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewThemTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewThemTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThemTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tenCot,
+            this.dataType,
+            this.primaryKey});
             this.dataGridViewThemTable.Location = new System.Drawing.Point(0, 630);
             this.dataGridViewThemTable.Name = "dataGridViewThemTable";
             this.dataGridViewThemTable.RowHeadersWidth = 51;
             this.dataGridViewThemTable.RowTemplate.Height = 24;
             this.dataGridViewThemTable.Size = new System.Drawing.Size(1425, 350);
             this.dataGridViewThemTable.TabIndex = 36;
+            // 
+            // tenCot
+            // 
+            this.tenCot.HeaderText = "Tên Cột";
+            this.tenCot.MinimumWidth = 6;
+            this.tenCot.Name = "tenCot";
+            // 
+            // dataType
+            // 
+            this.dataType.HeaderText = "Kiểu dữ liệu";
+            this.dataType.MinimumWidth = 6;
+            this.dataType.Name = "dataType";
+            // 
+            // primaryKey
+            // 
+            this.primaryKey.HeaderText = "Khóa";
+            this.primaryKey.MinimumWidth = 6;
+            this.primaryKey.Name = "primaryKey";
             // 
             // checkBox
             // 
@@ -199,6 +212,27 @@
             this.checkBox.Size = new System.Drawing.Size(18, 17);
             this.checkBox.TabIndex = 38;
             this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // textBoxTenCot
+            // 
+            this.textBoxTenCot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxTenCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxTenCot.Location = new System.Drawing.Point(840, 252);
+            this.textBoxTenCot.Multiline = true;
+            this.textBoxTenCot.Name = "textBoxTenCot";
+            this.textBoxTenCot.Size = new System.Drawing.Size(400, 50);
+            this.textBoxTenCot.TabIndex = 41;
+            // 
+            // textBoxDataType
+            // 
+            this.textBoxDataType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDataType.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxDataType.Location = new System.Drawing.Point(217, 425);
+            this.textBoxDataType.Multiline = true;
+            this.textBoxDataType.Name = "textBoxDataType";
+            this.textBoxDataType.Size = new System.Drawing.Size(400, 50);
+            this.textBoxDataType.TabIndex = 42;
             // 
             // ThemTable
             // 
@@ -206,11 +240,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.textBoxDataType);
+            this.Controls.Add(this.textBoxTenCot);
             this.Controls.Add(this.checkBox);
             this.Controls.Add(this.panelThemTable);
             this.Controls.Add(this.dataGridViewThemTable);
-            this.Controls.Add(this.comboBoxKieuDuLieu);
-            this.Controls.Add(this.comboBoxTenCot);
             this.Controls.Add(this.labelKhoa);
             this.Controls.Add(this.labelKieuDuLieu);
             this.Controls.Add(this.labelTenCot);
@@ -235,8 +269,6 @@
         private System.Windows.Forms.Label labelThemBang;
         private System.Windows.Forms.Label labelTenBang;
         private System.Windows.Forms.TextBox textBoxTenBang;
-        private System.Windows.Forms.ComboBox comboBoxKieuDuLieu;
-        private System.Windows.Forms.ComboBox comboBoxTenCot;
         private System.Windows.Forms.Label labelKhoa;
         private System.Windows.Forms.Label labelKieuDuLieu;
         private System.Windows.Forms.Label labelTenCot;
@@ -246,6 +278,11 @@
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.DataGridView dataGridViewThemTable;
         private System.Windows.Forms.CheckBox checkBox;
+        private System.Windows.Forms.TextBox textBoxTenCot;
+        private System.Windows.Forms.TextBox textBoxDataType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenCot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primaryKey;
     }
 }
 
