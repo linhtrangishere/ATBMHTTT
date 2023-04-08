@@ -40,7 +40,7 @@ namespace PHANHE1
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
             OracleCommand getListPrivilegeUser = conn.CreateCommand();
-            getListPrivilegeUser.CommandText = "SELECT GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE FROM DBA_TAB_PRIVS " + " WHERE " + " GRANTEE like Upper('" + textBoxNhapTenUser.Text + "')"; ;
+            getListPrivilegeUser.CommandText = "SELECT GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE FROM DBA_TAB_PRIVS " + " WHERE " + " GRANTEE like Upper('%" + textBoxNhapTenUser.Text + "%')"; ;
             getListPrivilegeUser.CommandType = CommandType.Text;
             OracleDataReader temp = getListPrivilegeUser.ExecuteReader();
             DataTable table_DSUser = new DataTable();

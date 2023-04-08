@@ -88,6 +88,7 @@
             this.textBoxNhapTenRole.Name = "textBoxNhapTenRole";
             this.textBoxNhapTenRole.Size = new System.Drawing.Size(630, 50);
             this.textBoxNhapTenRole.TabIndex = 15;
+            this.textBoxNhapTenRole.TextChanged += new System.EventHandler(this.textBoxNhapTenRole_TextChanged);
             // 
             // buttonThem
             // 

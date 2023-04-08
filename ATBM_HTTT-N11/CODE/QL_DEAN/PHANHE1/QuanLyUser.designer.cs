@@ -95,6 +95,7 @@
             this.buttonXoaUser.TabIndex = 18;
             this.buttonXoaUser.Text = "Xóa user";
             this.buttonXoaUser.UseVisualStyleBackColor = false;
+            this.buttonXoaUser.Click += new System.EventHandler(this.buttonXoaUser_Click);
             // 
             // dataGridViewQuanLyUser
             // 
