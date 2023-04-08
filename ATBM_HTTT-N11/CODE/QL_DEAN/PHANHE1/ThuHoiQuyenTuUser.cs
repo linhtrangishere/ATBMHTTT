@@ -149,7 +149,21 @@ namespace PHANHE1
             }
             else
             {
-
+                try {
+                    string col = comboBoxCot.SelectedValue.ToString();
+                    OracleConnection conn = new OracleConnection(connectionString);
+                    conn.Open();
+                    string text = "REVOKE " + pri[temp] + " ON UV_" + username + "_" + table + "_" + col + " FROM " + username;
+                    OracleCommand command = new OracleCommand(text, conn);
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Thu hồi quyền thành công!", "Thông báo");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                
             }
         }
 
