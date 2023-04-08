@@ -51,5 +51,12 @@ namespace PHANHE1
             chinhsuarole.Show();
             SwitchColorMenu(sender, e);
         }
+
+        private void buttonXoaRole_Click(object sender, EventArgs e)
+        {
+            XoaRole xoarole = new XoaRole();
+            xoarole.Show();
+            SwitchColorMenu(sender, e);
+        }
     }
 }

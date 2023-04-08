@@ -261,6 +261,18 @@
     <Compile Include="XemDanhSachView.Designer.cs">
       <DependentUpon>XemDanhSachView.cs</DependentUpon>
     </Compile>
+    <Compile Include="XoaRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaRole.Designer.cs">
+      <DependentUpon>XoaRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaUser.Designer.cs">
+      <DependentUpon>XoaUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CapQuyenChoRole.resx">
       <DependentUpon>CapQuyenChoRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +371,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XemDanhSachView.resx">
       <DependentUpon>XemDanhSachView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaRole.resx">
+      <DependentUpon>XoaRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaUser.resx">
+      <DependentUpon>XoaUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

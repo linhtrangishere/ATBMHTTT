@@ -60,7 +60,9 @@ namespace PHANHE1
 
         private void buttonXoaUser_Click(object sender, EventArgs e)
         {
-
+            XoaUser xoauser = new XoaUser();
+            xoauser.Show();
+            SwitchColorMenu(sender, e);
         }
     }
 }
