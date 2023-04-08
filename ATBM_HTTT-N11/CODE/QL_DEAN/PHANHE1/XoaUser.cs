@@ -31,15 +31,16 @@ namespace PHANHE1
         {
             this.Close();
         }
-        private void Run_USP_ADDROLE()
+        private void Run_USP_DROPUSER()
         {
             string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
             OracleCommand set_script_cmd = new OracleCommand(set_script, conn);
 
-            OracleCommand cmd = new OracleCommand("USP_ADDROLE", conn);
+            OracleCommand cmd = new OracleCommand("USP_DROPUSER", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            OracleParameter param1 = new OracleParameter("p_role_name", OracleDbType.Varchar2);
+            OracleParameter param1 = new OracleParameter("p_username", OracleDbType.Varchar2);
+
             cmd.Parameters.Add(param1);
 
 
@@ -50,7 +51,7 @@ namespace PHANHE1
             {
                 set_script_cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm role thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)
@@ -62,7 +63,7 @@ namespace PHANHE1
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            Run_USP_ADDROLE();
+            Run_USP_DROPUSER();
         }
 
         private void textBoxNhapTenRole_TextChanged(object sender, EventArgs e)
