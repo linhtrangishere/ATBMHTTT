@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PHANHE1
 {
@@ -110,7 +111,21 @@ namespace PHANHE1
             }
             else
             {
-
+                try
+                {
+                    string col = comboBoxCotThuHoi.SelectedValue.ToString();
+                    OracleConnection conn = new OracleConnection(connectionString);
+                    conn.Open();
+                    string text = "REVOKE " + pri[temp] + " ON UV_" + role + "_" + table + "_" + col + " FROM " + role;
+                    OracleCommand command = new OracleCommand(text, conn);
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Thu hồi quyền thành công!", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
 
