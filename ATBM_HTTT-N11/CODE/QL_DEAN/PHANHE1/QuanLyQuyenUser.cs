@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace PHANHE1
 {
     public partial class QuanLyQuyenUser : Form
     {
+        string connectionString = Login.connectionString;
         public QuanLyQuyenUser()
         {
             InitializeComponent();
@@ -64,6 +66,25 @@ namespace PHANHE1
             ChinhSuaQuyenChoUser chinhsuaquyenchouser = new ChinhSuaQuyenChoUser();
             chinhsuaquyenchouser.Show();
             SwitchColorMenu(sender, e);
+        }
+
+        private void dataGridViewQuanLyQuyenUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void QuanLyQuyenUser_Load(object sender, EventArgs e)
+        {
+            OracleConnection conn = new OracleConnection(connectionString);
+            conn.Open();
+            OracleCommand getData = conn.CreateCommand();
+            getData.CommandText = "select * from USER_TAB_PRIVS";
+            getData.CommandType = CommandType.Text;
+            OracleDataReader data = getData.ExecuteReader();
+            DataTable tempDT = new DataTable();
+            tempDT.Load(data);
+            dataGridViewQuanLyQuyenUser.DataSource = tempDT;
+            conn.Close();
         }
     }
 }
