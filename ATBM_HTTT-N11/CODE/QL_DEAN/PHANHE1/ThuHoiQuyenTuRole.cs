@@ -152,5 +152,10 @@ namespace PHANHE1
                 comboBoxThuHoiQuyen.DataSource = null;
             }
         }
+
+        private void comboBoxTenRole2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

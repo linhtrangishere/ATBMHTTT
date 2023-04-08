@@ -50,9 +50,9 @@
             this.groupBox1.Controls.Add(this.labelThuHoiQuyenTuRole);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.Location = new System.Drawing.Point(0, -8);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(1069, 130);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -72,7 +72,7 @@
             this.buttonHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
             this.buttonHuy.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHuy.Location = new System.Drawing.Point(608, 627);
-            this.buttonHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHuy.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHuy.Name = "buttonHuy";
             this.buttonHuy.Size = new System.Drawing.Size(150, 57);
             this.buttonHuy.TabIndex = 13;
@@ -107,7 +107,7 @@
             this.buttonThuHoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
             this.buttonThuHoi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThuHoi.Location = new System.Drawing.Point(285, 627);
-            this.buttonThuHoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThuHoi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThuHoi.Name = "buttonThuHoi";
             this.buttonThuHoi.Size = new System.Drawing.Size(150, 57);
             this.buttonThuHoi.TabIndex = 18;
@@ -131,7 +131,7 @@
             this.comboBoxThuHoiQuyen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBoxThuHoiQuyen.FormattingEnabled = true;
             this.comboBoxThuHoiQuyen.Location = new System.Drawing.Point(285, 325);
-            this.comboBoxThuHoiQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxThuHoiQuyen.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxThuHoiQuyen.Name = "comboBoxThuHoiQuyen";
             this.comboBoxThuHoiQuyen.Size = new System.Drawing.Size(474, 40);
             this.comboBoxThuHoiQuyen.TabIndex = 20;
@@ -142,7 +142,7 @@
             this.comboBoxBang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBoxBang.FormattingEnabled = true;
             this.comboBoxBang.Location = new System.Drawing.Point(285, 445);
-            this.comboBoxBang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBang.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBang.Name = "comboBoxBang";
             this.comboBoxBang.Size = new System.Drawing.Size(474, 40);
             this.comboBoxBang.TabIndex = 21;
@@ -157,6 +157,7 @@
             this.comboBoxTenRole2.Name = "comboBoxTenRole2";
             this.comboBoxTenRole2.Size = new System.Drawing.Size(474, 40);
             this.comboBoxTenRole2.TabIndex = 22;
+            this.comboBoxTenRole2.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenRole2_SelectedIndexChanged);
             // 
             // comboBoxCotThuHoi
             // 
@@ -211,7 +212,7 @@
             this.Controls.Add(this.labelTenRole);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonHuy);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThuHoiQuyenTuRole";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThuHoiQuyenTuRole";
