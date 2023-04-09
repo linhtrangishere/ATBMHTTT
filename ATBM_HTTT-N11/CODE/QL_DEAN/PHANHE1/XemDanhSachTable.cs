@@ -29,7 +29,7 @@ namespace PHANHE1
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
             OracleCommand getListTable = conn.CreateCommand();
-            getListTable.CommandText = "SELECT TABLE_NAME, OWNER, TABLESPACE_NAME, STATUS, TABLE_LOCK FROM DBA_TABLES " + " WHERE " + " TABLE_NAME like Upper('%" + textBoxTenTable.Text + "%')";
+            getListTable.CommandText = "Select * from USER_TABLES " + " WHERE " + " TABLE_NAME like Upper('%" + textBoxTenTable.Text + "%')";
             getListTable.CommandType = CommandType.Text;
             OracleDataReader temp = getListTable.ExecuteReader();
             DataTable table_DSTable = new DataTable();
@@ -40,7 +40,7 @@ namespace PHANHE1
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListTable = conn.CreateCommand();
-            getListTable.CommandText = "SELECT TABLE_NAME, OWNER, TABLESPACE_NAME, STATUS, TABLE_LOCK FROM DBA_TABLES";
+            getListTable.CommandText = "select * from USER_TABLES";
             getListTable.CommandType = CommandType.Text;
             OracleDataReader temp = getListTable.ExecuteReader();
             DataTable table_DSTable = new DataTable();

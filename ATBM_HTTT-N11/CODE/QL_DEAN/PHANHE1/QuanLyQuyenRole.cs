@@ -76,7 +76,7 @@ namespace PHANHE1
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
             OracleCommand getData = conn.CreateCommand();
-            getData.CommandText = "select * from ROLE_TAB_PRIVS WHERE ROLE LIKE 'RL_%'";
+            getData.CommandText = "SELECT ROLE, OWNER, TABLE_NAME, COLUMN_NAME, PRIVILEGE, GRANTABLE FROM ROLE_TAB_PRIVS WHERE ROLE LIKE 'RL_%'";
             getData.CommandType = CommandType.Text;
             OracleDataReader data = getData.ExecuteReader();
             DataTable tempDT = new DataTable();

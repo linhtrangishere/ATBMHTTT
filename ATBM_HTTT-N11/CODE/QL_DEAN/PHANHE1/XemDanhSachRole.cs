@@ -29,7 +29,7 @@ namespace PHANHE1
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
             OracleCommand getListRole = conn.CreateCommand();
-            getListRole.CommandText = "SELECT ROLE, ROLE_ID, PASSWORD_REQUIRED, AUTHENTICATION_TYPE, COMMON FROM DBA_ROLES " + " WHERE " + " ROLE like Upper('%" + textBoxTenRole.Text + "%')";
+            getListRole.CommandText = "SELECT * FROM DBA_ROLES WHERE ROLE LIKE 'RL_%' AND ROLE like Upper('%" + textBoxTenRole.Text + "%')";
             getListRole.CommandType = CommandType.Text;
             OracleDataReader temp = getListRole.ExecuteReader();
             DataTable table_DSRole = new DataTable();
@@ -40,7 +40,7 @@ namespace PHANHE1
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListRole = conn.CreateCommand();
-            getListRole.CommandText = "SELECT ROLE, ROLE_ID, PASSWORD_REQUIRED, AUTHENTICATION_TYPE, COMMON FROM DBA_ROLES";
+            getListRole.CommandText = "SELECT * FROM DBA_ROLES WHERE ROLE LIKE 'RL_%'";
             getListRole.CommandType = CommandType.Text;
             OracleDataReader temp = getListRole.ExecuteReader();
             DataTable table_DSRole = new DataTable();

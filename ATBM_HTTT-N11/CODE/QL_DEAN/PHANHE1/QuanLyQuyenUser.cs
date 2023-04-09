@@ -78,7 +78,7 @@ namespace PHANHE1
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
             OracleCommand getData = conn.CreateCommand();
-            getData.CommandText = "select * from USER_TAB_PRIVS";
+            getData.CommandText = "select * from user_tab_privs WHERE GRANTEE NOT LIKE 'RL%'";
             getData.CommandType = CommandType.Text;
             OracleDataReader data = getData.ExecuteReader();
             DataTable tempDT = new DataTable();
