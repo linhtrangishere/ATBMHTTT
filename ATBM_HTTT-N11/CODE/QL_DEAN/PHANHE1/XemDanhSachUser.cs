@@ -29,7 +29,7 @@ namespace PHANHE1
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListUser = conn.CreateCommand();
-            getListUser.CommandText = "SELECT USERNAME, USER_ID, CREATED, COMMON FROM ALL_USERS";
+            getListUser.CommandText = "SELECT USERNAME, USER_ID, CREATED, COMMON FROM DBA_USERS ORDER BY CREATED DESC";
             getListUser.CommandType = CommandType.Text;
             OracleDataReader temp = getListUser.ExecuteReader();
             DataTable table_DSUser = new DataTable();
@@ -40,7 +40,7 @@ namespace PHANHE1
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
             OracleCommand getListUser = conn.CreateCommand();
-            getListUser.CommandText = "SELECT USERNAME, USER_ID, CREATED, COMMON FROM ALL_USERS " + " WHERE " + " USERNAME like Upper('%" + textBoxUsername.Text + "%')"; ;
+            getListUser.CommandText = "SELECT USERNAME, USER_ID, CREATED, COMMON FROM DBA_USERS " + " WHERE " + " USERNAME like Upper('%" + textBoxUsername.Text + "%')" + "ORDER BY CREATED DESC";
             getListUser.CommandType = CommandType.Text;
             OracleDataReader temp = getListUser.ExecuteReader();
             DataTable table_DSUser = new DataTable();

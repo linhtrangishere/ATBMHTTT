@@ -117,6 +117,7 @@
             this.Controls.Add(this.panelXemDanhSachView);
             this.Name = "XemDanhSachView";
             this.Text = "XemDanhSachView";
+            this.Load += new System.EventHandler(this.XemDanhSachView_Load);
             this.panelXemDanhSachView.ResumeLayout(false);
             this.panelXemDanhSachView.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemDanhSachView)).EndInit();

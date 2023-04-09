@@ -52,5 +52,10 @@ namespace PHANHE1
         {
 
         }
+
+        private void XemDanhSachView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
