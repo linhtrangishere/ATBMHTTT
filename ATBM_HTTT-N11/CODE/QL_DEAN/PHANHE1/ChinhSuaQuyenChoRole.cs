@@ -236,7 +236,7 @@ namespace PHANHE1
                 OracleCommand command2 = new OracleCommand(text2, conn);
                 command2.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Phân quyền thành công!", "Thông báo");
+                MessageBox.Show("Cập nhật quyền thành công!", "Thông báo");
             }
         }
 

@@ -164,7 +164,7 @@ namespace PHANHE1
         {
             if (comboBoxThuHoiQuyen.SelectedIndex == 1 || comboBoxThuHoiQuyen.SelectedIndex == 3)
             {
-                comboBoxThuHoiQuyen.DataSource = null;
+                comboBoxCotThuHoi.DataSource = null;
             }
         }
 
