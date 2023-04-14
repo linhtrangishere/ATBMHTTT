@@ -23,15 +23,16 @@ namespace PHANHE1
             comboBoxQuyenMoi.Items.Add("INSERT");
             comboBoxQuyenMoi.Items.Add("UPDATE");
             comboBoxQuyenMoi.Items.Add("DELETE");
+            comboBoxQuyenMoi.SelectedIndex = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
+            //combobox username
             try
             {
-                //CAC TUY CHON USER
                 DataTable dt2 = new DataTable();
                 string temp = "SELECT * FROM dba_users WHERE USERNAME NOT LIKE '%SYS%' AND ACCOUNT_STATUS = 'OPEN' ORDER BY created DESC";
                 OracleCommand Cmd = new OracleCommand(temp, conn);
@@ -45,11 +46,11 @@ namespace PHANHE1
 
             catch
             {
-                MessageBox.Show("Không tồn tại user nào để cấp quyền!");
+                MessageBox.Show("Không tồn tại user nào!");
             }
+            //combobox table
             try
             {
-                //CAC TUY CHON BANG
                 DataTable dt = new DataTable();
                 string temp = "select TABLE_NAME from USER_TABLES";
                 OracleCommand a_Cmd = new OracleCommand(temp, conn);
@@ -60,7 +61,8 @@ namespace PHANHE1
                 comboBoxBang.ValueMember = dt.Columns[0].ColumnName;
                 comboBoxBang.DataSource = dt;
             }
-            catch {
+            catch 
+            {
                 MessageBox.Show("Không tồn tại bảng nào !!!");
             }
             conn.Close();
@@ -71,6 +73,7 @@ namespace PHANHE1
         {
             this.Close();
         }
+        
         private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxCapTrenCot.Checked)
@@ -99,9 +102,6 @@ namespace PHANHE1
 
         private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //CAC TUY CHON COT
-            //if (comboBoxQuyenMoi.SelectedValue.ToString() != "INSERT" && comboBoxQuyenMoi.SelectedValue.ToString() != "DELETE" && !checkBoxCapTrenCot.Checked)
-            //{
                 OracleConnection conn = new OracleConnection(Login.connectionString);
                 conn.Open();
                 string temp;
@@ -116,7 +116,6 @@ namespace PHANHE1
                 comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
                 comboBoxCot.DataSource = dt2;
                 conn.Close();
-            //}
         }
 
         private void dataGridViewChinhSuaQuyenChoUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -128,60 +127,20 @@ namespace PHANHE1
 
         }
         public string bangCu = null;
+        public string typ = null;
+        //xem quyen hien co cua mot user
         private void dataGridViewChinhSuaQuyenChoUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridViewChinhSuaQuyenChoUser.Rows[e.RowIndex];
-                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();
-                bangCu = row.Cells[2].Value.ToString();
+                DataGridViewRow row = dataGridViewChinhSuaQuyenChoUser.Rows[e.RowIndex];//lay dong hien tai dang chon
+                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();//lay quyen cua dong dang chon bo vao quyen cu
+                bangCu = row.Cells[2].Value.ToString();//lay bang cua dong dang chon bo vao bang cu
+                typ = row.Cells[8].Value.ToString();//kiem tra xem day la table or view
             }
             conn.Close();
-        }
-        //REVOKE QUYEN TU NGUOI DUNG
-        private void buttonChon_Click(object sender, EventArgs e)
-        {
-            OracleConnection conn = new OracleConnection(Login.connectionString);
-            conn.Open();
-            string table = bangCu;
-            string privs = textBoxQuyenCu.Text;
-            string username = comboBoxUserName.SelectedValue.ToString();
-
-            if (comboBoxCot.SelectedValue != null && privs != "SELECT" && privs != "UPDATE")
-            {
-                MessageBox.Show("Quyền này không thể thay đổi !!!");
-            }
-            else if (comboBoxCot.SelectedValue == null)
-            {
-                string temp = "REVOKE " + privs + " ON " + table + " FROM " + username;
-                Console.WriteLine(temp);
-                Console.WriteLine(temp);
-                OracleCommand command = new OracleCommand(temp, conn);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Hãy nhập quyền mới");
-
-            }
-            else
-            {
-                try
-                {
-                    string col = comboBoxCot.SelectedValue.ToString();
-                    string text = "REVOKE " + privs + " ON UV_" + username + "_" + table + "_" + col + " FROM " + username;
-                    OracleCommand command = new OracleCommand(text, conn);
-                    command.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Hãy nhập quyền mới");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-
-            }
-            conn.Close();
-
         }
         //XEM QUYEN CUA TAT CA CAC NGUOI DUNG DUOC CAP QUYEN
         private void buttonXemTatCa_Click(object sender, EventArgs e)
@@ -200,27 +159,56 @@ namespace PHANHE1
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
-            string table = comboBoxBang.SelectedValue.ToString();
-            int index = comboBoxQuyenMoi.SelectedIndex;
-            string privs = pri[index];
+
+            //revoke quyen cu
+            string tabName = bangCu; // bang chua quyen cu can thay doi
+            string tbType = typ;
+            string privs = textBoxQuyenCu.Text;// quyen cu can thay doi
             string username = comboBoxUserName.SelectedValue.ToString();
 
-            if (comboBoxCot.SelectedValue != null && privs != "SELECT" && privs != "UPDATE")
+            if (tbType == "VIEW" && privs != "SELECT" && privs != "UPDATE")
             {
-                MessageBox.Show("Quyền này không thể cập nhật");
+                MessageBox.Show("Chỉ được thu hồi quyền SELECT, UPDATE trên cột !!!");
+            }
+            else // TH: Table or view with privs select or update
+            {
+                try
+                {
+                    string temp = "REVOKE " + privs + " ON " + tabName + " FROM " + username;
+                    Console.WriteLine(temp);
+                    OracleCommand command = new OracleCommand(temp, conn);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
+
+            
+            //cap nhat lai quyen moi
+            string table = comboBoxBang.SelectedValue.ToString();
+            int index = comboBoxQuyenMoi.SelectedIndex;
+            string privs2 = pri[index];
+            string username2 = comboBoxUserName.SelectedValue.ToString();
+
+            if (comboBoxCot.SelectedValue != null && privs2 != "SELECT" && privs2 != "UPDATE")
+            {
+                MessageBox.Show("Chỉ được cấp quyền SELECT, UPDATE trên cột!");
             }
             else if (comboBoxCot.SelectedValue == null)
             {
                 if (checkBoxWithGrantOption.Checked)
                 {
-                    string text = "GRANT " + privs + " ON " + table + " TO " + username + " WITH GRANT OPTION";
+                    string text = "GRANT " + privs2 + " ON " + table + " TO " + username2 + " WITH GRANT OPTION";
                     Console.WriteLine(text);
                     OracleCommand command = new OracleCommand(text, conn);
                     command.ExecuteNonQuery();
                 }
                 else
                 {
-                    string text = "GRANT " + privs + " ON " + table + " TO " + username;
+                    string text = "GRANT " + privs2 + " ON " + table + " TO " + username2;
                     Console.WriteLine(text);
                     OracleCommand command = new OracleCommand(text, conn);
                     command.ExecuteNonQuery();
@@ -233,30 +221,30 @@ namespace PHANHE1
                 if (comboBoxCot.SelectedValue != null)
                 {
                     string col = comboBoxCot.SelectedValue.ToString();
-                    string text = "CREATE OR REPLACE VIEW UV_" + username + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
+                    string text = "CREATE OR REPLACE VIEW UV_" + username2 + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
                     OracleCommand command = new OracleCommand(text, conn);
                     command.ExecuteNonQuery();
                     string text2 = "";
-                    if (privs == "SELECT")
+                    if (privs2 == "SELECT")
                     {
                         if (checkBoxWithGrantOption.Checked)
                         {
-                            text2 = "GRANT " + privs + " ON UV_" + username + "_" + table + "_" + col + " TO " + username + " WITH GRANT OPTION";
+                            text2 = "GRANT " + privs2 + " ON UV_" + username2 + "_" + table + "_" + col + " TO " + username2 + " WITH GRANT OPTION";
                         }
                         else
                         {
-                            text2 = "GRANT " + privs + " ON UV_" + username + "_" + table + "_" + col + " TO " + username;
+                            text2 = "GRANT " + privs2 + " ON UV_" + username2 + "_" + table + "_" + col + " TO " + username2;
                         }
                     }
-                    else if (privs == "UPDATE")
+                    else if (privs2 == "UPDATE")
                     {
                         if (checkBoxWithGrantOption.Checked)
                         {
-                            text2 = "GRANT " + privs + "(" + col + ") ON UV_" + username + "_" + table + "_" + col + " TO " + username + " WITH GRANT OPTION";
+                            text2 = "GRANT " + privs2 + "(" + col + ") ON UV_" + username2 + "_" + table + "_" + col + " TO " + username2 + " WITH GRANT OPTION";
                         }
                         else
                         {
-                            text2 = "GRANT " + privs + "(" + col + ") ON UV_" + username + "_" + table + "_" + col + " TO " + username;
+                            text2 = "GRANT " + privs2 + "(" + col + ") ON UV_" + username2 + "_" + table + "_" + col + " TO " + username2;
                         }
                     }
                     Console.WriteLine(text2);
@@ -286,3 +274,4 @@ namespace PHANHE1
         }
     }
 }
+
