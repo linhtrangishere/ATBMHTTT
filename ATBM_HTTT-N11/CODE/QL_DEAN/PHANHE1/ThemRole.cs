@@ -52,6 +52,7 @@ namespace PHANHE1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm role thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                textBoxNhapTenRole.Clear();
             }
             catch (Exception ex)
             {

@@ -29,44 +29,56 @@
         private void InitializeComponent()
         {
             this.panelQuanLyUser = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelThemXoaSua = new System.Windows.Forms.Panel();
             this.buttonChinhSuaUser = new System.Windows.Forms.Button();
             this.buttonTaoUser = new System.Windows.Forms.Button();
             this.buttonXoaUser = new System.Windows.Forms.Button();
             this.panelQuanLyUser.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
             this.panelThemXoaSua.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelQuanLyUser
             // 
             this.panelQuanLyUser.BackColor = System.Drawing.Color.White;
-            this.panelQuanLyUser.Controls.Add(this.panelThemXoaSua);
-            this.panelQuanLyUser.Location = new System.Drawing.Point(0, -8);
-            this.panelQuanLyUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelQuanLyUser.Controls.Add(this.panelChildForm);
+            this.panelQuanLyUser.Location = new System.Drawing.Point(0, -10);
+            this.panelQuanLyUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQuanLyUser.Name = "panelQuanLyUser";
-            this.panelQuanLyUser.Size = new System.Drawing.Size(701, 561);
+            this.panelQuanLyUser.Size = new System.Drawing.Size(935, 690);
             this.panelQuanLyUser.TabIndex = 2;
             this.panelQuanLyUser.Paint += new System.Windows.Forms.PaintEventHandler(this.panelQuanLyUser_Paint);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Controls.Add(this.panelThemXoaSua);
+            this.panelChildForm.Location = new System.Drawing.Point(0, 15);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(932, 672);
+            this.panelChildForm.TabIndex = 19;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // panelThemXoaSua
             // 
             this.panelThemXoaSua.Controls.Add(this.buttonChinhSuaUser);
             this.panelThemXoaSua.Controls.Add(this.buttonTaoUser);
             this.panelThemXoaSua.Controls.Add(this.buttonXoaUser);
-            this.panelThemXoaSua.Location = new System.Drawing.Point(0, 81);
-            this.panelThemXoaSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelThemXoaSua.Location = new System.Drawing.Point(3, 146);
+            this.panelThemXoaSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelThemXoaSua.Name = "panelThemXoaSua";
-            this.panelThemXoaSua.Size = new System.Drawing.Size(701, 122);
+            this.panelThemXoaSua.Size = new System.Drawing.Size(929, 150);
             this.panelThemXoaSua.TabIndex = 18;
+            this.panelThemXoaSua.Paint += new System.Windows.Forms.PaintEventHandler(this.panelThemXoaSua_Paint);
             // 
             // buttonChinhSuaUser
             // 
             this.buttonChinhSuaUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonChinhSuaUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonChinhSuaUser.Location = new System.Drawing.Point(488, 23);
-            this.buttonChinhSuaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChinhSuaUser.Location = new System.Drawing.Point(651, 28);
+            this.buttonChinhSuaUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonChinhSuaUser.Name = "buttonChinhSuaUser";
-            this.buttonChinhSuaUser.Size = new System.Drawing.Size(174, 76);
+            this.buttonChinhSuaUser.Size = new System.Drawing.Size(232, 94);
             this.buttonChinhSuaUser.TabIndex = 20;
             this.buttonChinhSuaUser.Text = "Chỉnh sửa user";
             this.buttonChinhSuaUser.UseVisualStyleBackColor = false;
@@ -76,10 +88,10 @@
             // 
             this.buttonTaoUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonTaoUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonTaoUser.Location = new System.Drawing.Point(38, 23);
-            this.buttonTaoUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTaoUser.Location = new System.Drawing.Point(51, 28);
+            this.buttonTaoUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTaoUser.Name = "buttonTaoUser";
-            this.buttonTaoUser.Size = new System.Drawing.Size(174, 76);
+            this.buttonTaoUser.Size = new System.Drawing.Size(232, 94);
             this.buttonTaoUser.TabIndex = 19;
             this.buttonTaoUser.Text = "Tạo user";
             this.buttonTaoUser.UseVisualStyleBackColor = false;
@@ -90,10 +102,10 @@
             this.buttonXoaUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonXoaUser.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonXoaUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonXoaUser.Location = new System.Drawing.Point(262, 23);
-            this.buttonXoaUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonXoaUser.Location = new System.Drawing.Point(349, 28);
+            this.buttonXoaUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXoaUser.Name = "buttonXoaUser";
-            this.buttonXoaUser.Size = new System.Drawing.Size(174, 76);
+            this.buttonXoaUser.Size = new System.Drawing.Size(232, 94);
             this.buttonXoaUser.TabIndex = 18;
             this.buttonXoaUser.Text = "Xóa user";
             this.buttonXoaUser.UseVisualStyleBackColor = false;
@@ -101,15 +113,16 @@
             // 
             // QuanLyUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 547);
+            this.ClientSize = new System.Drawing.Size(932, 673);
             this.Controls.Add(this.panelQuanLyUser);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyUser";
             this.Text = "QuanLyUser";
             this.Load += new System.EventHandler(this.QuanLyUser_Load);
             this.panelQuanLyUser.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -122,5 +135,6 @@
         private System.Windows.Forms.Button buttonChinhSuaUser;
         private System.Windows.Forms.Button buttonTaoUser;
         private System.Windows.Forms.Button buttonXoaUser;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }

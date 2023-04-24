@@ -38,30 +38,44 @@ namespace PHANHE1
             }
         }
 
+        private Form formchild = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (formchild != null)
+            {
+                formchild.Close();
+            }
+            formchild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void buttonTaoRole_Click(object sender, EventArgs e)
         {
-            ThemRole addrole = new ThemRole();
-            addrole.Show();
-            SwitchColorMenu(sender, e);
+            OpenChildForm(new ThemRole());
+            //SwitchColorMenu(sender, e);
         }
 
         private void buttonChinhSuaRole_Click(object sender, EventArgs e)
         {
-            ChinhSuaRole chinhsuarole = new ChinhSuaRole();
-            chinhsuarole.Show();
-            SwitchColorMenu(sender, e);
+            OpenChildForm(new ChinhSuaRole());
+            //SwitchColorMenu(sender, e);
         }
 
         private void buttonXoaRole_Click(object sender, EventArgs e)
         {
-            XoaRole xoarole = new XoaRole();
-            xoarole.Show();
-            SwitchColorMenu(sender, e);
+            OpenChildForm(new XoaRole());
+            //SwitchColorMenu(sender, e);
         }
 
         private void QuanLyRole_Load(object sender, EventArgs e)
         {
-
+            panelChildForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         }
 
         private void dataGridViewQuanLyRole_CellContentClick(object sender, DataGridViewCellEventArgs e)

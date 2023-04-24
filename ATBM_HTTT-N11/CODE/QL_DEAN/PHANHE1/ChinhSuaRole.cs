@@ -55,6 +55,8 @@ namespace PHANHE1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Đặt mật khẩu cho role thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                textBoxRole.Clear();
+                textBoxMatKhau.Clear();
             }
             catch (Exception ex)
             {

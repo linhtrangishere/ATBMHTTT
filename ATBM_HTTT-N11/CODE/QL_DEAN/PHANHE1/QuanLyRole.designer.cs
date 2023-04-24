@@ -33,14 +33,16 @@
             this.buttonChinhSuaRole = new System.Windows.Forms.Button();
             this.buttonTaoRole = new System.Windows.Forms.Button();
             this.buttonXoaRole = new System.Windows.Forms.Button();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelQuanLyRole.SuspendLayout();
             this.panelThemXoaSua.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelQuanLyRole
             // 
             this.panelQuanLyRole.BackColor = System.Drawing.Color.White;
-            this.panelQuanLyRole.Controls.Add(this.panelThemXoaSua);
+            this.panelQuanLyRole.Controls.Add(this.panelChildForm);
             this.panelQuanLyRole.Location = new System.Drawing.Point(0, -10);
             this.panelQuanLyRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQuanLyRole.Name = "panelQuanLyRole";
@@ -53,7 +55,7 @@
             this.panelThemXoaSua.Controls.Add(this.buttonChinhSuaRole);
             this.panelThemXoaSua.Controls.Add(this.buttonTaoRole);
             this.panelThemXoaSua.Controls.Add(this.buttonXoaRole);
-            this.panelThemXoaSua.Location = new System.Drawing.Point(0, 100);
+            this.panelThemXoaSua.Location = new System.Drawing.Point(3, 131);
             this.panelThemXoaSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelThemXoaSua.Name = "panelThemXoaSua";
             this.panelThemXoaSua.Size = new System.Drawing.Size(935, 150);
@@ -99,6 +101,14 @@
             this.buttonXoaRole.UseVisualStyleBackColor = false;
             this.buttonXoaRole.Click += new System.EventHandler(this.buttonXoaRole_Click);
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Controls.Add(this.panelThemXoaSua);
+            this.panelChildForm.Location = new System.Drawing.Point(0, 15);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(932, 672);
+            this.panelChildForm.TabIndex = 19;
+            // 
             // QuanLyRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -111,6 +121,7 @@
             this.Load += new System.EventHandler(this.QuanLyRole_Load);
             this.panelQuanLyRole.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -122,5 +133,6 @@
         private System.Windows.Forms.Button buttonChinhSuaRole;
         private System.Windows.Forms.Button buttonTaoRole;
         private System.Windows.Forms.Button buttonXoaRole;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }

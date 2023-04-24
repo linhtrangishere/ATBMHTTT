@@ -53,6 +53,8 @@ namespace PHANHE1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Chỉnh sửa user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                textBoxTaiKhoan.Clear();
+                textBoxMatKhau.Clear();
             }
             catch (Exception ex)
             {

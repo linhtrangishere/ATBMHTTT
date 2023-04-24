@@ -53,6 +53,7 @@ namespace PHANHE1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                textBoxXoaUser.Clear();
             }
             catch (Exception ex)
             {

@@ -38,6 +38,22 @@ namespace PHANHE1
                 btn.BackColor = Color.FromArgb(255, 212, 178);
             }
         }
+        private Form formchild = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (formchild != null)
+            {
+                formchild.Close();
+            }
+            formchild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void panelQuanLyUser_Paint(object sender, PaintEventArgs e)
         {
@@ -46,26 +62,33 @@ namespace PHANHE1
 
         private void buttonTaoUser_Click(object sender, EventArgs e)
         {
-            ThemUser adduser = new ThemUser();
-            adduser.Show();
-            SwitchColorMenu(sender, e);
+            OpenChildForm(new ThemUser());
+            //SwitchColorMenu(sender, e);
         }
 
         private void buttonChinhSuaUser_Click(object sender, EventArgs e)
         {
-            ChinhSuaUser chinhsuauser = new ChinhSuaUser();
-            chinhsuauser.Show();
-            SwitchColorMenu(sender, e);
+            OpenChildForm(new ChinhSuaUser());
+            //SwitchColorMenu(sender, e);
         }
 
         private void buttonXoaUser_Click(object sender, EventArgs e)
         {
-            XoaUser xoauser = new XoaUser();
-            xoauser.Show();
-            SwitchColorMenu(sender, e);
+            OpenChildForm(new XoaUser());
+            //SwitchColorMenu(sender, e);
         }
 
         private void QuanLyUser_Load(object sender, EventArgs e)
+        {
+            panelChildForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        }
+
+        private void panelThemXoaSua_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
 
         }

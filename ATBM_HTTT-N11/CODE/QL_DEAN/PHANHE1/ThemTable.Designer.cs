@@ -46,6 +46,7 @@
             this.checkBox = new System.Windows.Forms.CheckBox();
             this.textBoxTenCot = new System.Windows.Forms.TextBox();
             this.textBoxDataType = new System.Windows.Forms.TextBox();
+            this.oracleCommandBuilder1 = new Oracle.ManagedDataAccess.Client.OracleCommandBuilder();
             this.groupBox.SuspendLayout();
             this.panelThemTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemTable)).BeginInit();
@@ -234,6 +235,11 @@
             this.textBoxDataType.Size = new System.Drawing.Size(400, 50);
             this.textBoxDataType.TabIndex = 42;
             // 
+            // oracleCommandBuilder1
+            // 
+            this.oracleCommandBuilder1.CatalogLocation = System.Data.Common.CatalogLocation.End;
+            this.oracleCommandBuilder1.CatalogSeparator = "@";
+            // 
             // ThemTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,6 +289,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenCot;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataType;
         private System.Windows.Forms.DataGridViewTextBoxColumn primaryKey;
+        private Oracle.ManagedDataAccess.Client.OracleCommandBuilder oracleCommandBuilder1;
     }
 }
 

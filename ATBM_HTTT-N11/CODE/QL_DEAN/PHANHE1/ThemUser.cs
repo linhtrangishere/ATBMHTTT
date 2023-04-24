@@ -60,7 +60,8 @@ namespace PHANHE1
                 set_script_cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                textBoxTaiKhoan.Clear();
+                textBoxMatKhau.Clear();
             }
             catch (Exception ex)
             {
@@ -77,6 +78,7 @@ namespace PHANHE1
         private void buttonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void textBoxTaiKhoan_TextChanged(object sender, EventArgs e)
@@ -89,6 +91,14 @@ namespace PHANHE1
 
         }
 
-        
+        private void labelTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelThemUser_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

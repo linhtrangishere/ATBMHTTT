@@ -42,8 +42,9 @@
             this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.Location = new System.Drawing.Point(0, 150);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(935, 850);
+            this.panelChildForm.Size = new System.Drawing.Size(935, 682);
             this.panelChildForm.TabIndex = 2;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // panelUserRole
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.panelChildForm);
             this.Name = "QuanLyObjects";
             this.Text = "QuanLyUserRole";
+            this.Load += new System.EventHandler(this.QuanLyObjects_Load);
             this.panelUserRole.ResumeLayout(false);
             this.ResumeLayout(false);
 

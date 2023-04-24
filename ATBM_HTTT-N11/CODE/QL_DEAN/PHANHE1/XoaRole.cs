@@ -52,10 +52,11 @@ namespace PHANHE1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa role thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                textBoxXoaRole.Clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Tạo role thất bại, mã lỗi: " + ex.Message);
+                MessageBox.Show("Xóa role thất bại, mã lỗi: " + ex.Message);
             }
 
         }
