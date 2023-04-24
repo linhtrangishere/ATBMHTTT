@@ -24,7 +24,7 @@ namespace PHANHE1
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListView = conn.CreateCommand();
-            getListView.CommandText = "SELECT VIEW_NAME, OWNER, TEXT_LENGTH FROM DBA_VIEWS";
+            getListView.CommandText = "SELECT * FROM USER_VIEWS";
             getListView.CommandType = CommandType.Text;
             OracleDataReader temp = getListView.ExecuteReader();
             DataTable table_DSView = new DataTable();
@@ -35,7 +35,7 @@ namespace PHANHE1
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
             OracleCommand getListView = conn.CreateCommand();
-            getListView.CommandText = "SELECT VIEW_NAME, OWNER, TEXT_LENGTH FROM DBA_VIEWS " + " WHERE " + " VIEW_NAME like Upper('%" + textBoxTenView.Text + "%')";
+            getListView.CommandText = "SELECT * FROM USER_VIEWS " + " WHERE " + " VIEW_NAME like Upper('%" + textBoxTenView.Text + "%')";
             getListView.CommandType = CommandType.Text;
             OracleDataReader temp = getListView.ExecuteReader();
             DataTable table_DSTable = new DataTable();

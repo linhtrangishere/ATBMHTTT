@@ -31,64 +31,54 @@
             this.panelQuanLyTable = new System.Windows.Forms.Panel();
             this.panelThemTable = new System.Windows.Forms.Panel();
             this.buttonTaoTable = new System.Windows.Forms.Button();
-            this.dataGridViewQuanLyTable = new System.Windows.Forms.DataGridView();
             this.panelQuanLyTable.SuspendLayout();
             this.panelThemTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panelQuanLyTable
             // 
             this.panelQuanLyTable.BackColor = System.Drawing.Color.White;
             this.panelQuanLyTable.Controls.Add(this.panelThemTable);
-            this.panelQuanLyTable.Controls.Add(this.dataGridViewQuanLyTable);
-            this.panelQuanLyTable.Location = new System.Drawing.Point(0, -10);
+            this.panelQuanLyTable.Location = new System.Drawing.Point(0, -8);
+            this.panelQuanLyTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelQuanLyTable.Name = "panelQuanLyTable";
-            this.panelQuanLyTable.Size = new System.Drawing.Size(935, 690);
+            this.panelQuanLyTable.Size = new System.Drawing.Size(701, 561);
             this.panelQuanLyTable.TabIndex = 2;
             this.panelQuanLyTable.Paint += new System.Windows.Forms.PaintEventHandler(this.panelQuanLyUser_Paint);
             // 
             // panelThemTable
             // 
             this.panelThemTable.Controls.Add(this.buttonTaoTable);
-            this.panelThemTable.Location = new System.Drawing.Point(0, 100);
+            this.panelThemTable.Location = new System.Drawing.Point(0, 81);
+            this.panelThemTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelThemTable.Name = "panelThemTable";
-            this.panelThemTable.Size = new System.Drawing.Size(935, 150);
+            this.panelThemTable.Size = new System.Drawing.Size(701, 122);
             this.panelThemTable.TabIndex = 18;
             // 
             // buttonTaoTable
             // 
             this.buttonTaoTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonTaoTable.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonTaoTable.Location = new System.Drawing.Point(350, 28);
+            this.buttonTaoTable.Location = new System.Drawing.Point(262, 23);
+            this.buttonTaoTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTaoTable.Name = "buttonTaoTable";
-            this.buttonTaoTable.Size = new System.Drawing.Size(232, 94);
+            this.buttonTaoTable.Size = new System.Drawing.Size(174, 76);
             this.buttonTaoTable.TabIndex = 19;
             this.buttonTaoTable.Text = "Tạo table";
             this.buttonTaoTable.UseVisualStyleBackColor = false;
             this.buttonTaoTable.Click += new System.EventHandler(this.buttonTaoUser_Click);
             // 
-            // dataGridViewQuanLyTable
-            // 
-            this.dataGridViewQuanLyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewQuanLyTable.Location = new System.Drawing.Point(0, 337);
-            this.dataGridViewQuanLyTable.Name = "dataGridViewQuanLyTable";
-            this.dataGridViewQuanLyTable.RowHeadersWidth = 51;
-            this.dataGridViewQuanLyTable.RowTemplate.Height = 24;
-            this.dataGridViewQuanLyTable.Size = new System.Drawing.Size(935, 350);
-            this.dataGridViewQuanLyTable.TabIndex = 14;
-            // 
             // QuanLyTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 673);
+            this.ClientSize = new System.Drawing.Size(699, 547);
             this.Controls.Add(this.panelQuanLyTable);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "QuanLyTable";
             this.Text = "QuanLyTable";
             this.panelQuanLyTable.ResumeLayout(false);
             this.panelThemTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,7 +86,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelQuanLyTable;
-        private System.Windows.Forms.DataGridView dataGridViewQuanLyTable;
         private System.Windows.Forms.Panel panelThemTable;
         private System.Windows.Forms.Button buttonTaoTable;
     }

@@ -38,7 +38,6 @@
             this.labelBang = new System.Windows.Forms.Label();
             this.labelQuyenMoi = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonChon = new System.Windows.Forms.Button();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonXem = new System.Windows.Forms.Button();
             this.buttonCapNhat = new System.Windows.Forms.Button();
@@ -150,7 +149,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonChon);
             this.panel1.Controls.Add(this.buttonXemTatCa);
             this.panel1.Controls.Add(this.buttonXem);
             this.panel1.Controls.Add(this.buttonCapNhat);
@@ -160,24 +158,11 @@
             this.panel1.Size = new System.Drawing.Size(276, 830);
             this.panel1.TabIndex = 37;
             // 
-            // buttonChon
-            // 
-            this.buttonChon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.buttonChon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonChon.Location = new System.Drawing.Point(40, 359);
-            this.buttonChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonChon.Name = "buttonChon";
-            this.buttonChon.Size = new System.Drawing.Size(200, 70);
-            this.buttonChon.TabIndex = 39;
-            this.buttonChon.Text = "Chọn";
-            this.buttonChon.UseVisualStyleBackColor = false;
-            this.buttonChon.Click += new System.EventHandler(this.buttonChon_Click);
-            // 
             // buttonXemTatCa
             // 
             this.buttonXemTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
             this.buttonXemTatCa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonXemTatCa.Location = new System.Drawing.Point(40, 190);
+            this.buttonXemTatCa.Location = new System.Drawing.Point(40, 154);
             this.buttonXemTatCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXemTatCa.Name = "buttonXemTatCa";
             this.buttonXemTatCa.Size = new System.Drawing.Size(200, 70);
@@ -330,7 +315,6 @@
         private System.Windows.Forms.Label labelBang;
         private System.Windows.Forms.Label labelQuyenMoi;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonChon;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonXem;
         private System.Windows.Forms.Button buttonCapNhat;

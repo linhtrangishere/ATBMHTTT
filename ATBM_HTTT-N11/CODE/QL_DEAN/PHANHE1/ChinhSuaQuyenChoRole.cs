@@ -22,11 +22,11 @@ namespace PHANHE1
             comboBoxQuyenMoi.Items.Add("INSERT");
             comboBoxQuyenMoi.Items.Add("UPDATE");
             comboBoxQuyenMoi.Items.Add("DELETE");
+            comboBoxQuyenMoi.SelectedIndex = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //CAC TUY CHON BANG
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
             try
@@ -43,7 +43,7 @@ namespace PHANHE1
             }
              catch
             {
-                MessageBox.Show("Không tồn tại role nào!");
+                MessageBox.Show("Không tồn tại role nào!!!");
             }
             try
             {
@@ -77,11 +77,10 @@ namespace PHANHE1
 
         private void buttonXem_Click(object sender, EventArgs e)
         {
-            //XEM QUYEN CUA ROLE
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
             string rolename = comboBoxRoleName.SelectedValue.ToString();
-            string temp = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE = '"+rolename+"'";
+            string temp = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE = '"+ rolename +"'";
             OracleDataAdapter adp = new OracleDataAdapter(temp, conn);
             DataTable dt = new DataTable();
             adp.Fill(dt);
@@ -101,8 +100,6 @@ namespace PHANHE1
 
         private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (comboBoxQuyenMoi.SelectedValue.ToString() != "INSERT" && comboBoxQuyenMoi.SelectedValue.ToString() != "DELETE" && !checkBoxCapTrenCot.Checked)
-            //{
                 OracleConnection conn = new OracleConnection(Login.connectionString);
                 conn.Open();
                 string temp;
@@ -117,7 +114,6 @@ namespace PHANHE1
                 comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
                 comboBoxCot.DataSource = dt2;
                 conn.Close();
-            //}
         }
 
         private void buttonXemTatCa_Click(object sender, EventArgs e)
@@ -137,8 +133,22 @@ namespace PHANHE1
         {
 
         }
-        public string bangCu = null;
+
+        
         private void dataGridViewChinhSuaQuyenChoRole_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCapTrenCot.Checked)
+            {
+                comboBoxCot.DataSource = null;
+            }
+        }
+        public string bangCu = null;
+      
+        private void dataGridViewChinhSuaQuyenChoRole_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
@@ -147,53 +157,35 @@ namespace PHANHE1
                 DataGridViewRow row = dataGridViewChinhSuaQuyenChoRole.Rows[e.RowIndex];
                 textBoxQuyenCu.Text = row.Cells[4].Value.ToString();
                 bangCu = row.Cells[2].Value.ToString();
+             
             }
             conn.Close();
         }
-
-        private void buttonChon_Click(object sender, EventArgs e)
-        {
-            OracleConnection conn = new OracleConnection(Login.connectionString);
-            conn.Open();
-            string table = bangCu;
-            string privs = textBoxQuyenCu.Text;
-            string role = comboBoxRoleName.SelectedValue.ToString();
-
-            if (comboBoxCot.SelectedValue != null && privs != "SELECT" && privs != "UPDATE")
-            {
-                MessageBox.Show("Quyền này không thể thay đổi !!!");
-            }
-            else if (comboBoxCot.SelectedValue == null)
-            {
-                string temp = "REVOKE " + privs + " ON " + table + " FROM " + role;
-                Console.WriteLine(temp);
-                OracleCommand command = new OracleCommand(temp, conn);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Hãy nhập quyền mới");
-
-            }
-            else
-            {
-                try
-                {
-                    string col = comboBoxCot.SelectedValue.ToString();
-                    string text = "REVOKE " + privs + " ON UV_" + role + "_" + table + "_" + col + " FROM " + role;
-                    OracleCommand command = new OracleCommand(text, conn);
-                    command.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Hãy nhập quyền mới");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-
-            }
-            conn.Close();
-        }
-
         private void buttonCapNhat_Click(object sender, EventArgs e)
         {
+            //revoke quyền
+            OracleConnection conn = new OracleConnection(Login.connectionString);
+            conn.Open();
+            string table1 = bangCu;
+            string privs1 = textBoxQuyenCu.Text;
+            string role1 = comboBoxRoleName.SelectedValue.ToString();
+            //cat chuoi ten cua bang cu kiem tra xem co phai view khong
+            string check = bangCu.Substring(0, 2);
+            if (check == "UV" && privs1 != "SELECT" && privs1 != "UPDATE")//TH: view with insert and delete => khong the cap tren cot
+            {
+                MessageBox.Show("Chỉ được chỉnh sửa quyền SELECT, UPDATE trên cột !!!");
+            }
+            else //TH: table or view with privs select and update
+            {
+                string temp1 = "REVOKE " + privs1 + " ON " + table1 + " FROM " + role1;
+                Console.WriteLine(temp1);
+                OracleCommand command = new OracleCommand(temp1, conn);
+                command.ExecuteNonQuery();
+            }
+
+
+
+            //grant quyền mới cho role
             string table = comboBoxBang.SelectedValue.ToString();
             int temp = comboBoxQuyenMoi.SelectedIndex;
             string privs = pri[temp];
@@ -205,21 +197,17 @@ namespace PHANHE1
             }
             else if (comboBoxCot.SelectedValue == null)
             {
-                OracleConnection conn = new OracleConnection(Login.connectionString);
-                conn.Open();
                 string text = "GRANT " + privs + " ON " + table + " TO " + role;
                 Console.WriteLine(text);
                 OracleCommand command = new OracleCommand(text, conn);
                 command.ExecuteNonQuery();
 
-                MessageBox.Show("Phân quyền thành công!", "Thông báo");
+                MessageBox.Show("Chỉnh sửa quyền thành công!", "Thông báo");
 
             }
             else
             {
                 string col = comboBoxCot.SelectedValue.ToString();
-                OracleConnection conn = new OracleConnection(Login.connectionString);
-                conn.Open();
                 string text = "CREATE OR REPLACE VIEW UV_" + role + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
                 OracleCommand command = new OracleCommand(text, conn);
                 command.ExecuteNonQuery();
@@ -236,29 +224,10 @@ namespace PHANHE1
                 OracleCommand command2 = new OracleCommand(text2, conn);
                 command2.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Cập nhật quyền thành công!", "Thông báo");
+                MessageBox.Show("Chỉnh sửa quyền thành công!", "Thông báo");
             }
+            
         }
 
-        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxCapTrenCot.Checked)
-            {
-                comboBoxCot.DataSource = null;
-            }
-        }
-
-        private void dataGridViewChinhSuaQuyenChoRole_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            OracleConnection conn = new OracleConnection(Login.connectionString);
-            conn.Open();
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewChinhSuaQuyenChoRole.Rows[e.RowIndex];
-                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();
-                bangCu = row.Cells[2].Value.ToString();
-            }
-            conn.Close();
-        }
     }
 }

@@ -40,7 +40,7 @@ namespace PHANHE1
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
             OracleCommand getListPrivilegeRole = conn.CreateCommand();
-            getListPrivilegeRole.CommandText = "SELECT ROLE, OWNER, TABLE_NAME, COLUMN_NAME, PRIVILEGE, GRANTABLE FROM ROLE_TAB_PRIVS " + " WHERE " + " ROLE like Upper('%" + textBoxNhapTenRole.Text + "%')"; ;
+            getListPrivilegeRole.CommandText = "SELECT ROLE, OWNER, TABLE_NAME, COLUMN_NAME, PRIVILEGE, GRANTABLE FROM ROLE_TAB_PRIVS " + " WHERE " + "  ROLE LIKE 'RL_%' AND ROLE like Upper('%" + textBoxNhapTenRole.Text + "%')"; ;
             getListPrivilegeRole.CommandType = CommandType.Text;
             OracleDataReader temp = getListPrivilegeRole.ExecuteReader();
             DataTable table_DSQuyenCuaRole = new DataTable();

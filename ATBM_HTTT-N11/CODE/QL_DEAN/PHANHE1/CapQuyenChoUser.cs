@@ -34,7 +34,7 @@ namespace PHANHE1
             {
 
                 DataTable dt2 = new DataTable();
-                string temp = "SELECT * FROM dba_users WHERE USERNAME NOT LIKE '%SYS%' AND ACCOUNT_STATUS = 'OPEN' ORDER BY created DESC";
+                string temp = "select * from user_tab_privs WHERE GRANTEE NOT LIKE 'RL%' AND OWNER != 'SYS'";
                 OracleCommand Cmd = new OracleCommand(temp, conn);
                 Cmd.CommandType = CommandType.Text;
                 OracleDataAdapter da2 = new OracleDataAdapter(Cmd);

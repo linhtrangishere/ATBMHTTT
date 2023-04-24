@@ -68,5 +68,10 @@ namespace PHANHE1
         {
 
         }
+
+        private void panelQuanLyRole_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
