@@ -58,5 +58,15 @@ namespace PHANHE1
             xoarole.Show();
             SwitchColorMenu(sender, e);
         }
+
+        private void QuanLyRole_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewQuanLyRole_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

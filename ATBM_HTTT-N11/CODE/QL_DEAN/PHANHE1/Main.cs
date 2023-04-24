@@ -107,5 +107,10 @@ namespace PHANHE1
         {
 
         }
+
+        private void labelNguyenVanA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

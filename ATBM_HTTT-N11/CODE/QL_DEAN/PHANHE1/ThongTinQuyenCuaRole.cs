@@ -24,7 +24,7 @@ namespace PHANHE1
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListPrivilegeRole = conn.CreateCommand();
-            getListPrivilegeRole.CommandText = "SELECT ROLE, OWNER, TABLE_NAME, COLUMN_NAME, PRIVILEGE, GRANTABLE FROM ROLE_TAB_PRIVS";
+            getListPrivilegeRole.CommandText = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE IN (SELECT ROLE FROM ROLE_TAB_PRIVS) AND OWNER IN (SELECT USER FROM DBA_USERS)";
             getListPrivilegeRole.CommandType = CommandType.Text;
             OracleDataReader temp = getListPrivilegeRole.ExecuteReader();
             DataTable table_DSQuyenCuaRole = new DataTable();
@@ -49,6 +49,11 @@ namespace PHANHE1
         }
 
         private void textBoxNhapTenRole_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThongTinQuyenCuaRole_Load(object sender, EventArgs e)
         {
 
         }

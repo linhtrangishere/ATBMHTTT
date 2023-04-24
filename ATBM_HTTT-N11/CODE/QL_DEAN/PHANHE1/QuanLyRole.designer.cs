@@ -105,6 +105,7 @@
             this.dataGridViewQuanLyRole.RowTemplate.Height = 24;
             this.dataGridViewQuanLyRole.Size = new System.Drawing.Size(935, 350);
             this.dataGridViewQuanLyRole.TabIndex = 14;
+            this.dataGridViewQuanLyRole.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQuanLyRole_CellContentClick);
             // 
             // QuanLyRole
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.panelQuanLyRole);
             this.Name = "QuanLyRole";
             this.Text = "QuanLyRole";
+            this.Load += new System.EventHandler(this.QuanLyRole_Load);
             this.panelQuanLyRole.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyRole)).EndInit();

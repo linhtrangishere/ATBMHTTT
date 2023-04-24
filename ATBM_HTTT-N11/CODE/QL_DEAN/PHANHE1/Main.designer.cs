@@ -136,6 +136,7 @@
             this.labelNguyenVanA.Size = new System.Drawing.Size(241, 45);
             this.labelNguyenVanA.TabIndex = 3;
             this.labelNguyenVanA.Text = "Nguyễn Văn A";
+            this.labelNguyenVanA.Click += new System.EventHandler(this.labelNguyenVanA_Click);
             // 
             // labelAdmin
             // 

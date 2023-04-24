@@ -64,5 +64,10 @@ namespace PHANHE1
             xoauser.Show();
             SwitchColorMenu(sender, e);
         }
+
+        private void QuanLyUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

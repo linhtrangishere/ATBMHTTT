@@ -76,13 +76,14 @@ namespace PHANHE1
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
             OracleCommand getData = conn.CreateCommand();
-            getData.CommandText = "select * from ROLE_TAB_PRIVS WHERE ROLE LIKE 'RL_%'";
+            getData.CommandText = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE IN (SELECT ROLE FROM ROLE_TAB_PRIVS) AND OWNER IN (SELECT USER FROM DBA_USERS)";
             getData.CommandType = CommandType.Text;
             OracleDataReader data = getData.ExecuteReader();
             DataTable tempDT = new DataTable();
             tempDT.Load(data);
             dataGridViewQuanLyQuyenRole.DataSource = tempDT;
             conn.Close();
+
         }
     }
 }

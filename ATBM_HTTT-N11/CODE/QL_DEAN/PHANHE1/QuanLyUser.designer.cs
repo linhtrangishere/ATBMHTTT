@@ -115,6 +115,7 @@
             this.Controls.Add(this.panelQuanLyUser);
             this.Name = "QuanLyUser";
             this.Text = "QuanLyUser";
+            this.Load += new System.EventHandler(this.QuanLyUser_Load);
             this.panelQuanLyUser.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyUser)).EndInit();

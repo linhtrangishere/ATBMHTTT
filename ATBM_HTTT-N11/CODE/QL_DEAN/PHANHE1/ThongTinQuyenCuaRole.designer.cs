@@ -116,6 +116,7 @@
             this.Controls.Add(this.panelThongTinQuyenCuaUser);
             this.Name = "ThongTinQuyenCuaRole";
             this.Text = "ThongTinQuyenCuaRole";
+            this.Load += new System.EventHandler(this.ThongTinQuyenCuaRole_Load);
             this.panelThongTinQuyenCuaUser.ResumeLayout(false);
             this.panelThongTinQuyenCuaUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinQuyenCuaRole)).EndInit();
