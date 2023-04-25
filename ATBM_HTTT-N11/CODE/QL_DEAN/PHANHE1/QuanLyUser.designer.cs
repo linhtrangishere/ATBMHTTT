@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             this.panelQuanLyUser = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelThemXoaSua = new System.Windows.Forms.Panel();
             this.buttonChinhSuaUser = new System.Windows.Forms.Button();
             this.buttonTaoUser = new System.Windows.Forms.Button();
             this.buttonXoaUser = new System.Windows.Forms.Button();
             this.panelQuanLyUser.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
             this.panelThemXoaSua.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelQuanLyUser
             // 
             this.panelQuanLyUser.BackColor = System.Drawing.Color.White;
-            this.panelQuanLyUser.Controls.Add(this.panelChildForm);
+            this.panelQuanLyUser.Controls.Add(this.panelThemXoaSua);
             this.panelQuanLyUser.Location = new System.Drawing.Point(0, -10);
             this.panelQuanLyUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelQuanLyUser.Name = "panelQuanLyUser";
@@ -50,26 +48,16 @@
             this.panelQuanLyUser.TabIndex = 2;
             this.panelQuanLyUser.Paint += new System.Windows.Forms.PaintEventHandler(this.panelQuanLyUser_Paint);
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Controls.Add(this.panelThemXoaSua);
-            this.panelChildForm.Location = new System.Drawing.Point(0, 15);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(932, 672);
-            this.panelChildForm.TabIndex = 19;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
-            // 
             // panelThemXoaSua
             // 
             this.panelThemXoaSua.Controls.Add(this.buttonChinhSuaUser);
             this.panelThemXoaSua.Controls.Add(this.buttonTaoUser);
             this.panelThemXoaSua.Controls.Add(this.buttonXoaUser);
-            this.panelThemXoaSua.Location = new System.Drawing.Point(3, 146);
+            this.panelThemXoaSua.Location = new System.Drawing.Point(0, 180);
             this.panelThemXoaSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelThemXoaSua.Name = "panelThemXoaSua";
-            this.panelThemXoaSua.Size = new System.Drawing.Size(929, 150);
-            this.panelThemXoaSua.TabIndex = 18;
-            this.panelThemXoaSua.Paint += new System.Windows.Forms.PaintEventHandler(this.panelThemXoaSua_Paint);
+            this.panelThemXoaSua.Size = new System.Drawing.Size(935, 150);
+            this.panelThemXoaSua.TabIndex = 19;
             // 
             // buttonChinhSuaUser
             // 
@@ -82,7 +70,7 @@
             this.buttonChinhSuaUser.TabIndex = 20;
             this.buttonChinhSuaUser.Text = "Chỉnh sửa user";
             this.buttonChinhSuaUser.UseVisualStyleBackColor = false;
-            this.buttonChinhSuaUser.Click += new System.EventHandler(this.buttonChinhSuaUser_Click);
+            this.buttonChinhSuaUser.Click += new System.EventHandler(this.buttonChinhSuaUser_Click_1);
             // 
             // buttonTaoUser
             // 
@@ -95,7 +83,7 @@
             this.buttonTaoUser.TabIndex = 19;
             this.buttonTaoUser.Text = "Tạo user";
             this.buttonTaoUser.UseVisualStyleBackColor = false;
-            this.buttonTaoUser.Click += new System.EventHandler(this.buttonTaoUser_Click);
+            this.buttonTaoUser.Click += new System.EventHandler(this.buttonTaoUser_Click_1);
             // 
             // buttonXoaUser
             // 
@@ -109,7 +97,7 @@
             this.buttonXoaUser.TabIndex = 18;
             this.buttonXoaUser.Text = "Xóa user";
             this.buttonXoaUser.UseVisualStyleBackColor = false;
-            this.buttonXoaUser.Click += new System.EventHandler(this.buttonXoaUser_Click);
+            this.buttonXoaUser.Click += new System.EventHandler(this.buttonXoaUser_Click_1);
             // 
             // QuanLyUser
             // 
@@ -122,7 +110,6 @@
             this.Text = "QuanLyUser";
             this.Load += new System.EventHandler(this.QuanLyUser_Load);
             this.panelQuanLyUser.ResumeLayout(false);
-            this.panelChildForm.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -135,6 +122,5 @@
         private System.Windows.Forms.Button buttonChinhSuaUser;
         private System.Windows.Forms.Button buttonTaoUser;
         private System.Windows.Forms.Button buttonXoaUser;
-        private System.Windows.Forms.Panel panelChildForm;
     }
 }

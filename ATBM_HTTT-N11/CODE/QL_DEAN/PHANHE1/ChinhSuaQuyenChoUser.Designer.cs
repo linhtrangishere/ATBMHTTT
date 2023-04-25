@@ -28,141 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox = new System.Windows.Forms.GroupBox();
-            this.labelChinhSuaQuyenChoUser = new System.Windows.Forms.Label();
-            this.labelTenUser = new System.Windows.Forms.Label();
-            this.comboBoxCot = new System.Windows.Forms.ComboBox();
-            this.comboBoxBang = new System.Windows.Forms.ComboBox();
-            this.comboBoxQuyenMoi = new System.Windows.Forms.ComboBox();
-            this.labelCot = new System.Windows.Forms.Label();
-            this.labelBang = new System.Windows.Forms.Label();
-            this.labelQuyenMoi = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelChinhSuaQuyenChoUser = new System.Windows.Forms.Panel();
+            this.comboBoxUserName = new System.Windows.Forms.ComboBox();
+            this.checkBoxCapTrenCot = new System.Windows.Forms.CheckBox();
+            this.checkBoxWithGrantOption = new System.Windows.Forms.CheckBox();
+            this.textBoxQuyenCu = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonXem = new System.Windows.Forms.Button();
             this.buttonCapNhat = new System.Windows.Forms.Button();
             this.dataGridViewChinhSuaQuyenChoUser = new System.Windows.Forms.DataGridView();
-            this.textBoxQuyenCu = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxWithGrantOption = new System.Windows.Forms.CheckBox();
-            this.checkBoxCapTrenCot = new System.Windows.Forms.CheckBox();
-            this.comboBoxUserName = new System.Windows.Forms.ComboBox();
-            this.groupBox.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.labelBang = new System.Windows.Forms.Label();
+            this.comboBoxCot = new System.Windows.Forms.ComboBox();
+            this.comboBoxBang = new System.Windows.Forms.ComboBox();
+            this.comboBoxQuyenMoi = new System.Windows.Forms.ComboBox();
+            this.labelCot = new System.Windows.Forms.Label();
+            this.labelQuyenMoi = new System.Windows.Forms.Label();
+            this.labelTenUser = new System.Windows.Forms.Label();
+            this.buttonQuayLai = new System.Windows.Forms.Button();
+            this.panelChinhSuaQuyenChoUser.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaQuyenChoUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox
+            // panelChinhSuaQuyenChoUser
             // 
-            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.groupBox.Controls.Add(this.labelChinhSuaQuyenChoUser);
-            this.groupBox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox.Location = new System.Drawing.Point(0, -10);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(1425, 160);
-            this.groupBox.TabIndex = 7;
-            this.groupBox.TabStop = false;
-            this.groupBox.Enter += new System.EventHandler(this.groupBox_Enter);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.comboBoxUserName);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.checkBoxCapTrenCot);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.checkBoxWithGrantOption);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.textBoxQuyenCu);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.label1);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.panel2);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.dataGridViewChinhSuaQuyenChoUser);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.labelBang);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.comboBoxCot);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.comboBoxBang);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.comboBoxQuyenMoi);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.labelCot);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.labelQuyenMoi);
+            this.panelChinhSuaQuyenChoUser.Controls.Add(this.labelTenUser);
+            this.panelChinhSuaQuyenChoUser.Location = new System.Drawing.Point(0, -10);
+            this.panelChinhSuaQuyenChoUser.Name = "panelChinhSuaQuyenChoUser";
+            this.panelChinhSuaQuyenChoUser.Size = new System.Drawing.Size(935, 600);
+            this.panelChinhSuaQuyenChoUser.TabIndex = 0;
             // 
-            // labelChinhSuaQuyenChoUser
+            // comboBoxUserName
             // 
-            this.labelChinhSuaQuyenChoUser.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelChinhSuaQuyenChoUser.Location = new System.Drawing.Point(460, 50);
-            this.labelChinhSuaQuyenChoUser.Name = "labelChinhSuaQuyenChoUser";
-            this.labelChinhSuaQuyenChoUser.Size = new System.Drawing.Size(549, 50);
-            this.labelChinhSuaQuyenChoUser.TabIndex = 0;
-            this.labelChinhSuaQuyenChoUser.Text = "Chỉnh sửa quyền cho user";
+            this.comboBoxUserName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxUserName.FormattingEnabled = true;
+            this.comboBoxUserName.Location = new System.Drawing.Point(270, 27);
+            this.comboBoxUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxUserName.Name = "comboBoxUserName";
+            this.comboBoxUserName.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxUserName.TabIndex = 56;
             // 
-            // labelTenUser
+            // checkBoxCapTrenCot
             // 
-            this.labelTenUser.AutoSize = true;
-            this.labelTenUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTenUser.Location = new System.Drawing.Point(75, 199);
-            this.labelTenUser.Name = "labelTenUser";
-            this.labelTenUser.Size = new System.Drawing.Size(134, 41);
-            this.labelTenUser.TabIndex = 14;
-            this.labelTenUser.Text = "Tên user";
+            this.checkBoxCapTrenCot.AutoSize = true;
+            this.checkBoxCapTrenCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxCapTrenCot.Location = new System.Drawing.Point(39, 515);
+            this.checkBoxCapTrenCot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxCapTrenCot.Name = "checkBoxCapTrenCot";
+            this.checkBoxCapTrenCot.Size = new System.Drawing.Size(293, 45);
+            this.checkBoxCapTrenCot.TabIndex = 55;
+            this.checkBoxCapTrenCot.Text = "Không cấp trên cột";
+            this.checkBoxCapTrenCot.UseVisualStyleBackColor = true;
+            this.checkBoxCapTrenCot.CheckedChanged += new System.EventHandler(this.checkBoxCapTrenCot_CheckedChanged);
             // 
-            // comboBoxCot
+            // checkBoxWithGrantOption
             // 
-            this.comboBoxCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxCot.FormattingEnabled = true;
-            this.comboBoxCot.Location = new System.Drawing.Point(600, 876);
-            this.comboBoxCot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxCot.Name = "comboBoxCot";
-            this.comboBoxCot.Size = new System.Drawing.Size(400, 49);
-            this.comboBoxCot.TabIndex = 33;
-            this.comboBoxCot.SelectedIndexChanged += new System.EventHandler(this.comboBoxCot_SelectedIndexChanged);
+            this.checkBoxWithGrantOption.AutoSize = true;
+            this.checkBoxWithGrantOption.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxWithGrantOption.Location = new System.Drawing.Point(399, 515);
+            this.checkBoxWithGrantOption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxWithGrantOption.Name = "checkBoxWithGrantOption";
+            this.checkBoxWithGrantOption.Size = new System.Drawing.Size(284, 45);
+            this.checkBoxWithGrantOption.TabIndex = 54;
+            this.checkBoxWithGrantOption.Text = "With Grant Option";
+            this.checkBoxWithGrantOption.UseVisualStyleBackColor = true;
             // 
-            // comboBoxBang
+            // textBoxQuyenCu
             // 
-            this.comboBoxBang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxBang.FormattingEnabled = true;
-            this.comboBoxBang.Location = new System.Drawing.Point(600, 736);
-            this.comboBoxBang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxBang.Name = "comboBoxBang";
-            this.comboBoxBang.Size = new System.Drawing.Size(400, 49);
-            this.comboBoxBang.TabIndex = 32;
-            this.comboBoxBang.SelectedIndexChanged += new System.EventHandler(this.comboBoxBang_SelectedIndexChanged);
+            this.textBoxQuyenCu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxQuyenCu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxQuyenCu.Location = new System.Drawing.Point(39, 335);
+            this.textBoxQuyenCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxQuyenCu.Multiline = true;
+            this.textBoxQuyenCu.Name = "textBoxQuyenCu";
+            this.textBoxQuyenCu.Size = new System.Drawing.Size(300, 50);
+            this.textBoxQuyenCu.TabIndex = 53;
             // 
-            // comboBoxQuyenMoi
+            // label1
             // 
-            this.comboBoxQuyenMoi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxQuyenMoi.FormattingEnabled = true;
-            this.comboBoxQuyenMoi.Location = new System.Drawing.Point(82, 876);
-            this.comboBoxQuyenMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxQuyenMoi.Name = "comboBoxQuyenMoi";
-            this.comboBoxQuyenMoi.Size = new System.Drawing.Size(400, 49);
-            this.comboBoxQuyenMoi.TabIndex = 31;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(40, 290);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 41);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Quyền cũ";
             // 
-            // labelCot
+            // panel2
             // 
-            this.labelCot.AutoSize = true;
-            this.labelCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelCot.Location = new System.Drawing.Point(600, 823);
-            this.labelCot.Name = "labelCot";
-            this.labelCot.Size = new System.Drawing.Size(67, 41);
-            this.labelCot.TabIndex = 30;
-            this.labelCot.Text = "Cột";
-            // 
-            // labelBang
-            // 
-            this.labelBang.AutoSize = true;
-            this.labelBang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelBang.Location = new System.Drawing.Point(600, 683);
-            this.labelBang.Name = "labelBang";
-            this.labelBang.Size = new System.Drawing.Size(90, 41);
-            this.labelBang.TabIndex = 29;
-            this.labelBang.Text = "Bảng";
-            // 
-            // labelQuyenMoi
-            // 
-            this.labelQuyenMoi.AutoSize = true;
-            this.labelQuyenMoi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelQuyenMoi.Location = new System.Drawing.Point(82, 823);
-            this.labelQuyenMoi.Name = "labelQuyenMoi";
-            this.labelQuyenMoi.Size = new System.Drawing.Size(172, 41);
-            this.labelQuyenMoi.TabIndex = 28;
-            this.labelQuyenMoi.Text = "Quyền mới";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buttonXemTatCa);
-            this.panel1.Controls.Add(this.buttonXem);
-            this.panel1.Controls.Add(this.buttonCapNhat);
-            this.panel1.Location = new System.Drawing.Point(1100, 150);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 830);
-            this.panel1.TabIndex = 37;
+            this.panel2.Controls.Add(this.buttonQuayLai);
+            this.panel2.Controls.Add(this.buttonXemTatCa);
+            this.panel2.Controls.Add(this.buttonXem);
+            this.panel2.Controls.Add(this.buttonCapNhat);
+            this.panel2.Location = new System.Drawing.Point(714, 27);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(206, 555);
+            this.panel2.TabIndex = 51;
             // 
             // buttonXemTatCa
             // 
-            this.buttonXemTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
+            this.buttonXemTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonXemTatCa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonXemTatCa.Location = new System.Drawing.Point(40, 154);
+            this.buttonXemTatCa.Location = new System.Drawing.Point(3, 160);
             this.buttonXemTatCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXemTatCa.Name = "buttonXemTatCa";
             this.buttonXemTatCa.Size = new System.Drawing.Size(200, 70);
@@ -173,9 +156,9 @@
             // 
             // buttonXem
             // 
-            this.buttonXem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
+            this.buttonXem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonXem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonXem.Location = new System.Drawing.Point(40, 34);
+            this.buttonXem.Location = new System.Drawing.Point(3, 0);
             this.buttonXem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXem.Name = "buttonXem";
             this.buttonXem.Size = new System.Drawing.Size(200, 70);
@@ -186,9 +169,9 @@
             // 
             // buttonCapNhat
             // 
-            this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
+            this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonCapNhat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCapNhat.Location = new System.Drawing.Point(40, 601);
+            this.buttonCapNhat.Location = new System.Drawing.Point(3, 320);
             this.buttonCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCapNhat.Name = "buttonCapNhat";
             this.buttonCapNhat.Size = new System.Drawing.Size(200, 70);
@@ -200,130 +183,140 @@
             // dataGridViewChinhSuaQuyenChoUser
             // 
             this.dataGridViewChinhSuaQuyenChoUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewChinhSuaQuyenChoUser.Location = new System.Drawing.Point(0, 290);
+            this.dataGridViewChinhSuaQuyenChoUser.Location = new System.Drawing.Point(0, 85);
             this.dataGridViewChinhSuaQuyenChoUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewChinhSuaQuyenChoUser.Name = "dataGridViewChinhSuaQuyenChoUser";
             this.dataGridViewChinhSuaQuyenChoUser.RowHeadersWidth = 51;
             this.dataGridViewChinhSuaQuyenChoUser.RowTemplate.Height = 24;
-            this.dataGridViewChinhSuaQuyenChoUser.Size = new System.Drawing.Size(1069, 350);
-            this.dataGridViewChinhSuaQuyenChoUser.TabIndex = 36;
-            this.dataGridViewChinhSuaQuyenChoUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChinhSuaQuyenChoUser_CellClick);
+            this.dataGridViewChinhSuaQuyenChoUser.Size = new System.Drawing.Size(600, 200);
+            this.dataGridViewChinhSuaQuyenChoUser.TabIndex = 50;
             this.dataGridViewChinhSuaQuyenChoUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChinhSuaQuyenChoUser_CellContentClick);
             // 
-            // textBoxQuyenCu
+            // labelBang
             // 
-            this.textBoxQuyenCu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxQuyenCu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxQuyenCu.Location = new System.Drawing.Point(82, 738);
-            this.textBoxQuyenCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxQuyenCu.Multiline = true;
-            this.textBoxQuyenCu.Name = "textBoxQuyenCu";
-            this.textBoxQuyenCu.Size = new System.Drawing.Size(399, 50);
-            this.textBoxQuyenCu.TabIndex = 39;
-            this.textBoxQuyenCu.TextChanged += new System.EventHandler(this.textBoxQuyenCu_TextChanged);
+            this.labelBang.AutoSize = true;
+            this.labelBang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelBang.Location = new System.Drawing.Point(400, 290);
+            this.labelBang.Name = "labelBang";
+            this.labelBang.Size = new System.Drawing.Size(90, 41);
+            this.labelBang.TabIndex = 45;
+            this.labelBang.Text = "Bảng";
             // 
-            // label1
+            // comboBoxCot
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(82, 683);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 41);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Quyền cũ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.comboBoxCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxCot.FormattingEnabled = true;
+            this.comboBoxCot.Location = new System.Drawing.Point(399, 445);
+            this.comboBoxCot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCot.Name = "comboBoxCot";
+            this.comboBoxCot.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxCot.TabIndex = 49;
             // 
-            // checkBoxWithGrantOption
+            // comboBoxBang
             // 
-            this.checkBoxWithGrantOption.AutoSize = true;
-            this.checkBoxWithGrantOption.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.checkBoxWithGrantOption.Location = new System.Drawing.Point(716, 967);
-            this.checkBoxWithGrantOption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxWithGrantOption.Name = "checkBoxWithGrantOption";
-            this.checkBoxWithGrantOption.Size = new System.Drawing.Size(284, 45);
-            this.checkBoxWithGrantOption.TabIndex = 40;
-            this.checkBoxWithGrantOption.Text = "With Grant Option";
-            this.checkBoxWithGrantOption.UseVisualStyleBackColor = true;
+            this.comboBoxBang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxBang.FormattingEnabled = true;
+            this.comboBoxBang.Location = new System.Drawing.Point(399, 336);
+            this.comboBoxBang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxBang.Name = "comboBoxBang";
+            this.comboBoxBang.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxBang.TabIndex = 48;
+            this.comboBoxBang.SelectedIndexChanged += new System.EventHandler(this.comboBoxBang_SelectedIndexChanged);
             // 
-            // checkBoxCapTrenCot
+            // comboBoxQuyenMoi
             // 
-            this.checkBoxCapTrenCot.AutoSize = true;
-            this.checkBoxCapTrenCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.checkBoxCapTrenCot.Location = new System.Drawing.Point(82, 967);
-            this.checkBoxCapTrenCot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxCapTrenCot.Name = "checkBoxCapTrenCot";
-            this.checkBoxCapTrenCot.Size = new System.Drawing.Size(293, 45);
-            this.checkBoxCapTrenCot.TabIndex = 41;
-            this.checkBoxCapTrenCot.Text = "Không cấp trên cột";
-            this.checkBoxCapTrenCot.UseVisualStyleBackColor = true;
-            this.checkBoxCapTrenCot.CheckedChanged += new System.EventHandler(this.checkBoxCapTrenCot_CheckedChanged);
+            this.comboBoxQuyenMoi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxQuyenMoi.FormattingEnabled = true;
+            this.comboBoxQuyenMoi.Location = new System.Drawing.Point(39, 445);
+            this.comboBoxQuyenMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxQuyenMoi.Name = "comboBoxQuyenMoi";
+            this.comboBoxQuyenMoi.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxQuyenMoi.TabIndex = 47;
             // 
-            // comboBoxUserName
+            // labelCot
             // 
-            this.comboBoxUserName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxUserName.FormattingEnabled = true;
-            this.comboBoxUserName.Location = new System.Drawing.Point(267, 199);
-            this.comboBoxUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxUserName.Name = "comboBoxUserName";
-            this.comboBoxUserName.Size = new System.Drawing.Size(400, 49);
-            this.comboBoxUserName.TabIndex = 42;
-            this.comboBoxUserName.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenUser_SelectedIndexChanged);
+            this.labelCot.AutoSize = true;
+            this.labelCot.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelCot.Location = new System.Drawing.Point(400, 400);
+            this.labelCot.Name = "labelCot";
+            this.labelCot.Size = new System.Drawing.Size(67, 41);
+            this.labelCot.TabIndex = 46;
+            this.labelCot.Text = "Cột";
+            // 
+            // labelQuyenMoi
+            // 
+            this.labelQuyenMoi.AutoSize = true;
+            this.labelQuyenMoi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelQuyenMoi.Location = new System.Drawing.Point(40, 400);
+            this.labelQuyenMoi.Name = "labelQuyenMoi";
+            this.labelQuyenMoi.Size = new System.Drawing.Size(172, 41);
+            this.labelQuyenMoi.TabIndex = 44;
+            this.labelQuyenMoi.Text = "Quyền mới";
+            // 
+            // labelTenUser
+            // 
+            this.labelTenUser.AutoSize = true;
+            this.labelTenUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTenUser.Location = new System.Drawing.Point(40, 30);
+            this.labelTenUser.Name = "labelTenUser";
+            this.labelTenUser.Size = new System.Drawing.Size(134, 41);
+            this.labelTenUser.TabIndex = 43;
+            this.labelTenUser.Text = "Tên user";
+            // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
+            this.buttonQuayLai.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(3, 480);
+            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(200, 70);
+            this.buttonQuayLai.TabIndex = 40;
+            this.buttonQuayLai.Text = "Quay lại";
+            this.buttonQuayLai.UseVisualStyleBackColor = false;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // ChinhSuaQuyenChoUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1475, 1055);
-            this.Controls.Add(this.comboBoxUserName);
-            this.Controls.Add(this.checkBoxCapTrenCot);
-            this.Controls.Add(this.checkBoxWithGrantOption);
-            this.Controls.Add(this.textBoxQuyenCu);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridViewChinhSuaQuyenChoUser);
-            this.Controls.Add(this.comboBoxCot);
-            this.Controls.Add(this.comboBoxBang);
-            this.Controls.Add(this.comboBoxQuyenMoi);
-            this.Controls.Add(this.labelCot);
-            this.Controls.Add(this.labelBang);
-            this.Controls.Add(this.labelQuyenMoi);
-            this.Controls.Add(this.labelTenUser);
-            this.Controls.Add(this.groupBox);
+            this.ClientSize = new System.Drawing.Size(932, 583);
+            this.Controls.Add(this.panelChinhSuaQuyenChoUser);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ChinhSuaQuyenChoUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChinhSuaQuyenChoUser";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelChinhSuaQuyenChoUser.ResumeLayout(false);
+            this.panelChinhSuaQuyenChoUser.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaQuyenChoUser)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.Label labelChinhSuaQuyenChoUser;
-        private System.Windows.Forms.Label labelTenUser;
-        private System.Windows.Forms.ComboBox comboBoxCot;
-        private System.Windows.Forms.ComboBox comboBoxBang;
-        private System.Windows.Forms.ComboBox comboBoxQuyenMoi;
-        private System.Windows.Forms.Label labelCot;
-        private System.Windows.Forms.Label labelBang;
-        private System.Windows.Forms.Label labelQuyenMoi;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelChinhSuaQuyenChoUser;
+        private System.Windows.Forms.ComboBox comboBoxUserName;
+        private System.Windows.Forms.CheckBox checkBoxCapTrenCot;
+        private System.Windows.Forms.CheckBox checkBoxWithGrantOption;
+        private System.Windows.Forms.TextBox textBoxQuyenCu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonXem;
         private System.Windows.Forms.Button buttonCapNhat;
         private System.Windows.Forms.DataGridView dataGridViewChinhSuaQuyenChoUser;
-        private System.Windows.Forms.TextBox textBoxQuyenCu;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBoxWithGrantOption;
-        private System.Windows.Forms.CheckBox checkBoxCapTrenCot;
-        private System.Windows.Forms.ComboBox comboBoxUserName;
+        private System.Windows.Forms.Label labelBang;
+        private System.Windows.Forms.ComboBox comboBoxCot;
+        private System.Windows.Forms.ComboBox comboBoxBang;
+        private System.Windows.Forms.ComboBox comboBoxQuyenMoi;
+        private System.Windows.Forms.Label labelCot;
+        private System.Windows.Forms.Label labelQuyenMoi;
+        private System.Windows.Forms.Label labelTenUser;
+        private System.Windows.Forms.Button buttonQuayLai;
     }
 }
 

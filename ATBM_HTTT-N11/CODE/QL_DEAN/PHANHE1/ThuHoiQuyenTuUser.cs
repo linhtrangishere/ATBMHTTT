@@ -71,61 +71,7 @@ namespace PHANHE1
             conn.Close();
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void labelCapQuyen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxUserName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxCapTrenCot.Checked)
-            {
-                comboBoxCot.DataSource = null;
-            }
-        }
-
-        private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxThuHoiQuyen.SelectedIndex != 1 && comboBoxThuHoiQuyen.SelectedIndex != 3 && !checkBoxCapTrenCot.Checked)
-            {
-                OracleConnection conn = new OracleConnection(connectionString);
-                conn.Open();
-                string temp;
-                string table = comboBoxBang.SelectedValue.ToString();
-                temp = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '" + table + "'";
-                DataTable dt2 = new DataTable();
-
-                OracleCommand Cmd = new OracleCommand(temp, conn);
-                Cmd.CommandType = CommandType.Text;
-                OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
-
-                da2.Fill(dt2);
-                comboBoxCot.DisplayMember = dt2.Columns[0].ColumnName;
-                comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
-                comboBoxCot.DataSource = dt2;
-                conn.Close();
-            }
-        }
-
-        private void comboBoxThuHoiQuyen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxThuHoiQuyen.SelectedIndex == 1 || comboBoxThuHoiQuyen.SelectedIndex == 3)
-            {
-                comboBoxCot.DataSource = null;
-            }
-        }
-
-        private void buttonThuHoi_Click(object sender, EventArgs e)
+        private void buttonThuHoi_Click_1(object sender, EventArgs e)
         {
             string table = comboBoxBang.SelectedValue.ToString();
             int temp = comboBoxThuHoiQuyen.SelectedIndex;
@@ -149,7 +95,8 @@ namespace PHANHE1
             }
             else
             {
-                try {
+                try
+                {
                     string col = comboBoxCot.SelectedValue.ToString();
                     OracleConnection conn = new OracleConnection(connectionString);
                     conn.Open();
@@ -159,17 +106,56 @@ namespace PHANHE1
                     conn.Close();
                     MessageBox.Show("Thu hồi quyền thành công!", "Thông báo");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                 }
-                
+
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void comboBoxThuHoiQuyen_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            if (comboBoxThuHoiQuyen.SelectedIndex == 1 || comboBoxThuHoiQuyen.SelectedIndex == 3)
+            {
+                comboBoxCot.DataSource = null;
+            }
+        }
 
+        private void comboBoxBang_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBoxThuHoiQuyen.SelectedIndex != 1 && comboBoxThuHoiQuyen.SelectedIndex != 3 && !checkBoxCapTrenCot.Checked)
+            {
+                OracleConnection conn = new OracleConnection(connectionString);
+                conn.Open();
+                string temp;
+                string table = comboBoxBang.SelectedValue.ToString();
+                temp = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '" + table + "'";
+                DataTable dt2 = new DataTable();
+
+                OracleCommand Cmd = new OracleCommand(temp, conn);
+                Cmd.CommandType = CommandType.Text;
+                OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
+
+                da2.Fill(dt2);
+                comboBoxCot.DisplayMember = dt2.Columns[0].ColumnName;
+                comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
+                comboBoxCot.DataSource = dt2;
+                conn.Close();
+            }
+        }
+
+        private void checkBoxCapTrenCot_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBoxCapTrenCot.Checked)
+            {
+                comboBoxCot.DataSource = null;
+            }
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -17,6 +17,23 @@ namespace PHANHE1
             InitializeComponent();
         }
 
+        private Form formchild = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (formchild != null)
+            {
+                formchild.Close();
+            }
+            formchild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelQuanLyTable.Controls.Add(childForm);
+            panelQuanLyTable.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void SwitchColorMenu(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -26,7 +43,7 @@ namespace PHANHE1
             }
             else
             {
-                foreach (Control prebtn in panelThemTable.Controls)
+                foreach (Control prebtn in panelQuanLyTable.Controls)
                 {
                     if (prebtn.GetType() == typeof(Button))
                     {
@@ -43,10 +60,9 @@ namespace PHANHE1
 
         }
 
-        private void buttonTaoUser_Click(object sender, EventArgs e)
+        private void buttonTaoTable_Click(object sender, EventArgs e)
         {
-            ThemTable adduser = new ThemTable();
-            adduser.Show();
+            OpenChildForm(new ThemTable());
             SwitchColorMenu(sender, e);
         }
     }

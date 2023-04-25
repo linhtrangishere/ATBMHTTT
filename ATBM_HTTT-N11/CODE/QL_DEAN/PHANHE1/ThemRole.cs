@@ -27,10 +27,6 @@ namespace PHANHE1
 
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private void Run_USP_ADDROLE()
         {
             string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
@@ -66,9 +62,9 @@ namespace PHANHE1
             Run_USP_ADDROLE();
         }
 
-        private void textBoxNhapTenRole_TextChanged(object sender, EventArgs e)
+        private void buttonQuayLai_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

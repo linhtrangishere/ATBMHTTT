@@ -1,13 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PHANHE1
@@ -41,7 +34,7 @@ namespace PHANHE1
                 comboBoxRoleName.ValueMember = dt2.Columns[0].ColumnName;
                 comboBoxRoleName.DataSource = dt2;
             }
-             catch
+            catch
             {
                 MessageBox.Show("Không tồn tại role nào!!!");
             }
@@ -65,55 +58,17 @@ namespace PHANHE1
 
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void groupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonXem_Click(object sender, EventArgs e)
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
             string rolename = comboBoxRoleName.SelectedValue.ToString();
-            string temp = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE = '"+ rolename +"'";
+            string temp = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE = '" + rolename + "'";
             OracleDataAdapter adp = new OracleDataAdapter(temp, conn);
             DataTable dt = new DataTable();
             adp.Fill(dt);
             dataGridViewChinhSuaQuyenChoRole.DataSource = dt;
             conn.Close();
-        }
-
-        private void labelChinhSuaQuyenChoRole_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                OracleConnection conn = new OracleConnection(Login.connectionString);
-                conn.Open();
-                string temp;
-                string table = comboBoxBang.SelectedValue.ToString();
-                temp = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '" + table + "'";
-                DataTable dt2 = new DataTable();
-                OracleCommand Cmd = new OracleCommand(temp, conn);
-                Cmd.CommandType = CommandType.Text;
-                OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
-                da2.Fill(dt2);
-                comboBoxCot.DisplayMember = dt2.Columns[0].ColumnName;
-                comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
-                comboBoxCot.DataSource = dt2;
-                conn.Close();
         }
 
         private void buttonXemTatCa_Click(object sender, EventArgs e)
@@ -129,38 +84,6 @@ namespace PHANHE1
             conn.Close();
         }
 
-        private void textBoxQuyenCu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        private void dataGridViewChinhSuaQuyenChoRole_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxCapTrenCot.Checked)
-            {
-                comboBoxCot.DataSource = null;
-            }
-        }
-        public string bangCu = null;
-      
-        private void dataGridViewChinhSuaQuyenChoRole_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            OracleConnection conn = new OracleConnection(Login.connectionString);
-            conn.Open();
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewChinhSuaQuyenChoRole.Rows[e.RowIndex];
-                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();
-                bangCu = row.Cells[2].Value.ToString();
-             
-            }
-            conn.Close();
-        }
         private void buttonCapNhat_Click(object sender, EventArgs e)
         {
             //revoke quyền
@@ -226,8 +149,57 @@ namespace PHANHE1
                 conn.Close();
                 MessageBox.Show("Chỉnh sửa quyền thành công!", "Thông báo");
             }
-            
         }
 
+        public string bangCu = null;
+        private void dataGridViewChinhSuaQuyenChoRole_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OracleConnection conn = new OracleConnection(Login.connectionString);
+            conn.Open();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewChinhSuaQuyenChoRole.Rows[e.RowIndex];
+                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();
+                bangCu = row.Cells[2].Value.ToString();
+
+            }
+            conn.Close();
+        }
+
+        private void comboBoxCot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCapTrenCot.Checked)
+            {
+                comboBoxCot.DataSource = null;
+            }
+        }
+
+        private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OracleConnection conn = new OracleConnection(Login.connectionString);
+            conn.Open();
+            string temp;
+            string table = comboBoxBang.SelectedValue.ToString();
+            temp = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '" + table + "'";
+            DataTable dt2 = new DataTable();
+            OracleCommand Cmd = new OracleCommand(temp, conn);
+            Cmd.CommandType = CommandType.Text;
+            OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
+            da2.Fill(dt2);
+            comboBoxCot.DisplayMember = dt2.Columns[0].ColumnName;
+            comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
+            comboBoxCot.DataSource = dt2;
+            conn.Close();
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

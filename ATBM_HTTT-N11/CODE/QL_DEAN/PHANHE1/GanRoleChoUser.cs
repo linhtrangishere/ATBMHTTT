@@ -63,9 +63,14 @@ namespace PHANHE1
             }
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
+        private void comboBoxUserName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+
+        }
+
+        private void comboBoxRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void buttonGan_Click(object sender, EventArgs e)
@@ -80,6 +85,11 @@ namespace PHANHE1
             command.ExecuteNonQuery();
 
             MessageBox.Show("Gán role thành công!", "Thông báo");
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

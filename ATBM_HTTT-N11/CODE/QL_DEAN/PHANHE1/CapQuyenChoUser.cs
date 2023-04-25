@@ -71,14 +71,14 @@ namespace PHANHE1
             conn.Close();
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
+        private void comboBoxUserName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void comboBoxCapQuyen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkBoxCapTrenCot.Checked)
+            if (comboBoxCapQuyen.SelectedIndex == 1 || comboBoxCapQuyen.SelectedIndex == 3)
             {
                 comboBoxCot.DataSource = null;
             }
@@ -107,12 +107,9 @@ namespace PHANHE1
             }
         }
 
-        private void comboBoxCapQuyen_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxCot_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxCapQuyen.SelectedIndex == 1 || comboBoxCapQuyen.SelectedIndex == 3)
-            {
-                comboBoxCot.DataSource = null;
-            }
+
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
@@ -175,7 +172,7 @@ namespace PHANHE1
                     else
                     {
                         text2 = "GRANT " + pri[temp] + "(" + col + ") ON UV_" + username + "_" + table + "_" + col + " TO " + username;
-                    }    
+                    }
                 }
                 Console.WriteLine(text2);
                 OracleCommand command2 = new OracleCommand(text2, conn);
@@ -183,10 +180,22 @@ namespace PHANHE1
                 conn.Close();
                 MessageBox.Show("Phân quyền thành công!", "Thông báo");
             }
-
         }
 
-        private void comboBoxUserName_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCapTrenCot.Checked)
+            {
+                comboBoxCot.DataSource = null;
+            }
+        }
+
+        private void checkBoxWithGrantOption_CheckedChanged(object sender, EventArgs e)
         {
 
         }

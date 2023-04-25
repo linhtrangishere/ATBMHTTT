@@ -28,119 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonHuy = new System.Windows.Forms.Button();
-            this.labelTaiKhoan = new System.Windows.Forms.Label();
-            this.textBoxTaiKhoan = new System.Windows.Forms.TextBox();
-            this.labelMatKhau = new System.Windows.Forms.Label();
-            this.textBoxMatKhau = new System.Windows.Forms.TextBox();
+            this.panelChinhSuaUser = new System.Windows.Forms.Panel();
             this.buttonCapNhat = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxMatKhau = new System.Windows.Forms.TextBox();
+            this.labelMatKhau = new System.Windows.Forms.Label();
+            this.textBoxTaiKhoan = new System.Windows.Forms.TextBox();
+            this.labelTaiKhoan = new System.Windows.Forms.Label();
+            this.buttonQuayLai = new System.Windows.Forms.Button();
+            this.panelChinhSuaUser.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonHuy
+            // panelChinhSuaUser
             // 
-            this.buttonHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
-            this.buttonHuy.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHuy.Location = new System.Drawing.Point(551, 371);
-            this.buttonHuy.Name = "buttonHuy";
-            this.buttonHuy.Size = new System.Drawing.Size(200, 70);
-            this.buttonHuy.TabIndex = 13;
-            this.buttonHuy.Text = "Quay lại";
-            this.buttonHuy.UseVisualStyleBackColor = false;
-            this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
+            this.panelChinhSuaUser.Controls.Add(this.buttonCapNhat);
+            this.panelChinhSuaUser.Controls.Add(this.textBoxMatKhau);
+            this.panelChinhSuaUser.Controls.Add(this.labelMatKhau);
+            this.panelChinhSuaUser.Controls.Add(this.textBoxTaiKhoan);
+            this.panelChinhSuaUser.Controls.Add(this.labelTaiKhoan);
+            this.panelChinhSuaUser.Controls.Add(this.buttonQuayLai);
+            this.panelChinhSuaUser.Location = new System.Drawing.Point(0, -10);
+            this.panelChinhSuaUser.Name = "panelChinhSuaUser";
+            this.panelChinhSuaUser.Size = new System.Drawing.Size(935, 600);
+            this.panelChinhSuaUser.TabIndex = 0;
             // 
-            // labelTaiKhoan
+            // buttonCapNhat
             // 
-            this.labelTaiKhoan.AutoSize = true;
-            this.labelTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTaiKhoan.Location = new System.Drawing.Point(121, 73);
-            this.labelTaiKhoan.Name = "labelTaiKhoan";
-            this.labelTaiKhoan.Size = new System.Drawing.Size(153, 41);
-            this.labelTaiKhoan.TabIndex = 14;
-            this.labelTaiKhoan.Text = "Tài khoản";
-            // 
-            // textBoxTaiKhoan
-            // 
-            this.textBoxTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(121, 126);
-            this.textBoxTaiKhoan.Multiline = true;
-            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(630, 50);
-            this.textBoxTaiKhoan.TabIndex = 15;
-            this.textBoxTaiKhoan.TextChanged += new System.EventHandler(this.textBoxTaiKhoan_TextChanged);
-            // 
-            // labelMatKhau
-            // 
-            this.labelMatKhau.AutoSize = true;
-            this.labelMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMatKhau.Location = new System.Drawing.Point(121, 213);
-            this.labelMatKhau.Name = "labelMatKhau";
-            this.labelMatKhau.Size = new System.Drawing.Size(152, 41);
-            this.labelMatKhau.TabIndex = 16;
-            this.labelMatKhau.Text = "Mật khẩu";
+            this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
+            this.buttonCapNhat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonCapNhat.Location = new System.Drawing.Point(150, 414);
+            this.buttonCapNhat.Name = "buttonCapNhat";
+            this.buttonCapNhat.Size = new System.Drawing.Size(200, 70);
+            this.buttonCapNhat.TabIndex = 24;
+            this.buttonCapNhat.Text = "Cập nhật";
+            this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // textBoxMatKhau
             // 
             this.textBoxMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMatKhau.Location = new System.Drawing.Point(121, 266);
+            this.textBoxMatKhau.Location = new System.Drawing.Point(150, 309);
             this.textBoxMatKhau.Multiline = true;
             this.textBoxMatKhau.Name = "textBoxMatKhau";
             this.textBoxMatKhau.PasswordChar = '*';
             this.textBoxMatKhau.Size = new System.Drawing.Size(630, 50);
-            this.textBoxMatKhau.TabIndex = 17;
-            this.textBoxMatKhau.TextChanged += new System.EventHandler(this.textBoxMatKhau_TextChanged);
+            this.textBoxMatKhau.TabIndex = 23;
             // 
-            // buttonCapNhat
+            // labelMatKhau
             // 
-            this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.buttonCapNhat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonCapNhat.Location = new System.Drawing.Point(121, 371);
-            this.buttonCapNhat.Name = "buttonCapNhat";
-            this.buttonCapNhat.Size = new System.Drawing.Size(200, 70);
-            this.buttonCapNhat.TabIndex = 18;
-            this.buttonCapNhat.Text = "Cập nhật";
-            this.buttonCapNhat.UseVisualStyleBackColor = false;
-            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
+            this.labelMatKhau.AutoSize = true;
+            this.labelMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelMatKhau.Location = new System.Drawing.Point(150, 256);
+            this.labelMatKhau.Name = "labelMatKhau";
+            this.labelMatKhau.Size = new System.Drawing.Size(152, 41);
+            this.labelMatKhau.TabIndex = 22;
+            this.labelMatKhau.Text = "Mật khẩu";
             // 
-            // panel1
+            // textBoxTaiKhoan
             // 
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(916, 630);
-            this.panel1.TabIndex = 19;
+            this.textBoxTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxTaiKhoan.Location = new System.Drawing.Point(150, 169);
+            this.textBoxTaiKhoan.Multiline = true;
+            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
+            this.textBoxTaiKhoan.Size = new System.Drawing.Size(630, 50);
+            this.textBoxTaiKhoan.TabIndex = 21;
+            // 
+            // labelTaiKhoan
+            // 
+            this.labelTaiKhoan.AutoSize = true;
+            this.labelTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTaiKhoan.Location = new System.Drawing.Point(150, 116);
+            this.labelTaiKhoan.Name = "labelTaiKhoan";
+            this.labelTaiKhoan.Size = new System.Drawing.Size(153, 41);
+            this.labelTaiKhoan.TabIndex = 20;
+            this.labelTaiKhoan.Text = "Tài khoản";
+            // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
+            this.buttonQuayLai.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(580, 414);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(200, 70);
+            this.buttonQuayLai.TabIndex = 19;
+            this.buttonQuayLai.Text = "Quay lại";
+            this.buttonQuayLai.UseVisualStyleBackColor = false;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // ChinhSuaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(914, 625);
-            this.Controls.Add(this.buttonCapNhat);
-            this.Controls.Add(this.textBoxMatKhau);
-            this.Controls.Add(this.labelMatKhau);
-            this.Controls.Add(this.textBoxTaiKhoan);
-            this.Controls.Add(this.labelTaiKhoan);
-            this.Controls.Add(this.buttonHuy);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(932, 583);
+            this.Controls.Add(this.panelChinhSuaUser);
             this.Name = "ChinhSuaUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChinhSuaUser";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelChinhSuaUser.ResumeLayout(false);
+            this.panelChinhSuaUser.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonHuy;
-        private System.Windows.Forms.Label labelTaiKhoan;
-        private System.Windows.Forms.TextBox textBoxTaiKhoan;
-        private System.Windows.Forms.Label labelMatKhau;
-        private System.Windows.Forms.TextBox textBoxMatKhau;
+
+        private System.Windows.Forms.Panel panelChinhSuaUser;
         private System.Windows.Forms.Button buttonCapNhat;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxMatKhau;
+        private System.Windows.Forms.Label labelMatKhau;
+        private System.Windows.Forms.TextBox textBoxTaiKhoan;
+        private System.Windows.Forms.Label labelTaiKhoan;
+        private System.Windows.Forms.Button buttonQuayLai;
     }
 }
 

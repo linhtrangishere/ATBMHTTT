@@ -26,11 +26,6 @@ namespace PHANHE1
 
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Run_USP_ALTERROLE()
         {
             string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
@@ -65,19 +60,14 @@ namespace PHANHE1
 
         }
 
-        private void textBoxRole_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCapNhat_Click(object sender, EventArgs e)
+        private void buttonCapNhat_Click_1(object sender, EventArgs e)
         {
             Run_USP_ALTERROLE();
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

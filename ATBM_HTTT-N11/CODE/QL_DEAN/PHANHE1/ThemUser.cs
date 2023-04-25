@@ -75,30 +75,9 @@ namespace PHANHE1
             Run_USP_THEMUSER();
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
+        private void buttonQuayLai_Click(object sender, EventArgs e)
         {
             this.Close();
-
-        }
-
-        private void textBoxTaiKhoan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelTaiKhoan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelThemUser_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

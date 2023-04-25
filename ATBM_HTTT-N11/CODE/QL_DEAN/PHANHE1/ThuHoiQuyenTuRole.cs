@@ -72,22 +72,7 @@ namespace PHANHE1
             conn.Close();
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonThuHoi_Click(object sender, EventArgs e)
+        private void buttonThuHoi_Click_1(object sender, EventArgs e)
         {
             string table = comboBoxBang.SelectedValue.ToString();
             int temp = comboBoxThuHoiQuyen.SelectedIndex;
@@ -129,7 +114,28 @@ namespace PHANHE1
             }
         }
 
-        private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void checkBoxColumn_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBoxColumn.Checked)
+            {
+                comboBoxCotThuHoi.DataSource = null;
+            }
+        }
+
+        private void comboBoxThuHoiQuyen_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBoxThuHoiQuyen.SelectedIndex == 1 || comboBoxThuHoiQuyen.SelectedIndex == 3)
+            {
+                comboBoxCotThuHoi.DataSource = null;
+            }
+        }
+
+        private void comboBoxBang_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (comboBoxThuHoiQuyen.SelectedIndex != 1 && comboBoxThuHoiQuyen.SelectedIndex != 3 && !checkBoxColumn.Checked)
             {
@@ -150,27 +156,6 @@ namespace PHANHE1
                 comboBoxCotThuHoi.DataSource = dt2;
                 conn.Close();
             }
-        }
-
-        private void checkBoxColumn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxColumn.Checked)
-            {
-                comboBoxCotThuHoi.DataSource = null;
-            }
-        }
-
-        private void comboBoxThuHoiQuyen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxThuHoiQuyen.SelectedIndex == 1 || comboBoxThuHoiQuyen.SelectedIndex == 3)
-            {
-                comboBoxCotThuHoi.DataSource = null;
-            }
-        }
-
-        private void comboBoxTenRole2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
