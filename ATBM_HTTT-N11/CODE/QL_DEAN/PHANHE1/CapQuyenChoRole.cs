@@ -16,7 +16,7 @@ namespace PHANHE1
     {
         string connectionString = Login.connectionString;
 
-        string[] pri = new string[] { "SELECT", "INSERT", "UPDATE", "DELETE"};
+        string[] pri = new string[] { "SELECT", "INSERT", "UPDATE", "DELETE" };
 
         public CapQuyenChoRole()
         {
@@ -32,8 +32,9 @@ namespace PHANHE1
         {
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
-            try {
-         
+            try
+            {
+
                 DataTable dt2 = new DataTable();
                 string temp = "SELECT DISTINCT GRANTED_ROLE FROM DBA_ROLE_PRIVS WHERE GRANTED_ROLE LIKE 'RL_%'";
                 OracleCommand Cmd = new OracleCommand(temp, conn);
@@ -45,11 +46,13 @@ namespace PHANHE1
                 comboTenRole.DataSource = dt2;
             }
 
-            catch {
+            catch
+            {
                 MessageBox.Show("Không tồn tại role nào để cấp quyền!");
             }
 
-            try {
+            try
+            {
                 DataTable dt = new DataTable();
                 string temp = "select TABLE_NAME from USER_TABLES";
                 OracleCommand a_Cmd = new OracleCommand(temp, conn);
@@ -62,26 +65,79 @@ namespace PHANHE1
                 comboBoxBang.ValueMember = dt.Columns[0].ColumnName;
                 comboBoxBang.DataSource = dt;
             }
-            catch {
+            catch
+            {
                 MessageBox.Show("Không tồn tại table nào để cấp quyền!");
             }
-           
+
             conn.Close();
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
+        private void buttonThem_Click(object sender, EventArgs e)
         {
+            string table = comboBoxBang.SelectedValue.ToString();
+            int temp = comboBoxCapQuyen.SelectedIndex;
+            string role = comboTenRole.SelectedValue.ToString();
 
+            if (comboBoxCot.SelectedValue != null && pri[temp] != "SELECT" && pri[temp] != "UPDATE")
+            {
+                MessageBox.Show("Chỉ được cấp quyền SELECT, UPDATE trên cột!");
+            }
+            else if (comboBoxCot.SelectedValue == null)
+            {
+                OracleConnection conn = new OracleConnection(connectionString);
+                conn.Open();
+                string text = "GRANT " + pri[temp] + " ON " + table + " TO " + role;
+                Console.WriteLine(text);
+                OracleCommand command = new OracleCommand(text, conn);
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Phân quyền thành công!", "Thông báo");
+
+            }
+            else
+            {
+                string col = comboBoxCot.SelectedValue.ToString();
+                OracleConnection conn = new OracleConnection(connectionString);
+                conn.Open();
+                string text = "CREATE OR REPLACE VIEW UV_" + role + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
+                OracleCommand command = new OracleCommand(text, conn);
+                command.ExecuteNonQuery();
+                string text2 = "";
+                if (pri[temp] == "SELECT")
+                {
+                    text2 = "GRANT " + pri[temp] + " ON UV_" + role + "_" + table + "_" + col + " TO " + role;
+                }
+                else if (pri[temp] == "UPDATE")
+                {
+                    text2 = "GRANT " + pri[temp] + "(" + col + ") ON UV_" + role + "_" + table + "_" + col + " TO " + role;
+                }
+                Console.WriteLine(text2);
+                OracleCommand command2 = new OracleCommand(text2, conn);
+                command2.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Phân quyền thành công!", "Thông báo");
+            }
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
+
+        private void comboTenRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void comboBoxCapQuyen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxCapQuyen.SelectedIndex == 1|| comboBoxCapQuyen.SelectedIndex == 3)
+            if (comboBoxCapQuyen.SelectedIndex == 1 || comboBoxCapQuyen.SelectedIndex == 3)
             {
                 comboBoxCot.DataSource = null;
             }
-
         }
+
         private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxCapQuyen.SelectedIndex != 1 && comboBoxCapQuyen.SelectedIndex != 3 && !checkBoxColumn.Checked)
@@ -104,70 +160,19 @@ namespace PHANHE1
                 comboBoxCot.DataSource = dt2;
                 conn.Close();
             }
+        }
+
+        private void comboBoxCot_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void buttonThem_Click(object sender, EventArgs e)
-        {   
-           
-                string table = comboBoxBang.SelectedValue.ToString();
-                int temp = comboBoxCapQuyen.SelectedIndex;
-                string role = comboTenRole.SelectedValue.ToString();
-                
-             if (comboBoxCot.SelectedValue != null && pri[temp] != "SELECT" && pri[temp] != "UPDATE")
-                {
-                    MessageBox.Show("Chỉ được cấp quyền SELECT, UPDATE trên cột!");
-                }
-                else if(comboBoxCot.SelectedValue == null)
-                {
-                    OracleConnection conn = new OracleConnection(connectionString);
-                    conn.Open();
-                    string text = "GRANT " + pri[temp] + " ON " + table + " TO " + role;
-                    Console.WriteLine(text);
-                    OracleCommand command = new OracleCommand(text, conn);
-                    command.ExecuteNonQuery();
-
-                    MessageBox.Show("Phân quyền thành công!", "Thông báo");
-
-                }
-                else
-                {
-                    string col = comboBoxCot.SelectedValue.ToString();
-                    OracleConnection conn = new OracleConnection(connectionString);
-                    conn.Open();
-                    string text = "CREATE OR REPLACE VIEW UV_" + role + "_" + table + "_" + col + " AS SELECT " + col + " FROM " + table;
-                    OracleCommand command = new OracleCommand(text, conn);
-                    command.ExecuteNonQuery();
-                string text2 = "";
-                    if (pri[temp] == "SELECT")
-                    {
-                        text2 = "GRANT " + pri[temp] + " ON UV_" + role + "_" + table + "_" + col + " TO " + role;
-                    }
-                    else if(pri[temp] == "UPDATE")
-                    {
-                    text2 = "GRANT " + pri[temp] + "(" + col +") ON UV_" + role + "_" + table + "_" + col + " TO " + role;
-                    }
-                Console.WriteLine(text2);
-                OracleCommand command2 = new OracleCommand(text2, conn);
-                command2.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Phân quyền thành công!", "Thông báo");
-                }
-            
-          
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxColumn_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxColumn.Checked)
             {
                 comboBoxCot.DataSource = null;
             }
-        }
-
-        private void comboTenRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

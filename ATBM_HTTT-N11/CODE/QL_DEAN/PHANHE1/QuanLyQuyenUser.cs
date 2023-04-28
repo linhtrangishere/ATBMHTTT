@@ -19,6 +19,24 @@ namespace PHANHE1
             InitializeComponent();
         }
 
+        private Form formchild = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (formchild != null)
+            {
+                formchild.Close();
+            }
+            formchild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelQuanLyQuyenUser.Controls.Add(childForm);
+            panelQuanLyQuyenUser.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+
         private void SwitchColorMenu(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -42,29 +60,25 @@ namespace PHANHE1
 
         private void buttonCapQuyen_Click(object sender, EventArgs e)
         {
-            CapQuyenChoUser capquyenuser = new CapQuyenChoUser();
-            capquyenuser.Show();
+            OpenChildForm(new CapQuyenChoUser());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonGanRole_Click(object sender, EventArgs e)
         {
-            GanRoleChoUser ganrole = new GanRoleChoUser();
-            ganrole.Show();
+            OpenChildForm(new GanRoleChoUser());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThuHoiQuyen_Click(object sender, EventArgs e)
         {
-            ThuHoiQuyenTuUser thuhoiquyenuser = new ThuHoiQuyenTuUser();
-            thuhoiquyenuser.Show();
+            OpenChildForm(new ThuHoiQuyenTuUser());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonChinhSuaQuyen_Click(object sender, EventArgs e)
         {
-            ChinhSuaQuyenChoUser chinhsuaquyenchouser = new ChinhSuaQuyenChoUser();
-            chinhsuaquyenchouser.Show();
+            OpenChildForm(new ChinhSuaQuyenChoUser());
             SwitchColorMenu(sender, e);
         }
 
@@ -78,7 +92,7 @@ namespace PHANHE1
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
             OracleCommand getData = conn.CreateCommand();
-            getData.CommandText = "SELECT * FROM USER_TAB_PRIVS WHERE GRANTEE IN (SELECT USERNAME FROM DBA_USERS WHERE ACCOUNT_STATUS = 'OPEN')";
+            getData.CommandText = "select * from user_tab_privs WHERE GRANTEE NOT LIKE 'RL%'";
             getData.CommandType = CommandType.Text;
             OracleDataReader data = getData.ExecuteReader();
             DataTable tempDT = new DataTable();

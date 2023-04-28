@@ -19,6 +19,24 @@ namespace PHANHE1
             InitializeComponent();
         }
 
+        private Form formchild = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (formchild != null)
+            {
+                formchild.Close();
+            }
+            formchild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelQuanLyQuyenRole.Controls.Add(childForm);
+            panelQuanLyQuyenRole.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+
         private void SwitchColorMenu(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -42,22 +60,19 @@ namespace PHANHE1
 
         private void buttonCapQuyen_Click(object sender, EventArgs e)
         {
-            CapQuyenChoRole caprole = new CapQuyenChoRole();
-            caprole.Show();
+            OpenChildForm(new CapQuyenChoRole());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThuHoiQuyen_Click(object sender, EventArgs e)
         {
-            ThuHoiQuyenTuRole thuhoirole = new ThuHoiQuyenTuRole();
-            thuhoirole.Show();
+            OpenChildForm(new ThuHoiQuyenTuRole());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonChinhSuaQuyen_Click(object sender, EventArgs e)
         {
-            ChinhSuaQuyenChoRole chinhsuaquyenchorole = new ChinhSuaQuyenChoRole();
-            chinhsuaquyenchorole.Show();
+            OpenChildForm(new ChinhSuaQuyenChoRole());
             SwitchColorMenu(sender, e);
         }
 
@@ -76,14 +91,13 @@ namespace PHANHE1
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
             OracleCommand getData = conn.CreateCommand();
-            getData.CommandText = "SELECT * FROM ROLE_TAB_PRIVS WHERE ROLE IN (SELECT ROLE FROM ROLE_TAB_PRIVS) AND OWNER IN (SELECT USER FROM DBA_USERS)";
+            getData.CommandText = "SELECT ROLE, OWNER, TABLE_NAME, COLUMN_NAME, PRIVILEGE, GRANTABLE FROM ROLE_TAB_PRIVS WHERE ROLE LIKE 'RL_%'";
             getData.CommandType = CommandType.Text;
             OracleDataReader data = getData.ExecuteReader();
             DataTable tempDT = new DataTable();
             tempDT.Load(data);
             dataGridViewQuanLyQuyenRole.DataSource = tempDT;
             conn.Close();
-
         }
     }
 }

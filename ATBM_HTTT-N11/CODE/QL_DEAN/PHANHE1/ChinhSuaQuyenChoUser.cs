@@ -61,28 +61,11 @@ namespace PHANHE1
                 comboBoxBang.ValueMember = dt.Columns[0].ColumnName;
                 comboBoxBang.DataSource = dt;
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Không tồn tại bảng nào !!!");
             }
             conn.Close();
-
-        }
-
-        private void buttonHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxCapTrenCot.Checked)
-            {
-                comboBoxCot.DataSource = null;
-            }
-        }
-        private void groupBox_Enter(object sender, EventArgs e)
-        {
 
         }
 
@@ -100,48 +83,6 @@ namespace PHANHE1
             conn.Close();
         }
 
-        private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                OracleConnection conn = new OracleConnection(Login.connectionString);
-                conn.Open();
-                string temp;
-                string table = comboBoxBang.SelectedValue.ToString();
-                temp = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '" + table + "'";
-                DataTable dt2 = new DataTable();
-                OracleCommand Cmd = new OracleCommand(temp, conn);
-                Cmd.CommandType = CommandType.Text;
-                OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
-                da2.Fill(dt2);
-                comboBoxCot.DisplayMember = dt2.Columns[0].ColumnName;
-                comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
-                comboBoxCot.DataSource = dt2;
-                conn.Close();
-        }
-
-        private void dataGridViewChinhSuaQuyenChoUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        public string bangCu = null;
-        public string typ = null;
-        //xem quyen hien co cua mot user
-        private void dataGridViewChinhSuaQuyenChoUser_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            OracleConnection conn = new OracleConnection(Login.connectionString);
-            conn.Open();
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewChinhSuaQuyenChoUser.Rows[e.RowIndex];//lay dong hien tai dang chon
-                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();//lay quyen cua dong dang chon bo vao quyen cu
-                bangCu = row.Cells[2].Value.ToString();//lay bang cua dong dang chon bo vao bang cu
-                typ = row.Cells[8].Value.ToString();//kiem tra xem day la table or view
-            }
-            conn.Close();
-        }
         //XEM QUYEN CUA TAT CA CAC NGUOI DUNG DUOC CAP QUYEN
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
@@ -154,6 +95,7 @@ namespace PHANHE1
             dataGridViewChinhSuaQuyenChoUser.DataSource = dt;
             conn.Close();
         }
+
         //CAP NHAT QUYEN MOI CHO USER
         private void buttonCapNhat_Click(object sender, EventArgs e)
         {
@@ -186,7 +128,7 @@ namespace PHANHE1
             }
 
 
-            
+
             //cap nhat lai quyen moi
             string table = comboBoxBang.SelectedValue.ToString();
             int index = comboBoxQuyenMoi.SelectedIndex;
@@ -214,7 +156,7 @@ namespace PHANHE1
                     command.ExecuteNonQuery();
                 }
                 MessageBox.Show("Cập nhật thành công!", "Thông báo");
-             
+
             }
             else
             {
@@ -253,24 +195,57 @@ namespace PHANHE1
                     conn.Close();
                     MessageBox.Show("Cập nhật thành công !!!", "Thông báo");
                 }
-                
+
             }
             conn.Close();
         }
 
-        private void textBoxQuyenCu_TextChanged(object sender, EventArgs e)
+        private void buttonQuayLai_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void comboBoxCot_SelectedIndexChanged(object sender, EventArgs e)
+        public string bangCu = null;
+        public string typ = null;
+        //xem quyen hien co cua mot user
+        private void dataGridViewChinhSuaQuyenChoUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            OracleConnection conn = new OracleConnection(Login.connectionString);
+            conn.Open();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewChinhSuaQuyenChoUser.Rows[e.RowIndex];//lay dong hien tai dang chon
+                textBoxQuyenCu.Text = row.Cells[4].Value.ToString();//lay quyen cua dong dang chon bo vao quyen cu
+                bangCu = row.Cells[2].Value.ToString();//lay bang cua dong dang chon bo vao bang cu
+                typ = row.Cells[8].Value.ToString();//kiem tra xem day la table or view
+            }
+            conn.Close();
         }
 
-        private void comboBoxTenUser_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxBang_SelectedIndexChanged(object sender, EventArgs e)
         {
+            OracleConnection conn = new OracleConnection(Login.connectionString);
+            conn.Open();
+            string temp;
+            string table = comboBoxBang.SelectedValue.ToString();
+            temp = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '" + table + "'";
+            DataTable dt2 = new DataTable();
+            OracleCommand Cmd = new OracleCommand(temp, conn);
+            Cmd.CommandType = CommandType.Text;
+            OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
+            da2.Fill(dt2);
+            comboBoxCot.DisplayMember = dt2.Columns[0].ColumnName;
+            comboBoxCot.ValueMember = dt2.Columns[0].ColumnName;
+            comboBoxCot.DataSource = dt2;
+            conn.Close();
+        }
 
+        private void checkBoxCapTrenCot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCapTrenCot.Checked)
+            {
+                comboBoxCot.DataSource = null;
+            }
         }
     }
 }

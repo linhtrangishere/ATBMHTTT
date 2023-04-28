@@ -87,7 +87,6 @@ C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debu
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachView.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyTable.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyObjects.resources
-C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QuanLyView.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.ThemTable.resources
 C:\Users\DELL\Desktop\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\bin\Debug\PHANHE1.exe.config
 C:\Users\DELL\Desktop\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\bin\Debug\PHANHE1.exe

@@ -23,7 +23,6 @@ namespace PHANHE1
         }
         List<Table> Tab = new List<Table>();
 
-        
         public ThemTable()
         {
             InitializeComponent();
@@ -34,34 +33,38 @@ namespace PHANHE1
 
         }
 
-        private void buttonHuy_Click(object sender, EventArgs e)
+        private void SwitchColorMenu(object sender, EventArgs e)
         {
-            this.Close();
+            Button btn = sender as Button;
+            if (btn.BackColor == Color.FromArgb(255, 212, 178))
+            {
+                btn.BackColor = Color.FromArgb(255, 246, 189);
+            }
+            else
+            {
+                foreach (Control prebtn in panelThemTable.Controls)
+                {
+                    if (prebtn.GetType() == typeof(Button))
+                    {
+                        prebtn.BackColor = Color.FromArgb(255, 246, 189);
+                        prebtn.ForeColor = Color.Black;
+                    }
+                }
+                btn.BackColor = Color.FromArgb(255, 212, 178);
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         //ADD PHAN TU VAO DATAGRID VA LIST<STRUCT>
         private void buttonThem_Click(object sender, EventArgs e)
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
             dataGridViewThemTable.Rows.Add(textBoxTenCot.Text, textBoxDataType.Text, checkBox.Checked);
-            Tab.Add(new Table() {columnName = textBoxTenCot.Text, dataType = textBoxDataType.Text, isKey = checkBox.Checked });
+            Tab.Add(new Table() { columnName = textBoxTenCot.Text, dataType = textBoxDataType.Text, isKey = checkBox.Checked });
             conn.Close();
+            SwitchColorMenu(sender, e);
         }
 
-        private void checkBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         // TRUY VAN TAO BANG
         private void buttonTaoBang_Click(object sender, EventArgs e)
         {
@@ -90,7 +93,7 @@ namespace PHANHE1
                         strKey = "ALTER TABLE " + textBoxTenBang.Text + " ADD CONSTRAINT " + textBoxTenBang.Text + "_PK PRIMARY KEY (" + Tab[i].columnName + ")";
                         OracleCommand cmd2 = new OracleCommand(strKey, conn);
                         cmd2.ExecuteNonQuery();
-                        conn.Close() ;
+                        conn.Close();
 
                     }
                 }
@@ -101,16 +104,12 @@ namespace PHANHE1
                 MessageBox.Show("Vui long thu lai!!!");
             }
             conn.Close();
+            SwitchColorMenu(sender, e);
         }
 
-        private void labelThemBang_Click(object sender, EventArgs e)
+        private void buttonQuayLai_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void groupBox_Enter(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

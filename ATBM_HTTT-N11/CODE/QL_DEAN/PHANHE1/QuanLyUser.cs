@@ -49,8 +49,8 @@ namespace PHANHE1
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panelQuanLyUser.Controls.Add(childForm);
+            panelQuanLyUser.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -60,27 +60,9 @@ namespace PHANHE1
 
         }
 
-        private void buttonTaoUser_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThemUser());
-            //SwitchColorMenu(sender, e);
-        }
-
-        private void buttonChinhSuaUser_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ChinhSuaUser());
-            //SwitchColorMenu(sender, e);
-        }
-
-        private void buttonXoaUser_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new XoaUser());
-            //SwitchColorMenu(sender, e);
-        }
-
         private void QuanLyUser_Load(object sender, EventArgs e)
         {
-            panelChildForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            
         }
 
         private void panelThemXoaSua_Paint(object sender, PaintEventArgs e)
@@ -91,6 +73,24 @@ namespace PHANHE1
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonTaoUser_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThemUser());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonXoaUser_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new XoaUser());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonChinhSuaUser_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChinhSuaUser());
+            SwitchColorMenu(sender, e);
         }
     }
 }

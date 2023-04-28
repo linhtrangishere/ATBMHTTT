@@ -177,12 +177,6 @@
     <Compile Include="QuanLyObjects.designer.cs">
       <DependentUpon>QuanLyObjects.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyView.Designer.cs">
-      <DependentUpon>QuanLyView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ThemTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,9 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyObjects.resx">
       <DependentUpon>QuanLyObjects.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyView.resx">
-      <DependentUpon>QuanLyView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemRole.resx">
       <DependentUpon>ThemRole.cs</DependentUpon>

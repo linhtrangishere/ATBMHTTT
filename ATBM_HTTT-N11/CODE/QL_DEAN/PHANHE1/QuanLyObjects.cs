@@ -26,8 +26,11 @@ namespace PHANHE1
             }
             formchild = childForm;
             childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None; 
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            //childForm.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(childForm);
+            //panelChildForm.Tag = childForm;
+            //childForm.BringToFront();
             childForm.Show();
         }
 
@@ -68,22 +71,6 @@ namespace PHANHE1
         {
             OpenChildForm(new QuanLyTable());
             SwitchColorMenu(sender, e);
-        }
-
-        private void buttonView_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new QuanLyView());
-            SwitchColorMenu(sender, e);
-        }
-
-        private void panelChildForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void QuanLyObjects_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

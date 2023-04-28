@@ -38,7 +38,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV0417', N'Nguyễn Thị Dỗ', N'Nam', to_date('07/08/1997', 'MM/DD/RRRR'), N'Điền Trung, Bá Thước, Thanh Hóa,R', '08456294412', '86474000', '822700', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV0430', N'Nguyễn Thị Phê', N'Nữ', to_date('07/27/1968', 'MM/DD/RRRR'), N'Bình Thành, Phụng Hiệp, Hậu Giang,', '08743076227', '99875000', '453200', N'Nhân viên', 'PB0006');
+VALUES ('NV0430', N'Nguyễn Thị Phê', N'Nữ', to_date('07/27/1968', 'MM/DD/RRRR'), N'Bình Thành, Phụng Hiệp, Hậu Giang', '08743076227', '99875000', '453200', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV0523', N'Nguyễn Anh Thi', N'Nam', to_date('09/25/1987', 'MM/DD/RRRR'), N'Trí Lực, Thới Bình, Cà Mau,2I', '08519621173', '64556000', '190100', N'Nhân viên', 'PB0005');
@@ -71,22 +71,22 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV0830', N'Nguyễn Văn Thái', N'Nam', to_date('03/07/1974', 'MM/DD/RRRR'), N'Ia Yok, Ia Grai, Gia Lai,C39G', '08072558989', '41678000', '325600', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV0884', N'Nguyễn Thị Mai Thủy', N'Nam', to_date('01/27/1996', 'MM/DD/RRRR'), N'Vân Hòa, Ba Vì, Hà Nội,', '09573548930', '44355000', '832500', N'Nhân viên', 'PB0008');
+VALUES ('NV0884', N'Nguyễn Thị Mai Thủy', N'Nam', to_date('01/27/1996', 'MM/DD/RRRR'), N'Vân Hòa, Ba Vì, Hà Nội', '09573548930', '44355000', '832500', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV0965', N'Nguyễn Thị Phát', N'Nữ', to_date('08/11/1982', 'MM/DD/RRRR'), N'Bình Thạnh, Thủ Thừa, Long An,', '03510389305', '2601000', '699900', N'Nhân viên', 'PB0007');
+VALUES ('NV0965', N'Nguyễn Thị Phát', N'Nữ', to_date('08/11/1982', 'MM/DD/RRRR'), N'Bình Thạnh, Thủ Thừa, Long An', '03510389305', '2601000', '699900', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1037', N'Nguyễn Ô', N'Nữ', to_date('07/21/1979', 'MM/DD/RRRR'), N'Cẩm Trung, Cẩm Phả, Quảng Ninh,B', '08170396284', '54228000', '262500', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1038', N'Nguyễn Đức Tiếu', N'Nam', to_date('10/23/1968', 'MM/DD/RRRR'), N'Hiệp Phú, Quận 9, Hồ Chí Minh,', '03372929573', '6392000', '584400', N'Nhân viên', 'PB0004');
+VALUES ('NV1038', N'Nguyễn Đức Tiếu', N'Nam', to_date('10/23/1968', 'MM/DD/RRRR'), N'Hiệp Phú, Quận 9, Hồ Chí Minh', '03372929573', '6392000', '584400', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1114', N'Nguyễn Đức Thắng', N'Nữ', to_date('04/19/1995', 'MM/DD/RRRR'), N'Ma Nới, Ninh Sơn, Ninh Thuận,X5QA05', '08268115085', '78821000', '735400', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1115', N'Nguyễn Thị Lan', N'Nữ', to_date('03/14/1966', 'MM/DD/RRRR'), N'Hữu Văn, Chương Mỹ, Hà Nội,', '08354725251', '7468000', '460300', N'Nhân viên', 'PB0006');
+VALUES ('NV1115', N'Nguyễn Thị Lan', N'Nữ', to_date('03/14/1966', 'MM/DD/RRRR'), N'Hữu Văn, Chương Mỹ, Hà Nội', '08354725251', '7468000', '460300', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1167', N'Nguyễn Thị Huyễn', N'Nam', to_date('09/06/2000', 'MM/DD/RRRR'), N'Hải Tân, Hải Dương, Hải Dương,O', '08693180155', '1901000', '248800', N'Nhân viên', 'PB0004');
@@ -98,7 +98,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV1198', N'Nguyễn Thị Suối', N'Nam', to_date('11/04/1981', 'MM/DD/RRRR'), N'Cầu Bà, Khánh Vĩnh, Khánh Hòa,G1Q', '08406557224', '6815000', '752400', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1222', N'Nguyễn Thị Sinh Tấm', N'Nữ', to_date('10/17/1969', 'MM/DD/RRRR'), N'Thuận Thới, Trà Ôn, Vĩnh Long,', '09751233426', '17737000', '990900', N'Nhân viên', 'PB0002');
+VALUES ('NV1222', N'Nguyễn Thị Sinh Tấm', N'Nữ', to_date('10/17/1969', 'MM/DD/RRRR'), N'Thuận Thới, Trà Ôn, Vĩnh Long', '09751233426', '17737000', '990900', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1230', N'Nguyễn Đức Phổ', N'Nam', to_date('05/13/1962', 'MM/DD/RRRR'), N'Quế Phong, Quế Sơn, Quảng Nam,8I37CQ', '09442233651', '2729000', '246700', N'Nhân viên', 'PB0003');
@@ -125,7 +125,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV1442', N'Nguyễn Thế Tuyên', N'Nam', to_date('10/05/1970', 'MM/DD/RRRR'), N'Tân Hòa, Biên Hòa, Đồng Nai,0ZWLU', '09965294407', '48735000', '731800', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1468', N'Nguyễn Thị Mi', N'Nam', to_date('01/13/1960', 'MM/DD/RRRR'), N'Định Mỹ, Thoại Sơn, An Giang,', '09795260183', '33069000', '201100', N'Nhân viên', 'PB0005');
+VALUES ('NV1468', N'Nguyễn Thị Mi', N'Nam', to_date('01/13/1960', 'MM/DD/RRRR'), N'Định Mỹ, Thoại Sơn, An Giang', '09795260183', '33069000', '201100', N'Nhân viên', 'PB0005');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1524', N'Nguyễn Đức Thắng', N'Nam', to_date('12/25/1974', 'MM/DD/RRRR'), N'Đoọc Mạy, Kỳ Sơn, Nghệ An,UN', '09975438165', '59691000', '255000', N'Nhân viên', 'PB0008');
@@ -149,13 +149,13 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV1775', N'Nguyễn Đức Tẩn', N'Nam', to_date('03/07/1953', 'MM/DD/RRRR'), N'Đất Mới, Năm Căn, Cà Mau,3IK2', '03548139276', '36597000', '794200', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1810', N'Nguyễn Thị Mi', N'Nam', to_date('12/06/1993', 'MM/DD/RRRR'), N'Long Bình, Ngã Năm, Sóc Trăng,', '03843495795', '4533000', '559200', N'Nhân viên', 'PB0001');
+VALUES ('NV1810', N'Nguyễn Thị Mi', N'Nam', to_date('12/06/1993', 'MM/DD/RRRR'), N'Long Bình, Ngã Năm, Sóc Trăng', '03843495795', '4533000', '559200', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1814', N'Nguyễn Thi', N'Nam', to_date('08/30/1977', 'MM/DD/RRRR'), N'Bình Minh, Tĩnh Gia, Thanh Hóa,T', '09511053209', '74750000', '244300', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1826', N'Nguyễn Đình Luân', N'Nam', to_date('10/23/1973', 'MM/DD/RRRR'), N'Cẩm Hà, Cẩm Xuyên, Hà Tĩnh,', '03300718350', '8649000', NULL, N'Nhân viên', 'PB0007');
+VALUES ('NV1826', N'Nguyễn Đình Luân', N'Nam', to_date('10/23/1973', 'MM/DD/RRRR'), N'Cẩm Hà, Cẩm Xuyên, Hà Tĩnh', '03300718350', '8649000', NULL, N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1877', N'Nguyễn Thị Tam', N'Nam', to_date('04/09/1981', 'MM/DD/RRRR'), N'Thành Công, Gò Công Tây, Tiền Giang,XYLW6', '08012536533', '4778000', '748400', N'Nhân viên', 'PB0008');
@@ -170,7 +170,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV1961', N'Nguyễn Đức Giáo Hoàng', N'Nữ', to_date('12/26/1963', 'MM/DD/RRRR'), N'An Bình, Buôn Hồ, Đắk Lắk,C', '08046002382', '2238000', '432300', N'Nhân viên', 'PB0005');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV1967', N'Nguyễn Thị Phỉ', N'Nữ', to_date('01/27/1955', 'MM/DD/RRRR'), N'Thới Thuận, Thốt Nốt, Cần Thơ,', '03877349485', '38932000', '231600', N'Nhân viên', 'PB0006');
+VALUES ('NV1967', N'Nguyễn Thị Phỉ', N'Nữ', to_date('01/27/1955', 'MM/DD/RRRR'), N'Thới Thuận, Thốt Nốt, Cần Thơ', '03877349485', '38932000', '231600', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV1990', N'Nguyễn Thị Linh', N'Nữ', to_date('10/16/1983', 'MM/DD/RRRR'), N'Hải Khê, Hải Lăng, Quảng Trị,O0RH', '03048101426', '6466000', '345000', N'Nhân viên', 'PB0002');
@@ -263,13 +263,13 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV3009', N'Nguyễn Minh Tâm', N'Nam', to_date('01/15/1969', 'MM/DD/RRRR'), N'Long Thủy, Phước Long, Bình Phước,JSDI3', '08095361624', '8501000', '838400', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV3051', N'Nguyễn Đức Đông', N'Nữ', to_date('09/10/1960', 'MM/DD/RRRR'), N'Cam Phước Tây, Cam Lâm, Khánh Hòa,', '08669444084', '98712000', '590000', N'Nhân viên', 'PB0008');
+VALUES ('NV3051', N'Nguyễn Đức Đông', N'Nữ', to_date('09/10/1960', 'MM/DD/RRRR'), N'Cam Phước Tây, Cam Lâm, Khánh Hòa', '08669444084', '98712000', '590000', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV3070', N'Nguyễn Kỹ', N'Nữ', to_date('01/29/1995', 'MM/DD/RRRR'), N'Pú Trạng, Nghĩa Lộ, Yên Bái,C5HL', '09648745816', '9526000', '399700', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV3111', N'Nguyễn Thị Mến', N'Nam', to_date('10/22/1973', 'MM/DD/RRRR'), N'Sơn Cao, Sơn Hà, Quảng Ngãi,', '09255504792', '7433000', '311400', N'Nhân viên', 'PB0006');
+VALUES ('NV3111', N'Nguyễn Thị Mến', N'Nam', to_date('10/22/1973', 'MM/DD/RRRR'), N'Sơn Cao, Sơn Hà, Quảng Ngãi', '09255504792', '7433000', '311400', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV3138', N'Nguyễn Quân', N'Nữ', to_date('07/25/1968', 'MM/DD/RRRR'), N'Yên Phúc, Ý Yên, Nam Định,3UZL9', '03957481399', '35384000', '416700', N'Nhân viên', 'PB0005');
@@ -284,7 +284,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV3224', N'Nguyễn Đức Linh', N'Nữ', to_date('09/09/1972', 'MM/DD/RRRR'), N'Văn Miếu, Thanh Sơn, Phú Thọ,MCQE0', '08385953109', '13754000', '108700', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV3359', N'Nguyễn Đức Mười', N'Nữ', to_date('06/20/1986', 'MM/DD/RRRR'), N'Tiên Long, Châu Thành, Bến Tre,', '03393034511', '46378000', '640900', N'Nhân viên', 'PB0003');
+VALUES ('NV3359', N'Nguyễn Đức Mười', N'Nữ', to_date('06/20/1986', 'MM/DD/RRRR'), N'Tiên Long, Châu Thành, Bến Tre', '03393034511', '46378000', '640900', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV3411', N'Nguyễn Thi', N'Nam', to_date('01/18/1964', 'MM/DD/RRRR'), N'Tân Lập, Bắc Tân Uyên, Bình Dương,J66HGA', '03392043396', '3441000', '815400', N'Nhân viên', 'PB0003');
@@ -308,7 +308,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV3653', N'Nguyễn Tăng Mai Châu', N'Nữ', to_date('01/27/2002', 'MM/DD/RRRR'), N'Hải Lĩnh, Tĩnh Gia, Thanh Hóa,SK1D3', '03644621728', '5107000', '128600', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV3655', N'Nguyễn Đức Thắng', N'Nữ', to_date('10/30/1974', 'MM/DD/RRRR'), N'Vĩnh Quang, Vĩnh Thạnh, Bình Định,', '03878132150', '1760000', '229100', N'Nhân viên', 'PB0002');
+VALUES ('NV3655', N'Nguyễn Đức Thắng', N'Nữ', to_date('10/30/1974', 'MM/DD/RRRR'), N'Vĩnh Quang, Vĩnh Thạnh, Bình Định', '03878132150', '1760000', '229100', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV3678', N'Nguyễn Nhã', N'Nam', to_date('01/15/1966', 'MM/DD/RRRR'), N'Gia Hội, Văn Chấn, Yên Bái,GPWC73', '08892517411', '2417000', '107200', N'Nhân viên', 'PB0003');
@@ -362,7 +362,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV4318', N'Nguyễn Văn Năm', N'Nam', to_date('12/15/1991', 'MM/DD/RRRR'), N'Yên Khang, Ý Yên, Nam Định,KO8G', '03849696370', '2555000', '852200', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV4325', N'Nguyễn Thị Lộc', N'Nam', to_date('10/13/1954', 'MM/DD/RRRR'), N'Qui Hướng, Mộc Châu, Sơn La,', '08857522858', '21902000', '472600', N'Nhân viên', 'PB0002');
+VALUES ('NV4325', N'Nguyễn Thị Lộc', N'Nam', to_date('10/13/1954', 'MM/DD/RRRR'), N'Qui Hướng, Mộc Châu, Sơn La', '08857522858', '21902000', '472600', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV4334', N'Nguyễn Thị An', N'Nữ', to_date('10/07/1982', 'MM/DD/RRRR'), N'Huy Bắc, Phù Yên, Sơn La,54J', '08232253604', '25378000', '567100', N'Nhân viên', 'PB0008');
@@ -449,22 +449,22 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV5165', N'Nguyễn Thị Mai', N'Nữ', to_date('01/08/1977', 'MM/DD/RRRR'), N'Châu Phong, Tân Châu, An Giang,4VKE', '08419609406', '9481000', NULL, N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5208', N'Nguyễn Tăng Mai Trang', N'Nữ', to_date('09/25/1960', 'MM/DD/RRRR'), N'Tân Bình, Đăk Đoa, Gia Lai,', '03947807993', '44235000', '578200', N'Nhân viên', 'PB0003');
+VALUES ('NV5208', N'Nguyễn Tăng Mai Trang', N'Nữ', to_date('09/25/1960', 'MM/DD/RRRR'), N'Tân Bình, Đăk Đoa, Gia Lai', '03947807993', '44235000', '578200', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5215', N'Nguyễn Thị Kim Thoa', N'Nam', to_date('10/11/1968', 'MM/DD/RRRR'), N'Đắk Plao, Đăk Glong, Đắk Nông,', '03531767519', '47664000', '841900', N'Nhân viên', 'PB0001');
+VALUES ('NV5215', N'Nguyễn Thị Kim Thoa', N'Nam', to_date('10/11/1968', 'MM/DD/RRRR'), N'Đắk Plao, Đăk Glong, Đắk Nông', '03531767519', '47664000', '841900', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5271', N'Nguyễn Thị Liên', N'Nữ', to_date('12/06/1965', 'MM/DD/RRRR'), N'Mỹ Lương, Yên Lập, Phú Thọ,', '03138627936', '5415000', '908500', N'Nhân viên', 'PB0008');
+VALUES ('NV5271', N'Nguyễn Thị Liên', N'Nữ', to_date('12/06/1965', 'MM/DD/RRRR'), N'Mỹ Lương, Yên Lập, Phú Thọ', '03138627936', '5415000', '908500', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5289', N'Nguyễn Vinh', N'Nam', to_date('05/12/1983', 'MM/DD/RRRR'), N'Song Phượng, Đan Phượng, Hà Nội,', '09458493487', '8708000', '444800', N'Nhân viên', 'PB0001');
+VALUES ('NV5289', N'Nguyễn Vinh', N'Nam', to_date('05/12/1983', 'MM/DD/RRRR'), N'Song Phượng, Đan Phượng, Hà Nội', '09458493487', '8708000', '444800', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV5292', N'Nguyễn Đức Tiệu', N'Nữ', to_date('08/26/1964', 'MM/DD/RRRR'), N'Bình Hải, Thăng Bình, Quảng Nam,B8', '03273437570', '34025000', '795200', N'Nhân viên', 'PB0005');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5303', N'Nguyễn Thị Thạch', N'Nam', to_date('03/04/1982', 'MM/DD/RRRR'), N'Thanh Sơn, Định Quán, Đồng Nai,', '03928781714', '19217000', '853900', N'Nhân viên', 'PB0003');
+VALUES ('NV5303', N'Nguyễn Thị Thạch', N'Nam', to_date('03/04/1982', 'MM/DD/RRRR'), N'Thanh Sơn, Định Quán, Đồng Nai', '03928781714', '19217000', '853900', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV5355', N'Nguyễn Thị Bích Trâm', N'Nữ', to_date('12/17/1987', 'MM/DD/RRRR'), N'Quảng Phú, Thanh Hóa, Thanh Hóa,X21', '08791315569', '91538000', '202800', N'Nhân viên', 'PB0002');
@@ -488,7 +488,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV5442', N'Nguyễn Thị Linh', N'Nam', to_date('10/22/1979', 'MM/DD/RRRR'), N'Tiền Tiến, Phù Cừ, Hưng Yên,0O', '03133279629', '7209000', '807800', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5460', N'Nguyễn Thị Thị', N'Nữ', to_date('08/30/1989', 'MM/DD/RRRR'), N'Minh Tiến, Ngọc Lặc, Thanh Hóa,', '09862023300', '20282000', '205500', N'Nhân viên', 'PB0004');
+VALUES ('NV5460', N'Nguyễn Thị Thị', N'Nữ', to_date('08/30/1989', 'MM/DD/RRRR'), N'Minh Tiến, Ngọc Lặc, Thanh Hóa', '09862023300', '20282000', '205500', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV5466', N'Nguyễn Thị Ngộ', N'Nam', to_date('03/11/1979', 'MM/DD/RRRR'), N'Phước Hưng, An Phú, An Giang,SWXQZ', '03601908130', '4044000', '444300', N'Nhân viên', 'PB0007');
@@ -506,7 +506,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV5581', N'Nguyễn Thị Hửu', N'Nam', to_date('10/22/1964', 'MM/DD/RRRR'), N'Tà Lài, Tân Phú, Đồng Nai,4SKU7', '03360551295', '9868000', '329900', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5702', N'Nguyễn Chí Sanh', N'Nam', to_date('09/04/1974', 'MM/DD/RRRR'), N'Lộc Thuận, Lộc Ninh, Bình Phước,', '08366763424', '87829000', '520200', N'Nhân viên', 'PB0007');
+VALUES ('NV5702', N'Nguyễn Chí Sanh', N'Nam', to_date('09/04/1974', 'MM/DD/RRRR'), N'Lộc Thuận, Lộc Ninh, Bình Phước', '08366763424', '87829000', '520200', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV5792', N'Nguyễn Thị Thanh', N'Nam', to_date('04/12/1994', 'MM/DD/RRRR'), N'Văn Nghĩa, Lạc Sơn, Hoà Bình,XXEWX', '09156516470', '89113000', '836800', N'Nhân viên', 'PB0008');
@@ -521,7 +521,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV5851', N'Nguyễn Nhã', N'Nam', to_date('10/23/1999', 'MM/DD/RRRR'), N'Nam Tiến, Phổ Yên, Thái Nguyên,S06S3', '09536949775', '57037000', '792600', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV5858', N'Nguyễn Thị Phụng', N'Nam', to_date('05/12/1984', 'MM/DD/RRRR'), N'Nậm Păm, Mường La, Sơn La,', '09856888012', '5808000', '144200', N'Nhân viên', 'PB0007');
+VALUES ('NV5858', N'Nguyễn Thị Phụng', N'Nam', to_date('05/12/1984', 'MM/DD/RRRR'), N'Nậm Păm, Mường La, Sơn La', '09856888012', '5808000', '144200', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV5890', N'Nguyễn Đức Phúc', N'Nữ', to_date('09/10/1992', 'MM/DD/RRRR'), N'Thạch Bàn, Long Biên, Hà Nội,XE3', '09410949218', '59013000', '805900', N'Nhân viên', 'PB0003');
@@ -542,7 +542,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV6052', N'Nguyễn Tứ', N'Nam', to_date('12/14/1967', 'MM/DD/RRRR'), N'Thạch Trung, Hà Tĩnh, Hà Tĩnh,Q25L', '08385542141', '41062000', '864200', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV6062', N'Nguyễn Đức Việt', N'Nam', to_date('12/12/1986', 'MM/DD/RRRR'), N'Thượng Nông, Na Hang, Tuyên Quang,', '08008230290', '72156000', '968800', N'Nhân viên', 'PB0008');
+VALUES ('NV6062', N'Nguyễn Đức Việt', N'Nam', to_date('12/12/1986', 'MM/DD/RRRR'), N'Thượng Nông, Na Hang, Tuyên Quang', '08008230290', '72156000', '968800', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV6090', N'Nguyễn Thị Hân', N'Nữ', to_date('08/20/1996', 'MM/DD/RRRR'), N'An Bình, Cao Lãnh, Đồng Tháp,77', '08813456647', '6743000', '178200', N'Nhân viên', 'PB0002');
@@ -608,7 +608,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV6635', N'Nguyễn Thị Trọng', N'Nữ', to_date('06/06/1993', 'MM/DD/RRRR'), N'Tân Lập, Mộc Châu, Sơn La,I1Y3', '09327738187', '1411000', '302100', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV6640', N'Nguyễn Thị Thế', N'Nữ', to_date('12/09/1994', 'MM/DD/RRRR'), N'Bình Khánh, Cần Giờ, Hồ Chí Minh,', '03390220991', '6392000', '718200', N'Nhân viên', 'PB0002');
+VALUES ('NV6640', N'Nguyễn Thị Thế', N'Nữ', to_date('12/09/1994', 'MM/DD/RRRR'), N'Bình Khánh, Cần Giờ, Hồ Chí Minh', '03390220991', '6392000', '718200', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV6644', N'Nguyễn Thám', N'Nữ', to_date('06/19/1971', 'MM/DD/RRRR'), N'Phú Thọ, Tam Nông, Đồng Tháp,8', '09676872239', '70159000', '762100', N'Nhân viên', 'PB0005');
@@ -641,10 +641,10 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV6924', N'Nguyễn Đức Nam', N'Nam', to_date('11/18/1977', 'MM/DD/RRRR'), N'Mồ Sì San, Phong Thổ, Lai Châu,0VHRME', '08261309643', '98175000', '921500', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV6938', N'Nguyễn Văn Sách', N'Nam', to_date('08/11/1990', 'MM/DD/RRRR'), N'Đức Thạnh, Mộ Đức, Quảng Ngãi,', '03813477715', '9070000', '624900', N'Nhân viên', 'PB0008');
+VALUES ('NV6938', N'Nguyễn Văn Sách', N'Nam', to_date('08/11/1990', 'MM/DD/RRRR'), N'Đức Thạnh, Mộ Đức, Quảng Ngãi', '03813477715', '9070000', '624900', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV6967', N'Nguyễn Thị Hậu', N'Nữ', to_date('11/16/1970', 'MM/DD/RRRR'), N'Hợp Thịnh, Hiệp Hòa, Bắc Giang,', '03734839554', '7487000', '502400', N'Nhân viên', 'PB0001');
+VALUES ('NV6967', N'Nguyễn Thị Hậu', N'Nữ', to_date('11/16/1970', 'MM/DD/RRRR'), N'Hợp Thịnh, Hiệp Hòa, Bắc Giang', '03734839554', '7487000', '502400', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV6994', N'Nguyễn Ngọc Trân', N'Nam', to_date('06/20/1994', 'MM/DD/RRRR'), N'Thành Công, Ba Đình, Hà Nội,7CUUQ5', '09054134649', '32623000', '858000', N'Nhân viên', 'PB0007');
@@ -716,10 +716,10 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV7879', N'Nguyễn Thị Chạy', N'Nam', to_date('12/22/1981', 'MM/DD/RRRR'), N'Lái Thiêu, Thuận An, Bình Dương,ZPBKTI', '09390350305', '2836000', '947600', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV7888', N'Nguyễn Đức Khách', N'Nam', to_date('04/03/1965', 'MM/DD/RRRR'), N'Quang Lịch, Kiến Xương, Thái Bình,', '03246447867', '1654000', '267600', N'Nhân viên', 'PB0006');
+VALUES ('NV7888', N'Nguyễn Đức Khách', N'Nam', to_date('04/03/1965', 'MM/DD/RRRR'), N'Quang Lịch, Kiến Xương, Thái Bình', '03246447867', '1654000', '267600', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV7939', N'Nguyễn Anh Thi', N'Nam', to_date('08/20/1986', 'MM/DD/RRRR'), N'Quảng Hòa, Quảng Xương, Thanh Hóa,', '09493438200', '80088000', '731100', N'Nhân viên', 'PB0007');
+VALUES ('NV7939', N'Nguyễn Anh Thi', N'Nam', to_date('08/20/1986', 'MM/DD/RRRR'), N'Quảng Hòa, Quảng Xương, Thanh Hóa', '09493438200', '80088000', '731100', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV7978', N'Nguyễn Thị Chinh', N'Nữ', to_date('09/24/1985', 'MM/DD/RRRR'), N'Việt Hưng, Hạ Long, Quảng Ninh,A2', '08935718447', '70406000', '772000', N'Nhân viên', 'PB0001');
@@ -758,7 +758,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8281', N'Nguyễn Tựu', N'Nữ', to_date('09/29/1979', 'MM/DD/RRRR'), N'Hiệp Hòa, Quảng Yên, Quảng Ninh,P', '03711791550', '65248000', '388900', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8348', N'Nguyễn Khắc Hiếu', N'Nữ', to_date('09/06/1979', 'MM/DD/RRRR'), N'An Thắng, An Lão, Hải Phòng,', '08245535764', '11385000', '529400', N'Nhân viên', 'PB0004');
+VALUES ('NV8348', N'Nguyễn Khắc Hiếu', N'Nữ', to_date('09/06/1979', 'MM/DD/RRRR'), N'An Thắng, An Lão, Hải Phòng', '08245535764', '11385000', '529400', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8370', N'Nguyễn Thị Nhàn', N'Nữ', to_date('08/29/1990', 'MM/DD/RRRR'), N'Tỏa Tình, Tuần Giáo, Điện Biên,23CZR', '08415443483', '31143000', '109300', N'Nhân viên', 'PB0002');
@@ -773,13 +773,13 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8417', N'Nguyễn Đức Giáo Hoàng', N'Nam', to_date('01/22/1998', 'MM/DD/RRRR'), N'Đắk Tơ Lung, Kon Rẫy, Kon Tum,EN', '03619102985', '4595000', '320400', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8419', N'Nguyễn Yêm', N'Nữ', to_date('07/11/2002', 'MM/DD/RRRR'), N'Cẩm Thanh, Hội An, Quảng Nam,', '08177910182', '7151000', '768400', N'Nhân viên', 'PB0003');
+VALUES ('NV8419', N'Nguyễn Yêm', N'Nữ', to_date('07/11/2002', 'MM/DD/RRRR'), N'Cẩm Thanh, Hội An, Quảng Nam', '08177910182', '7151000', '768400', N'Nhân viên', 'PB0003');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8442', N'Nguyễn Thị Hoan', N'Nữ', to_date('09/20/1993', 'MM/DD/RRRR'), N'Khánh Dương, Yên Mô, Ninh Bình,U', '09011461622', '36165000', '948700', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8507', N'Nguyễn Đức Hiền', N'Nữ', to_date('02/12/1989', 'MM/DD/RRRR'), N'Vân Hòa, Ba Vì, Hà Nội,', '08220977415', '3734000', '619100', N'Nhân viên', 'PB0004');
+VALUES ('NV8507', N'Nguyễn Đức Hiền', N'Nữ', to_date('02/12/1989', 'MM/DD/RRRR'), N'Vân Hòa, Ba Vì, Hà Nội', '08220977415', '3734000', '619100', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8522', N'Nguyễn Thị Dung', N'Nữ', to_date('09/11/1967', 'MM/DD/RRRR'), N'Phú Cường, Cai Lậy, Tiền Giang,5HA', '09339139586', '3683000', '238000', N'Nhân viên', 'PB0002');
@@ -791,7 +791,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8562', N'Nguyễn Tăng Mai Châu', N'Nữ', to_date('02/19/1983', 'MM/DD/RRRR'), N'Thạnh Phú, Vĩnh Cửu, Đồng Nai,IS', '08016226313', '28445000', '167000', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8587', N'Nguyễn Thị Phỉ', N'Nam', to_date('11/14/1971', 'MM/DD/RRRR'), N'Tây Tiến, Tiền Hải, Thái Bình,', '08780735103', '48961000', '288900', N'Nhân viên', 'PB0008');
+VALUES ('NV8587', N'Nguyễn Thị Phỉ', N'Nam', to_date('11/14/1971', 'MM/DD/RRRR'), N'Tây Tiến, Tiền Hải, Thái Bình', '08780735103', '48961000', '288900', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8627', N'Nguyễn Thị Đào', N'Nam', to_date('07/21/2000', 'MM/DD/RRRR'), N'Long An, Tân Châu, An Giang,XGI', '09128954240', '57328000', '749200', N'Nhân viên', 'PB0007');
@@ -803,13 +803,13 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8650', N'Nguyễn Tần', N'Nữ', to_date('09/15/1972', 'MM/DD/RRRR'), N'Lộc Thành, Lộc Ninh, Bình Phước,F', '03483632580', '2432000', '340000', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8661', N'Nguyễn Đức Thắng', N'Nam', to_date('06/24/1962', 'MM/DD/RRRR'), N'Đông Sơn, A Lưới, Thừa Thiên Huế,', '03943534276', '74141000', '782600', N'Nhân viên', 'PB0006');
+VALUES ('NV8661', N'Nguyễn Đức Thắng', N'Nam', to_date('06/24/1962', 'MM/DD/RRRR'), N'Đông Sơn, A Lưới, Thừa Thiên Huế', '03943534276', '74141000', '782600', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8666', N'Nguyễn Đức Chí Công', N'Nữ', to_date('06/03/2001', 'MM/DD/RRRR'), N'Hòa Thạnh, Tân Phú, Hồ Chí Minh,0787B', '03993279045', '21227000', '766400', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8687', N'Nguyễn Đức', N'Nam', to_date('04/27/1983', 'MM/DD/RRRR'), N'Định Thành, Thoại Sơn, An Giang,', '09994420758', '7384000', '468500', N'Nhân viên', 'PB0008');
+VALUES ('NV8687', N'Nguyễn Đức', N'Nam', to_date('04/27/1983', 'MM/DD/RRRR'), N'Định Thành, Thoại Sơn, An Giang', '09994420758', '7384000', '468500', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8697', N'Nguyễn Thị Sinh Tấm', N'Nam', to_date('09/06/1990', 'MM/DD/RRRR'), N'Hóa Hợp, Minh Hóa, Quảng Bình,LZE5', '03753849751', '1422000', '946500', N'Nhân viên', 'PB0001');
@@ -818,7 +818,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8717', N'Nguyễn Tụ', N'Nữ', to_date('01/19/1962', 'MM/DD/RRRR'), N'Lộc Quang, Lộc Ninh, Bình Phước,70L', '08230984405', '6799000', '489800', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8735', N'Nguyễn Kích', N'Nam', to_date('11/08/1980', 'MM/DD/RRRR'), N'Đức Phổ, Cát Tiên, Lâm Đồng,', '09396821470', '82672000', '199500', N'Nhân viên', 'PB0002');
+VALUES ('NV8735', N'Nguyễn Kích', N'Nam', to_date('11/08/1980', 'MM/DD/RRRR'), N'Đức Phổ, Cát Tiên, Lâm Đồng', '09396821470', '82672000', '199500', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8736', N'Nguyễn Duy Thoại', N'Nam', to_date('03/26/1958', 'MM/DD/RRRR'), N'Long Hưng, Phú Riềng, Bình Phước,HFHI', '08053006457', '7093000', NULL, N'Nhân viên', 'PB0008');
@@ -830,7 +830,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8772', N'Nguyễn Thị Thị', N'Nam', to_date('01/31/1990', 'MM/DD/RRRR'), N'Chiềng Cơi, Sơn La, Sơn La,IR', '03825492797', '46179000', '432000', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8828', N'Nguyễn Đức Thịnh', N'Nam', to_date('10/28/1957', 'MM/DD/RRRR'), N'Động Quan, Lục Yên, Yên Bái,', '08903533916', '20030000', '738500', N'Nhân viên', 'PB0008');
+VALUES ('NV8828', N'Nguyễn Đức Thịnh', N'Nam', to_date('10/28/1957', 'MM/DD/RRRR'), N'Động Quan, Lục Yên, Yên Bái', '08903533916', '20030000', '738500', N'Nhân viên', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8858', N'Nguyễn Đức Hồng Y', N'Nam', to_date('12/04/1986', 'MM/DD/RRRR'), N'Lai Hạ, Lương Tài, Bắc Ninh,YE', '03590558509', '7730000', '509300', N'Nhân viên', 'PB0004');
@@ -842,7 +842,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV8891', N'Nguyễn Tăng Mai Trang', N'Nam', to_date('02/29/1960', 'MM/DD/RRRR'), N'Nhơn Thạnh, Bến Tre, Bến Tre,FTQA', '09186372067', '9993000', '971200', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV8897', N'Nguyễn Xin', N'Nữ', to_date('02/02/1988', 'MM/DD/RRRR'), N'Mường Lèo, Sốp Cộp, Sơn La,', '09813442395', '8412000', '935000', N'Nhân viên', 'PB0004');
+VALUES ('NV8897', N'Nguyễn Xin', N'Nữ', to_date('02/02/1988', 'MM/DD/RRRR'), N'Mường Lèo, Sốp Cộp, Sơn La', '09813442395', '8412000', '935000', N'Nhân viên', 'PB0004');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8955', N'Nguyễn Yêm', N'Nữ', to_date('08/10/1989', 'MM/DD/RRRR'), N'Thành Phước, Bình Minh, Vĩnh Long,AA', '08220506945', '7696000', '412000', N'Nhân viên', 'PB0005');
@@ -875,10 +875,10 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV9265', N'Nguyễn Thị Phụng', N'Nữ', to_date('09/11/1974', 'MM/DD/RRRR'), N'Thanh Uyên, Tam Nông, Phú Thọ,R2R7I1', '08944282396', '9771000', '618000', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV9412', N'Nguyễn Tăng Mai Trang', N'Nữ', to_date('06/13/1991', 'MM/DD/RRRR'), N'Phú Lương, Hà Đông, Hà Nội,', '03260461694', '65131000', '788700', N'Nhân viên', 'PB0001');
+VALUES ('NV9412', N'Nguyễn Tăng Mai Trang', N'Nữ', to_date('06/13/1991', 'MM/DD/RRRR'), N'Phú Lương, Hà Đông, Hà Nội', '03260461694', '65131000', '788700', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV9449', N'Nguyễn Thị Hà', N'Nam', to_date('04/13/1955', 'MM/DD/RRRR'), N'Cát Hải, Phù Cát, Bình Định,', '03503029694', '88581000', '521300', N'Nhân viên', 'PB0007');
+VALUES ('NV9449', N'Nguyễn Thị Hà', N'Nam', to_date('04/13/1955', 'MM/DD/RRRR'), N'Cát Hải, Phù Cát, Bình Định', '03503029694', '88581000', '521300', N'Nhân viên', 'PB0007');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV9462', N'Nguyễn Thị Tam', N'Nam', to_date('01/25/1983', 'MM/DD/RRRR'), N'Hưng Định, Thuận An, Bình Dương,YQWZMB', '09325439011', '59137000', '902800', N'Nhân viên', 'PB0002');
@@ -887,7 +887,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV9501', N'Nguyễn Thị Kim Duyên', N'Nữ', to_date('11/12/1973', 'MM/DD/RRRR'), N'Tân Nhựt, Bình Chánh, Hồ Chí Minh,3R', '08977727059', '7615000', '627000', N'Nhân viên', 'PB0001');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV9519', N'Nguyễn Thị Ngà', N'Nam', to_date('04/14/1994', 'MM/DD/RRRR'), N'Hoằng Yến, Hoằng Hóa, Thanh Hóa,', '09064205589', '2871000', '517000', N'Nhân viên', 'PB0006');
+VALUES ('NV9519', N'Nguyễn Thị Ngà', N'Nam', to_date('04/14/1994', 'MM/DD/RRRR'), N'Hoằng Yến, Hoằng Hóa, Thanh Hóa', '09064205589', '2871000', '517000', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV9525', N'Nguyễn Đức Phú', N'Nam', to_date('07/17/1998', 'MM/DD/RRRR'), N'Quới Thiện,Vũng Liêm, Vĩnh Long,B68', '08978614616', '50358000', '100000', N'Nhân viên', 'PB0001');
@@ -908,7 +908,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV9693', N'Nguyễn Thị Chi', N'Nam', to_date('05/27/1990', 'MM/DD/RRRR'), N'Phổng Lập, Thuận Châu, Sơn La,7', '08169708099', '83466000', '806500', N'Nhân viên', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV9800', N'Nguyễn Phận', N'Nam', to_date('05/01/1956', 'MM/DD/RRRR'), N'Đốc Tín, Mỹ Đức, Hà Nội,', '08790200672', '74442000', '129700', N'Nhân viên', 'PB0002');
+VALUES ('NV9800', N'Nguyễn Phận', N'Nam', to_date('05/01/1956', 'MM/DD/RRRR'), N'Đốc Tín, Mỹ Đức, Hà Nội', '08790200672', '74442000', '129700', N'Nhân viên', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV9872', N'Nguyễn Kích', N'Nam', to_date('06/21/2003', 'MM/DD/RRRR'), N'Thạnh Lộc, Giồng Riềng, Kiên Giang,UV4', '03703327689', '7527000', '871500', N'Nhân viên', 'PB0005');
@@ -935,7 +935,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV0174', N'Nguyễn Đức', N'Nữ', to_date('10/17/1964', 'MM/DD/RRRR'), N'Trà Tây, Trà Bồng, Quảng Ngãi,PES5P', '03787894435', '6207000', '529500', N'Trưởng phòng', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV0189', N'Nguyễn Đức Chấn', N'Nam', to_date('02/25/1977', 'MM/DD/RRRR'), N'Tân Thành, Buôn Ma Thuột, Đắk Lắk,', '03252913574', '9442000', '418100', N'Trưởng phòng', 'PB0006');
+VALUES ('NV0189', N'Nguyễn Đức Chấn', N'Nam', to_date('02/25/1977', 'MM/DD/RRRR'), N'Tân Thành, Buôn Ma Thuột, Đắk Lắk', '03252913574', '9442000', '418100', N'Trưởng phòng', 'PB0006');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV0232', N'Nguyễn Ngọc Trân', N'Nữ', to_date('02/21/1962', 'MM/DD/RRRR'), N'Thạch Đồng, Thanh Thuỷ, Phú Thọ,1TH2ZF', '08422509423', '2212000', '467900', N'Trưởng phòng', 'PB0003');
@@ -1022,7 +1022,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV6463', N'Nguyễn Thị Nga', N'Nam', to_date('10/01/1967', 'MM/DD/RRRR'), N'Trần Hưng Đạo, Thái Bình, Thái Bình,H', '09514482420', '8306000', '412400', N'QL trực tiếp', 'PB0002');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV6911', N'Nguyễn Thị Chín', N'Nam', to_date('02/12/1971', 'MM/DD/RRRR'), N'Hòa Thành, Đông Hòa, Phú Yên,', '08790629422', '4452000', '216000', N'Nhân sự', 'PB0008');
+VALUES ('NV6911', N'Nguyễn Thị Chín', N'Nam', to_date('02/12/1971', 'MM/DD/RRRR'), N'Hòa Thành, Đông Hòa, Phú Yên', '08790629422', '4452000', '216000', N'Nhân sự', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV7182', N'Nguyễn Tứ', N'Nữ', to_date('10/26/1970', 'MM/DD/RRRR'), N'Phương Phú, Phụng Hiệp, Hậu Giang,V', '03574504948', '93146000', '300300', N'QL trực tiếp', 'PB0002');
@@ -1031,7 +1031,7 @@ INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, 
 VALUES ('NV7820', N'Nguyễn Đức Hồng Y', N'Nam', to_date('09/15/1995', 'MM/DD/RRRR'), N'Hòa Tiến, Hòa Vang, Đà Nẵng,R', '08434801976', '67365000', '161400', N'QL trực tiếp', 'PB0008');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
-VALUES ('NV7936', N'Nguyễn Phận', N'Nam', to_date('10/02/1993', 'MM/DD/RRRR'), N'Mường Lống, Kỳ Sơn, Nghệ An,', '08023874368', '1581000', '539300', N'QL trực tiếp', 'PB0005');
+VALUES ('NV7936', N'Nguyễn Phận', N'Nam', to_date('10/02/1993', 'MM/DD/RRRR'), N'Mường Lống, Kỳ Sơn, Nghệ An', '08023874368', '1581000', '539300', N'QL trực tiếp', 'PB0005');
 
 INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, PHG) 
 VALUES ('NV8070', N'Nguyễn Vinh', N'Nữ', to_date('10/26/1986', 'MM/DD/RRRR'), N'Quý Hòa, Lạc Sơn, Hoà Bình,33QTB', '08680912117', '6080000', '818300', N'Tài chính', 'PB0006');

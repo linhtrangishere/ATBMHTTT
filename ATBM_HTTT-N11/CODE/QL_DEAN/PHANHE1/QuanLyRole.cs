@@ -49,33 +49,15 @@ namespace PHANHE1
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panelQuanLyRole.Controls.Add(childForm);
+            panelQuanLyRole.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private void buttonTaoRole_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThemRole());
-            //SwitchColorMenu(sender, e);
-        }
-
-        private void buttonChinhSuaRole_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ChinhSuaRole());
-            //SwitchColorMenu(sender, e);
-        }
-
-        private void buttonXoaRole_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new XoaRole());
-            //SwitchColorMenu(sender, e);
-        }
-
         private void QuanLyRole_Load(object sender, EventArgs e)
         {
-            panelChildForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            
         }
 
         private void dataGridViewQuanLyRole_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,6 +68,24 @@ namespace PHANHE1
         private void panelQuanLyRole_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonTaoRole_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThemRole());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonXoaRole_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new XoaRole());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonChinhSuaRole_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChinhSuaRole());
+            SwitchColorMenu(sender, e);
         }
     }
 }
