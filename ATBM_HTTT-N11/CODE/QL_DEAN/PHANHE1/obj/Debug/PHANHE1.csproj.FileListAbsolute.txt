@@ -183,3 +183,8 @@ C:\Users\lantr\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debu
 C:\Users\lantr\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XemDanhSachView.resources
 C:\Users\lantr\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XoaRole.resources
 C:\Users\lantr\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.XoaUser.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanVien.Main_NhanVien.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.Main_NhanSu.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.QLTrucTiep.Main_QLTrucTiep.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TaiChinh.Main_TaiChinh.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.Main_TruongPhong.resources

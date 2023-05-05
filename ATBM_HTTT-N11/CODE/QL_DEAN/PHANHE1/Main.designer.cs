@@ -35,9 +35,9 @@
             this.buttonThongTinQuyen = new System.Windows.Forms.Button();
             this.buttonThongTinObjects = new System.Windows.Forms.Button();
             this.panelUsername = new System.Windows.Forms.Panel();
-            this.labelNguyenVanA = new System.Windows.Forms.Label();
             this.labelAdmin = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.labelNguyenVanA = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelUsername.SuspendLayout();
             this.SuspendLayout();
@@ -127,17 +127,6 @@
             this.panelUsername.TabIndex = 0;
             this.panelUsername.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUsername_Paint);
             // 
-            // labelNguyenVanA
-            // 
-            this.labelNguyenVanA.AutoSize = true;
-            this.labelNguyenVanA.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNguyenVanA.Location = new System.Drawing.Point(48, 93);
-            this.labelNguyenVanA.Name = "labelNguyenVanA";
-            this.labelNguyenVanA.Size = new System.Drawing.Size(241, 45);
-            this.labelNguyenVanA.TabIndex = 3;
-            this.labelNguyenVanA.Text = "Nguyễn Văn A";
-            this.labelNguyenVanA.Click += new System.EventHandler(this.labelNguyenVanA_Click);
-            // 
             // labelAdmin
             // 
             this.labelAdmin.AutoSize = true;
@@ -156,6 +145,17 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1085, 990);
             this.panelChildForm.TabIndex = 1;
+            // 
+            // labelNguyenVanA
+            // 
+            this.labelNguyenVanA.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNguyenVanA.Location = new System.Drawing.Point(0, 93);
+            this.labelNguyenVanA.Name = "labelNguyenVanA";
+            this.labelNguyenVanA.Size = new System.Drawing.Size(337, 45);
+            this.labelNguyenVanA.TabIndex = 3;
+            this.labelNguyenVanA.Text = "Nguyễn Văn A";
+            this.labelNguyenVanA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNguyenVanA.Click += new System.EventHandler(this.labelNguyenVanA_Click);
             // 
             // Main
             // 
@@ -185,8 +185,8 @@
         private System.Windows.Forms.Button buttonThongTinQuyen;
         private System.Windows.Forms.Button buttonThongTinObjects;
         private System.Windows.Forms.Panel panelUsername;
-        private System.Windows.Forms.Label labelNguyenVanA;
         private System.Windows.Forms.Label labelAdmin;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Label labelNguyenVanA;
     }
 }

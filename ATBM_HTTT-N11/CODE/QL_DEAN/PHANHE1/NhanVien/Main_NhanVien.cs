@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PHANHE1
+namespace PHANHE1.NhanVien
 {
-    public partial class ThongTinObjects : Form
+    public partial class Main_NhanVien : Form
     {
-        public ThongTinObjects()
+        public Main_NhanVien()
         {
             InitializeComponent();
         }
@@ -28,8 +28,8 @@ namespace PHANHE1
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panelChildFormNV.Controls.Add(childForm);
+            panelChildFormNV.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -43,7 +43,7 @@ namespace PHANHE1
             }
             else
             {
-                foreach (Control prebtn in panelObjects.Controls)
+                foreach (Control prebtn in panelMenuNV.Controls)
                 {
                     if (prebtn.GetType() == typeof(Button))
                     {
@@ -55,28 +55,63 @@ namespace PHANHE1
             }
         }
 
-        private void buttonUser_Click(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new XemDanhSachUser());
+
+        }
+
+        private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            //OpenChildForm(new ThongTinObjects());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonRole_Click(object sender, EventArgs e)
+        private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new XemDanhSachRole());
+            //OpenChildForm(new ThongTinQuyen());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonTable_Click(object sender, EventArgs e)
+        private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new XemDanhSachTable());
+            //OpenChildForm(new QuanLyObjects());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonView_Click(object sender, EventArgs e)
+        private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new XemDanhSachView());
+            //OpenChildForm(new QuanLyQuyen());
             SwitchColorMenu(sender, e);
+        }
+
+        private void buttonDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelUsername_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelNguyenVanA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChildFormNV_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

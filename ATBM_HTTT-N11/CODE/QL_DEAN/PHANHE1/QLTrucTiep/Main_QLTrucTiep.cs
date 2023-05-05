@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
-using System.Threading;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PHANHE1
+namespace PHANHE1.QLTrucTiep
 {
-    public partial class Main : Form
+    public partial class Main_QLTrucTiep : Form
     {
-        public Main()
+        public Main_QLTrucTiep()
         {
             InitializeComponent();
         }
@@ -17,14 +22,14 @@ namespace PHANHE1
         {
             if (formchild != null)
             {
-                formchild.Close(); 
+                formchild.Close();
             }
             formchild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panelChildFormQLTT.Controls.Add(childForm);
+            panelChildFormQLTT.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -38,7 +43,7 @@ namespace PHANHE1
             }
             else
             {
-                foreach (Control prebtn in panelMenu.Controls)
+                foreach (Control prebtn in panelMenuQLTT.Controls)
                 {
                     if (prebtn.GetType() == typeof(Button))
                     {
@@ -55,27 +60,27 @@ namespace PHANHE1
 
         }
 
-        private void buttonThongTinObjects_Click(object sender, EventArgs e)
+        private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinObjects());
+            //OpenChildForm(new ThongTinObjects());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonThongTinQuyen_Click(object sender, EventArgs e)
+        private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinQuyen());
+            //OpenChildForm(new ThongTinQuyen());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonQuanLyObjects_Click(object sender, EventArgs e)
+        private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyObjects());
+            //OpenChildForm(new QuanLyObjects());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonQuanLyQuyen_Click(object sender, EventArgs e)
+        private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyQuyen());
+            //OpenChildForm(new QuanLyQuyen());
             SwitchColorMenu(sender, e);
         }
 
@@ -101,7 +106,24 @@ namespace PHANHE1
 
         private void labelNguyenVanA_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void panelChildFormNV_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonThongTinNhanVien_Click(object sender, EventArgs e)
+        {
+            //OpenChildForm(new QuanLyQuyen());
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonQuanLyPhanCong_Click(object sender, EventArgs e)
+        {
+            //OpenChildForm(new QuanLyQuyen());
+            SwitchColorMenu(sender, e);
         }
     }
 }
