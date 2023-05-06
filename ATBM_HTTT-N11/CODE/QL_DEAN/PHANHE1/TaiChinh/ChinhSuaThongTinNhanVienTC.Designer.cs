@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             this.panelChinhSuaThongTinNhanVienTC = new System.Windows.Forms.Panel();
-            this.comboBoxPhongBan = new System.Windows.Forms.ComboBox();
-            this.labelTenDeAn = new System.Windows.Forms.Label();
-            this.textBoxMaDeAn = new System.Windows.Forms.TextBox();
-            this.labelPhongBan = new System.Windows.Forms.Label();
+            this.comboBoxMaNhanVien = new System.Windows.Forms.ComboBox();
+            this.labelLuong = new System.Windows.Forms.Label();
+            this.textBoxPhuCap = new System.Windows.Forms.TextBox();
+            this.labelPhuCap = new System.Windows.Forms.Label();
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.dataGridViewChinhSuaThongTinNhanVienTC = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonCapNhat = new System.Windows.Forms.Button();
-            this.textBoxTenDeAn = new System.Windows.Forms.TextBox();
-            this.labelMaDeAn = new System.Windows.Forms.Label();
-            this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.labelNgayBatDau = new System.Windows.Forms.Label();
+            this.textBoxLuong = new System.Windows.Forms.TextBox();
+            this.labelMaNhanVien = new System.Windows.Forms.Label();
             this.panelChinhSuaThongTinNhanVienTC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaThongTinNhanVienTC)).BeginInit();
             this.SuspendLayout();
@@ -48,62 +46,60 @@
             // panelChinhSuaThongTinNhanVienTC
             // 
             this.panelChinhSuaThongTinNhanVienTC.BackColor = System.Drawing.Color.White;
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.dateTimePickerNgayBatDau);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelNgayBatDau);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.comboBoxPhongBan);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelTenDeAn);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.textBoxMaDeAn);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelPhongBan);
+            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.comboBoxMaNhanVien);
+            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelLuong);
+            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.textBoxPhuCap);
+            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelPhuCap);
             this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.buttonQuayLai);
             this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.dataGridViewChinhSuaThongTinNhanVienTC);
             this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.buttonXemTatCa);
             this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.buttonCapNhat);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.textBoxTenDeAn);
-            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelMaDeAn);
+            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.textBoxLuong);
+            this.panelChinhSuaThongTinNhanVienTC.Controls.Add(this.labelMaNhanVien);
             this.panelChinhSuaThongTinNhanVienTC.Location = new System.Drawing.Point(0, -10);
             this.panelChinhSuaThongTinNhanVienTC.Name = "panelChinhSuaThongTinNhanVienTC";
             this.panelChinhSuaThongTinNhanVienTC.Size = new System.Drawing.Size(935, 750);
             this.panelChinhSuaThongTinNhanVienTC.TabIndex = 0;
             // 
-            // comboBoxPhongBan
+            // comboBoxMaNhanVien
             // 
-            this.comboBoxPhongBan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxPhongBan.FormattingEnabled = true;
-            this.comboBoxPhongBan.Location = new System.Drawing.Point(430, 282);
-            this.comboBoxPhongBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxPhongBan.Name = "comboBoxPhongBan";
-            this.comboBoxPhongBan.Size = new System.Drawing.Size(300, 49);
-            this.comboBoxPhongBan.TabIndex = 73;
+            this.comboBoxMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxMaNhanVien.FormattingEnabled = true;
+            this.comboBoxMaNhanVien.Location = new System.Drawing.Point(430, 52);
+            this.comboBoxMaNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaNhanVien.Name = "comboBoxMaNhanVien";
+            this.comboBoxMaNhanVien.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxMaNhanVien.TabIndex = 73;
             // 
-            // labelTenDeAn
+            // labelLuong
             // 
-            this.labelTenDeAn.AutoSize = true;
-            this.labelTenDeAn.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTenDeAn.Location = new System.Drawing.Point(190, 130);
-            this.labelTenDeAn.Name = "labelTenDeAn";
-            this.labelTenDeAn.Size = new System.Drawing.Size(150, 41);
-            this.labelTenDeAn.TabIndex = 72;
-            this.labelTenDeAn.Text = "Tên đề án";
+            this.labelLuong.AutoSize = true;
+            this.labelLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelLuong.Location = new System.Drawing.Point(190, 160);
+            this.labelLuong.Name = "labelLuong";
+            this.labelLuong.Size = new System.Drawing.Size(106, 41);
+            this.labelLuong.TabIndex = 72;
+            this.labelLuong.Text = "Lương";
             // 
-            // textBoxMaDeAn
+            // textBoxPhuCap
             // 
-            this.textBoxMaDeAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMaDeAn.Location = new System.Drawing.Point(430, 41);
-            this.textBoxMaDeAn.Multiline = true;
-            this.textBoxMaDeAn.Name = "textBoxMaDeAn";
-            this.textBoxMaDeAn.Size = new System.Drawing.Size(300, 50);
-            this.textBoxMaDeAn.TabIndex = 71;
+            this.textBoxPhuCap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPhuCap.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxPhuCap.Location = new System.Drawing.Point(430, 251);
+            this.textBoxPhuCap.Multiline = true;
+            this.textBoxPhuCap.Name = "textBoxPhuCap";
+            this.textBoxPhuCap.Size = new System.Drawing.Size(300, 50);
+            this.textBoxPhuCap.TabIndex = 71;
             // 
-            // labelPhongBan
+            // labelPhuCap
             // 
-            this.labelPhongBan.AutoSize = true;
-            this.labelPhongBan.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelPhongBan.Location = new System.Drawing.Point(190, 290);
-            this.labelPhongBan.Name = "labelPhongBan";
-            this.labelPhongBan.Size = new System.Drawing.Size(167, 41);
-            this.labelPhongBan.TabIndex = 70;
-            this.labelPhongBan.Text = "Phòng ban";
+            this.labelPhuCap.AutoSize = true;
+            this.labelPhuCap.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelPhuCap.Location = new System.Drawing.Point(190, 260);
+            this.labelPhuCap.Name = "labelPhuCap";
+            this.labelPhuCap.Size = new System.Drawing.Size(127, 41);
+            this.labelPhuCap.TabIndex = 70;
+            this.labelPhuCap.Text = "Phụ cấp";
             // 
             // buttonQuayLai
             // 
@@ -152,44 +148,25 @@
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
             // 
-            // textBoxTenDeAn
+            // textBoxLuong
             // 
-            this.textBoxTenDeAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxTenDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxTenDeAn.Location = new System.Drawing.Point(430, 121);
-            this.textBoxTenDeAn.Multiline = true;
-            this.textBoxTenDeAn.Name = "textBoxTenDeAn";
-            this.textBoxTenDeAn.Size = new System.Drawing.Size(300, 50);
-            this.textBoxTenDeAn.TabIndex = 65;
+            this.textBoxLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxLuong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxLuong.Location = new System.Drawing.Point(430, 151);
+            this.textBoxLuong.Multiline = true;
+            this.textBoxLuong.Name = "textBoxLuong";
+            this.textBoxLuong.Size = new System.Drawing.Size(300, 50);
+            this.textBoxLuong.TabIndex = 65;
             // 
-            // labelMaDeAn
+            // labelMaNhanVien
             // 
-            this.labelMaDeAn.AutoSize = true;
-            this.labelMaDeAn.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMaDeAn.Location = new System.Drawing.Point(190, 50);
-            this.labelMaDeAn.Name = "labelMaDeAn";
-            this.labelMaDeAn.Size = new System.Drawing.Size(146, 41);
-            this.labelMaDeAn.TabIndex = 64;
-            this.labelMaDeAn.Text = "Mã đề án";
-            // 
-            // dateTimePickerNgayBatDau
-            // 
-            this.dateTimePickerNgayBatDau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayBatDau.Location = new System.Drawing.Point(430, 204);
-            this.dateTimePickerNgayBatDau.Name = "dateTimePickerNgayBatDau";
-            this.dateTimePickerNgayBatDau.Size = new System.Drawing.Size(300, 47);
-            this.dateTimePickerNgayBatDau.TabIndex = 75;
-            // 
-            // labelNgayBatDau
-            // 
-            this.labelNgayBatDau.AutoSize = true;
-            this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNgayBatDau.Location = new System.Drawing.Point(191, 210);
-            this.labelNgayBatDau.Name = "labelNgayBatDau";
-            this.labelNgayBatDau.Size = new System.Drawing.Size(203, 41);
-            this.labelNgayBatDau.TabIndex = 74;
-            this.labelNgayBatDau.Text = "Ngày bắt đầu";
+            this.labelMaNhanVien.AutoSize = true;
+            this.labelMaNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelMaNhanVien.Location = new System.Drawing.Point(190, 60);
+            this.labelMaNhanVien.Name = "labelMaNhanVien";
+            this.labelMaNhanVien.Size = new System.Drawing.Size(204, 41);
+            this.labelMaNhanVien.TabIndex = 64;
+            this.labelMaNhanVien.Text = "Mã nhân viên";
             // 
             // ChinhSuaThongTinNhanVienTC
             // 
@@ -213,13 +190,11 @@
         private System.Windows.Forms.DataGridView dataGridViewChinhSuaThongTinNhanVienTC;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonCapNhat;
-        private System.Windows.Forms.TextBox textBoxTenDeAn;
-        private System.Windows.Forms.Label labelMaDeAn;
-        private System.Windows.Forms.TextBox textBoxMaDeAn;
-        private System.Windows.Forms.Label labelPhongBan;
-        private System.Windows.Forms.ComboBox comboBoxPhongBan;
-        private System.Windows.Forms.Label labelTenDeAn;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgayBatDau;
-        private System.Windows.Forms.Label labelNgayBatDau;
+        private System.Windows.Forms.TextBox textBoxLuong;
+        private System.Windows.Forms.Label labelMaNhanVien;
+        private System.Windows.Forms.TextBox textBoxPhuCap;
+        private System.Windows.Forms.Label labelPhuCap;
+        private System.Windows.Forms.ComboBox comboBoxMaNhanVien;
+        private System.Windows.Forms.Label labelLuong;
     }
 }

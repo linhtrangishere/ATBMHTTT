@@ -567,8 +567,14 @@
     <EmbeddedResource Include="ThuHoiQuyenTuUser.resx">
       <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ChinhSuaThongTinDeAnTDA.resx">
+      <DependentUpon>ChinhSuaThongTinDeAnTDA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TruongDeAn\Main_TruongDeAn.resx">
       <DependentUpon>Main_TruongDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ThemThongTinDeAnTDA.resx">
+      <DependentUpon>ThemThongTinDeAnTDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongDeAn\ThongTinCaNhanTDA.resx">
       <DependentUpon>ThongTinCaNhanTDA.cs</DependentUpon>
@@ -581,6 +587,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TruongDeAn\ThongTinPhongBanTDA.resx">
       <DependentUpon>ThongTinPhongBanTDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\XoaThongTinDeAnTDA.resx">
+      <DependentUpon>XoaThongTinDeAnTDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongPhong\Main_TruongPhong.resx">
       <DependentUpon>Main_TruongPhong.cs</DependentUpon>

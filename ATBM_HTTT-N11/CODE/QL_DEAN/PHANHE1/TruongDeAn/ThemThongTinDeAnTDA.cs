@@ -16,5 +16,10 @@ namespace PHANHE1.TruongDeAn
         {
             InitializeComponent();
         }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

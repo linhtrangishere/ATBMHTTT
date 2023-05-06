@@ -207,3 +207,6 @@ C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debu
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongDeAn.ThongTinDeAnTDA.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongDeAn.ThongTinPhanCongTDA.resources
 C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongDeAn.ThongTinPhongBanTDA.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongDeAn.ChinhSuaThongTinDeAnTDA.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongDeAn.ThemThongTinDeAnTDA.resources
+C:\Users\binhp\source\repos\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongDeAn.XoaThongTinDeAnTDA.resources

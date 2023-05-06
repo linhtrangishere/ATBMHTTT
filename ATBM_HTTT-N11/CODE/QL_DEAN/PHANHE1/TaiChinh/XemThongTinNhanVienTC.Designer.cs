@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panelXemThongTinNhanVienTC = new System.Windows.Forms.Panel();
+            this.buttonQuayLai = new System.Windows.Forms.Button();
             this.dataGridViewThongTinNhanVienQLTT = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.textBoxNhapMaNhanVien = new System.Windows.Forms.TextBox();
             this.labelNhapMaNhanVien = new System.Windows.Forms.Label();
-            this.buttonQuayLai = new System.Windows.Forms.Button();
             this.panelXemThongTinNhanVienTC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienQLTT)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,19 @@
             this.panelXemThongTinNhanVienTC.Name = "panelXemThongTinNhanVienTC";
             this.panelXemThongTinNhanVienTC.Size = new System.Drawing.Size(935, 750);
             this.panelXemThongTinNhanVienTC.TabIndex = 0;
+            // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
+            this.buttonQuayLai.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(540, 350);
+            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(250, 70);
+            this.buttonQuayLai.TabIndex = 63;
+            this.buttonQuayLai.Text = "Quay lại";
+            this.buttonQuayLai.UseVisualStyleBackColor = false;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // dataGridViewThongTinNhanVienQLTT
             // 
@@ -106,23 +119,11 @@
             this.labelNhapMaNhanVien.TabIndex = 58;
             this.labelNhapMaNhanVien.Text = "Nhập mã nhân viên";
             // 
-            // buttonQuayLai
-            // 
-            this.buttonQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
-            this.buttonQuayLai.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(540, 350);
-            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(250, 70);
-            this.buttonQuayLai.TabIndex = 63;
-            this.buttonQuayLai.Text = "Quay lại";
-            this.buttonQuayLai.UseVisualStyleBackColor = false;
-            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
-            // 
             // XemThongTinNhanVienTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(932, 733);
             this.Controls.Add(this.panelXemThongTinNhanVienTC);
             this.Name = "XemThongTinNhanVienTC";

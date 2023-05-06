@@ -16,7 +16,7 @@ namespace PHANHE1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TruongDeAn.Main_TruongDeAn());
+            Application.Run(new QLTrucTiep.Main_QLTrucTiep());
         }
     }
 }
