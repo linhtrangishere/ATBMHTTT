@@ -16,7 +16,7 @@ namespace PHANHE1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanSu.Main_NhanSu());
+            Application.Run(new Login());
         }
     }
 }

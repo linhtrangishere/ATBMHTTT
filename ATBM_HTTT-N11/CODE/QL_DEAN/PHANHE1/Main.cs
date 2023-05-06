@@ -79,9 +79,16 @@ namespace PHANHE1
             SwitchColorMenu(sender, e);
         }
 
+        
+        private void ResetConnectionString()
+        {
+            Login.connectionString = "Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)" + "(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)));";
+        }
+
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+            ResetConnectionString();
         }
 
         private void panelUsername_Paint(object sender, PaintEventArgs e)

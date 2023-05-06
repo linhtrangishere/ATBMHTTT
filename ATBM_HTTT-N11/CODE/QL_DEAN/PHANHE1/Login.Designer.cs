@@ -51,6 +51,7 @@
             this.groupBox.Size = new System.Drawing.Size(1425, 160);
             this.groupBox.TabIndex = 7;
             this.groupBox.TabStop = false;
+            this.groupBox.Enter += new System.EventHandler(this.groupBox_Enter);
             // 
             // labelDangNhapHeThong
             // 
