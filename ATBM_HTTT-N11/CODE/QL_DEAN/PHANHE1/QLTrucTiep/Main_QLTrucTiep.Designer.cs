@@ -64,7 +64,7 @@
             // buttonQuanLyPhanCong
             // 
             this.buttonQuanLyPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonQuanLyPhanCong.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonQuanLyPhanCong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonQuanLyPhanCong.Location = new System.Drawing.Point(-5, 740);
             this.buttonQuanLyPhanCong.Name = "buttonQuanLyPhanCong";
             this.buttonQuanLyPhanCong.Size = new System.Drawing.Size(352, 94);
@@ -76,7 +76,7 @@
             // buttonThongTinNhanVien
             // 
             this.buttonThongTinNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinNhanVien.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonThongTinNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThongTinNhanVien.Location = new System.Drawing.Point(-5, 630);
             this.buttonThongTinNhanVien.Name = "buttonThongTinNhanVien";
             this.buttonThongTinNhanVien.Size = new System.Drawing.Size(352, 94);
@@ -88,7 +88,7 @@
             // buttonDangXuat
             // 
             this.buttonDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonDangXuat.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonDangXuat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonDangXuat.Location = new System.Drawing.Point(-5, 850);
             this.buttonDangXuat.Name = "buttonDangXuat";
             this.buttonDangXuat.Size = new System.Drawing.Size(352, 94);
@@ -100,7 +100,7 @@
             // buttonThongTinDeAn
             // 
             this.buttonThongTinDeAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinDeAn.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonThongTinDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThongTinDeAn.Location = new System.Drawing.Point(-5, 520);
             this.buttonThongTinDeAn.Name = "buttonThongTinDeAn";
             this.buttonThongTinDeAn.Size = new System.Drawing.Size(352, 94);
@@ -112,7 +112,7 @@
             // buttonThongTinPhongBan
             // 
             this.buttonThongTinPhongBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinPhongBan.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonThongTinPhongBan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThongTinPhongBan.Location = new System.Drawing.Point(-5, 410);
             this.buttonThongTinPhongBan.Name = "buttonThongTinPhongBan";
             this.buttonThongTinPhongBan.Size = new System.Drawing.Size(352, 94);
@@ -124,7 +124,7 @@
             // buttonThongTinPhanCong
             // 
             this.buttonThongTinPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinPhanCong.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonThongTinPhanCong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThongTinPhanCong.Location = new System.Drawing.Point(-5, 300);
             this.buttonThongTinPhanCong.Name = "buttonThongTinPhanCong";
             this.buttonThongTinPhanCong.Size = new System.Drawing.Size(352, 94);
@@ -136,7 +136,7 @@
             // buttonThongTinCaNhan
             // 
             this.buttonThongTinCaNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinCaNhan.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThongTinCaNhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonThongTinCaNhan.Location = new System.Drawing.Point(-5, 190);
             this.buttonThongTinCaNhan.Name = "buttonThongTinCaNhan";
             this.buttonThongTinCaNhan.Size = new System.Drawing.Size(352, 94);

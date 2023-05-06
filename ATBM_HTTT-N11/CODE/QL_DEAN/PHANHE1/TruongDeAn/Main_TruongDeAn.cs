@@ -62,25 +62,25 @@ namespace PHANHE1.TruongDeAn
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinObjects());
+            OpenChildForm(new ThongTinCaNhanTDA());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinQuyen());
+            OpenChildForm(new ThongTinPhanCongTDA());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyObjects());
+            OpenChildForm(new ThongTinPhongBanTDA());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinDeAnTDA());
             SwitchColorMenu(sender, e);
         }
 

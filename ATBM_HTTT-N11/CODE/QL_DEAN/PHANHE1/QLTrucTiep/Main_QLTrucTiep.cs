@@ -62,25 +62,25 @@ namespace PHANHE1.QLTrucTiep
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinObjects());
+            OpenChildForm(new ThongTinCaNhanQLTT());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinQuyen());
+            OpenChildForm(new ThongTinPhanCongQLTT());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyObjects());
+            OpenChildForm(new ThongTinPhongBanQLTT());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinDeAnQLTT());
             SwitchColorMenu(sender, e);
         }
 
@@ -116,13 +116,13 @@ namespace PHANHE1.QLTrucTiep
 
         private void buttonThongTinNhanVien_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinNhanVienQLTT());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonQuanLyPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new QuanLyPhanCongQLTT());
             SwitchColorMenu(sender, e);
         }
     }

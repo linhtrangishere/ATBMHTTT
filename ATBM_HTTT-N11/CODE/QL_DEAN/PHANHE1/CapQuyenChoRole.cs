@@ -41,9 +41,9 @@ namespace PHANHE1
                 Cmd.CommandType = CommandType.Text;
                 OracleDataAdapter da2 = new OracleDataAdapter(Cmd);
                 da2.Fill(dt2);
-                comboTenRole.DisplayMember = dt2.Columns[0].ColumnName;
-                comboTenRole.ValueMember = dt2.Columns[0].ColumnName;
-                comboTenRole.DataSource = dt2;
+                comboBoxTenRole.DisplayMember = dt2.Columns[0].ColumnName;
+                comboBoxTenRole.ValueMember = dt2.Columns[0].ColumnName;
+                comboBoxTenRole.DataSource = dt2;
             }
 
             catch
@@ -77,7 +77,7 @@ namespace PHANHE1
         {
             string table = comboBoxBang.SelectedValue.ToString();
             int temp = comboBoxCapQuyen.SelectedIndex;
-            string role = comboTenRole.SelectedValue.ToString();
+            string role = comboBoxTenRole.SelectedValue.ToString();
 
             if (comboBoxCot.SelectedValue != null && pri[temp] != "SELECT" && pri[temp] != "UPDATE")
             {

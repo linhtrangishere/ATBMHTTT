@@ -20,6 +20,7 @@ namespace PHANHE1
         {
             InitializeComponent();
         }
+
         private void buttonThoat_Click(object sender, EventArgs e)
         {   
             Application.Exit();
@@ -27,8 +28,6 @@ namespace PHANHE1
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            
-
             string username = textBoxTaiKhoan.Text;
             string password = textBoxMatKhau.Text;
             connectionString = connectionString + "User ID = " + username + "; Password = " + password + ";";

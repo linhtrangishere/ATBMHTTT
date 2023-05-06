@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelCapQuyenChoRole = new System.Windows.Forms.Panel();
-            this.comboTenRole = new System.Windows.Forms.ComboBox();
+            this.comboBoxTenRole = new System.Windows.Forms.ComboBox();
             this.checkBoxColumn = new System.Windows.Forms.CheckBox();
             this.comboBoxCot = new System.Windows.Forms.ComboBox();
             this.comboBoxBang = new System.Windows.Forms.ComboBox();
@@ -45,7 +45,7 @@
             // 
             // panelCapQuyenChoRole
             // 
-            this.panelCapQuyenChoRole.Controls.Add(this.comboTenRole);
+            this.panelCapQuyenChoRole.Controls.Add(this.comboBoxTenRole);
             this.panelCapQuyenChoRole.Controls.Add(this.checkBoxColumn);
             this.panelCapQuyenChoRole.Controls.Add(this.comboBoxCot);
             this.panelCapQuyenChoRole.Controls.Add(this.comboBoxBang);
@@ -61,16 +61,16 @@
             this.panelCapQuyenChoRole.Size = new System.Drawing.Size(935, 600);
             this.panelCapQuyenChoRole.TabIndex = 0;
             // 
-            // comboTenRole
+            // comboBoxTenRole
             // 
-            this.comboTenRole.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboTenRole.FormattingEnabled = true;
-            this.comboTenRole.Location = new System.Drawing.Point(390, 80);
-            this.comboTenRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboTenRole.Name = "comboTenRole";
-            this.comboTenRole.Size = new System.Drawing.Size(400, 49);
-            this.comboTenRole.TabIndex = 38;
-            this.comboTenRole.SelectedIndexChanged += new System.EventHandler(this.comboTenRole_SelectedIndexChanged);
+            this.comboBoxTenRole.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxTenRole.FormattingEnabled = true;
+            this.comboBoxTenRole.Location = new System.Drawing.Point(390, 80);
+            this.comboBoxTenRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxTenRole.Name = "comboBoxTenRole";
+            this.comboBoxTenRole.Size = new System.Drawing.Size(400, 49);
+            this.comboBoxTenRole.TabIndex = 38;
+            this.comboBoxTenRole.SelectedIndexChanged += new System.EventHandler(this.comboTenRole_SelectedIndexChanged);
             // 
             // checkBoxColumn
             // 
@@ -205,7 +205,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelCapQuyenChoRole;
-        private System.Windows.Forms.ComboBox comboTenRole;
+        private System.Windows.Forms.ComboBox comboBoxTenRole;
         private System.Windows.Forms.CheckBox checkBoxColumn;
         private System.Windows.Forms.ComboBox comboBoxCot;
         private System.Windows.Forms.ComboBox comboBoxBang;

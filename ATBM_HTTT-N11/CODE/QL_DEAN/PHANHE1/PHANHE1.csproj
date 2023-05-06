@@ -153,6 +153,42 @@
     <Compile Include="QLTrucTiep\Main_QLTrucTiep.Designer.cs">
       <DependentUpon>Main_QLTrucTiep.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLTrucTiep\QuanLyPhanCongQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep\QuanLyPhanCongQLTT.Designer.cs">
+      <DependentUpon>QuanLyPhanCongQLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinCaNhanQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinCaNhanQLTT.Designer.cs">
+      <DependentUpon>ThongTinCaNhanQLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinDeAnQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinDeAnQLTT.Designer.cs">
+      <DependentUpon>ThongTinDeAnQLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinNhanVienQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinNhanVienQLTT.Designer.cs">
+      <DependentUpon>ThongTinNhanVienQLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinPhanCongQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinPhanCongQLTT.Designer.cs">
+      <DependentUpon>ThongTinPhanCongQLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinPhongBanQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTrucTiep\ThongTinPhongBanQLTT.Designer.cs">
+      <DependentUpon>ThongTinPhongBanQLTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,11 +231,59 @@
     <Compile Include="QuanLyObjects.designer.cs">
       <DependentUpon>QuanLyObjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaiChinh\ChinhSuaThongTinNhanVienTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ChinhSuaThongTinNhanVienTC.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinNhanVienTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiChinh\Main_TaiChinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TaiChinh\Main_TaiChinh.Designer.cs">
       <DependentUpon>Main_TaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\QuanLyPhanCongTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\QuanLyPhanCongTC.Designer.cs">
+      <DependentUpon>QuanLyPhanCongTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinCaNhanTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinCaNhanTC.Designer.cs">
+      <DependentUpon>ThongTinCaNhanTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinDeAnTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinDeAnTC.Designer.cs">
+      <DependentUpon>ThongTinDeAnTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinNhanVienTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinNhanVienTC.Designer.cs">
+      <DependentUpon>ThongTinNhanVienTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\XemThongTinNhanVienTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\XemThongTinNhanVienTC.Designer.cs">
+      <DependentUpon>XemThongTinNhanVienTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinPhanCongTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinPhanCongTC.Designer.cs">
+      <DependentUpon>ThongTinPhanCongTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinPhongBanTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\ThongTinPhongBanTC.Designer.cs">
+      <DependentUpon>ThongTinPhongBanTC.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemTable.cs">
       <SubType>Form</SubType>
@@ -255,11 +339,53 @@
     <Compile Include="ThuHoiQuyenTuUser.designer.cs">
       <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruongDeAn\ChinhSuaThongTinDeAnTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ChinhSuaThongTinDeAnTDA.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinDeAnTDA.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruongDeAn\Main_TruongDeAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TruongDeAn\Main_TruongDeAn.Designer.cs">
       <DependentUpon>Main_TruongDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\ThemThongTinDeAnTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ThemThongTinDeAnTDA.Designer.cs">
+      <DependentUpon>ThemThongTinDeAnTDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinCaNhanTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinCaNhanTDA.Designer.cs">
+      <DependentUpon>ThongTinCaNhanTDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinDeAnTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinDeAnTDA.Designer.cs">
+      <DependentUpon>ThongTinDeAnTDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinPhanCongTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinPhanCongTDA.Designer.cs">
+      <DependentUpon>ThongTinPhanCongTDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinPhongBanTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\ThongTinPhongBanTDA.Designer.cs">
+      <DependentUpon>ThongTinPhongBanTDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\XoaThongTinDeAnTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\XoaThongTinDeAnTDA.Designer.cs">
+      <DependentUpon>XoaThongTinDeAnTDA.cs</DependentUpon>
     </Compile>
     <Compile Include="TruongPhong\Main_TruongPhong.cs">
       <SubType>Form</SubType>
@@ -348,6 +474,24 @@
     <EmbeddedResource Include="QLTrucTiep\Main_QLTrucTiep.resx">
       <DependentUpon>Main_QLTrucTiep.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLTrucTiep\QuanLyPhanCongQLTT.resx">
+      <DependentUpon>QuanLyPhanCongQLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTrucTiep\ThongTinCaNhanQLTT.resx">
+      <DependentUpon>ThongTinCaNhanQLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTrucTiep\ThongTinDeAnQLTT.resx">
+      <DependentUpon>ThongTinDeAnQLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTrucTiep\ThongTinNhanVienQLTT.resx">
+      <DependentUpon>ThongTinNhanVienQLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTrucTiep\ThongTinPhanCongQLTT.resx">
+      <DependentUpon>ThongTinPhanCongQLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTrucTiep\ThongTinPhongBanQLTT.resx">
+      <DependentUpon>ThongTinPhongBanQLTT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyQuyen.resx">
       <DependentUpon>QuanLyQuyen.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,8 +513,32 @@
     <EmbeddedResource Include="QuanLyObjects.resx">
       <DependentUpon>QuanLyObjects.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ChinhSuaThongTinNhanVienTC.resx">
+      <DependentUpon>ChinhSuaThongTinNhanVienTC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TaiChinh\Main_TaiChinh.resx">
       <DependentUpon>Main_TaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\QuanLyPhanCongTC.resx">
+      <DependentUpon>QuanLyPhanCongTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ThongTinCaNhanTC.resx">
+      <DependentUpon>ThongTinCaNhanTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ThongTinDeAnTC.resx">
+      <DependentUpon>ThongTinDeAnTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ThongTinNhanVienTC.resx">
+      <DependentUpon>ThongTinNhanVienTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ThongTinPhanCongTC.resx">
+      <DependentUpon>ThongTinPhanCongTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\ThongTinPhongBanTC.resx">
+      <DependentUpon>ThongTinPhongBanTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\XemThongTinNhanVienTC.resx">
+      <DependentUpon>XemThongTinNhanVienTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemRole.resx">
       <DependentUpon>ThemRole.cs</DependentUpon>
@@ -398,6 +566,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThuHoiQuyenTuUser.resx">
       <DependentUpon>ThuHoiQuyenTuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\Main_TruongDeAn.resx">
+      <DependentUpon>Main_TruongDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ThongTinCaNhanTDA.resx">
+      <DependentUpon>ThongTinCaNhanTDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ThongTinDeAnTDA.resx">
+      <DependentUpon>ThongTinDeAnTDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ThongTinPhanCongTDA.resx">
+      <DependentUpon>ThongTinPhanCongTDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\ThongTinPhongBanTDA.resx">
+      <DependentUpon>ThongTinPhongBanTDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongPhong\Main_TruongPhong.resx">
       <DependentUpon>Main_TruongPhong.cs</DependentUpon>

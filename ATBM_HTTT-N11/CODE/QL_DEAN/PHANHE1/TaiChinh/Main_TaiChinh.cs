@@ -62,25 +62,25 @@ namespace PHANHE1.TaiChinh
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinObjects());
+            OpenChildForm(new ThongTinCaNhanTC());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinQuyen());
+            OpenChildForm(new ThongTinPhanCongTC());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyObjects());
+            OpenChildForm(new ThongTinPhongBanTC());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinDeAnTC());
             SwitchColorMenu(sender, e);
         }
 
@@ -116,13 +116,13 @@ namespace PHANHE1.TaiChinh
 
         private void buttonThongTinNhanVien_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinNhanVienTC());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonQuanLyPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new QuanLyPhanCongTC());
             SwitchColorMenu(sender, e);
         }
     }
