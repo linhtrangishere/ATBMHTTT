@@ -417,6 +417,12 @@
     <Compile Include="TruongPhong\Main_TruongPhong.Designer.cs">
       <DependentUpon>Main_TruongPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruongPhong\ThongTinDeAnTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong\ThongTinDeAnTP.Designer.cs">
+      <DependentUpon>ThongTinDeAnTP.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemDanhSachRole.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PHANHE1.NhanVien
+namespace PHANHE1.TruongPhong
 {
-    public partial class ThongTinCaNhanNV : Form
+    public partial class ThongTinDeAnTP : Form
     {
-        public ThongTinCaNhanNV()
+        public ThongTinDeAnTP()
         {
             InitializeComponent();
-        }
-
-        private void ThongTinCaNhanNV_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
