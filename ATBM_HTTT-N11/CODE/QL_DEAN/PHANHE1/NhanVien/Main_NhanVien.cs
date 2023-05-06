@@ -62,25 +62,25 @@ namespace PHANHE1.NhanVien
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinObjects());
+            OpenChildForm(new ThongTinCaNhanNV());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinQuyen());
+            OpenChildForm(new ThongTinPhanCongNV());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyObjects());
+            OpenChildForm(new ThongTinPhongBanNV());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinDeAnNV());
             SwitchColorMenu(sender, e);
         }
 
