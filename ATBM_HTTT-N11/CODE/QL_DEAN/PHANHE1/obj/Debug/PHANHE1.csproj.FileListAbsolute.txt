@@ -310,3 +310,14 @@ C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PH
 C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinPhanCongTP.resources
 C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinPhongBanTP.resources
 C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.XoaPhanCongTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinCaNhanTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ThongTinCaNhanNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ChinhSuaNhanVienNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ChinhSuaPhongBanNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.QuanLyNhanVienNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.QuanLyPhongBanNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ThemNhanVienNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ThemPhongBanNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ThongTinDeAnNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.ThongTinPhanCongNS.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.NhanSu.XoaPhongBanNS.resources

@@ -133,11 +133,71 @@
     <Compile Include="Main.designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\ChinhSuaNhanVienNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ChinhSuaNhanVienNS.Designer.cs">
+      <DependentUpon>ChinhSuaNhanVienNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ChinhSuaPhongBanNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ChinhSuaPhongBanNS.Designer.cs">
+      <DependentUpon>ChinhSuaPhongBanNS.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanSu\Main_NhanSu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanSu\Main_NhanSu.Designer.cs">
       <DependentUpon>Main_NhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\QuanLyNhanVienNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\QuanLyNhanVienNS.Designer.cs">
+      <DependentUpon>QuanLyNhanVienNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\QuanLyPhongBanNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\QuanLyPhongBanNS.Designer.cs">
+      <DependentUpon>QuanLyPhongBanNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThemNhanVienNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThemNhanVienNS.Designer.cs">
+      <DependentUpon>ThemNhanVienNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThemPhongBanNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThemPhongBanNS.Designer.cs">
+      <DependentUpon>ThemPhongBanNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThongTinCaNhanNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThongTinCaNhanNS.Designer.cs">
+      <DependentUpon>ThongTinCaNhanNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThongTinDeAnNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThongTinDeAnNS.Designer.cs">
+      <DependentUpon>ThongTinDeAnNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThongTinPhanCongNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThongTinPhanCongNS.Designer.cs">
+      <DependentUpon>ThongTinPhanCongNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\XoaPhongBanNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\XoaPhongBanNS.Designer.cs">
+      <DependentUpon>XoaPhongBanNS.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien\Main_NhanVien.cs">
       <SubType>Form</SubType>
@@ -435,6 +495,12 @@
     <Compile Include="TruongPhong\ThemPhanCongTP.Designer.cs">
       <DependentUpon>ThemPhanCongTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruongPhong\ThongTinCaNhanTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong\ThongTinCaNhanTP.Designer.cs">
+      <DependentUpon>ThongTinCaNhanTP.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruongPhong\ThongTinDeAnTP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -528,8 +594,38 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ChinhSuaNhanVienNS.resx">
+      <DependentUpon>ChinhSuaNhanVienNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ChinhSuaPhongBanNS.resx">
+      <DependentUpon>ChinhSuaPhongBanNS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\Main_NhanSu.resx">
       <DependentUpon>Main_NhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\QuanLyNhanVienNS.resx">
+      <DependentUpon>QuanLyNhanVienNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\QuanLyPhongBanNS.resx">
+      <DependentUpon>QuanLyPhongBanNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThemNhanVienNS.resx">
+      <DependentUpon>ThemNhanVienNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThemPhongBanNS.resx">
+      <DependentUpon>ThemPhongBanNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThongTinCaNhanNS.resx">
+      <DependentUpon>ThongTinCaNhanNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThongTinDeAnNS.resx">
+      <DependentUpon>ThongTinDeAnNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThongTinPhanCongNS.resx">
+      <DependentUpon>ThongTinPhanCongNS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\XoaPhongBanNS.resx">
+      <DependentUpon>XoaPhongBanNS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\Main_NhanVien.resx">
       <DependentUpon>Main_NhanVien.cs</DependentUpon>
@@ -686,6 +782,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TruongPhong\ThemPhanCongTP.resx">
       <DependentUpon>ThemPhanCongTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong\ThongTinCaNhanTP.resx">
+      <DependentUpon>ThongTinCaNhanTP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongPhong\ThongTinDeAnTP.resx">
       <DependentUpon>ThongTinDeAnTP.cs</DependentUpon>

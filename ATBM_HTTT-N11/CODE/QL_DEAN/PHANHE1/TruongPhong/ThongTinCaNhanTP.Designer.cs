@@ -1,6 +1,6 @@
-﻿namespace PHANHE1.TruongDeAn
+﻿namespace PHANHE1.TruongPhong
 {
-    partial class ThongTinCaNhanTDA
+    partial class ThongTinCaNhanTP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelThongTinCaNhanTDA = new System.Windows.Forms.Label();
-            this.panelChildFormTTCN = new System.Windows.Forms.Panel();
             this.labelMaPhongValue = new System.Windows.Forms.Label();
-            this.labelNQLValue = new System.Windows.Forms.Label();
             this.labelPhuCapValue = new System.Windows.Forms.Label();
             this.labelLuongValue = new System.Windows.Forms.Label();
             this.labelPhaiValue = new System.Windows.Forms.Label();
             this.labelTenNVValue = new System.Windows.Forms.Label();
             this.labelMaNVValue = new System.Windows.Forms.Label();
+            this.labelThongTinCaNhanTDA = new System.Windows.Forms.Label();
+            this.panelChildFormTTCN = new System.Windows.Forms.Panel();
+            this.labelNQLValue = new System.Windows.Forms.Label();
             this.buttonCapNhat = new System.Windows.Forms.Button();
             this.labelMaPhong = new System.Windows.Forms.Label();
             this.labelMaNQL = new System.Windows.Forms.Label();
@@ -56,45 +56,6 @@
             this.panelThongTinCaNhanTDA.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelThongTinCaNhanTDA
-            // 
-            this.labelThongTinCaNhanTDA.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelThongTinCaNhanTDA.Location = new System.Drawing.Point(0, 10);
-            this.labelThongTinCaNhanTDA.Name = "labelThongTinCaNhanTDA";
-            this.labelThongTinCaNhanTDA.Size = new System.Drawing.Size(935, 120);
-            this.labelThongTinCaNhanTDA.TabIndex = 0;
-            this.labelThongTinCaNhanTDA.Text = "Thông tin cá nhân";
-            this.labelThongTinCaNhanTDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelChildFormTTCN
-            // 
-            this.panelChildFormTTCN.BackColor = System.Drawing.Color.White;
-            this.panelChildFormTTCN.Controls.Add(this.labelMaPhongValue);
-            this.panelChildFormTTCN.Controls.Add(this.labelNQLValue);
-            this.panelChildFormTTCN.Controls.Add(this.labelPhuCapValue);
-            this.panelChildFormTTCN.Controls.Add(this.labelLuongValue);
-            this.panelChildFormTTCN.Controls.Add(this.labelPhaiValue);
-            this.panelChildFormTTCN.Controls.Add(this.labelTenNVValue);
-            this.panelChildFormTTCN.Controls.Add(this.labelMaNVValue);
-            this.panelChildFormTTCN.Controls.Add(this.buttonCapNhat);
-            this.panelChildFormTTCN.Controls.Add(this.labelMaPhong);
-            this.panelChildFormTTCN.Controls.Add(this.labelMaNQL);
-            this.panelChildFormTTCN.Controls.Add(this.labelPhuCap);
-            this.panelChildFormTTCN.Controls.Add(this.labelLuong);
-            this.panelChildFormTTCN.Controls.Add(this.textBoxSDT);
-            this.panelChildFormTTCN.Controls.Add(this.labelSDT);
-            this.panelChildFormTTCN.Controls.Add(this.textBoxDiaChi);
-            this.panelChildFormTTCN.Controls.Add(this.labelDiaChi);
-            this.panelChildFormTTCN.Controls.Add(this.dateTimePickerNgaySinh);
-            this.panelChildFormTTCN.Controls.Add(this.labelNgaySinh);
-            this.panelChildFormTTCN.Controls.Add(this.labelPhai);
-            this.panelChildFormTTCN.Controls.Add(this.labelTenNV);
-            this.panelChildFormTTCN.Controls.Add(this.labelMaNV);
-            this.panelChildFormTTCN.Location = new System.Drawing.Point(-1, 124);
-            this.panelChildFormTTCN.Name = "panelChildFormTTCN";
-            this.panelChildFormTTCN.Size = new System.Drawing.Size(935, 715);
-            this.panelChildFormTTCN.TabIndex = 7;
-            // 
             // labelMaPhongValue
             // 
             this.labelMaPhongValue.AutoSize = true;
@@ -104,16 +65,6 @@
             this.labelMaPhongValue.Size = new System.Drawing.Size(239, 41);
             this.labelMaPhongValue.TabIndex = 62;
             this.labelMaPhongValue.Text = "mã phòng value";
-            // 
-            // labelNQLValue
-            // 
-            this.labelNQLValue.AutoSize = true;
-            this.labelNQLValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNQLValue.Location = new System.Drawing.Point(323, 585);
-            this.labelNQLValue.Name = "labelNQLValue";
-            this.labelNQLValue.Size = new System.Drawing.Size(211, 41);
-            this.labelNQLValue.TabIndex = 61;
-            this.labelNQLValue.Text = "mã NQL value";
             // 
             // labelPhuCapValue
             // 
@@ -164,6 +115,55 @@
             this.labelMaNVValue.Size = new System.Drawing.Size(183, 41);
             this.labelMaNVValue.TabIndex = 56;
             this.labelMaNVValue.Text = "mã nv value";
+            // 
+            // labelThongTinCaNhanTDA
+            // 
+            this.labelThongTinCaNhanTDA.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelThongTinCaNhanTDA.Location = new System.Drawing.Point(0, 10);
+            this.labelThongTinCaNhanTDA.Name = "labelThongTinCaNhanTDA";
+            this.labelThongTinCaNhanTDA.Size = new System.Drawing.Size(935, 120);
+            this.labelThongTinCaNhanTDA.TabIndex = 0;
+            this.labelThongTinCaNhanTDA.Text = "Thông tin cá nhân";
+            this.labelThongTinCaNhanTDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelChildFormTTCN
+            // 
+            this.panelChildFormTTCN.BackColor = System.Drawing.Color.White;
+            this.panelChildFormTTCN.Controls.Add(this.labelMaPhongValue);
+            this.panelChildFormTTCN.Controls.Add(this.labelNQLValue);
+            this.panelChildFormTTCN.Controls.Add(this.labelPhuCapValue);
+            this.panelChildFormTTCN.Controls.Add(this.labelLuongValue);
+            this.panelChildFormTTCN.Controls.Add(this.labelPhaiValue);
+            this.panelChildFormTTCN.Controls.Add(this.labelTenNVValue);
+            this.panelChildFormTTCN.Controls.Add(this.labelMaNVValue);
+            this.panelChildFormTTCN.Controls.Add(this.buttonCapNhat);
+            this.panelChildFormTTCN.Controls.Add(this.labelMaPhong);
+            this.panelChildFormTTCN.Controls.Add(this.labelMaNQL);
+            this.panelChildFormTTCN.Controls.Add(this.labelPhuCap);
+            this.panelChildFormTTCN.Controls.Add(this.labelLuong);
+            this.panelChildFormTTCN.Controls.Add(this.textBoxSDT);
+            this.panelChildFormTTCN.Controls.Add(this.labelSDT);
+            this.panelChildFormTTCN.Controls.Add(this.textBoxDiaChi);
+            this.panelChildFormTTCN.Controls.Add(this.labelDiaChi);
+            this.panelChildFormTTCN.Controls.Add(this.dateTimePickerNgaySinh);
+            this.panelChildFormTTCN.Controls.Add(this.labelNgaySinh);
+            this.panelChildFormTTCN.Controls.Add(this.labelPhai);
+            this.panelChildFormTTCN.Controls.Add(this.labelTenNV);
+            this.panelChildFormTTCN.Controls.Add(this.labelMaNV);
+            this.panelChildFormTTCN.Location = new System.Drawing.Point(-1, 124);
+            this.panelChildFormTTCN.Name = "panelChildFormTTCN";
+            this.panelChildFormTTCN.Size = new System.Drawing.Size(935, 715);
+            this.panelChildFormTTCN.TabIndex = 5;
+            // 
+            // labelNQLValue
+            // 
+            this.labelNQLValue.AutoSize = true;
+            this.labelNQLValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelNQLValue.Location = new System.Drawing.Point(323, 585);
+            this.labelNQLValue.Name = "labelNQLValue";
+            this.labelNQLValue.Size = new System.Drawing.Size(211, 41);
+            this.labelNQLValue.TabIndex = 61;
+            this.labelNQLValue.Text = "mã NQL value";
             // 
             // buttonCapNhat
             // 
@@ -313,17 +313,17 @@
             this.panelThongTinCaNhanTDA.Location = new System.Drawing.Point(-1, -6);
             this.panelThongTinCaNhanTDA.Name = "panelThongTinCaNhanTDA";
             this.panelThongTinCaNhanTDA.Size = new System.Drawing.Size(935, 130);
-            this.panelThongTinCaNhanTDA.TabIndex = 6;
+            this.panelThongTinCaNhanTDA.TabIndex = 4;
             // 
-            // ThongTinCaNhanTDA
+            // ThongTinCaNhanTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 833);
             this.Controls.Add(this.panelChildFormTTCN);
             this.Controls.Add(this.panelThongTinCaNhanTDA);
-            this.Name = "ThongTinCaNhanTDA";
-            this.Text = "ThongTinCaNhanTDA";
+            this.Name = "ThongTinCaNhanTP";
+            this.Text = "ThongTinCaNhanTP";
             this.panelChildFormTTCN.ResumeLayout(false);
             this.panelChildFormTTCN.PerformLayout();
             this.panelThongTinCaNhanTDA.ResumeLayout(false);
@@ -333,15 +333,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelThongTinCaNhanTDA;
-        private System.Windows.Forms.Panel panelChildFormTTCN;
         private System.Windows.Forms.Label labelMaPhongValue;
-        private System.Windows.Forms.Label labelNQLValue;
         private System.Windows.Forms.Label labelPhuCapValue;
         private System.Windows.Forms.Label labelLuongValue;
         private System.Windows.Forms.Label labelPhaiValue;
         private System.Windows.Forms.Label labelTenNVValue;
         private System.Windows.Forms.Label labelMaNVValue;
+        private System.Windows.Forms.Label labelThongTinCaNhanTDA;
+        private System.Windows.Forms.Panel panelChildFormTTCN;
+        private System.Windows.Forms.Label labelNQLValue;
         private System.Windows.Forms.Button buttonCapNhat;
         private System.Windows.Forms.Label labelMaPhong;
         private System.Windows.Forms.Label labelMaNQL;

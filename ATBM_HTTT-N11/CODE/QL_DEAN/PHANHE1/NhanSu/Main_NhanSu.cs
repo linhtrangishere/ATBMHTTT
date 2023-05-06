@@ -63,25 +63,25 @@ namespace PHANHE1.NhanSu
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinObjects());
+            OpenChildForm(new ThongTinCaNhanNS());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinQuyen());
+            OpenChildForm(new ThongTinPhanCongNS());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyObjects());
+            OpenChildForm(new QuanLyPhongBanNS());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinDeAnNS());
             SwitchColorMenu(sender, e);
         }
 
@@ -117,7 +117,7 @@ namespace PHANHE1.NhanSu
 
         private void buttonQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new QuanLyNhanVienNS());
             SwitchColorMenu(sender, e);
         }
     }

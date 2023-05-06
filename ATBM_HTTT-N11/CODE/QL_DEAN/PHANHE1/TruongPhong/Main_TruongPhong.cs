@@ -62,7 +62,7 @@ namespace PHANHE1.TruongPhong
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinCa());
+            OpenChildForm(new ThongTinCaNhanTP());
             SwitchColorMenu(sender, e);
         }
 

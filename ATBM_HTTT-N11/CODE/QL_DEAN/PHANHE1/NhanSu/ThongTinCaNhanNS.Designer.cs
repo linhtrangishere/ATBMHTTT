@@ -1,6 +1,6 @@
-﻿namespace PHANHE1.TruongDeAn
+﻿namespace PHANHE1.NhanSu
 {
-    partial class ThongTinCaNhanTDA
+    partial class ThongTinCaNhanNS
     {
         /// <summary>
         /// Required designer variable.
@@ -315,15 +315,15 @@
             this.panelThongTinCaNhanTDA.Size = new System.Drawing.Size(935, 130);
             this.panelThongTinCaNhanTDA.TabIndex = 6;
             // 
-            // ThongTinCaNhanTDA
+            // ThongTinCaNhanNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 833);
             this.Controls.Add(this.panelChildFormTTCN);
             this.Controls.Add(this.panelThongTinCaNhanTDA);
-            this.Name = "ThongTinCaNhanTDA";
-            this.Text = "ThongTinCaNhanTDA";
+            this.Name = "ThongTinCaNhanNS";
+            this.Text = "ThongTinCaNhanNS";
             this.panelChildFormTTCN.ResumeLayout(false);
             this.panelChildFormTTCN.PerformLayout();
             this.panelThongTinCaNhanTDA.ResumeLayout(false);
