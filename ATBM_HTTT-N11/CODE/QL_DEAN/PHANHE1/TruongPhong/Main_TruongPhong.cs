@@ -62,27 +62,29 @@ namespace PHANHE1.TruongPhong
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinObjects());
+            //OpenChildForm(new ThongTinCa());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new ThongTinQuyen());
+            OpenChildForm(new ThongTinPhanCongTP());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyObjects());
+            OpenChildForm(new ThongTinPhongBanTP());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinDeAnTP());
             SwitchColorMenu(sender, e);
         }
+
+
 
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
@@ -116,13 +118,13 @@ namespace PHANHE1.TruongPhong
 
         private void buttonThongTinNhanVien_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new ThongTinNhanVienTP());
             SwitchColorMenu(sender, e);
         }
 
         private void buttonQuanLyPhanCong_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new QuanLyQuyen());
+            OpenChildForm(new QuanLyPhanCongTP());
             SwitchColorMenu(sender, e);
         }
     }

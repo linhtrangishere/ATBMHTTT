@@ -16,7 +16,7 @@ namespace PHANHE1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanVien.Main_NhanVien());
+            Application.Run(new TruongPhong.Main_TruongPhong());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using PHANHE1.TaiChinh;
+﻿using PHANHE1.TruongDeAn;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PHANHE1.TruongDeAn
+namespace PHANHE1.TruongPhong
 {
-    public partial class ThongTinDeAnTDA : Form
+    public partial class QuanLyPhanCongTP : Form
     {
-        public ThongTinDeAnTDA()
+        public QuanLyPhanCongTP()
         {
             InitializeComponent();
         }
@@ -29,8 +29,8 @@ namespace PHANHE1.TruongDeAn
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildFormTTDA.Controls.Add(childForm);
-            panelChildFormTTDA.Tag = childForm;
+            panelChildFormQuanLyPhanCong.Controls.Add(childForm);
+            panelChildFormQuanLyPhanCong.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -57,37 +57,29 @@ namespace PHANHE1.TruongDeAn
             }
         }
 
-        private void textBoxMaNV_TextChanged(object sender, EventArgs e)
+       
+
+        private void QuanLyPhanCongTP_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void panelThongTinCaNhanQLTT_Paint(object sender, PaintEventArgs e)
+        private void buttonThemPhanCong_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonThemDeAn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThemThongTinDeAnTDA());
+            OpenChildForm(new ThemPhanCongTP());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonXoaDeAn_Click(object sender, EventArgs e)
+        private void buttonXoaPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new XoaThongTinDeAnTDA());
+            OpenChildForm(new XoaPhanCongTP());
             SwitchColorMenu(sender, e);
         }
 
-        private void buttonChinhSuaDeAn_Click(object sender, EventArgs e)
+        private void buttonChinhSuaPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChinhSuaThongTinDeAnTDA());
+            OpenChildForm(new ChinhSuaPhanCongTP());
             SwitchColorMenu(sender, e);
-        }
-
-        private void ThongTinDeAnTDA_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -127,6 +127,7 @@
             this.Controls.Add(this.panelThongTinDeAnTDA);
             this.Name = "ThongTinDeAnTDA";
             this.Text = "ThongTinDeAnTDA";
+            this.Load += new System.EventHandler(this.ThongTinDeAnTDA_Load);
             this.panelThongTinDeAnTDA.ResumeLayout(false);
             this.panelChildFormTTDA.ResumeLayout(false);
             this.panelThemXoaSua.ResumeLayout(false);

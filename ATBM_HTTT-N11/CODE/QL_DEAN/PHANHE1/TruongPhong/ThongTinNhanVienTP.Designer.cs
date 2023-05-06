@@ -1,6 +1,6 @@
 ﻿namespace PHANHE1.TruongPhong
 {
-    partial class ThongTinDeAnTP
+    partial class ThongTinNhanVienTP
     {
         /// <summary>
         /// Required designer variable.
@@ -29,59 +29,59 @@
         private void InitializeComponent()
         {
             this.panelThongTinDeAnQLTT = new System.Windows.Forms.Panel();
-            this.labelThongTinDeAnTP = new System.Windows.Forms.Label();
-            this.panelChildFormTTDA = new System.Windows.Forms.Panel();
-            this.dataGridViewThongTinDeAnTP = new System.Windows.Forms.DataGridView();
+            this.labelThongTinNhanVienTP = new System.Windows.Forms.Label();
+            this.panelChildFormTTNV = new System.Windows.Forms.Panel();
+            this.dataGridViewThongTinNhanVienTP = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.textBoxNhapMaDeAn = new System.Windows.Forms.TextBox();
             this.labelNhapMaDeAn = new System.Windows.Forms.Label();
             this.panelThongTinDeAnQLTT.SuspendLayout();
-            this.panelChildFormTTDA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinDeAnTP)).BeginInit();
+            this.panelChildFormTTNV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienTP)).BeginInit();
             this.SuspendLayout();
             // 
             // panelThongTinDeAnQLTT
             // 
             this.panelThongTinDeAnQLTT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.panelThongTinDeAnQLTT.Controls.Add(this.labelThongTinDeAnTP);
+            this.panelThongTinDeAnQLTT.Controls.Add(this.labelThongTinNhanVienTP);
             this.panelThongTinDeAnQLTT.Location = new System.Drawing.Point(-1, -6);
             this.panelThongTinDeAnQLTT.Name = "panelThongTinDeAnQLTT";
             this.panelThongTinDeAnQLTT.Size = new System.Drawing.Size(935, 130);
-            this.panelThongTinDeAnQLTT.TabIndex = 4;
+            this.panelThongTinDeAnQLTT.TabIndex = 6;
             // 
-            // labelThongTinDeAnTP
+            // labelThongTinNhanVienTP
             // 
-            this.labelThongTinDeAnTP.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelThongTinDeAnTP.Location = new System.Drawing.Point(0, 10);
-            this.labelThongTinDeAnTP.Name = "labelThongTinDeAnTP";
-            this.labelThongTinDeAnTP.Size = new System.Drawing.Size(935, 120);
-            this.labelThongTinDeAnTP.TabIndex = 0;
-            this.labelThongTinDeAnTP.Text = "Thông tin đề án";
-            this.labelThongTinDeAnTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelThongTinNhanVienTP.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelThongTinNhanVienTP.Location = new System.Drawing.Point(0, 10);
+            this.labelThongTinNhanVienTP.Name = "labelThongTinNhanVienTP";
+            this.labelThongTinNhanVienTP.Size = new System.Drawing.Size(935, 120);
+            this.labelThongTinNhanVienTP.TabIndex = 0;
+            this.labelThongTinNhanVienTP.Text = "Thông tin nhân viên";
+            this.labelThongTinNhanVienTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelChildFormTTDA
+            // panelChildFormTTNV
             // 
-            this.panelChildFormTTDA.BackColor = System.Drawing.Color.White;
-            this.panelChildFormTTDA.Controls.Add(this.dataGridViewThongTinDeAnTP);
-            this.panelChildFormTTDA.Controls.Add(this.buttonXemTatCa);
-            this.panelChildFormTTDA.Controls.Add(this.buttonTimKiem);
-            this.panelChildFormTTDA.Controls.Add(this.textBoxNhapMaDeAn);
-            this.panelChildFormTTDA.Controls.Add(this.labelNhapMaDeAn);
-            this.panelChildFormTTDA.Location = new System.Drawing.Point(-1, 124);
-            this.panelChildFormTTDA.Name = "panelChildFormTTDA";
-            this.panelChildFormTTDA.Size = new System.Drawing.Size(935, 715);
-            this.panelChildFormTTDA.TabIndex = 5;
+            this.panelChildFormTTNV.BackColor = System.Drawing.Color.White;
+            this.panelChildFormTTNV.Controls.Add(this.dataGridViewThongTinNhanVienTP);
+            this.panelChildFormTTNV.Controls.Add(this.buttonXemTatCa);
+            this.panelChildFormTTNV.Controls.Add(this.buttonTimKiem);
+            this.panelChildFormTTNV.Controls.Add(this.textBoxNhapMaDeAn);
+            this.panelChildFormTTNV.Controls.Add(this.labelNhapMaDeAn);
+            this.panelChildFormTTNV.Location = new System.Drawing.Point(-1, 124);
+            this.panelChildFormTTNV.Name = "panelChildFormTTNV";
+            this.panelChildFormTTNV.Size = new System.Drawing.Size(935, 715);
+            this.panelChildFormTTNV.TabIndex = 7;
             // 
-            // dataGridViewThongTinDeAnTP
+            // dataGridViewThongTinNhanVienTP
             // 
-            this.dataGridViewThongTinDeAnTP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewThongTinDeAnTP.Location = new System.Drawing.Point(0, 415);
-            this.dataGridViewThongTinDeAnTP.Name = "dataGridViewThongTinDeAnTP";
-            this.dataGridViewThongTinDeAnTP.RowHeadersWidth = 51;
-            this.dataGridViewThongTinDeAnTP.RowTemplate.Height = 24;
-            this.dataGridViewThongTinDeAnTP.Size = new System.Drawing.Size(935, 300);
-            this.dataGridViewThongTinDeAnTP.TabIndex = 57;
+            this.dataGridViewThongTinNhanVienTP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThongTinNhanVienTP.Location = new System.Drawing.Point(0, 415);
+            this.dataGridViewThongTinNhanVienTP.Name = "dataGridViewThongTinNhanVienTP";
+            this.dataGridViewThongTinNhanVienTP.RowHeadersWidth = 51;
+            this.dataGridViewThongTinNhanVienTP.RowTemplate.Height = 24;
+            this.dataGridViewThongTinNhanVienTP.Size = new System.Drawing.Size(935, 300);
+            this.dataGridViewThongTinNhanVienTP.TabIndex = 57;
             // 
             // buttonXemTatCa
             // 
@@ -123,23 +123,23 @@
             this.labelNhapMaDeAn.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelNhapMaDeAn.Location = new System.Drawing.Point(145, 230);
             this.labelNhapMaDeAn.Name = "labelNhapMaDeAn";
-            this.labelNhapMaDeAn.Size = new System.Drawing.Size(227, 41);
+            this.labelNhapMaDeAn.Size = new System.Drawing.Size(285, 41);
             this.labelNhapMaDeAn.TabIndex = 0;
-            this.labelNhapMaDeAn.Text = "Nhập mã đề án";
+            this.labelNhapMaDeAn.Text = "Nhập mã nhân viên";
             // 
-            // ThongTinDeAnTP
+            // ThongTinNhanVienTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 833);
             this.Controls.Add(this.panelThongTinDeAnQLTT);
-            this.Controls.Add(this.panelChildFormTTDA);
-            this.Name = "ThongTinDeAnTP";
-            this.Text = "ThongTinDeAnTP";
+            this.Controls.Add(this.panelChildFormTTNV);
+            this.Name = "ThongTinNhanVienTP";
+            this.Text = "ThongTinNhanVienTP";
             this.panelThongTinDeAnQLTT.ResumeLayout(false);
-            this.panelChildFormTTDA.ResumeLayout(false);
-            this.panelChildFormTTDA.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinDeAnTP)).EndInit();
+            this.panelChildFormTTNV.ResumeLayout(false);
+            this.panelChildFormTTNV.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienTP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,9 +147,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panelThongTinDeAnQLTT;
-        private System.Windows.Forms.Label labelThongTinDeAnTP;
-        private System.Windows.Forms.Panel panelChildFormTTDA;
-        private System.Windows.Forms.DataGridView dataGridViewThongTinDeAnTP;
+        private System.Windows.Forms.Label labelThongTinNhanVienTP;
+        private System.Windows.Forms.Panel panelChildFormTTNV;
+        private System.Windows.Forms.DataGridView dataGridViewThongTinNhanVienTP;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.TextBox textBoxNhapMaDeAn;

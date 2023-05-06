@@ -302,3 +302,11 @@ C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PH
 C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.csproj.CopyComplete
 C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.exe
 C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.pdb
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ChinhSuaPhanCongTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.QuanLyPhanCongTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThemPhanCongTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinDeAnTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinNhanVienTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinPhanCongTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.ThongTinPhongBanTP.resources
+C:\Users\DELL\Documents\ATBMHTTT\ATBM_HTTT-N11\CODE\QL_DEAN\PHANHE1\obj\Debug\PHANHE1.TruongPhong.XoaPhanCongTP.resources
