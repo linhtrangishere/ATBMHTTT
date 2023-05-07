@@ -178,7 +178,7 @@
     <Compile Include="NhanSu\ThongTinCaNhanNS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu\ThongTinCaNhanNS.Designer.cs">
+    <Compile Include="NhanSu\ThongTinCaNhanNS.designer.cs">
       <DependentUpon>ThongTinCaNhanNS.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\ThongTinDeAnNS.cs">

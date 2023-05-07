@@ -7,9 +7,12 @@ namespace PHANHE1
 {
     public partial class Main : Form
     {
-        public Main()
+        String username = "";
+        public Main(String usr_name)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
         }
 
         private Form formchild = null;

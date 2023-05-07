@@ -12,9 +12,12 @@ namespace PHANHE1.TruongDeAn
 {
     public partial class Main_TruongDeAn : Form
     {
-        public Main_TruongDeAn()
+        String username = "";
+        public Main_TruongDeAn(String usr_name)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
         }
 
         private Form formchild = null;

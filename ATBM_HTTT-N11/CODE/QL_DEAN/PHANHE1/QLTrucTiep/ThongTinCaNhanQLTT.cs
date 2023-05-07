@@ -17,12 +17,7 @@ namespace PHANHE1.QLTrucTiep
             InitializeComponent();
         }
 
-        private void textBoxMaNV_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelThongTinCaNhanQLTT_Paint(object sender, PaintEventArgs e)
+        private void buttonCapNhat_Click(object sender, EventArgs e)
         {
 
         }

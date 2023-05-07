@@ -17,11 +17,6 @@ namespace PHANHE1.TruongDeAn
             InitializeComponent();
         }
 
-        private void textBoxMaNV_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelThongTinCaNhanQLTT_Paint(object sender, PaintEventArgs e)
         {
 

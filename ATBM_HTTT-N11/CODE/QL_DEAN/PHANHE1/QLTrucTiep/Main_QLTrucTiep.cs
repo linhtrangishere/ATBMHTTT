@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PHANHE1.QLTrucTiep
 {
     public partial class Main_QLTrucTiep : Form
     {
-        public Main_QLTrucTiep()
+        String username = "";
+        public Main_QLTrucTiep(String usr_name)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
         }
 
         private Form formchild = null;

@@ -136,13 +136,13 @@ namespace PHANHE1
 
                     if (IsUserRole(username, "DBA"))
                     {
-                        Main openDba = new Main();
+                        Main openDba = new Main(username);
                         openDba.Show();
                        
                     }
                     else if (IsUserRole(username, "RL_TRUONGDA")) 
                     {
-                        TruongDeAn.Main_TruongDeAn openTruongDean = new Main_TruongDeAn();
+                        TruongDeAn.Main_TruongDeAn openTruongDean = new Main_TruongDeAn(username);
                         openTruongDean.Show();
                     }
                     else if (IsUserRole(username, "RL_NHANVIEN"))
@@ -157,12 +157,12 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_QLTRUCTIEP"))
                     {
-                        QLTrucTiep.Main_QLTrucTiep openQLTrucTiep = new Main_QLTrucTiep();
+                        QLTrucTiep.Main_QLTrucTiep openQLTrucTiep = new Main_QLTrucTiep(username);
                         openQLTrucTiep.Show();
                     }
                     else if (IsUserRole(username, "RL_TAICHINH"))
                     {
-                        TaiChinh.Main_TaiChinh openTaiChinh = new Main_TaiChinh();
+                        TaiChinh.Main_TaiChinh openTaiChinh = new Main_TaiChinh(username);
                         openTaiChinh.Show();
                     }
                     else if (IsUserRole(username, "RL_TRUONGPHONG"))

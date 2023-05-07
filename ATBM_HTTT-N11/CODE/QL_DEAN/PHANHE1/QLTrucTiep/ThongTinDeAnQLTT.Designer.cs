@@ -95,6 +95,7 @@
             this.buttonXemTatCa.TabIndex = 56;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -107,6 +108,7 @@
             this.buttonTimKiem.TabIndex = 55;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // textBoxNhapMaDeAn
             // 

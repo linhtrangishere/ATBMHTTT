@@ -26,5 +26,15 @@ namespace PHANHE1.QLTrucTiep
         {
 
         }
+
+        private void buttonXemTatCa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
