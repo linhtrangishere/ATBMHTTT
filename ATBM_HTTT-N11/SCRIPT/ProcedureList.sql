@@ -59,4 +59,37 @@ END;
 /
 
 ------------------------------------------- NHANVIEN -------------------------------------------
---1. xem tất cả các thuộc tính trên quan hệ NHANVIEN và PHANCONG liên quan đến chính nhân viên đó
+--1. Sửa trên các thuộc tính NGAYSINH, DIACHI, SODT liên quan đến chính nhân viên đó
+CREATE OR REPLACE PROCEDURE USP_UPDATE_NHANVIEN_NHANVIEN (
+    p_ngaysinh IN DATE,
+    p_diachi IN NVARCHAR2,
+    p_sodt IN VARCHAR2,
+    p_out_message OUT NVARCHAR2
+)
+AS
+    v_manv VARCHAR2(6);
+BEGIN
+    SELECT MANV INTO v_manv
+    FROM UV_NHANVIEN_NHANVIEN;
+    
+    IF v_manv IS NOT NULL THEN
+        UPDATE NHANVIEN
+        SET
+            NGAYSINH = p_ngaysinh,
+            DIACHI = p_diachi,
+            SODT = p_sodt
+        WHERE MANV = v_manv;
+        
+        COMMIT;
+        p_out_message := 'Cập nhật thông tin thành công!';
+    ELSE
+        p_out_message := 'Không tìm thấy nhân viên!';
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
+END;
+/
+GRANT EXECUTE ON USP_UPDATE_NHANVIEN_NHANVIEN TO RL_NHANVIEN;
+/

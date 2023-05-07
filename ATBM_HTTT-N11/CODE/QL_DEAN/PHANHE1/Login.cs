@@ -98,7 +98,7 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_NHANSU"))
                     {
-                        NhanSu.Main_NhanSu openNhanSu = new Main_NhanSu();
+                        NhanSu.Main_NhanSu openNhanSu = new Main_NhanSu(username, userAdmin);
                         openNhanSu.Show();
                     }
                     else if (IsUserRole(username, "RL_QLTRUCTIEP"))
@@ -113,7 +113,7 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_TRUONGPHONG"))
                     {
-                        TruongPhong.Main_TruongPhong openTruongPhong = new Main_TruongPhong();
+                        TruongPhong.Main_TruongPhong openTruongPhong = new Main_TruongPhong(username, userAdmin);
                         openTruongPhong.Show();
                     }
                     else

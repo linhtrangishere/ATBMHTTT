@@ -32,8 +32,8 @@ namespace PHANHE1
 
         private void Run_USP_THEMUSER()
         {
-            string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
-            OracleCommand set_script_cmd = new OracleCommand(set_script, conn);
+            //string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
+            //OracleCommand set_script_cmd = new OracleCommand(set_script, conn);
 
             OracleCommand cmd = new OracleCommand("USP_CREATEUSER", conn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -57,7 +57,7 @@ namespace PHANHE1
                 //{
                 //    MessageBox.Show("Thêm user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //}
-                set_script_cmd.ExecuteNonQuery();
+                //set_script_cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBoxTaiKhoan.Clear();

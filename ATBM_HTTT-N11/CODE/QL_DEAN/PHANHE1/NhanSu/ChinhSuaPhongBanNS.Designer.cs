@@ -70,6 +70,7 @@
             this.comboBoxMaPhongBan.Name = "comboBoxMaPhongBan";
             this.comboBoxMaPhongBan.Size = new System.Drawing.Size(300, 49);
             this.comboBoxMaPhongBan.TabIndex = 80;
+            this.comboBoxMaPhongBan.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPhongBan_SelectedIndexChanged);
             // 
             // comboBoxTruongPhong
             // 
@@ -80,6 +81,7 @@
             this.comboBoxTruongPhong.Name = "comboBoxTruongPhong";
             this.comboBoxTruongPhong.Size = new System.Drawing.Size(300, 49);
             this.comboBoxTruongPhong.TabIndex = 79;
+            this.comboBoxTruongPhong.SelectedIndexChanged += new System.EventHandler(this.comboBoxTruongPhong_SelectedIndexChanged);
             // 
             // textBoxTenPhongBan
             // 
@@ -90,6 +92,7 @@
             this.textBoxTenPhongBan.Name = "textBoxTenPhongBan";
             this.textBoxTenPhongBan.Size = new System.Drawing.Size(440, 50);
             this.textBoxTenPhongBan.TabIndex = 78;
+            this.textBoxTenPhongBan.TextChanged += new System.EventHandler(this.textBoxTenPhongBan_TextChanged);
             // 
             // labelTenPhongBan
             // 
@@ -133,6 +136,7 @@
             this.dataGridViewThemPhongBanNS.RowTemplate.Height = 24;
             this.dataGridViewThemPhongBanNS.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewThemPhongBanNS.TabIndex = 68;
+            this.dataGridViewThemPhongBanNS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThemPhongBanNS_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -145,6 +149,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonCapNhat
             // 
@@ -157,6 +162,7 @@
             this.buttonCapNhat.TabIndex = 66;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // labelMaPhongBan
             // 
@@ -176,6 +182,7 @@
             this.Controls.Add(this.panelThemPhanCongTP);
             this.Name = "ChinhSuaPhongBanNS";
             this.Text = "ChinhSuaPhongBanNS";
+            this.Load += new System.EventHandler(this.ChinhSuaPhongBanNS_Load);
             this.panelThemPhanCongTP.ResumeLayout(false);
             this.panelThemPhanCongTP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemPhongBanNS)).EndInit();

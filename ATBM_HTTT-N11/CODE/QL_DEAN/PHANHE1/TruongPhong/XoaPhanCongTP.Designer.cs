@@ -66,6 +66,7 @@
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
             this.comboBoxNhanVien.Size = new System.Drawing.Size(300, 49);
             this.comboBoxNhanVien.TabIndex = 77;
+            this.comboBoxNhanVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhanVien_SelectedIndexChanged);
             // 
             // labelMaDA
             // 
@@ -86,6 +87,7 @@
             this.comboBoxDeAn.Name = "comboBoxDeAn";
             this.comboBoxDeAn.Size = new System.Drawing.Size(300, 49);
             this.comboBoxDeAn.TabIndex = 73;
+            this.comboBoxDeAn.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeAn_SelectedIndexChanged);
             // 
             // buttonQuayLai
             // 
@@ -109,6 +111,7 @@
             this.dataGridViewThemThongTinDeAnTDA.RowTemplate.Height = 24;
             this.dataGridViewThemThongTinDeAnTDA.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewThemThongTinDeAnTDA.TabIndex = 68;
+            this.dataGridViewThemThongTinDeAnTDA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThemThongTinDeAnTDA_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -121,6 +124,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonXoa
             // 
@@ -133,6 +137,7 @@
             this.buttonXoa.TabIndex = 66;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // labelMaNhanVien
             // 
@@ -152,6 +157,7 @@
             this.Controls.Add(this.panelXoaPhanCongTP);
             this.Name = "XoaPhanCongTP";
             this.Text = "XoaPhanCongTP";
+            this.Load += new System.EventHandler(this.XoaPhanCongTP_Load);
             this.panelXoaPhanCongTP.ResumeLayout(false);
             this.panelXoaPhanCongTP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemThongTinDeAnTDA)).EndInit();

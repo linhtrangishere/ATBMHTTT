@@ -29,8 +29,8 @@ namespace PHANHE1
 
         private void Run_USP_DROPUSER()
         {
-            string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
-            OracleCommand set_script_cmd = new OracleCommand(set_script, conn);
+            //string set_script = "alter session set \"_ORACLE_SCRIPT\" = true";
+            //OracleCommand set_script_cmd = new OracleCommand(set_script, conn);
 
             OracleCommand cmd = new OracleCommand("USP_DROPUSER", conn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -45,7 +45,7 @@ namespace PHANHE1
 
             try
             {
-                set_script_cmd.ExecuteNonQuery();
+                //set_script_cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa user thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

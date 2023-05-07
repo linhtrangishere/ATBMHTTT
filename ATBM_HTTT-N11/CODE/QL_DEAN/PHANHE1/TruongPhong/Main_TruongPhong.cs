@@ -12,9 +12,14 @@ namespace PHANHE1.TruongPhong
 {
     public partial class Main_TruongPhong : Form
     {
-        public Main_TruongPhong()
+        String username = "";
+        String userAdmin = "";
+        public Main_TruongPhong(String usr_name, String usrAdmin)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
+            this.userAdmin = usrAdmin;
         }
 
         private Form formchild = null;
@@ -62,25 +67,25 @@ namespace PHANHE1.TruongPhong
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanTP());
+            OpenChildForm(new ThongTinCaNhanTP(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhanCongTP());
+            OpenChildForm(new ThongTinPhanCongTP(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhongBanTP());
+            OpenChildForm(new ThongTinPhongBanTP(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinDeAnTP());
+            OpenChildForm(new ThongTinDeAnTP(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
@@ -118,13 +123,13 @@ namespace PHANHE1.TruongPhong
 
         private void buttonThongTinNhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinNhanVienTP());
+            OpenChildForm(new ThongTinNhanVienTP(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonQuanLyPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyPhanCongTP());
+            OpenChildForm(new QuanLyPhanCongTP(userAdmin));
             SwitchColorMenu(sender, e);
         }
     }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenuNS = new System.Windows.Forms.Panel();
+            this.buttonThongTinPhongBan = new System.Windows.Forms.Button();
             this.buttonQuanLyNhanVien = new System.Windows.Forms.Button();
             this.buttonDangXuat = new System.Windows.Forms.Button();
             this.buttonThongTinDeAn = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             // panelMenuNS
             // 
             this.panelMenuNS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
+            this.panelMenuNS.Controls.Add(this.buttonThongTinPhongBan);
             this.panelMenuNS.Controls.Add(this.buttonQuanLyNhanVien);
             this.panelMenuNS.Controls.Add(this.buttonDangXuat);
             this.panelMenuNS.Controls.Add(this.buttonThongTinDeAn);
@@ -59,11 +61,23 @@
             this.panelMenuNS.TabIndex = 0;
             this.panelMenuNS.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
+            // buttonThongTinPhongBan
+            // 
+            this.buttonThongTinPhongBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
+            this.buttonThongTinPhongBan.Font = new System.Drawing.Font("Segoe UI", 18.5F);
+            this.buttonThongTinPhongBan.Location = new System.Drawing.Point(-10, 404);
+            this.buttonThongTinPhongBan.Name = "buttonThongTinPhongBan";
+            this.buttonThongTinPhongBan.Size = new System.Drawing.Size(352, 94);
+            this.buttonThongTinPhongBan.TabIndex = 18;
+            this.buttonThongTinPhongBan.Text = "Thông tin phòng ban";
+            this.buttonThongTinPhongBan.UseVisualStyleBackColor = false;
+            this.buttonThongTinPhongBan.Click += new System.EventHandler(this.buttonThongTinPhongBan_Click_1);
+            // 
             // buttonQuanLyNhanVien
             // 
             this.buttonQuanLyNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonQuanLyNhanVien.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonQuanLyNhanVien.Location = new System.Drawing.Point(-5, 670);
+            this.buttonQuanLyNhanVien.Location = new System.Drawing.Point(-10, 758);
             this.buttonQuanLyNhanVien.Name = "buttonQuanLyNhanVien";
             this.buttonQuanLyNhanVien.Size = new System.Drawing.Size(352, 94);
             this.buttonQuanLyNhanVien.TabIndex = 17;
@@ -75,7 +89,7 @@
             // 
             this.buttonDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonDangXuat.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonDangXuat.Location = new System.Drawing.Point(-5, 790);
+            this.buttonDangXuat.Location = new System.Drawing.Point(-10, 870);
             this.buttonDangXuat.Name = "buttonDangXuat";
             this.buttonDangXuat.Size = new System.Drawing.Size(352, 94);
             this.buttonDangXuat.TabIndex = 16;
@@ -87,7 +101,7 @@
             // 
             this.buttonThongTinDeAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonThongTinDeAn.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonThongTinDeAn.Location = new System.Drawing.Point(-5, 550);
+            this.buttonThongTinDeAn.Location = new System.Drawing.Point(0, 526);
             this.buttonThongTinDeAn.Name = "buttonThongTinDeAn";
             this.buttonThongTinDeAn.Size = new System.Drawing.Size(352, 94);
             this.buttonThongTinDeAn.TabIndex = 15;
@@ -99,7 +113,7 @@
             // 
             this.buttonQuanLyPhongBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonQuanLyPhongBan.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonQuanLyPhongBan.Location = new System.Drawing.Point(-5, 430);
+            this.buttonQuanLyPhongBan.Location = new System.Drawing.Point(0, 642);
             this.buttonQuanLyPhongBan.Name = "buttonQuanLyPhongBan";
             this.buttonQuanLyPhongBan.Size = new System.Drawing.Size(352, 94);
             this.buttonQuanLyPhongBan.TabIndex = 14;
@@ -110,8 +124,8 @@
             // buttonThongTinPhanCong
             // 
             this.buttonThongTinPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
-            this.buttonThongTinPhanCong.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonThongTinPhanCong.Location = new System.Drawing.Point(-5, 310);
+            this.buttonThongTinPhanCong.Font = new System.Drawing.Font("Segoe UI", 18.5F);
+            this.buttonThongTinPhanCong.Location = new System.Drawing.Point(0, 286);
             this.buttonThongTinPhanCong.Name = "buttonThongTinPhanCong";
             this.buttonThongTinPhanCong.Size = new System.Drawing.Size(352, 94);
             this.buttonThongTinPhanCong.TabIndex = 13;
@@ -123,7 +137,7 @@
             // 
             this.buttonThongTinCaNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonThongTinCaNhan.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThongTinCaNhan.Location = new System.Drawing.Point(-5, 190);
+            this.buttonThongTinCaNhan.Location = new System.Drawing.Point(0, 166);
             this.buttonThongTinCaNhan.Name = "buttonThongTinCaNhan";
             this.buttonThongTinCaNhan.Size = new System.Drawing.Size(352, 94);
             this.buttonThongTinCaNhan.TabIndex = 12;
@@ -203,5 +217,6 @@
         private System.Windows.Forms.Panel panelChildFormNS;
         private System.Windows.Forms.Label labelNguyenVanA;
         private System.Windows.Forms.Button buttonQuanLyNhanVien;
+        private System.Windows.Forms.Button buttonThongTinPhongBan;
     }
 }

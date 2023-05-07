@@ -34,8 +34,8 @@
             this.dataGridViewThongTinNhanVienTP = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.textBoxNhapMaDeAn = new System.Windows.Forms.TextBox();
             this.labelNhapMaDeAn = new System.Windows.Forms.Label();
+            this.comboBoxMaNhanVien = new System.Windows.Forms.ComboBox();
             this.panelThongTinDeAnQLTT.SuspendLayout();
             this.panelChildFormTTNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienTP)).BeginInit();
@@ -63,10 +63,10 @@
             // panelChildFormTTNV
             // 
             this.panelChildFormTTNV.BackColor = System.Drawing.Color.White;
+            this.panelChildFormTTNV.Controls.Add(this.comboBoxMaNhanVien);
             this.panelChildFormTTNV.Controls.Add(this.dataGridViewThongTinNhanVienTP);
             this.panelChildFormTTNV.Controls.Add(this.buttonXemTatCa);
             this.panelChildFormTTNV.Controls.Add(this.buttonTimKiem);
-            this.panelChildFormTTNV.Controls.Add(this.textBoxNhapMaDeAn);
             this.panelChildFormTTNV.Controls.Add(this.labelNhapMaDeAn);
             this.panelChildFormTTNV.Location = new System.Drawing.Point(-1, 124);
             this.panelChildFormTTNV.Name = "panelChildFormTTNV";
@@ -82,6 +82,7 @@
             this.dataGridViewThongTinNhanVienTP.RowTemplate.Height = 24;
             this.dataGridViewThongTinNhanVienTP.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewThongTinNhanVienTP.TabIndex = 57;
+            this.dataGridViewThongTinNhanVienTP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThongTinNhanVienTP_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -94,6 +95,7 @@
             this.buttonXemTatCa.TabIndex = 56;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -106,16 +108,7 @@
             this.buttonTimKiem.TabIndex = 55;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // textBoxNhapMaDeAn
-            // 
-            this.textBoxNhapMaDeAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNhapMaDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxNhapMaDeAn.Location = new System.Drawing.Point(152, 280);
-            this.textBoxNhapMaDeAn.Multiline = true;
-            this.textBoxNhapMaDeAn.Name = "textBoxNhapMaDeAn";
-            this.textBoxNhapMaDeAn.Size = new System.Drawing.Size(300, 50);
-            this.textBoxNhapMaDeAn.TabIndex = 1;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // labelNhapMaDeAn
             // 
@@ -127,6 +120,17 @@
             this.labelNhapMaDeAn.TabIndex = 0;
             this.labelNhapMaDeAn.Text = "Nhập mã nhân viên";
             // 
+            // comboBoxMaNhanVien
+            // 
+            this.comboBoxMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxMaNhanVien.FormattingEnabled = true;
+            this.comboBoxMaNhanVien.Location = new System.Drawing.Point(152, 281);
+            this.comboBoxMaNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaNhanVien.Name = "comboBoxMaNhanVien";
+            this.comboBoxMaNhanVien.Size = new System.Drawing.Size(293, 49);
+            this.comboBoxMaNhanVien.TabIndex = 63;
+            this.comboBoxMaNhanVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNhanVien_SelectedIndexChanged);
+            // 
             // ThongTinNhanVienTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,6 +140,7 @@
             this.Controls.Add(this.panelChildFormTTNV);
             this.Name = "ThongTinNhanVienTP";
             this.Text = "ThongTinNhanVienTP";
+            this.Load += new System.EventHandler(this.ThongTinNhanVienTP_Load);
             this.panelThongTinDeAnQLTT.ResumeLayout(false);
             this.panelChildFormTTNV.ResumeLayout(false);
             this.panelChildFormTTNV.PerformLayout();
@@ -152,7 +157,7 @@
         private System.Windows.Forms.DataGridView dataGridViewThongTinNhanVienTP;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.TextBox textBoxNhapMaDeAn;
         private System.Windows.Forms.Label labelNhapMaDeAn;
+        private System.Windows.Forms.ComboBox comboBoxMaNhanVien;
     }
 }

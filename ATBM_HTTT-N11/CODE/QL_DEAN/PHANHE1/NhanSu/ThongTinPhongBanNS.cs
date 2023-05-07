@@ -8,27 +8,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace PHANHE1.NhanVien
+namespace PHANHE1.NhanSu
 {
-    public partial class ThongTinPhongBanNV : Form
+    public partial class ThongTinPhongBanNS : Form
     {
         OracleConnection conn = new OracleConnection(Login.connectionString);
 
         String userAdmin = "";
-        public ThongTinPhongBanNV(String usrAdmin)
+        public ThongTinPhongBanNS(String usrAdmin)
         {
             InitializeComponent();
             conn.Open();
             this.userAdmin = usrAdmin;
         }
 
-        private void ThongTinPhongBanNV_Load(object sender, EventArgs e)
+        private void ThongTinPhongBanNS_Load(object sender, EventArgs e)
         {
-            LoadDataToComboBox();
+
         }
 
+        private void dataGridViewThongTinPhongBanNS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void LoadDataToComboBox()
+        {
+            OracleCommand getPhongBanData = conn.CreateCommand();
+            getPhongBanData.CommandText = "SELECT MAPB FROM " + userAdmin + " .PHONGBAN";
+            getPhongBanData.CommandType = CommandType.Text;
+            OracleDataReader dataReader = getPhongBanData.ExecuteReader();
+
+            comboBoxMaPhongBan.Items.Clear();
+            while (dataReader.Read())
+            {
+                comboBoxMaPhongBan.Items.Add(dataReader["MAPB"].ToString());
+            }
+        }
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListPhongBan = conn.CreateCommand();
@@ -37,10 +53,10 @@ namespace PHANHE1.NhanVien
             OracleDataReader temp = getListPhongBan.ExecuteReader();
             DataTable table_DSPhongBan = new DataTable();
             table_DSPhongBan.Load(temp);
-            dataGridViewThongTinPhongBanNV.DataSource = table_DSPhongBan;
+            dataGridViewThongTinPhongBanNS.DataSource = table_DSPhongBan;
         }
 
-        private void dataGridViewThongTinPhongBanNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void comboBoxMaPhongBan_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -59,31 +75,7 @@ namespace PHANHE1.NhanVien
             OracleDataReader temp = getListPhongBan.ExecuteReader();
             DataTable table_DSPhongBan = new DataTable();
             table_DSPhongBan.Load(temp);
-            dataGridViewThongTinPhongBanNV.DataSource = table_DSPhongBan;
-        }
-
-        private void LoadDataToComboBox()
-        {
-            OracleCommand getPhongBanData = conn.CreateCommand();
-            getPhongBanData.CommandText = "SELECT MAPB FROM " + userAdmin + " .PHONGBAN";
-            getPhongBanData.CommandType = CommandType.Text;
-            OracleDataReader dataReader = getPhongBanData.ExecuteReader();
-
-            comboBoxMaPhongBan.Items.Clear();
-            while (dataReader.Read())
-            {
-                comboBoxMaPhongBan.Items.Add(dataReader["MAPB"].ToString());
-            }
-        }
-
-        private void panelChildFormTTPB_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBoxMaPhongBan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            dataGridViewThongTinPhongBanNS.DataSource = table_DSPhongBan;
         }
     }
 }

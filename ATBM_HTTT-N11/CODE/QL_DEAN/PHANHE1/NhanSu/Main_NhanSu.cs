@@ -12,9 +12,14 @@ namespace PHANHE1.NhanSu
 {
     public partial class Main_NhanSu : Form
     {
-        public Main_NhanSu()
+        String username = "";
+        String userAdmin = "";
+        public Main_NhanSu(String usr_name, String usrAdmin)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
+            this.userAdmin = usrAdmin;
         }
 
 
@@ -63,25 +68,25 @@ namespace PHANHE1.NhanSu
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanNS());
+            OpenChildForm(new ThongTinCaNhanNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhanCongNS());
+            OpenChildForm(new ThongTinPhanCongNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyPhongBanNS());
+            OpenChildForm(new QuanLyPhongBanNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinDeAnNS());
+            OpenChildForm(new ThongTinDeAnNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
@@ -117,7 +122,13 @@ namespace PHANHE1.NhanSu
 
         private void buttonQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyNhanVienNS());
+            OpenChildForm(new QuanLyNhanVienNS(userAdmin));
+            SwitchColorMenu(sender, e);
+        }
+
+        private void buttonThongTinPhongBan_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThongTinPhongBanNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
     }
