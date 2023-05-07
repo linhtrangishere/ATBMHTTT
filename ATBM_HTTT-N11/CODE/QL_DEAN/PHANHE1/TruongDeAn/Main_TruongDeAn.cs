@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PHANHE1.TruongDeAn
 {
     public partial class Main_TruongDeAn : Form
     {
-        public Main_TruongDeAn()
+        String username = "";
+        public Main_TruongDeAn(String usr_name)
         {
             InitializeComponent();
+            this.username = usr_name;
+            labelNguyenVanA.Text = username;
         }
 
         private Form formchild = null;

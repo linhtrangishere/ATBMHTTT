@@ -1,3 +1,4 @@
+------------------------------------------- ADMIN -------------------------------------------
 -- Tạo user
 CREATE OR REPLACE PROCEDURE USP_CREATEUSER (
     p_username IN VARCHAR2,
@@ -57,4 +58,5 @@ BEGIN
 END;
 /
 
-
+------------------------------------------- NHANVIEN -------------------------------------------
+--1. xem tất cả các thuộc tính trên quan hệ NHANVIEN và PHANCONG liên quan đến chính nhân viên đó

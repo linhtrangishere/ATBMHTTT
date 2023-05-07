@@ -12,11 +12,16 @@ namespace PHANHE1.NhanVien
 {
     public partial class Main_NhanVien : Form
     {
-        public Main_NhanVien()
+        String username = "";
+        String userAdmin = "";
+        public Main_NhanVien(String usr_name, String usrAdmin)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
+            this.userAdmin = usrAdmin;
         }
-
+        
         private Form formchild = null;
         private void OpenChildForm(Form childForm)
         {
@@ -74,7 +79,7 @@ namespace PHANHE1.NhanVien
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhongBanNV());
+            OpenChildForm(new ThongTinPhongBanNV(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
