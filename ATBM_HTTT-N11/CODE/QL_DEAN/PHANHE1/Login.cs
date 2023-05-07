@@ -17,6 +17,7 @@ using PHANHE1.QLTrucTiep;
 using PHANHE1.TaiChinh;
 using PHANHE1.TruongPhong;
 using static PHANHE1.ThemTable;
+using System.Data.SqlClient;
 
 namespace PHANHE1
 {
@@ -28,67 +29,12 @@ namespace PHANHE1
             InitializeComponent();
         }
 
+        //string userAdmin = "ADMIN_PRJ";
+
         private void buttonThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        //private bool IsUserDba(string username)
-        //{
-        //    using (OracleConnection conn = new OracleConnection(connectionString))
-        //    {
-        //        string roleQuery = "SELECT granted_role FROM dba_role_privs WHERE grantee = :username";
-        //        OracleCommand cmd = new OracleCommand(roleQuery, conn);
-        //        cmd.Parameters.Add(new OracleParameter("username", username.ToUpper()));
-
-        //        conn.Open();
-        //        OracleDataReader reader = cmd.ExecuteReader();
-
-        //        List<string> roles = new List<string>();
-        //        while (reader.Read())
-        //        {
-        //            roles.Add(reader["granted_role"].ToString());
-        //        }
-        //        conn.Close();
-
-        //        return roles.Contains("DBA");
-        //    }
-        //}
-
-
-        //private string GetUserRole(string username)
-        //{
-        //    using (OracleConnection conn = new OracleConnection(connectionString))
-        //    {
-        //        string roleQuery = "SELECT granted_role FROM dba_role_privs WHERE grantee = :username";
-        //        OracleCommand cmd = new OracleCommand(roleQuery, conn);
-        //        cmd.Parameters.Add(new OracleParameter("username", username.ToUpper()));
-
-        //        conn.Open();
-        //        OracleDataReader reader = cmd.ExecuteReader();
-
-        //        List<string> roles = new List<string>();
-        //        while (reader.Read())
-        //        {
-        //            roles.Add(reader["granted_role"].ToString());
-        //        }
-        //        conn.Close();
-
-        //        // Kiểm tra role mong muốn của người dùng
-        //        if (roles.Contains("DBA"))
-        //        {
-        //            return "DBA";
-        //        }
-        //        else if (roles.Contains("RL_TRUONGDEAN"))
-        //        {
-        //            return "RL_TRUONGDEAN";
-        //        }
-        //        else
-        //        {
-        //            return "";
-        //        }
-        //    }
-        //}
 
         private bool IsUserRole(string username, string roleToCheck)
         {
@@ -147,7 +93,7 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_NHANVIEN"))
                     {
-                        NhanVien.Main_NhanVien openNhanVien = new Main_NhanVien();
+                        NhanVien.Main_NhanVien openNhanVien = new Main_NhanVien(username, userAdmin);
                         openNhanVien.Show();
                     }
                     else if (IsUserRole(username, "RL_NHANSU"))
@@ -202,5 +148,7 @@ namespace PHANHE1
         {
 
         }
+
+       
     }
 }

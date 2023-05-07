@@ -82,6 +82,7 @@
             this.dataGridViewThongTinPhongBanNV.RowTemplate.Height = 24;
             this.dataGridViewThongTinPhongBanNV.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewThongTinPhongBanNV.TabIndex = 57;
+            this.dataGridViewThongTinPhongBanNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThongTinPhongBanNV_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -94,6 +95,7 @@
             this.buttonXemTatCa.TabIndex = 56;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -136,6 +138,7 @@
             this.Controls.Add(this.panelChildFormTTPB);
             this.Name = "ThongTinPhongBanNV";
             this.Text = "ThongTinPhongBanNV";
+            this.Load += new System.EventHandler(this.ThongTinPhongBanNV_Load);
             this.panelThongTinPhongBanQLTT.ResumeLayout(false);
             this.panelChildFormTTPB.ResumeLayout(false);
             this.panelChildFormTTPB.PerformLayout();
