@@ -30,22 +30,22 @@
         {
             this.panelXemThongTinNhanVienTC = new System.Windows.Forms.Panel();
             this.buttonQuayLai = new System.Windows.Forms.Button();
-            this.dataGridViewThongTinNhanVienQLTT = new System.Windows.Forms.DataGridView();
+            this.dataGridViewThongTinNhanVienTC = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.textBoxNhapMaNhanVien = new System.Windows.Forms.TextBox();
             this.labelNhapMaNhanVien = new System.Windows.Forms.Label();
+            this.comboBoxMaNhanVien = new System.Windows.Forms.ComboBox();
             this.panelXemThongTinNhanVienTC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienQLTT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienTC)).BeginInit();
             this.SuspendLayout();
             // 
             // panelXemThongTinNhanVienTC
             // 
+            this.panelXemThongTinNhanVienTC.Controls.Add(this.comboBoxMaNhanVien);
             this.panelXemThongTinNhanVienTC.Controls.Add(this.buttonQuayLai);
-            this.panelXemThongTinNhanVienTC.Controls.Add(this.dataGridViewThongTinNhanVienQLTT);
+            this.panelXemThongTinNhanVienTC.Controls.Add(this.dataGridViewThongTinNhanVienTC);
             this.panelXemThongTinNhanVienTC.Controls.Add(this.buttonXemTatCa);
             this.panelXemThongTinNhanVienTC.Controls.Add(this.buttonTimKiem);
-            this.panelXemThongTinNhanVienTC.Controls.Add(this.textBoxNhapMaNhanVien);
             this.panelXemThongTinNhanVienTC.Controls.Add(this.labelNhapMaNhanVien);
             this.panelXemThongTinNhanVienTC.Location = new System.Drawing.Point(0, -10);
             this.panelXemThongTinNhanVienTC.Name = "panelXemThongTinNhanVienTC";
@@ -65,15 +65,15 @@
             this.buttonQuayLai.UseVisualStyleBackColor = false;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
-            // dataGridViewThongTinNhanVienQLTT
+            // dataGridViewThongTinNhanVienTC
             // 
-            this.dataGridViewThongTinNhanVienQLTT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewThongTinNhanVienQLTT.Location = new System.Drawing.Point(0, 447);
-            this.dataGridViewThongTinNhanVienQLTT.Name = "dataGridViewThongTinNhanVienQLTT";
-            this.dataGridViewThongTinNhanVienQLTT.RowHeadersWidth = 51;
-            this.dataGridViewThongTinNhanVienQLTT.RowTemplate.Height = 24;
-            this.dataGridViewThongTinNhanVienQLTT.Size = new System.Drawing.Size(935, 300);
-            this.dataGridViewThongTinNhanVienQLTT.TabIndex = 62;
+            this.dataGridViewThongTinNhanVienTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThongTinNhanVienTC.Location = new System.Drawing.Point(0, 447);
+            this.dataGridViewThongTinNhanVienTC.Name = "dataGridViewThongTinNhanVienTC";
+            this.dataGridViewThongTinNhanVienTC.RowHeadersWidth = 51;
+            this.dataGridViewThongTinNhanVienTC.RowTemplate.Height = 24;
+            this.dataGridViewThongTinNhanVienTC.Size = new System.Drawing.Size(935, 300);
+            this.dataGridViewThongTinNhanVienTC.TabIndex = 62;
             // 
             // buttonXemTatCa
             // 
@@ -86,6 +86,7 @@
             this.buttonXemTatCa.TabIndex = 61;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -98,16 +99,7 @@
             this.buttonTimKiem.TabIndex = 60;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // textBoxNhapMaNhanVien
-            // 
-            this.textBoxNhapMaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNhapMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxNhapMaNhanVien.Location = new System.Drawing.Point(152, 213);
-            this.textBoxNhapMaNhanVien.Multiline = true;
-            this.textBoxNhapMaNhanVien.Name = "textBoxNhapMaNhanVien";
-            this.textBoxNhapMaNhanVien.Size = new System.Drawing.Size(300, 50);
-            this.textBoxNhapMaNhanVien.TabIndex = 59;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // labelNhapMaNhanVien
             // 
@@ -119,6 +111,15 @@
             this.labelNhapMaNhanVien.TabIndex = 58;
             this.labelNhapMaNhanVien.Text = "Nhập mã nhân viên";
             // 
+            // comboBoxMaNhanVien
+            // 
+            this.comboBoxMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMaNhanVien.FormattingEnabled = true;
+            this.comboBoxMaNhanVien.Location = new System.Drawing.Point(152, 212);
+            this.comboBoxMaNhanVien.Name = "comboBoxMaNhanVien";
+            this.comboBoxMaNhanVien.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxMaNhanVien.TabIndex = 64;
+            // 
             // XemThongTinNhanVienTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -128,9 +129,10 @@
             this.Controls.Add(this.panelXemThongTinNhanVienTC);
             this.Name = "XemThongTinNhanVienTC";
             this.Text = "XemThongTinNhanVienTC";
+            this.Load += new System.EventHandler(this.XemThongTinNhanVienTC_Load);
             this.panelXemThongTinNhanVienTC.ResumeLayout(false);
             this.panelXemThongTinNhanVienTC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienQLTT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinNhanVienTC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,10 +141,10 @@
 
         private System.Windows.Forms.Panel panelXemThongTinNhanVienTC;
         private System.Windows.Forms.Button buttonQuayLai;
-        private System.Windows.Forms.DataGridView dataGridViewThongTinNhanVienQLTT;
+        private System.Windows.Forms.DataGridView dataGridViewThongTinNhanVienTC;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.TextBox textBoxNhapMaNhanVien;
         private System.Windows.Forms.Label labelNhapMaNhanVien;
+        private System.Windows.Forms.ComboBox comboBoxMaNhanVien;
     }
 }

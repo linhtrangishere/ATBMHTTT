@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelChinhSuaThongTinDeAnTDA = new System.Windows.Forms.Panel();
+            this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.comboBoxPhongBan = new System.Windows.Forms.ComboBox();
             this.labelTenDeAn = new System.Windows.Forms.Label();
             this.textBoxMaDeAn = new System.Windows.Forms.TextBox();
@@ -39,8 +41,6 @@
             this.buttonCapNhat = new System.Windows.Forms.Button();
             this.textBoxTenDeAn = new System.Windows.Forms.TextBox();
             this.labelMaDeAn = new System.Windows.Forms.Label();
-            this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.panelChinhSuaThongTinDeAnTDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaThongTinDeAnTDA)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,25 @@
             this.panelChinhSuaThongTinDeAnTDA.Name = "panelChinhSuaThongTinDeAnTDA";
             this.panelChinhSuaThongTinDeAnTDA.Size = new System.Drawing.Size(935, 750);
             this.panelChinhSuaThongTinDeAnTDA.TabIndex = 0;
+            // 
+            // dateTimePickerNgayBatDau
+            // 
+            this.dateTimePickerNgayBatDau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePickerNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNgayBatDau.Location = new System.Drawing.Point(430, 199);
+            this.dateTimePickerNgayBatDau.Name = "dateTimePickerNgayBatDau";
+            this.dateTimePickerNgayBatDau.Size = new System.Drawing.Size(300, 47);
+            this.dateTimePickerNgayBatDau.TabIndex = 75;
+            // 
+            // labelNgayBatDau
+            // 
+            this.labelNgayBatDau.AutoSize = true;
+            this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelNgayBatDau.Location = new System.Drawing.Point(190, 205);
+            this.labelNgayBatDau.Name = "labelNgayBatDau";
+            this.labelNgayBatDau.Size = new System.Drawing.Size(203, 41);
+            this.labelNgayBatDau.TabIndex = 74;
+            this.labelNgayBatDau.Text = "Ngày bắt đầu";
             // 
             // comboBoxPhongBan
             // 
@@ -139,6 +158,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonCapNhat
             // 
@@ -151,6 +171,7 @@
             this.buttonCapNhat.TabIndex = 66;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // textBoxTenDeAn
             // 
@@ -171,25 +192,6 @@
             this.labelMaDeAn.Size = new System.Drawing.Size(146, 41);
             this.labelMaDeAn.TabIndex = 64;
             this.labelMaDeAn.Text = "Mã đề án";
-            // 
-            // dateTimePickerNgayBatDau
-            // 
-            this.dateTimePickerNgayBatDau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayBatDau.Location = new System.Drawing.Point(430, 199);
-            this.dateTimePickerNgayBatDau.Name = "dateTimePickerNgayBatDau";
-            this.dateTimePickerNgayBatDau.Size = new System.Drawing.Size(300, 47);
-            this.dateTimePickerNgayBatDau.TabIndex = 75;
-            // 
-            // labelNgayBatDau
-            // 
-            this.labelNgayBatDau.AutoSize = true;
-            this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNgayBatDau.Location = new System.Drawing.Point(190, 205);
-            this.labelNgayBatDau.Name = "labelNgayBatDau";
-            this.labelNgayBatDau.Size = new System.Drawing.Size(203, 41);
-            this.labelNgayBatDau.TabIndex = 74;
-            this.labelNgayBatDau.Text = "Ngày bắt đầu";
             // 
             // ChinhSuaThongTinDeAnTDA
             // 

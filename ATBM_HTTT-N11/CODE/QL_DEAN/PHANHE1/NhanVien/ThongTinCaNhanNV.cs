@@ -21,5 +21,10 @@ namespace PHANHE1.NhanVien
         {
 
         }
+
+        private void buttonCapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

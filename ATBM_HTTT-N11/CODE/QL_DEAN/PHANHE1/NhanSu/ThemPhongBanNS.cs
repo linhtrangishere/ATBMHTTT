@@ -21,5 +21,10 @@ namespace PHANHE1.NhanSu
         {
             this.Close();
         }
+
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

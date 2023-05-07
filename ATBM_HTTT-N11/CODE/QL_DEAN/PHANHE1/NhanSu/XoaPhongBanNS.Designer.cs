@@ -109,6 +109,7 @@
             this.buttonXoa.TabIndex = 66;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // labelMaPhongBan
             // 

@@ -14,10 +14,12 @@ namespace PHANHE1.QLTrucTiep
     public partial class ThongTinDeAnQLTT : Form
     {
         OracleConnection conn = new OracleConnection(Login.connectionString);
-        public ThongTinDeAnQLTT()
+        String userAdmin = "";
+        public ThongTinDeAnQLTT(String usrAdmin)
         {
             InitializeComponent();
             conn.Open();
+            this.userAdmin = usrAdmin;
         }
 
         private void textBoxMaNV_TextChanged(object sender, EventArgs e)
@@ -32,24 +34,49 @@ namespace PHANHE1.QLTrucTiep
 
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
-            OracleCommand getListThongTinDeAn = conn.CreateCommand();
-            getListThongTinDeAn.CommandText = "SELECT * FROM NHOM11.DEAN";
-            getListThongTinDeAn.CommandType = CommandType.Text;
-            OracleDataReader temp = getListThongTinDeAn.ExecuteReader();
-            DataTable table_DSDeAn = new DataTable();
-            table_DSDeAn.Load(temp);
-            dataGridViewThongTinDeAnQLTT.DataSource = table_DSDeAn;
+            OracleCommand getListThongTinDeAnQLTT = conn.CreateCommand();
+            getListThongTinDeAnQLTT.CommandText = "SELECT * FROM " + userAdmin + " .DEAN";
+            getListThongTinDeAnQLTT.CommandType = CommandType.Text;
+            OracleDataReader temp = getListThongTinDeAnQLTT.ExecuteReader();
+            DataTable table_DSDeAnQLTT = new DataTable();
+            table_DSDeAnQLTT.Load(temp);
+            dataGridViewThongTinDeAnQLTT.DataSource = table_DSDeAnQLTT;
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
-            OracleCommand getListThongTinDeAn = conn.CreateCommand();
-            getListThongTinDeAn.CommandText = "SELECT * FROM NHOM11.DEAN " + " WHERE " + " DEAN like Upper('%" + textBoxNhapMaDeAn.Text + "%')"; ;
-            getListThongTinDeAn.CommandType = CommandType.Text;
-            OracleDataReader temp = getListThongTinDeAn.ExecuteReader();
-            DataTable table_DSDeAnTimKiem = new DataTable();
-            table_DSDeAnTimKiem.Load(temp);
-            dataGridViewThongTinDeAnQLTT.DataSource = table_DSDeAnTimKiem;
+            if (string.IsNullOrEmpty(comboBoxMaDeAn.Text))
+            {
+                MessageBox.Show("Vui lòng chọn đề án!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            OracleCommand getListPhongBanQLTT = conn.CreateCommand();
+            getListPhongBanQLTT.CommandText = "SELECT * FROM " + userAdmin + " .DEAN " + " WHERE MADA LIKE UPPER('%" + comboBoxMaDeAn.Text.Trim() + "%')";
+            getListPhongBanQLTT.CommandType = CommandType.Text;
+            OracleDataReader temp = getListPhongBanQLTT.ExecuteReader();
+            DataTable table_DSPhongBanQLTT = new DataTable();
+            table_DSPhongBanQLTT.Load(temp);
+            dataGridViewThongTinDeAnQLTT.DataSource = table_DSPhongBanQLTT;
+        }
+
+        private void ThongTinDeAnQLTT_Load(object sender, EventArgs e)
+        {
+            LoadDataToComboBox();
+        }
+
+        private void LoadDataToComboBox()
+        {
+            OracleCommand getPhongBanDataQLTT = conn.CreateCommand();
+            getPhongBanDataQLTT.CommandText = "SELECT MADA FROM " + userAdmin + " .DEAN";
+            getPhongBanDataQLTT.CommandType = CommandType.Text;
+            OracleDataReader dataReader = getPhongBanDataQLTT.ExecuteReader();
+
+            comboBoxMaDeAn.Items.Clear();
+            while (dataReader.Read())
+            {
+                comboBoxMaDeAn.Items.Add(dataReader["MADA"].ToString());
+            }
         }
     }
 }
