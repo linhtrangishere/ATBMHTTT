@@ -40,15 +40,15 @@
             this.labelSDT = new System.Windows.Forms.Label();
             this.textBoxDiaChi = new System.Windows.Forms.TextBox();
             this.labelDiaChi = new System.Windows.Forms.Label();
-            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.labelNgaySinh = new System.Windows.Forms.Label();
-            this.comboBoxPhai = new System.Windows.Forms.ComboBox();
             this.labelPhai = new System.Windows.Forms.Label();
-            this.textBoxTenNV = new System.Windows.Forms.TextBox();
             this.labelTenNV = new System.Windows.Forms.Label();
-            this.textBoxMaNV = new System.Windows.Forms.TextBox();
             this.labelMaNV = new System.Windows.Forms.Label();
             this.panelThemNhanVienNS = new System.Windows.Forms.Panel();
+            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxPhai = new System.Windows.Forms.ComboBox();
+            this.textBoxTenNV = new System.Windows.Forms.TextBox();
+            this.textBoxMaNV = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemNhanVienNS)).BeginInit();
             this.panelThemNhanVienNS.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,7 @@
             this.dataGridViewThemNhanVienNS.RowTemplate.Height = 24;
             this.dataGridViewThemNhanVienNS.Size = new System.Drawing.Size(935, 223);
             this.dataGridViewThemNhanVienNS.TabIndex = 78;
+            this.dataGridViewThemNhanVienNS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThemNhanVienNS_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -87,6 +88,7 @@
             this.buttonXemTatCa.TabIndex = 77;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonThem
             // 
@@ -99,6 +101,7 @@
             this.buttonThem.TabIndex = 76;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // textBoxMaPhong
             // 
@@ -109,6 +112,7 @@
             this.textBoxMaPhong.Name = "textBoxMaPhong";
             this.textBoxMaPhong.Size = new System.Drawing.Size(300, 50);
             this.textBoxMaPhong.TabIndex = 75;
+            this.textBoxMaPhong.TextChanged += new System.EventHandler(this.textBoxMaPhong_TextChanged);
             // 
             // labelMaPhong
             // 
@@ -129,6 +133,7 @@
             this.textBoxMaNQL.Name = "textBoxMaNQL";
             this.textBoxMaNQL.Size = new System.Drawing.Size(300, 50);
             this.textBoxMaNQL.TabIndex = 72;
+            this.textBoxMaNQL.TextChanged += new System.EventHandler(this.textBoxMaNQL_TextChanged);
             // 
             // labelMaNQL
             // 
@@ -149,6 +154,7 @@
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(300, 50);
             this.textBoxSDT.TabIndex = 67;
+            this.textBoxSDT.TextChanged += new System.EventHandler(this.textBoxSDT_TextChanged);
             // 
             // labelSDT
             // 
@@ -169,6 +175,7 @@
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(300, 50);
             this.textBoxDiaChi.TabIndex = 65;
+            this.textBoxDiaChi.TextChanged += new System.EventHandler(this.textBoxDiaChi_TextChanged);
             // 
             // labelDiaChi
             // 
@@ -180,15 +187,6 @@
             this.labelDiaChi.TabIndex = 64;
             this.labelDiaChi.Text = "Địa chỉ";
             // 
-            // dateTimePickerNgaySinh
-            // 
-            this.dateTimePickerNgaySinh.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(280, 214);
-            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
-            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(300, 47);
-            this.dateTimePickerNgaySinh.TabIndex = 63;
-            // 
             // labelNgaySinh
             // 
             this.labelNgaySinh.AutoSize = true;
@@ -198,16 +196,6 @@
             this.labelNgaySinh.Size = new System.Drawing.Size(154, 41);
             this.labelNgaySinh.TabIndex = 62;
             this.labelNgaySinh.Text = "Ngày sinh";
-            // 
-            // comboBoxPhai
-            // 
-            this.comboBoxPhai.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxPhai.FormattingEnabled = true;
-            this.comboBoxPhai.Location = new System.Drawing.Point(280, 152);
-            this.comboBoxPhai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxPhai.Name = "comboBoxPhai";
-            this.comboBoxPhai.Size = new System.Drawing.Size(300, 49);
-            this.comboBoxPhai.TabIndex = 61;
             // 
             // labelPhai
             // 
@@ -219,16 +207,6 @@
             this.labelPhai.TabIndex = 60;
             this.labelPhai.Text = "Phái";
             // 
-            // textBoxTenNV
-            // 
-            this.textBoxTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxTenNV.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxTenNV.Location = new System.Drawing.Point(280, 91);
-            this.textBoxTenNV.Multiline = true;
-            this.textBoxTenNV.Name = "textBoxTenNV";
-            this.textBoxTenNV.Size = new System.Drawing.Size(300, 50);
-            this.textBoxTenNV.TabIndex = 59;
-            // 
             // labelTenNV
             // 
             this.labelTenNV.AutoSize = true;
@@ -238,16 +216,6 @@
             this.labelTenNV.Size = new System.Drawing.Size(116, 41);
             this.labelTenNV.TabIndex = 58;
             this.labelTenNV.Text = "Tên NV";
-            // 
-            // textBoxMaNV
-            // 
-            this.textBoxMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaNV.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMaNV.Location = new System.Drawing.Point(280, 31);
-            this.textBoxMaNV.Multiline = true;
-            this.textBoxMaNV.Name = "textBoxMaNV";
-            this.textBoxMaNV.Size = new System.Drawing.Size(300, 50);
-            this.textBoxMaNV.TabIndex = 57;
             // 
             // labelMaNV
             // 
@@ -286,6 +254,49 @@
             this.panelThemNhanVienNS.Size = new System.Drawing.Size(935, 750);
             this.panelThemNhanVienNS.TabIndex = 1;
             // 
+            // dateTimePickerNgaySinh
+            // 
+            this.dateTimePickerNgaySinh.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(280, 214);
+            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
+            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(300, 47);
+            this.dateTimePickerNgaySinh.TabIndex = 63;
+            this.dateTimePickerNgaySinh.ValueChanged += new System.EventHandler(this.dateTimePickerNgaySinh_ValueChanged);
+            // 
+            // comboBoxPhai
+            // 
+            this.comboBoxPhai.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxPhai.FormattingEnabled = true;
+            this.comboBoxPhai.Location = new System.Drawing.Point(280, 152);
+            this.comboBoxPhai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxPhai.Name = "comboBoxPhai";
+            this.comboBoxPhai.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxPhai.TabIndex = 61;
+            this.comboBoxPhai.SelectedIndexChanged += new System.EventHandler(this.comboBoxPhai_SelectedIndexChanged);
+            // 
+            // textBoxTenNV
+            // 
+            this.textBoxTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxTenNV.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxTenNV.Location = new System.Drawing.Point(280, 91);
+            this.textBoxTenNV.Multiline = true;
+            this.textBoxTenNV.Name = "textBoxTenNV";
+            this.textBoxTenNV.Size = new System.Drawing.Size(300, 50);
+            this.textBoxTenNV.TabIndex = 59;
+            this.textBoxTenNV.TextChanged += new System.EventHandler(this.textBoxTenNV_TextChanged);
+            // 
+            // textBoxMaNV
+            // 
+            this.textBoxMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMaNV.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxMaNV.Location = new System.Drawing.Point(280, 31);
+            this.textBoxMaNV.Multiline = true;
+            this.textBoxMaNV.Name = "textBoxMaNV";
+            this.textBoxMaNV.Size = new System.Drawing.Size(300, 50);
+            this.textBoxMaNV.TabIndex = 57;
+            this.textBoxMaNV.TextChanged += new System.EventHandler(this.textBoxMaNV_TextChanged);
+            // 
             // ThemNhanVienNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,6 +305,7 @@
             this.Controls.Add(this.panelThemNhanVienNS);
             this.Name = "ThemNhanVienNS";
             this.Text = "ThemNhanVienNS";
+            this.Load += new System.EventHandler(this.ThemNhanVienNS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemNhanVienNS)).EndInit();
             this.panelThemNhanVienNS.ResumeLayout(false);
             this.panelThemNhanVienNS.PerformLayout();
@@ -315,14 +327,14 @@
         private System.Windows.Forms.Label labelSDT;
         private System.Windows.Forms.TextBox textBoxDiaChi;
         private System.Windows.Forms.Label labelDiaChi;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
         private System.Windows.Forms.Label labelNgaySinh;
-        private System.Windows.Forms.ComboBox comboBoxPhai;
         private System.Windows.Forms.Label labelPhai;
-        private System.Windows.Forms.TextBox textBoxTenNV;
         private System.Windows.Forms.Label labelTenNV;
-        private System.Windows.Forms.TextBox textBoxMaNV;
         private System.Windows.Forms.Label labelMaNV;
         private System.Windows.Forms.Panel panelThemNhanVienNS;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
+        private System.Windows.Forms.ComboBox comboBoxPhai;
+        private System.Windows.Forms.TextBox textBoxTenNV;
+        private System.Windows.Forms.TextBox textBoxMaNV;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace PHANHE1.NhanVien
+﻿namespace PHANHE1.NhanSu
 {
-    partial class ThongTinPhongBanNV
+    partial class ThongTinPhongBanNS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelThongTinPhongBanQLTT = new System.Windows.Forms.Panel();
-            this.labelThongTinPhongBanNV = new System.Windows.Forms.Label();
+            this.panelThongTinPhongBanTC = new System.Windows.Forms.Panel();
+            this.labelThongTinPhongBanTP = new System.Windows.Forms.Label();
             this.panelChildFormTTPB = new System.Windows.Forms.Panel();
-            this.dataGridViewThongTinPhongBanNV = new System.Windows.Forms.DataGridView();
+            this.comboBoxMaPhongBan = new System.Windows.Forms.ComboBox();
+            this.dataGridViewThongTinPhongBanNS = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.labelNhapMaPhongBan = new System.Windows.Forms.Label();
-            this.comboBoxMaPhongBan = new System.Windows.Forms.ComboBox();
-            this.panelThongTinPhongBanQLTT.SuspendLayout();
+            this.panelThongTinPhongBanTC.SuspendLayout();
             this.panelChildFormTTPB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinPhongBanNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinPhongBanNS)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelThongTinPhongBanQLTT
+            // panelThongTinPhongBanTC
             // 
-            this.panelThongTinPhongBanQLTT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
-            this.panelThongTinPhongBanQLTT.Controls.Add(this.labelThongTinPhongBanNV);
-            this.panelThongTinPhongBanQLTT.Location = new System.Drawing.Point(-1, -6);
-            this.panelThongTinPhongBanQLTT.Name = "panelThongTinPhongBanQLTT";
-            this.panelThongTinPhongBanQLTT.Size = new System.Drawing.Size(935, 130);
-            this.panelThongTinPhongBanQLTT.TabIndex = 4;
+            this.panelThongTinPhongBanTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
+            this.panelThongTinPhongBanTC.Controls.Add(this.labelThongTinPhongBanTP);
+            this.panelThongTinPhongBanTC.Location = new System.Drawing.Point(-1, -6);
+            this.panelThongTinPhongBanTC.Name = "panelThongTinPhongBanTC";
+            this.panelThongTinPhongBanTC.Size = new System.Drawing.Size(935, 130);
+            this.panelThongTinPhongBanTC.TabIndex = 6;
             // 
-            // labelThongTinPhongBanNV
+            // labelThongTinPhongBanTP
             // 
-            this.labelThongTinPhongBanNV.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelThongTinPhongBanNV.Location = new System.Drawing.Point(0, 10);
-            this.labelThongTinPhongBanNV.Name = "labelThongTinPhongBanNV";
-            this.labelThongTinPhongBanNV.Size = new System.Drawing.Size(935, 120);
-            this.labelThongTinPhongBanNV.TabIndex = 0;
-            this.labelThongTinPhongBanNV.Text = "Thông tin phòng ban";
-            this.labelThongTinPhongBanNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelThongTinPhongBanTP.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelThongTinPhongBanTP.Location = new System.Drawing.Point(0, 10);
+            this.labelThongTinPhongBanTP.Name = "labelThongTinPhongBanTP";
+            this.labelThongTinPhongBanTP.Size = new System.Drawing.Size(935, 120);
+            this.labelThongTinPhongBanTP.TabIndex = 0;
+            this.labelThongTinPhongBanTP.Text = "Thông tin phòng ban";
+            this.labelThongTinPhongBanTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelChildFormTTPB
             // 
             this.panelChildFormTTPB.BackColor = System.Drawing.Color.White;
             this.panelChildFormTTPB.Controls.Add(this.comboBoxMaPhongBan);
-            this.panelChildFormTTPB.Controls.Add(this.dataGridViewThongTinPhongBanNV);
+            this.panelChildFormTTPB.Controls.Add(this.dataGridViewThongTinPhongBanNS);
             this.panelChildFormTTPB.Controls.Add(this.buttonXemTatCa);
             this.panelChildFormTTPB.Controls.Add(this.buttonTimKiem);
             this.panelChildFormTTPB.Controls.Add(this.labelNhapMaPhongBan);
             this.panelChildFormTTPB.Location = new System.Drawing.Point(-1, 124);
             this.panelChildFormTTPB.Name = "panelChildFormTTPB";
             this.panelChildFormTTPB.Size = new System.Drawing.Size(935, 715);
-            this.panelChildFormTTPB.TabIndex = 5;
-            this.panelChildFormTTPB.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildFormTTPB_Paint);
+            this.panelChildFormTTPB.TabIndex = 7;
             // 
-            // dataGridViewThongTinPhongBanNV
+            // comboBoxMaPhongBan
             // 
-            this.dataGridViewThongTinPhongBanNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewThongTinPhongBanNV.Location = new System.Drawing.Point(0, 415);
-            this.dataGridViewThongTinPhongBanNV.Name = "dataGridViewThongTinPhongBanNV";
-            this.dataGridViewThongTinPhongBanNV.RowHeadersWidth = 51;
-            this.dataGridViewThongTinPhongBanNV.RowTemplate.Height = 24;
-            this.dataGridViewThongTinPhongBanNV.Size = new System.Drawing.Size(935, 300);
-            this.dataGridViewThongTinPhongBanNV.TabIndex = 57;
-            this.dataGridViewThongTinPhongBanNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThongTinPhongBanNV_CellContentClick);
+            this.comboBoxMaPhongBan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxMaPhongBan.FormattingEnabled = true;
+            this.comboBoxMaPhongBan.Location = new System.Drawing.Point(152, 281);
+            this.comboBoxMaPhongBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaPhongBan.Name = "comboBoxMaPhongBan";
+            this.comboBoxMaPhongBan.Size = new System.Drawing.Size(293, 49);
+            this.comboBoxMaPhongBan.TabIndex = 61;
+            this.comboBoxMaPhongBan.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPhongBan_SelectedIndexChanged);
+            // 
+            // dataGridViewThongTinPhongBanNS
+            // 
+            this.dataGridViewThongTinPhongBanNS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThongTinPhongBanNS.Location = new System.Drawing.Point(0, 415);
+            this.dataGridViewThongTinPhongBanNS.Name = "dataGridViewThongTinPhongBanNS";
+            this.dataGridViewThongTinPhongBanNS.RowHeadersWidth = 51;
+            this.dataGridViewThongTinPhongBanNS.RowTemplate.Height = 24;
+            this.dataGridViewThongTinPhongBanNS.Size = new System.Drawing.Size(935, 300);
+            this.dataGridViewThongTinPhongBanNS.TabIndex = 57;
+            this.dataGridViewThongTinPhongBanNS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThongTinPhongBanNS_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -121,44 +131,33 @@
             this.labelNhapMaPhongBan.TabIndex = 0;
             this.labelNhapMaPhongBan.Text = "Nhập mã phòng ban";
             // 
-            // comboBoxMaPhongBan
-            // 
-            this.comboBoxMaPhongBan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxMaPhongBan.FormattingEnabled = true;
-            this.comboBoxMaPhongBan.Location = new System.Drawing.Point(152, 281);
-            this.comboBoxMaPhongBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxMaPhongBan.Name = "comboBoxMaPhongBan";
-            this.comboBoxMaPhongBan.Size = new System.Drawing.Size(293, 49);
-            this.comboBoxMaPhongBan.TabIndex = 60;
-            this.comboBoxMaPhongBan.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPhongBan_SelectedIndexChanged);
-            // 
-            // ThongTinPhongBanNV
+            // ThongTinPhongBanNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 833);
-            this.Controls.Add(this.panelThongTinPhongBanQLTT);
+            this.Controls.Add(this.panelThongTinPhongBanTC);
             this.Controls.Add(this.panelChildFormTTPB);
-            this.Name = "ThongTinPhongBanNV";
-            this.Text = "ThongTinPhongBanNV";
-            this.Load += new System.EventHandler(this.ThongTinPhongBanNV_Load);
-            this.panelThongTinPhongBanQLTT.ResumeLayout(false);
+            this.Name = "ThongTinPhongBanNS";
+            this.Text = "ThongTinPhongBanNS";
+            this.Load += new System.EventHandler(this.ThongTinPhongBanNS_Load);
+            this.panelThongTinPhongBanTC.ResumeLayout(false);
             this.panelChildFormTTPB.ResumeLayout(false);
             this.panelChildFormTTPB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinPhongBanNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinPhongBanNS)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelThongTinPhongBanQLTT;
-        private System.Windows.Forms.Label labelThongTinPhongBanNV;
+        private System.Windows.Forms.Panel panelThongTinPhongBanTC;
+        private System.Windows.Forms.Label labelThongTinPhongBanTP;
         private System.Windows.Forms.Panel panelChildFormTTPB;
-        private System.Windows.Forms.DataGridView dataGridViewThongTinPhongBanNV;
+        private System.Windows.Forms.ComboBox comboBoxMaPhongBan;
+        private System.Windows.Forms.DataGridView dataGridViewThongTinPhongBanNS;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.Label labelNhapMaPhongBan;
-        private System.Windows.Forms.ComboBox comboBoxMaPhongBan;
     }
 }

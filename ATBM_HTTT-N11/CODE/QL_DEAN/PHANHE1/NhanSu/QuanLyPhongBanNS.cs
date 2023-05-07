@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace PHANHE1.NhanSu
 {
     public partial class QuanLyPhongBanNS : Form
     {
-        public QuanLyPhongBanNS()
+        OracleConnection conn = new OracleConnection(Login.connectionString);
+        String userAdmin = "";
+        public QuanLyPhongBanNS(String usrAdmin)
         {
             InitializeComponent();
+            conn.Open();
+            this.userAdmin = usrAdmin;
         }
 
         private Form formchild = null;
@@ -63,19 +68,13 @@ namespace PHANHE1.NhanSu
 
         private void buttonThemPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThemPhongBanNS());
-            SwitchColorMenu(sender, e);
-        }
-
-        private void buttonXoaPhongBan_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new XoaPhongBanNS());
+            OpenChildForm(new ThemPhongBanNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonChinhSuaPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChinhSuaPhongBanNS());
+            OpenChildForm(new ChinhSuaPhongBanNS(userAdmin));
             SwitchColorMenu(sender, e);
         }
     }

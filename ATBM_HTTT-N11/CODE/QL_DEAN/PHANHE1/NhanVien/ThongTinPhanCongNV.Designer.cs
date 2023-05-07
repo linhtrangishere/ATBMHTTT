@@ -31,10 +31,10 @@
             this.panelThongTinPhanCongQLTT = new System.Windows.Forms.Panel();
             this.labelThongTinPhanCongNV = new System.Windows.Forms.Label();
             this.panelChildFormTTPC = new System.Windows.Forms.Panel();
+            this.comboBoxMaDeAn = new System.Windows.Forms.ComboBox();
             this.dataGridViewThongTinPhanCongNV = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.textBoxNhapMaDeAn = new System.Windows.Forms.TextBox();
             this.labelNhapMaDeAn = new System.Windows.Forms.Label();
             this.panelThongTinPhanCongQLTT.SuspendLayout();
             this.panelChildFormTTPC.SuspendLayout();
@@ -63,15 +63,25 @@
             // panelChildFormTTPC
             // 
             this.panelChildFormTTPC.BackColor = System.Drawing.Color.White;
+            this.panelChildFormTTPC.Controls.Add(this.comboBoxMaDeAn);
             this.panelChildFormTTPC.Controls.Add(this.dataGridViewThongTinPhanCongNV);
             this.panelChildFormTTPC.Controls.Add(this.buttonXemTatCa);
             this.panelChildFormTTPC.Controls.Add(this.buttonTimKiem);
-            this.panelChildFormTTPC.Controls.Add(this.textBoxNhapMaDeAn);
             this.panelChildFormTTPC.Controls.Add(this.labelNhapMaDeAn);
             this.panelChildFormTTPC.Location = new System.Drawing.Point(-1, 124);
             this.panelChildFormTTPC.Name = "panelChildFormTTPC";
             this.panelChildFormTTPC.Size = new System.Drawing.Size(935, 715);
             this.panelChildFormTTPC.TabIndex = 5;
+            // 
+            // comboBoxMaDeAn
+            // 
+            this.comboBoxMaDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxMaDeAn.FormattingEnabled = true;
+            this.comboBoxMaDeAn.Location = new System.Drawing.Point(152, 281);
+            this.comboBoxMaDeAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaDeAn.Name = "comboBoxMaDeAn";
+            this.comboBoxMaDeAn.Size = new System.Drawing.Size(293, 49);
+            this.comboBoxMaDeAn.TabIndex = 61;
             // 
             // dataGridViewThongTinPhanCongNV
             // 
@@ -82,6 +92,7 @@
             this.dataGridViewThongTinPhanCongNV.RowTemplate.Height = 24;
             this.dataGridViewThongTinPhanCongNV.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewThongTinPhanCongNV.TabIndex = 57;
+            this.dataGridViewThongTinPhanCongNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThongTinPhanCongNV_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -94,6 +105,7 @@
             this.buttonXemTatCa.TabIndex = 56;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -106,16 +118,7 @@
             this.buttonTimKiem.TabIndex = 55;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // textBoxNhapMaDeAn
-            // 
-            this.textBoxNhapMaDeAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNhapMaDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxNhapMaDeAn.Location = new System.Drawing.Point(152, 280);
-            this.textBoxNhapMaDeAn.Multiline = true;
-            this.textBoxNhapMaDeAn.Name = "textBoxNhapMaDeAn";
-            this.textBoxNhapMaDeAn.Size = new System.Drawing.Size(300, 50);
-            this.textBoxNhapMaDeAn.TabIndex = 1;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // labelNhapMaDeAn
             // 
@@ -136,6 +139,7 @@
             this.Controls.Add(this.panelChildFormTTPC);
             this.Name = "ThongTinPhanCongNV";
             this.Text = "ThongTinPhanCongNV";
+            this.Load += new System.EventHandler(this.ThongTinPhanCongNV_Load);
             this.panelThongTinPhanCongQLTT.ResumeLayout(false);
             this.panelChildFormTTPC.ResumeLayout(false);
             this.panelChildFormTTPC.PerformLayout();
@@ -152,7 +156,7 @@
         private System.Windows.Forms.DataGridView dataGridViewThongTinPhanCongNV;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.TextBox textBoxNhapMaDeAn;
         private System.Windows.Forms.Label labelNhapMaDeAn;
+        private System.Windows.Forms.ComboBox comboBoxMaDeAn;
     }
 }

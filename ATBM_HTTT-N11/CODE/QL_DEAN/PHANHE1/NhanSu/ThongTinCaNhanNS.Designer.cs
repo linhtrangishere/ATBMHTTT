@@ -104,6 +104,7 @@
             this.labelMaPhongValue.Size = new System.Drawing.Size(239, 41);
             this.labelMaPhongValue.TabIndex = 62;
             this.labelMaPhongValue.Text = "mã phòng value";
+            this.labelMaPhongValue.Click += new System.EventHandler(this.labelMaPhongValue_Click);
             // 
             // labelNQLValue
             // 
@@ -114,6 +115,7 @@
             this.labelNQLValue.Size = new System.Drawing.Size(211, 41);
             this.labelNQLValue.TabIndex = 61;
             this.labelNQLValue.Text = "mã NQL value";
+            this.labelNQLValue.Click += new System.EventHandler(this.labelNQLValue_Click);
             // 
             // labelPhuCapValue
             // 
@@ -124,6 +126,7 @@
             this.labelPhuCapValue.Size = new System.Drawing.Size(208, 41);
             this.labelPhuCapValue.TabIndex = 60;
             this.labelPhuCapValue.Text = "phụ cấp value";
+            this.labelPhuCapValue.Click += new System.EventHandler(this.labelPhuCapValue_Click);
             // 
             // labelLuongValue
             // 
@@ -134,6 +137,7 @@
             this.labelLuongValue.Size = new System.Drawing.Size(180, 41);
             this.labelLuongValue.TabIndex = 59;
             this.labelLuongValue.Text = "lương value";
+            this.labelLuongValue.Click += new System.EventHandler(this.labelLuongValue_Click);
             // 
             // labelPhaiValue
             // 
@@ -144,6 +148,7 @@
             this.labelPhaiValue.Size = new System.Drawing.Size(158, 41);
             this.labelPhaiValue.TabIndex = 58;
             this.labelPhaiValue.Text = "phái value";
+            this.labelPhaiValue.Click += new System.EventHandler(this.labelPhaiValue_Click);
             // 
             // labelTenNVValue
             // 
@@ -154,6 +159,7 @@
             this.labelTenNVValue.Size = new System.Drawing.Size(185, 41);
             this.labelTenNVValue.TabIndex = 57;
             this.labelTenNVValue.Text = "tên nv value";
+            this.labelTenNVValue.Click += new System.EventHandler(this.labelTenNVValue_Click);
             // 
             // labelMaNVValue
             // 
@@ -164,18 +170,20 @@
             this.labelMaNVValue.Size = new System.Drawing.Size(183, 41);
             this.labelMaNVValue.TabIndex = 56;
             this.labelMaNVValue.Text = "mã nv value";
+            this.labelMaNVValue.Click += new System.EventHandler(this.labelMaNVValue_Click);
             // 
             // buttonCapNhat
             // 
             this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonCapNhat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonCapNhat.Location = new System.Drawing.Point(680, 295);
+            this.buttonCapNhat.Location = new System.Drawing.Point(649, 556);
             this.buttonCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCapNhat.Name = "buttonCapNhat";
             this.buttonCapNhat.Size = new System.Drawing.Size(200, 70);
             this.buttonCapNhat.TabIndex = 55;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // labelMaPhong
             // 
@@ -226,6 +234,7 @@
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(300, 50);
             this.textBoxSDT.TabIndex = 45;
+            this.textBoxSDT.TextChanged += new System.EventHandler(this.textBoxSDT_TextChanged);
             // 
             // labelSDT
             // 
@@ -244,8 +253,9 @@
             this.textBoxDiaChi.Location = new System.Drawing.Point(330, 296);
             this.textBoxDiaChi.Multiline = true;
             this.textBoxDiaChi.Name = "textBoxDiaChi";
-            this.textBoxDiaChi.Size = new System.Drawing.Size(300, 50);
+            this.textBoxDiaChi.Size = new System.Drawing.Size(591, 50);
             this.textBoxDiaChi.TabIndex = 43;
+            this.textBoxDiaChi.TextChanged += new System.EventHandler(this.textBoxDiaChi_TextChanged);
             // 
             // labelDiaChi
             // 
@@ -265,6 +275,7 @@
             this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
             this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(300, 47);
             this.dateTimePickerNgaySinh.TabIndex = 41;
+            this.dateTimePickerNgaySinh.ValueChanged += new System.EventHandler(this.dateTimePickerNgaySinh_ValueChanged);
             // 
             // labelNgaySinh
             // 
@@ -324,6 +335,7 @@
             this.Controls.Add(this.panelThongTinCaNhanTDA);
             this.Name = "ThongTinCaNhanNS";
             this.Text = "ThongTinCaNhanNS";
+            this.Load += new System.EventHandler(this.ThongTinCaNhanNS_Load);
             this.panelChildFormTTCN.ResumeLayout(false);
             this.panelChildFormTTCN.PerformLayout();
             this.panelThongTinCaNhanTDA.ResumeLayout(false);

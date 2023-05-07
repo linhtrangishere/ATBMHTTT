@@ -70,6 +70,7 @@
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
             this.comboBoxNhanVien.Size = new System.Drawing.Size(300, 49);
             this.comboBoxNhanVien.TabIndex = 77;
+            this.comboBoxNhanVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhanVien_SelectedIndexChanged);
             // 
             // labelMaDA
             // 
@@ -89,6 +90,7 @@
             this.dateTimePickerNgayBatDau.Name = "dateTimePickerNgayBatDau";
             this.dateTimePickerNgayBatDau.Size = new System.Drawing.Size(300, 47);
             this.dateTimePickerNgayBatDau.TabIndex = 75;
+            this.dateTimePickerNgayBatDau.ValueChanged += new System.EventHandler(this.dateTimePickerNgayBatDau_ValueChanged);
             // 
             // labelNgayBatDau
             // 
@@ -109,6 +111,7 @@
             this.comboBoxDeAn.Name = "comboBoxDeAn";
             this.comboBoxDeAn.Size = new System.Drawing.Size(300, 49);
             this.comboBoxDeAn.TabIndex = 73;
+            this.comboBoxDeAn.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeAn_SelectedIndexChanged);
             // 
             // buttonQuayLai
             // 
@@ -132,6 +135,7 @@
             this.dataGridViewThemThongTinDeAnTDA.RowTemplate.Height = 24;
             this.dataGridViewThemThongTinDeAnTDA.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewThemThongTinDeAnTDA.TabIndex = 68;
+            this.dataGridViewThemThongTinDeAnTDA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThemThongTinDeAnTDA_CellContentClick);
             // 
             // buttonXemTatCa
             // 
@@ -144,6 +148,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonCapNhat
             // 
@@ -156,6 +161,7 @@
             this.buttonCapNhat.TabIndex = 66;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // labelMaNhanVien
             // 
@@ -176,6 +182,7 @@
             this.Name = "ChinhSuaPhanCongTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "ChinhSuaPhanCongTP";
+            this.Load += new System.EventHandler(this.ChinhSuaPhanCongTP_Load);
             this.panelThemPhanCongTP.ResumeLayout(false);
             this.panelThemPhanCongTP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemThongTinDeAnTDA)).EndInit();

@@ -23,13 +23,13 @@ namespace PHANHE1
 {
     public partial class Login : Form
     {
-        public static string connectionString = "Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)" + "(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)));";
+        public static string connectionString = "Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)" + "(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = QUANLYNHANVIEN)));";
         public Login()
         {
             InitializeComponent();
         }
 
-        //string userAdmin = "ADMIN_PRJ";
+        string userAdmin = "ADMIN";
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
@@ -98,7 +98,7 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_NHANSU"))
                     {
-                        NhanSu.Main_NhanSu openNhanSu = new Main_NhanSu();
+                        NhanSu.Main_NhanSu openNhanSu = new Main_NhanSu(username, userAdmin);
                         openNhanSu.Show();
                     }
                     else if (IsUserRole(username, "RL_QLTRUCTIEP"))
@@ -113,7 +113,7 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_TRUONGPHONG"))
                     {
-                        TruongPhong.Main_TruongPhong openTruongPhong = new Main_TruongPhong();
+                        TruongPhong.Main_TruongPhong openTruongPhong = new Main_TruongPhong(username, userAdmin);
                         openTruongPhong.Show();
                     }
                     else

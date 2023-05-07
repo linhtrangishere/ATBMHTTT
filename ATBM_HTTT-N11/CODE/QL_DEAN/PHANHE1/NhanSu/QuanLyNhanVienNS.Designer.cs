@@ -111,6 +111,7 @@
             this.Controls.Add(this.panelChildFormQuanLyNV);
             this.Name = "QuanLyNhanVienNS";
             this.Text = "QuanLyNhanVienNS";
+            this.Load += new System.EventHandler(this.QuanLyNhanVienNS_Load);
             this.panelQuanLyNhanVienNS.ResumeLayout(false);
             this.panelChildFormQuanLyNV.ResumeLayout(false);
             this.panelThemChinhSua.ResumeLayout(false);

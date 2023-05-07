@@ -67,13 +67,13 @@ namespace PHANHE1.NhanVien
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanNV());
+            OpenChildForm(new ThongTinCaNhanNV(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhanCongNV());
+            OpenChildForm(new ThongTinPhanCongNV(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
@@ -85,7 +85,7 @@ namespace PHANHE1.NhanVien
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinDeAnNV());
+            OpenChildForm(new ThongTinDeAnNV(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
