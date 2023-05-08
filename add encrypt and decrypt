@@ -10,6 +10,10 @@ BEGIN
    IF TEMP_COUNT = 1 THEN
       EXECUTE IMMEDIATE 'DROP TABLE DEAN';
    END IF;
+   SELECT COUNT(*) INTO TEMP_COUNT FROM USER_TABLES WHERE TABLE_NAME = 'HELPDBA';
+   IF TEMP_COUNT = 1 THEN
+      EXECUTE IMMEDIATE 'DROP TABLE HELPDBA';
+   END IF;
    SELECT COUNT(*) INTO TEMP_COUNT FROM USER_TABLES WHERE TABLE_NAME = 'NHANVIEN';
    IF TEMP_COUNT = 1 THEN
       EXECUTE IMMEDIATE 'DROP TABLE NHANVIEN';
@@ -65,6 +69,12 @@ CREATE TABLE PHANCONG(
     CONSTRAINT PHANCONG_DEAN_FK FOREIGN KEY (MADA) REFERENCES DEAN(MADA),
     CONSTRAINT PHANCONG_NHANVIEN_FK FOREIGN KEY (MANV) REFERENCES NHANVIEN(MANV)
 );
+/
+CREATE TABLE HELPDBA (
+    MANV CHAR(6),
+    VAL VARCHAR(30)
+    CONSTRAINT PK_HELPDBA PRIMARY KEY (MANV)
+    );
 /
 
 SET DEFINE OFF
@@ -2659,6 +2669,206 @@ AS
 END; 
 /
 exec USP_CREATEUSER;
+alter session set "_ORACLE_SCRIPT"=true;
+set serveroutput on;
+
+-------------------------------ENCRYPT FUNCTION---------------------------------
+CREATE OR REPLACE FUNCTION  ENCRYPT_DATA(input_data IN VARCHAR2,key_str VARCHAR2 )
+RETURN RAW
+IS
+ raw_input RAW(128):= UTL_RAW.CAST_TO_RAW(CONVERT(input_data,'AL32UTF8','US7ASCII'));
+ raw_key RAW(128):= UTL_RAW.CAST_TO_RAW(CONVERT(key_str,'AL32UTF8','US7ASCII'));
+ encrypted_raw RAW(2048);
+ encrypted_str VARCHAR2(2048);
+ decrypted_raw RAW(2048);
+ decrypted_str VARCHAR2(2048);
+ BEGIN
+   dbms_output.put_line('INPUT DATA: ' || input_data);
+    encrypted_raw := dbms_crypto.Encrypt(
+        src => raw_input,
+        typ => dbms_crypto.DES_CBC_PKCS5,
+        key => raw_key      
+    ); 
+    RETURN encrypted_raw;
+END ENCRYPT_DATA;
+-- TEST ENCRYPT
+SET SERVEROUTPUT ON;
+DECLARE 
+TEST_STR raw(128);
+BEGIN
+TEST_STR:=ENCRYPT_DATA('100000','NV001');
+dbms_output.put_line('DATA AFTER ENCRYPTED: '||TEST_STR);
+END;
+/
+CREATE OR REPLACE PROCEDURE ENCRYPT_NHANVIEN
+IS
+count_nv INT;
+exe NVARCHAR2(1000);
+temp INT;
+
+CURSOR cur_manv IS SELECT MANV FROM NHANVIEN ORDER BY MANV ASC;
+CURSOR cur_luong IS SELECT LUONG FROM NHANVIEN ORDER BY MANV ASC;
+CURSOR cur_phucap IS SELECT PHUCAP FROM NHANVIEN ORDER BY MANV ASC;
+TYPE arr_manv IS VARRAY(400)OF NHANVIEN.MANV%TYPE;
+TYPE arr_luong IS VARRAY(400)OF NHANVIEN.LUONG%TYPE;
+TYPE arr_phucap IS VARRAY(400)OF NHANVIEN.PHUCAP%TYPE;
+manv arr_manv := arr_manv();
+luong arr_luong := arr_luong();
+phucap arr_phucap := arr_phucap();
+cnt INTEGER := 0;
+
+input_data_luong NVARCHAR2(200);
+encrypted_raw_luong RAW(200);
+input_data_phucap NVARCHAR2(200);
+key_string NVARCHAR2(200);
+encrypted_raw_phucap RAW(200);
+
+BEGIN
+    --MANV
+   FOR i IN cur_manv LOOP
+    cnt:=cnt+1;
+    manv.extend;
+    manv(cnt):= i.manv;
+   END LOOP;
+   cnt:=0;
+   -- LUONG
+   FOR j IN cur_luong LOOP
+   cnt:=cnt+1;
+   luong.extend;
+   luong(cnt):= j.luong;
+   END LOOP;
+   --PHUCAP
+   cnt:=0;
+   FOR j IN cur_phucap LOOP
+   cnt:=cnt+1;
+   phucap.extend;
+   phucap(cnt):= j.phucap;
+   END LOOP;
+   -- Encrypt
+   exe:='SELECT COUNT(*) FROM NHANVIEN';
+   EXECUTE IMMEDIATE (exe) INTO count_nv;
+   FOR temp IN 1..count_nv LOOP
+   input_data_luong:=  luong(temp);
+   input_data_phucap:=  phucap(temp);
+   exe:= 'select dbms_random.string(''L'', 10) str from dual';
+   EXECUTE IMMEDIATE (exe) INTO key_string;
+   EXECUTE IMMEDIATE('INSERT INTO HELPDBA(MANV,VAL) VALUES('''||manv(temp)||''','''||key_string||''')');
+   --MA HOA COT LUONG
+   encrypted_raw_luong := ENCRYPT_DATA(input_data_luong,key_string);
+   --MA HOA COT PHUCAP
+   encrypted_raw_phucap := ENCRYPT_DATA(input_data_phucap,key_string);
+   --UPDATE LUONG SAU MA HOA 
+   EXECUTE IMMEDIATE('UPDATE NHANVIEN SET LUONG = '''||encrypted_raw_luong||''' WHERE MANV = ''' ||manv(temp)||'''');
+   EXECUTE IMMEDIATE('UPDATE NHANVIEN SET PHUCAP = '''||encrypted_raw_phucap||''' WHERE MANV = ''' ||manv(temp)||'''');
+   END LOOP;
+END;
+/
+EXEC ENCRYPT_NHANVIEN;
+
+SELECT * FROM NHANVIEN;
+select * from HELPDBA;
+
+/
+CREATE OR REPLACE FUNCTION FUNC_DECRYPT(input_raw_data IN RAW, input_key_string_data VARCHAR2)
+RETURN NUMBER
+IS
+input_raw RAW(128):=input_raw_data;
+input_key_string VARCHAR2(200) := input_key_string_data;
+input_key_raw RAW(200):= UTL_RAW.CAST_TO_RAW(CONVERT(input_key_string,'AL32UTF8','US7ASCII'));
+
+decrypted_raw RAW(128);
+decrypted_nvarchar2 VARCHAR2(200);
+decrypted_ret NUMBER;
+BEGIN
+    decrypted_raw:=dbms_crypto.Decrypt(
+        src => input_raw,
+        typ => dbms_crypto.DES_CBC_PKCS5,
+        key =>input_key_raw
+    );
+    
+    decrypted_nvarchar2:= CONVERT(UTL_RAW.CAST_TO_VARCHAR2(decrypted_raw),'US7ASCII','AL32UTF8');
+    --decrypted_ret:=TO_NUMBER(decrypted_nvarchar2,'99.99');
+  RETURN decrypted_nvarchar2;
+END FUNC_DECRYPT;
+/
+
+CREATE OR REPLACE PROCEDURE DECRYPT_NHANVIEN
+IS
+count_nv INT;
+exe NVARCHAR2(1000);
+temp INT;
+
+CURSOR cur_manv IS SELECT MANV FROM NHANVIEN ORDER BY MANV ASC;
+CURSOR cur_luong IS SELECT LUONG FROM NHANVIEN ORDER BY MANV ASC;
+CURSOR cur_phucap IS SELECT PHUCAP FROM NHANVIEN ORDER BY MANV ASC;
+CURSOR cur_key IS SELECT VAL FROM HELPDBA ORDER BY MANV ASC;
+TYPE arr_manv IS VARRAY(400)OF NHANVIEN.MANV%TYPE;
+TYPE arr_luong IS VARRAY(400)OF NHANVIEN.LUONG%TYPE;
+TYPE arr_phucap IS VARRAY(400)OF NHANVIEN.PHUCAP%TYPE;
+TYPE arr_key IS VARRAY(400)OF HELPDBA.VAL%TYPE;
+manv arr_manv := arr_manv();
+luong arr_luong := arr_luong();
+phucap arr_phucap := arr_phucap();
+val arr_key := arr_key();
+cnt INTEGER := 0;
+
+input_data_luong RAW(200);
+decrypted_raw_luong VARCHAR2(50);
+input_data_phucap RAW(200);
+key_string VARCHAR2(200);
+decrypted_raw_phucap VARCHAR2(50);
+
+BEGIN
+    --MANV
+   FOR i IN cur_manv LOOP
+    cnt:=cnt+1;
+    manv.extend;
+    manv(cnt):= i.manv;
+   END LOOP;
+   cnt:=0;
+   -- LUONG
+   FOR j IN cur_luong LOOP
+   cnt:=cnt+1;
+   luong.extend;
+   luong(cnt):= j.luong;
+   END LOOP;
+   --PHUCAP
+   cnt:=0;
+   FOR j IN cur_phucap LOOP
+   cnt:=cnt+1;
+   phucap.extend;
+   phucap(cnt):= j.phucap;
+   END LOOP;
+   --KEY
+   cnt:=0;
+   FOR j IN cur_key LOOP
+   cnt:=cnt+1;
+   val.extend;
+   val(cnt):= j.val;
+   END LOOP;
+   -- Encrypt
+   exe:='SELECT COUNT(*) FROM NHANVIEN';
+   EXECUTE IMMEDIATE (exe) INTO count_nv;
+   FOR temp IN 1..count_nv LOOP
+   input_data_luong:=  luong(temp);
+   input_data_phucap:=  phucap(temp);
+   key_string :=  val(temp);
+   decrypted_raw_luong := FUNC_DECRYPT(input_data_luong,key_string);
+   --GIAI MA COT PHUCAP
+   decrypted_raw_phucap := FUNC_DECRYPT(input_data_phucap,key_string);
+   --UPDATE LUONG SAU MA HOA 
+   EXECUTE IMMEDIATE('UPDATE NHANVIEN SET LUONG = '''||decrypted_raw_luong||''' WHERE MANV = ''' ||manv(temp)||'''');
+   EXECUTE IMMEDIATE('UPDATE NHANVIEN SET PHUCAP = '''||decrypted_raw_phucap||''' WHERE MANV = ''' ||manv(temp)||'''');
+   END LOOP;
+END;
+/
+CREATE OR REPLACE UV_DECRYPT_NHANVIEN 
+AS 
+    SELECT * FROM UV_DECRYPT_NHANVIEN WHERE MANV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+GRANT SELECT ON UV_DECRYPT_NHANVIEN TO RL_NHANVIEN;
+--EXEC DECRYPT_NHANVIEN;
+
 /
 GRANT RL_NHANVIEN TO RL_NHANSU;
 /
@@ -3043,4 +3253,6 @@ EXCEPTION
 END;
 /
 GRANT EXECUTE ON USP_UPDATE_DEAN TO RL_TRUONGDA;
+/
+COMMIT;
 /
