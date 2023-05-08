@@ -15,11 +15,13 @@ namespace PHANHE1.TruongDeAn
     {
         OracleConnection conn = new OracleConnection(Login.connectionString);
         String userAdmin = "";
-        public ThongTinCaNhanTDA(String usrAdmin)
+        String username = "";
+        public ThongTinCaNhanTDA(String usrAdmin, String username)
         {
             InitializeComponent();
             conn.Open();
             this.userAdmin = usrAdmin;
+            this.username = username;
         }
 
         private void panelThongTinCaNhanQLTT_Paint(object sender, PaintEventArgs e)
@@ -75,8 +77,26 @@ namespace PHANHE1.TruongDeAn
                 dateTimePickerNgaySinh.Value = Convert.ToDateTime(dataReader["NGAYSINH"]);
                 textBoxDiaChi.Text = dataReader["DIACHI"].ToString();
                 textBoxSDT.Text = dataReader["SODT"].ToString();
-                labelLuongValue.Text = dataReader["LUONG"].ToString();
-                labelPhuCapValue.Text = dataReader["PHUCAP"].ToString();
+                //decrypt LUONG TRUONG DE AN
+                OracleCommand Cmd = new OracleCommand(userAdmin + ".FUNC_LOGIN_DECRYPT_LUONG", conn);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.Add("returnVal", OracleDbType.Varchar2, 200);
+                Cmd.Parameters["returnVal"].Direction = ParameterDirection.ReturnValue;
+                Cmd.Parameters.Add("cur_user", OracleDbType.Varchar2);
+                Cmd.Parameters["cur_user"].Value = username;
+                Cmd.ExecuteNonQuery();
+                string luong_val = Cmd.Parameters["returnVal"].Value.ToString();
+                labelLuongValue.Text = luong_val;
+                //decrypt PHUCAP TRUONG AN
+                OracleCommand Cmd2 = new OracleCommand(userAdmin + ".FUNC_LOGIN_DECRYPT_PHUCAP", conn);
+                Cmd2.CommandType = CommandType.StoredProcedure;
+                Cmd2.Parameters.Add("returnVal2", OracleDbType.Varchar2, 200);
+                Cmd2.Parameters["returnVal2"].Direction = ParameterDirection.ReturnValue;
+                Cmd2.Parameters.Add("cur_user", OracleDbType.Varchar2);
+                Cmd2.Parameters["cur_user"].Value = username;
+                Cmd2.ExecuteNonQuery();
+                string phucap_val = Cmd2.Parameters["returnVal2"].Value.ToString();
+                labelPhuCapValue.Text = phucap_val;
                 labelNQLValue.Text = dataReader["MANQL"].ToString();
                 labelMaPhongValue.Text = dataReader["PHG"].ToString();
             }

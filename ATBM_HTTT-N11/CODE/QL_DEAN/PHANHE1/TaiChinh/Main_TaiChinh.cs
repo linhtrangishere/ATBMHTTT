@@ -68,7 +68,7 @@ namespace PHANHE1.TaiChinh
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanTC(userAdmin));
+            OpenChildForm(new ThongTinCaNhanTC(userAdmin, username));
             SwitchColorMenu(sender, e);
         }
 

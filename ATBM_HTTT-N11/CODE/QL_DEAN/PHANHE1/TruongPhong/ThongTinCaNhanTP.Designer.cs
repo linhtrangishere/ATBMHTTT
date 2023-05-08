@@ -131,6 +131,7 @@
             this.labelThongTinCaNhanTDA.TabIndex = 0;
             this.labelThongTinCaNhanTDA.Text = "Thông tin cá nhân";
             this.labelThongTinCaNhanTDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelThongTinCaNhanTDA.Click += new System.EventHandler(this.labelThongTinCaNhanTDA_Click);
             // 
             // panelChildFormTTCN
             // 

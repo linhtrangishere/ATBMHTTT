@@ -68,7 +68,7 @@ namespace PHANHE1.QLTrucTiep
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanQLTT(userAdmin));
+            OpenChildForm(new ThongTinCaNhanQLTT(userAdmin, username));
             SwitchColorMenu(sender, e);
         }
 
