@@ -25,7 +25,7 @@ namespace PHANHE1.NhanSu
 
         private void ThongTinPhongBanNS_Load(object sender, EventArgs e)
         {
-
+            LoadDataToComboBox();
         }
 
         private void dataGridViewThongTinPhongBanNS_CellContentClick(object sender, DataGridViewCellEventArgs e)

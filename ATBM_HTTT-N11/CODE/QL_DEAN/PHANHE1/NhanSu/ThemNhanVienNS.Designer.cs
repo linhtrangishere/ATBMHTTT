@@ -32,9 +32,7 @@
             this.dataGridViewThemNhanVienNS = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
-            this.textBoxMaPhong = new System.Windows.Forms.TextBox();
             this.labelMaPhong = new System.Windows.Forms.Label();
-            this.textBoxMaNQL = new System.Windows.Forms.TextBox();
             this.labelMaNQL = new System.Windows.Forms.Label();
             this.textBoxSDT = new System.Windows.Forms.TextBox();
             this.labelSDT = new System.Windows.Forms.Label();
@@ -49,6 +47,10 @@
             this.comboBoxPhai = new System.Windows.Forms.ComboBox();
             this.textBoxTenNV = new System.Windows.Forms.TextBox();
             this.textBoxMaNV = new System.Windows.Forms.TextBox();
+            this.comboBoxPhongBan = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaNQL = new System.Windows.Forms.ComboBox();
+            this.comboBoxVaiTro = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemNhanVienNS)).BeginInit();
             this.panelThemNhanVienNS.SuspendLayout();
             this.SuspendLayout();
@@ -57,10 +59,10 @@
             // 
             this.buttonQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(110)))));
             this.buttonQuayLai.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(630, 370);
+            this.buttonQuayLai.Location = new System.Drawing.Point(738, 379);
             this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(250, 70);
+            this.buttonQuayLai.Size = new System.Drawing.Size(174, 70);
             this.buttonQuayLai.TabIndex = 79;
             this.buttonQuayLai.Text = "Quay lại";
             this.buttonQuayLai.UseVisualStyleBackColor = false;
@@ -69,11 +71,11 @@
             // dataGridViewThemNhanVienNS
             // 
             this.dataGridViewThemNhanVienNS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewThemNhanVienNS.Location = new System.Drawing.Point(0, 525);
+            this.dataGridViewThemNhanVienNS.Location = new System.Drawing.Point(0, 581);
             this.dataGridViewThemNhanVienNS.Name = "dataGridViewThemNhanVienNS";
             this.dataGridViewThemNhanVienNS.RowHeadersWidth = 51;
             this.dataGridViewThemNhanVienNS.RowTemplate.Height = 24;
-            this.dataGridViewThemNhanVienNS.Size = new System.Drawing.Size(935, 223);
+            this.dataGridViewThemNhanVienNS.Size = new System.Drawing.Size(935, 167);
             this.dataGridViewThemNhanVienNS.TabIndex = 78;
             this.dataGridViewThemNhanVienNS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThemNhanVienNS_CellContentClick);
             // 
@@ -81,10 +83,10 @@
             // 
             this.buttonXemTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonXemTatCa.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonXemTatCa.Location = new System.Drawing.Point(630, 230);
+            this.buttonXemTatCa.Location = new System.Drawing.Point(738, 239);
             this.buttonXemTatCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonXemTatCa.Name = "buttonXemTatCa";
-            this.buttonXemTatCa.Size = new System.Drawing.Size(250, 70);
+            this.buttonXemTatCa.Size = new System.Drawing.Size(174, 70);
             this.buttonXemTatCa.TabIndex = 77;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
@@ -94,25 +96,14 @@
             // 
             this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonThem.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonThem.Location = new System.Drawing.Point(630, 90);
+            this.buttonThem.Location = new System.Drawing.Point(738, 99);
             this.buttonThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(250, 70);
+            this.buttonThem.Size = new System.Drawing.Size(174, 70);
             this.buttonThem.TabIndex = 76;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = false;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
-            // 
-            // textBoxMaPhong
-            // 
-            this.textBoxMaPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaPhong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMaPhong.Location = new System.Drawing.Point(280, 451);
-            this.textBoxMaPhong.Multiline = true;
-            this.textBoxMaPhong.Name = "textBoxMaPhong";
-            this.textBoxMaPhong.Size = new System.Drawing.Size(300, 50);
-            this.textBoxMaPhong.TabIndex = 75;
-            this.textBoxMaPhong.TextChanged += new System.EventHandler(this.textBoxMaPhong_TextChanged);
             // 
             // labelMaPhong
             // 
@@ -123,17 +114,6 @@
             this.labelMaPhong.Size = new System.Drawing.Size(159, 41);
             this.labelMaPhong.TabIndex = 73;
             this.labelMaPhong.Text = "Mã phòng";
-            // 
-            // textBoxMaNQL
-            // 
-            this.textBoxMaNQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaNQL.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMaNQL.Location = new System.Drawing.Point(280, 391);
-            this.textBoxMaNQL.Multiline = true;
-            this.textBoxMaNQL.Name = "textBoxMaNQL";
-            this.textBoxMaNQL.Size = new System.Drawing.Size(300, 50);
-            this.textBoxMaNQL.TabIndex = 72;
-            this.textBoxMaNQL.TextChanged += new System.EventHandler(this.textBoxMaNQL_TextChanged);
             // 
             // labelMaNQL
             // 
@@ -173,7 +153,7 @@
             this.textBoxDiaChi.Location = new System.Drawing.Point(280, 271);
             this.textBoxDiaChi.Multiline = true;
             this.textBoxDiaChi.Name = "textBoxDiaChi";
-            this.textBoxDiaChi.Size = new System.Drawing.Size(300, 50);
+            this.textBoxDiaChi.Size = new System.Drawing.Size(452, 50);
             this.textBoxDiaChi.TabIndex = 65;
             this.textBoxDiaChi.TextChanged += new System.EventHandler(this.textBoxDiaChi_TextChanged);
             // 
@@ -229,13 +209,15 @@
             // 
             // panelThemNhanVienNS
             // 
+            this.panelThemNhanVienNS.Controls.Add(this.comboBoxVaiTro);
+            this.panelThemNhanVienNS.Controls.Add(this.label1);
+            this.panelThemNhanVienNS.Controls.Add(this.comboBoxMaNQL);
+            this.panelThemNhanVienNS.Controls.Add(this.comboBoxPhongBan);
             this.panelThemNhanVienNS.Controls.Add(this.buttonQuayLai);
             this.panelThemNhanVienNS.Controls.Add(this.dataGridViewThemNhanVienNS);
             this.panelThemNhanVienNS.Controls.Add(this.buttonXemTatCa);
             this.panelThemNhanVienNS.Controls.Add(this.buttonThem);
-            this.panelThemNhanVienNS.Controls.Add(this.textBoxMaPhong);
             this.panelThemNhanVienNS.Controls.Add(this.labelMaPhong);
-            this.panelThemNhanVienNS.Controls.Add(this.textBoxMaNQL);
             this.panelThemNhanVienNS.Controls.Add(this.labelMaNQL);
             this.panelThemNhanVienNS.Controls.Add(this.textBoxSDT);
             this.panelThemNhanVienNS.Controls.Add(this.labelSDT);
@@ -282,7 +264,7 @@
             this.textBoxTenNV.Location = new System.Drawing.Point(280, 91);
             this.textBoxTenNV.Multiline = true;
             this.textBoxTenNV.Name = "textBoxTenNV";
-            this.textBoxTenNV.Size = new System.Drawing.Size(300, 50);
+            this.textBoxTenNV.Size = new System.Drawing.Size(452, 50);
             this.textBoxTenNV.TabIndex = 59;
             this.textBoxTenNV.TextChanged += new System.EventHandler(this.textBoxTenNV_TextChanged);
             // 
@@ -296,6 +278,49 @@
             this.textBoxMaNV.Size = new System.Drawing.Size(300, 50);
             this.textBoxMaNV.TabIndex = 57;
             this.textBoxMaNV.TextChanged += new System.EventHandler(this.textBoxMaNV_TextChanged);
+            // 
+            // comboBoxPhongBan
+            // 
+            this.comboBoxPhongBan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxPhongBan.FormattingEnabled = true;
+            this.comboBoxPhongBan.Location = new System.Drawing.Point(280, 452);
+            this.comboBoxPhongBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxPhongBan.Name = "comboBoxPhongBan";
+            this.comboBoxPhongBan.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxPhongBan.TabIndex = 80;
+            this.comboBoxPhongBan.SelectedIndexChanged += new System.EventHandler(this.comboBoxPhongBan_SelectedIndexChanged);
+            // 
+            // comboBoxMaNQL
+            // 
+            this.comboBoxMaNQL.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxMaNQL.FormattingEnabled = true;
+            this.comboBoxMaNQL.Location = new System.Drawing.Point(280, 392);
+            this.comboBoxMaNQL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaNQL.Name = "comboBoxMaNQL";
+            this.comboBoxMaNQL.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxMaNQL.TabIndex = 81;
+            this.comboBoxMaNQL.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNQL_SelectedIndexChanged);
+            // 
+            // comboBoxVaiTro
+            // 
+            this.comboBoxVaiTro.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxVaiTro.FormattingEnabled = true;
+            this.comboBoxVaiTro.Location = new System.Drawing.Point(280, 514);
+            this.comboBoxVaiTro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxVaiTro.Name = "comboBoxVaiTro";
+            this.comboBoxVaiTro.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxVaiTro.TabIndex = 84;
+            this.comboBoxVaiTro.SelectedIndexChanged += new System.EventHandler(this.comboBoxVaiTro_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(60, 522);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 41);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Vai trò";
             // 
             // ThemNhanVienNS
             // 
@@ -319,9 +344,7 @@
         private System.Windows.Forms.DataGridView dataGridViewThemNhanVienNS;
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.TextBox textBoxMaPhong;
         private System.Windows.Forms.Label labelMaPhong;
-        private System.Windows.Forms.TextBox textBoxMaNQL;
         private System.Windows.Forms.Label labelMaNQL;
         private System.Windows.Forms.TextBox textBoxSDT;
         private System.Windows.Forms.Label labelSDT;
@@ -336,5 +359,9 @@
         private System.Windows.Forms.ComboBox comboBoxPhai;
         private System.Windows.Forms.TextBox textBoxTenNV;
         private System.Windows.Forms.TextBox textBoxMaNV;
+        private System.Windows.Forms.ComboBox comboBoxPhongBan;
+        private System.Windows.Forms.ComboBox comboBoxMaNQL;
+        private System.Windows.Forms.ComboBox comboBoxVaiTro;
+        private System.Windows.Forms.Label label1;
     }
 }
