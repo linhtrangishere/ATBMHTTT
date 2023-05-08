@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelChinhSuaThongTinNhanVienTC = new System.Windows.Forms.Panel();
+            this.comboBoxMaNhanVien = new System.Windows.Forms.ComboBox();
             this.labelLuong = new System.Windows.Forms.Label();
             this.textBoxPhuCap = new System.Windows.Forms.TextBox();
             this.labelPhuCap = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.buttonCapNhat = new System.Windows.Forms.Button();
             this.textBoxLuong = new System.Windows.Forms.TextBox();
             this.labelMaNhanVien = new System.Windows.Forms.Label();
-            this.comboBoxMaNhanVien = new System.Windows.Forms.ComboBox();
             this.panelChinhSuaThongTinNhanVienTC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaThongTinNhanVienTC)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,16 @@
             this.panelChinhSuaThongTinNhanVienTC.Name = "panelChinhSuaThongTinNhanVienTC";
             this.panelChinhSuaThongTinNhanVienTC.Size = new System.Drawing.Size(935, 750);
             this.panelChinhSuaThongTinNhanVienTC.TabIndex = 0;
+            // 
+            // comboBoxMaNhanVien
+            // 
+            this.comboBoxMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxMaNhanVien.FormattingEnabled = true;
+            this.comboBoxMaNhanVien.Location = new System.Drawing.Point(430, 52);
+            this.comboBoxMaNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaNhanVien.Name = "comboBoxMaNhanVien";
+            this.comboBoxMaNhanVien.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxMaNhanVien.TabIndex = 73;
             // 
             // labelLuong
             // 
@@ -113,6 +123,7 @@
             this.dataGridViewChinhSuaThongTinNhanVienTC.RowTemplate.Height = 24;
             this.dataGridViewChinhSuaThongTinNhanVienTC.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewChinhSuaThongTinNhanVienTC.TabIndex = 68;
+            this.dataGridViewChinhSuaThongTinNhanVienTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChinhSuaThongTinNhanVienTC_CellClick);
             // 
             // buttonXemTatCa
             // 
@@ -159,16 +170,6 @@
             this.labelMaNhanVien.Size = new System.Drawing.Size(204, 41);
             this.labelMaNhanVien.TabIndex = 64;
             this.labelMaNhanVien.Text = "Mã nhân viên";
-            // 
-            // comboBoxMaNhanVien
-            // 
-            this.comboBoxMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBoxMaNhanVien.FormattingEnabled = true;
-            this.comboBoxMaNhanVien.Location = new System.Drawing.Point(430, 52);
-            this.comboBoxMaNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxMaNhanVien.Name = "comboBoxMaNhanVien";
-            this.comboBoxMaNhanVien.Size = new System.Drawing.Size(300, 49);
-            this.comboBoxMaNhanVien.TabIndex = 73;
             // 
             // ChinhSuaThongTinNhanVienTC
             // 

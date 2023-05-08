@@ -125,10 +125,5 @@ namespace PHANHE1.NhanVien
                 MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void buttonCapNhat_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

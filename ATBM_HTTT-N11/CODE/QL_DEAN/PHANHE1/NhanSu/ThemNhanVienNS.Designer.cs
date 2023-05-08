@@ -229,6 +229,7 @@
             // 
             // panelThemNhanVienNS
             // 
+            this.panelThemNhanVienNS.BackColor = System.Drawing.Color.White;
             this.panelThemNhanVienNS.Controls.Add(this.buttonQuayLai);
             this.panelThemNhanVienNS.Controls.Add(this.dataGridViewThemNhanVienNS);
             this.panelThemNhanVienNS.Controls.Add(this.buttonXemTatCa);

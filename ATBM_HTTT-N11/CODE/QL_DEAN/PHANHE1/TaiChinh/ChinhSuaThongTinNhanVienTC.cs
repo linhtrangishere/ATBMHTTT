@@ -31,22 +31,22 @@ namespace PHANHE1.TaiChinh
         {
             try
             {
-                OracleCommand updateNhanVienQLTT = new OracleCommand(userAdmin + ".USP_UPDATE_LUONG_PHUCAP_NHANVIEN", conn);
-                updateNhanVienQLTT.CommandType = CommandType.StoredProcedure;
+                OracleCommand updatePhanCongCmd = new OracleCommand(userAdmin + ".USP_UPDATE_LUONG_PHUCAP_NHANVIEN", conn);
+                updatePhanCongCmd.CommandType = CommandType.StoredProcedure;
 
-                updateNhanVienQLTT.Parameters.Add("p_manv", OracleDbType.Varchar2).Value = comboBoxMaNhanVien.Text.Trim();
-                updateNhanVienQLTT.Parameters.Add("p_luong", OracleDbType.Varchar2).Value = textBoxLuong.Text.Trim();
-                updateNhanVienQLTT.Parameters.Add("p_phucap", OracleDbType.Varchar2).Value = textBoxPhuCap.Text.Trim();
+                updatePhanCongCmd.Parameters.Add("p_manv", OracleDbType.Varchar2).Value = comboBoxMaNhanVien.SelectedItem?.ToString() ?? (object)DBNull.Value;
+                updatePhanCongCmd.Parameters.Add("p_luong", OracleDbType.Varchar2).Value = textBoxLuong.Text.Trim();
+                updatePhanCongCmd.Parameters.Add("p_phucap", OracleDbType.Varchar2).Value = textBoxPhuCap.Text.Trim();
 
                 OracleParameter outMessageParam = new OracleParameter("p_out_message", OracleDbType.NVarchar2, 500);
                 outMessageParam.Direction = ParameterDirection.Output;
-                updateNhanVienQLTT.Parameters.Add(outMessageParam);
+                updatePhanCongCmd.Parameters.Add(outMessageParam);
 
-                updateNhanVienQLTT.ExecuteNonQuery();
+                updatePhanCongCmd.ExecuteNonQuery();
                 string outMessage = outMessageParam.Value.ToString();
                 MessageBox.Show(outMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                LoadData(); // Tải lại dữ liệu sau khi cập nhật
+                //LoadData(); // Tải lại dữ liệu sau khi cập nhật (nếu cần)
             }
             catch (Exception ex)
             {
@@ -67,22 +67,32 @@ namespace PHANHE1.TaiChinh
 
         private void ChinhSuaThongTinNhanVienTC_Load(object sender, EventArgs e)
         {
-            LoadData();
+            LoadDataToComboBox();
+            dataGridViewChinhSuaThongTinNhanVienTC.CellClick += dataGridViewChinhSuaThongTinNhanVienTC_CellClick;
         }
 
-        private void LoadData()
+        private void LoadDataToComboBox()
         {
-            OracleCommand getViewNhanVienQLTT = conn.CreateCommand();
-            getViewNhanVienQLTT.CommandText = "SELECT * FROM " + userAdmin + " .NHANVIEN";
-            getViewNhanVienQLTT.CommandType = CommandType.Text;
-            OracleDataReader dataReader = getViewNhanVienQLTT.ExecuteReader();
+            OracleCommand getMaDAData = conn.CreateCommand();
+            getMaDAData.CommandText = "SELECT DISTINCT MANV FROM " + userAdmin + " .NHANVIEN";
+            getMaDAData.CommandType = CommandType.Text;
+            OracleDataReader dataReader = getMaDAData.ExecuteReader();
 
-            //comboBoxMaNhanVien.Items.Clear();
+            comboBoxMaNhanVien.Items.Clear();
             while (dataReader.Read())
             {
                 comboBoxMaNhanVien.Items.Add(dataReader["MANV"].ToString());
-                textBoxLuong.Text = dataReader["LUONG"].ToString();
-                textBoxPhuCap.Text = dataReader["PHUCAP"].ToString();
+            }
+        }
+
+        private void dataGridViewChinhSuaThongTinNhanVienTC_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewChinhSuaThongTinNhanVienTC.Rows[e.RowIndex];
+                comboBoxMaNhanVien.SelectedItem = row.Cells["MANV"].Value.ToString();
+                textBoxLuong.Text = row.Cells["LUONG"].Value.ToString();
+                textBoxPhuCap.Text = row.Cells["PHUCAP"].Value.ToString();
             }
         }
     }
