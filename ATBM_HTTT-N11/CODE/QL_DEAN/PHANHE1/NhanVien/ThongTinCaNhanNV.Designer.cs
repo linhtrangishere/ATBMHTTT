@@ -60,10 +60,10 @@
             // 
             this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonCapNhat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonCapNhat.Location = new System.Drawing.Point(660, 380);
-            this.buttonCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCapNhat.Location = new System.Drawing.Point(522, 507);
+            this.buttonCapNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCapNhat.Name = "buttonCapNhat";
-            this.buttonCapNhat.Size = new System.Drawing.Size(200, 70);
+            this.buttonCapNhat.Size = new System.Drawing.Size(150, 57);
             this.buttonCapNhat.TabIndex = 55;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
@@ -73,9 +73,10 @@
             // 
             this.labelMaPhong.AutoSize = true;
             this.labelMaPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMaPhong.Location = new System.Drawing.Point(110, 655);
+            this.labelMaPhong.Location = new System.Drawing.Point(13, 532);
+            this.labelMaPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMaPhong.Name = "labelMaPhong";
-            this.labelMaPhong.Size = new System.Drawing.Size(159, 41);
+            this.labelMaPhong.Size = new System.Drawing.Size(126, 32);
             this.labelMaPhong.TabIndex = 52;
             this.labelMaPhong.Text = "Mã phòng";
             // 
@@ -83,9 +84,10 @@
             // 
             this.labelMaNQL.AutoSize = true;
             this.labelMaNQL.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMaNQL.Location = new System.Drawing.Point(110, 585);
+            this.labelMaNQL.Location = new System.Drawing.Point(13, 475);
+            this.labelMaNQL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMaNQL.Name = "labelMaNQL";
-            this.labelMaNQL.Size = new System.Drawing.Size(131, 41);
+            this.labelMaNQL.Size = new System.Drawing.Size(104, 32);
             this.labelMaNQL.TabIndex = 50;
             this.labelMaNQL.Text = "Mã NQL";
             // 
@@ -93,9 +95,10 @@
             // 
             this.labelPhuCap.AutoSize = true;
             this.labelPhuCap.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelPhuCap.Location = new System.Drawing.Point(110, 515);
+            this.labelPhuCap.Location = new System.Drawing.Point(13, 418);
+            this.labelPhuCap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhuCap.Name = "labelPhuCap";
-            this.labelPhuCap.Size = new System.Drawing.Size(127, 41);
+            this.labelPhuCap.Size = new System.Drawing.Size(101, 32);
             this.labelPhuCap.TabIndex = 48;
             this.labelPhuCap.Text = "Phụ cấp";
             // 
@@ -103,9 +106,10 @@
             // 
             this.labelLuong.AutoSize = true;
             this.labelLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelLuong.Location = new System.Drawing.Point(110, 445);
+            this.labelLuong.Location = new System.Drawing.Point(13, 362);
+            this.labelLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLuong.Name = "labelLuong";
-            this.labelLuong.Size = new System.Drawing.Size(106, 41);
+            this.labelLuong.Size = new System.Drawing.Size(84, 32);
             this.labelLuong.TabIndex = 46;
             this.labelLuong.Text = "Lương";
             // 
@@ -113,19 +117,21 @@
             // 
             this.textBoxSDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxSDT.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxSDT.Location = new System.Drawing.Point(330, 366);
+            this.textBoxSDT.Location = new System.Drawing.Point(179, 297);
+            this.textBoxSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSDT.Multiline = true;
             this.textBoxSDT.Name = "textBoxSDT";
-            this.textBoxSDT.Size = new System.Drawing.Size(300, 50);
+            this.textBoxSDT.Size = new System.Drawing.Size(226, 41);
             this.textBoxSDT.TabIndex = 45;
             // 
             // labelSDT
             // 
             this.labelSDT.AutoSize = true;
             this.labelSDT.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelSDT.Location = new System.Drawing.Point(110, 375);
+            this.labelSDT.Location = new System.Drawing.Point(13, 305);
+            this.labelSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSDT.Name = "labelSDT";
-            this.labelSDT.Size = new System.Drawing.Size(198, 41);
+            this.labelSDT.Size = new System.Drawing.Size(159, 32);
             this.labelSDT.TabIndex = 44;
             this.labelSDT.Text = "Số điện thoại";
             // 
@@ -133,19 +139,21 @@
             // 
             this.textBoxDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDiaChi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxDiaChi.Location = new System.Drawing.Point(330, 296);
+            this.textBoxDiaChi.Location = new System.Drawing.Point(179, 240);
+            this.textBoxDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDiaChi.Multiline = true;
             this.textBoxDiaChi.Name = "textBoxDiaChi";
-            this.textBoxDiaChi.Size = new System.Drawing.Size(500, 50);
+            this.textBoxDiaChi.Size = new System.Drawing.Size(493, 41);
             this.textBoxDiaChi.TabIndex = 43;
             // 
             // labelDiaChi
             // 
             this.labelDiaChi.AutoSize = true;
             this.labelDiaChi.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelDiaChi.Location = new System.Drawing.Point(110, 305);
+            this.labelDiaChi.Location = new System.Drawing.Point(13, 248);
+            this.labelDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDiaChi.Name = "labelDiaChi";
-            this.labelDiaChi.Size = new System.Drawing.Size(111, 41);
+            this.labelDiaChi.Size = new System.Drawing.Size(88, 32);
             this.labelDiaChi.TabIndex = 42;
             this.labelDiaChi.Text = "Địa chỉ";
             // 
@@ -153,18 +161,20 @@
             // 
             this.dateTimePickerNgaySinh.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dateTimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(330, 229);
+            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(179, 186);
+            this.dateTimePickerNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
-            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(300, 47);
+            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(226, 39);
             this.dateTimePickerNgaySinh.TabIndex = 41;
             // 
             // labelNgaySinh
             // 
             this.labelNgaySinh.AutoSize = true;
             this.labelNgaySinh.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNgaySinh.Location = new System.Drawing.Point(110, 235);
+            this.labelNgaySinh.Location = new System.Drawing.Point(13, 191);
+            this.labelNgaySinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNgaySinh.Name = "labelNgaySinh";
-            this.labelNgaySinh.Size = new System.Drawing.Size(154, 41);
+            this.labelNgaySinh.Size = new System.Drawing.Size(122, 32);
             this.labelNgaySinh.TabIndex = 40;
             this.labelNgaySinh.Text = "Ngày sinh";
             // 
@@ -172,9 +182,10 @@
             // 
             this.labelPhai.AutoSize = true;
             this.labelPhai.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelPhai.Location = new System.Drawing.Point(110, 165);
+            this.labelPhai.Location = new System.Drawing.Point(13, 134);
+            this.labelPhai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhai.Name = "labelPhai";
-            this.labelPhai.Size = new System.Drawing.Size(77, 41);
+            this.labelPhai.Size = new System.Drawing.Size(61, 32);
             this.labelPhai.TabIndex = 4;
             this.labelPhai.Text = "Phái";
             // 
@@ -182,9 +193,10 @@
             // 
             this.labelTenNV.AutoSize = true;
             this.labelTenNV.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTenNV.Location = new System.Drawing.Point(110, 95);
+            this.labelTenNV.Location = new System.Drawing.Point(13, 77);
+            this.labelTenNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTenNV.Name = "labelTenNV";
-            this.labelTenNV.Size = new System.Drawing.Size(116, 41);
+            this.labelTenNV.Size = new System.Drawing.Size(92, 32);
             this.labelTenNV.TabIndex = 2;
             this.labelTenNV.Text = "Tên NV";
             // 
@@ -192,9 +204,10 @@
             // 
             this.labelMaNV.AutoSize = true;
             this.labelMaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMaNV.Location = new System.Drawing.Point(110, 25);
+            this.labelMaNV.Location = new System.Drawing.Point(13, 20);
+            this.labelMaNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMaNV.Name = "labelMaNV";
-            this.labelMaNV.Size = new System.Drawing.Size(112, 41);
+            this.labelMaNV.Size = new System.Drawing.Size(89, 32);
             this.labelMaNV.TabIndex = 0;
             this.labelMaNV.Text = "Mã NV";
             // 
@@ -222,18 +235,20 @@
             this.panelChildFormTTCN.Controls.Add(this.labelPhai);
             this.panelChildFormTTCN.Controls.Add(this.labelTenNV);
             this.panelChildFormTTCN.Controls.Add(this.labelMaNV);
-            this.panelChildFormTTCN.Location = new System.Drawing.Point(-1, 124);
+            this.panelChildFormTTCN.Location = new System.Drawing.Point(-1, 101);
+            this.panelChildFormTTCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelChildFormTTCN.Name = "panelChildFormTTCN";
-            this.panelChildFormTTCN.Size = new System.Drawing.Size(935, 715);
+            this.panelChildFormTTCN.Size = new System.Drawing.Size(701, 581);
             this.panelChildFormTTCN.TabIndex = 3;
             // 
             // labelMaPhongValue
             // 
             this.labelMaPhongValue.AutoSize = true;
             this.labelMaPhongValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMaPhongValue.Location = new System.Drawing.Point(323, 655);
+            this.labelMaPhongValue.Location = new System.Drawing.Point(173, 532);
+            this.labelMaPhongValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMaPhongValue.Name = "labelMaPhongValue";
-            this.labelMaPhongValue.Size = new System.Drawing.Size(239, 41);
+            this.labelMaPhongValue.Size = new System.Drawing.Size(190, 32);
             this.labelMaPhongValue.TabIndex = 62;
             this.labelMaPhongValue.Text = "mã phòng value";
             // 
@@ -241,9 +256,10 @@
             // 
             this.labelNQLValue.AutoSize = true;
             this.labelNQLValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNQLValue.Location = new System.Drawing.Point(323, 585);
+            this.labelNQLValue.Location = new System.Drawing.Point(173, 475);
+            this.labelNQLValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNQLValue.Name = "labelNQLValue";
-            this.labelNQLValue.Size = new System.Drawing.Size(211, 41);
+            this.labelNQLValue.Size = new System.Drawing.Size(168, 32);
             this.labelNQLValue.TabIndex = 61;
             this.labelNQLValue.Text = "mã NQL value";
             // 
@@ -251,9 +267,10 @@
             // 
             this.labelPhuCapValue.AutoSize = true;
             this.labelPhuCapValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelPhuCapValue.Location = new System.Drawing.Point(323, 515);
+            this.labelPhuCapValue.Location = new System.Drawing.Point(173, 418);
+            this.labelPhuCapValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhuCapValue.Name = "labelPhuCapValue";
-            this.labelPhuCapValue.Size = new System.Drawing.Size(208, 41);
+            this.labelPhuCapValue.Size = new System.Drawing.Size(166, 32);
             this.labelPhuCapValue.TabIndex = 60;
             this.labelPhuCapValue.Text = "phụ cấp value";
             // 
@@ -261,9 +278,10 @@
             // 
             this.labelLuongValue.AutoSize = true;
             this.labelLuongValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelLuongValue.Location = new System.Drawing.Point(323, 445);
+            this.labelLuongValue.Location = new System.Drawing.Point(173, 362);
+            this.labelLuongValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLuongValue.Name = "labelLuongValue";
-            this.labelLuongValue.Size = new System.Drawing.Size(180, 41);
+            this.labelLuongValue.Size = new System.Drawing.Size(143, 32);
             this.labelLuongValue.TabIndex = 59;
             this.labelLuongValue.Text = "lương value";
             // 
@@ -271,9 +289,10 @@
             // 
             this.labelPhaiValue.AutoSize = true;
             this.labelPhaiValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelPhaiValue.Location = new System.Drawing.Point(323, 165);
+            this.labelPhaiValue.Location = new System.Drawing.Point(173, 134);
+            this.labelPhaiValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPhaiValue.Name = "labelPhaiValue";
-            this.labelPhaiValue.Size = new System.Drawing.Size(158, 41);
+            this.labelPhaiValue.Size = new System.Drawing.Size(126, 32);
             this.labelPhaiValue.TabIndex = 58;
             this.labelPhaiValue.Text = "phái value";
             // 
@@ -281,9 +300,10 @@
             // 
             this.labelTenNVValue.AutoSize = true;
             this.labelTenNVValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTenNVValue.Location = new System.Drawing.Point(323, 95);
+            this.labelTenNVValue.Location = new System.Drawing.Point(173, 77);
+            this.labelTenNVValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTenNVValue.Name = "labelTenNVValue";
-            this.labelTenNVValue.Size = new System.Drawing.Size(185, 41);
+            this.labelTenNVValue.Size = new System.Drawing.Size(148, 32);
             this.labelTenNVValue.TabIndex = 57;
             this.labelTenNVValue.Text = "tên nv value";
             // 
@@ -291,9 +311,10 @@
             // 
             this.labelMaNVValue.AutoSize = true;
             this.labelMaNVValue.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelMaNVValue.Location = new System.Drawing.Point(323, 25);
+            this.labelMaNVValue.Location = new System.Drawing.Point(173, 20);
+            this.labelMaNVValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMaNVValue.Name = "labelMaNVValue";
-            this.labelMaNVValue.Size = new System.Drawing.Size(183, 41);
+            this.labelMaNVValue.Size = new System.Drawing.Size(146, 32);
             this.labelMaNVValue.TabIndex = 56;
             this.labelMaNVValue.Text = "mã nv value";
             // 
@@ -301,28 +322,31 @@
             // 
             this.panelThongTinCaNhanTDA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(237)))), ((int)(((byte)(199)))));
             this.panelThongTinCaNhanTDA.Controls.Add(this.labelThongTinCaNhanTDA);
-            this.panelThongTinCaNhanTDA.Location = new System.Drawing.Point(-1, -6);
+            this.panelThongTinCaNhanTDA.Location = new System.Drawing.Point(-1, -5);
+            this.panelThongTinCaNhanTDA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelThongTinCaNhanTDA.Name = "panelThongTinCaNhanTDA";
-            this.panelThongTinCaNhanTDA.Size = new System.Drawing.Size(935, 130);
+            this.panelThongTinCaNhanTDA.Size = new System.Drawing.Size(701, 106);
             this.panelThongTinCaNhanTDA.TabIndex = 2;
             // 
             // labelThongTinCaNhanTDA
             // 
             this.labelThongTinCaNhanTDA.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelThongTinCaNhanTDA.Location = new System.Drawing.Point(0, 10);
+            this.labelThongTinCaNhanTDA.Location = new System.Drawing.Point(0, 8);
+            this.labelThongTinCaNhanTDA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelThongTinCaNhanTDA.Name = "labelThongTinCaNhanTDA";
-            this.labelThongTinCaNhanTDA.Size = new System.Drawing.Size(935, 120);
+            this.labelThongTinCaNhanTDA.Size = new System.Drawing.Size(701, 98);
             this.labelThongTinCaNhanTDA.TabIndex = 0;
             this.labelThongTinCaNhanTDA.Text = "Thông tin cá nhân";
             this.labelThongTinCaNhanTDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ThongTinCaNhanNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 833);
+            this.ClientSize = new System.Drawing.Size(699, 677);
             this.Controls.Add(this.panelChildFormTTCN);
             this.Controls.Add(this.panelThongTinCaNhanTDA);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ThongTinCaNhanNV";
             this.Text = "ThongTinCaNhanNV";
             this.Load += new System.EventHandler(this.ThongTinCaNhanNV_Load);

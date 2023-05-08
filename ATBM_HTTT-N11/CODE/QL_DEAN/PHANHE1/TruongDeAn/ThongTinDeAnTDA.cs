@@ -92,7 +92,13 @@ namespace PHANHE1.TruongDeAn
 
         private void ThongTinDeAnTDA_Load(object sender, EventArgs e)
         {
-
+            OracleCommand getListThongTinDeAnTDA = conn.CreateCommand();
+            getListThongTinDeAnTDA.CommandText = "SELECT * FROM " + userAdmin + " .DEAN ORDER BY MADA ASC";
+            getListThongTinDeAnTDA.CommandType = CommandType.Text;
+            OracleDataReader temp = getListThongTinDeAnTDA.ExecuteReader();
+            DataTable table_DSDeAnTC = new DataTable();
+            table_DSDeAnTC.Load(temp);
+            dataGridViewTTDA.DataSource = table_DSDeAnTC;
         }
     }
 }
