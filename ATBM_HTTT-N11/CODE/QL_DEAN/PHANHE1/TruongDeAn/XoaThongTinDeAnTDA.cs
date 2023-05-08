@@ -45,7 +45,7 @@ namespace PHANHE1.TruongDeAn
                 OracleCommand xoaPhanCongCmd = new OracleCommand(userAdmin + ".USP_XOA_DEAN", conn);
                 xoaPhanCongCmd.CommandType = CommandType.StoredProcedure;
 
-                xoaPhanCongCmd.Parameters.Add("p_mada", OracleDbType.Varchar2).Value = comboBoxDeAn.SelectedItem.ToString();
+                xoaPhanCongCmd.Parameters.Add("p_mada", OracleDbType.Varchar2).Value = comboBoxDeAn.SelectedItem?.ToString() ?? (object)DBNull.Value;
 
                 OracleParameter outMessageParam = new OracleParameter("p_out_message", OracleDbType.NVarchar2, 500);
                 outMessageParam.Direction = ParameterDirection.Output;
