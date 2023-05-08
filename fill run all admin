@@ -3146,11 +3146,11 @@ BEGIN
     WHERE MANV = p_manv;
 
     IF SQL%ROWCOUNT = 0 THEN
-        p_out_message := 'Không tìm thấy phân công để cập nhật.';
+        p_out_message := 'Không tìm thấy nhân viên để cập nhật.';
         ROLLBACK;
     ELSE
         COMMIT;
-        p_out_message := 'Cập nhật phân công thành công!';
+        p_out_message := 'Cập nhật lương và phụ cấp thành công!';
     END IF;
 EXCEPTION
     WHEN OTHERS THEN
@@ -3177,11 +3177,11 @@ BEGIN
     VALUES (p_mada, p_tenda, p_ngaybatdau, p_phong);
 
     COMMIT;
-    p_out_message := 'Thêm phân công thành công!';
+    p_out_message := 'Thêm đề án thành công!';
 EXCEPTION
     WHEN DUP_VAL_ON_INDEX THEN
         ROLLBACK;
-        p_out_message := 'Mã phòng ban đã tồn tại!';
+        p_out_message := 'Mã đề án đã tồn tại!';
     WHEN OTHERS THEN
         ROLLBACK;
         p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
@@ -3203,7 +3203,7 @@ BEGIN
     WHERE MADA = p_mada;
 
     IF v_count = 0 THEN
-        p_out_message := 'Phân công không tồn tại';
+        p_out_message := 'Đề án không tồn tại';
     ELSE
         DELETE FROM DEAN
         WHERE MADA = p_mada;
@@ -3213,7 +3213,7 @@ BEGIN
             p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
         ELSE
             COMMIT;
-            p_out_message := 'Xóa phân công thành công!';
+            p_out_message := 'Xóa đề án thành công!';
         END IF;
     END IF;
 EXCEPTION
@@ -3240,11 +3240,11 @@ BEGIN
     WHERE MADA = p_mada;
 
     IF SQL%ROWCOUNT = 0 THEN
-        p_out_message := 'Không tìm thấy phân công để cập nhật.';
+        p_out_message := 'Không tìm thấy đề án để cập nhật.';
         ROLLBACK;
     ELSE
         COMMIT;
-        p_out_message := 'Cập nhật phân công thành công!';
+        p_out_message := 'Cập nhật đề án thành công!';
     END IF;
 EXCEPTION
     WHEN OTHERS THEN
