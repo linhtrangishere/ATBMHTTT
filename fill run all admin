@@ -3090,6 +3090,38 @@ GRANT EXECUTE ON USP_CAPNHAT_PHONGBAN_NS TO RL_NHANSU;
 /
 
 --2. Thêm, chỉnh sửa nhân viên
+--Thêm nhân viên
+CREATE OR REPLACE PROCEDURE USP_THEMNHANVIEN_NS(
+    p_MANV IN NVARCHAR2,
+    p_TENNV IN NVARCHAR2,
+    p_PHAI IN NVARCHAR2,
+    p_NGAYSINH IN DATE,
+    p_DIACHI IN NVARCHAR2,
+    p_SODT IN NVARCHAR2,
+    p_VAITRO IN NVARCHAR2,
+    p_MANQL IN NVARCHAR2,
+    p_PHG IN NVARCHAR2,
+    p_out_message OUT NVARCHAR2
+) AS
+BEGIN
+    INSERT INTO UV_NHANSU_NHANVIEN(MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG)
+    VALUES (p_MANV, p_TENNV, p_PHAI, p_NGAYSINH, p_DIACHI, p_SODT, p_VAITRO, p_MANQL, p_PHG);
+
+    IF SQL%ROWCOUNT > 0 THEN
+        p_out_message := 'Thêm nhân viên thành công!';
+        COMMIT;
+    ELSE
+        p_out_message := 'Thêm nhân viên thất bại!';
+        ROLLBACK;
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        p_out_message := 'Lỗi: ' || SQLERRM;
+        ROLLBACK;
+END;
+/
+GRANT EXECUTE ON USP_THEMNHANVIEN_NS TO RL_NHANSU;
+/
 --Chỉnh sửa nhân viên
 CREATE OR REPLACE PROCEDURE USP_CAPNHAT_NHANVIEN_NS (
     p_manv IN NVARCHAR2,
