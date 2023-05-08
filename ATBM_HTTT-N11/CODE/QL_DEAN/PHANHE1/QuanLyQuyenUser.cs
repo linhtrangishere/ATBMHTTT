@@ -92,7 +92,7 @@ namespace PHANHE1
             OracleConnection conn = new OracleConnection(connectionString);
             conn.Open();
             OracleCommand getData = conn.CreateCommand();
-            getData.CommandText = "select * from user_tab_privs WHERE GRANTEE NOT LIKE 'RL%'";
+            getData.CommandText = "SELECT * FROM USER_TAB_PRIVS WHERE GRANTEE IN (SELECT USERNAME FROM DBA_USERS) AND GRANTEE != '" + Login.username + "'"; ;
             getData.CommandType = CommandType.Text;
             OracleDataReader data = getData.ExecuteReader();
             DataTable tempDT = new DataTable();

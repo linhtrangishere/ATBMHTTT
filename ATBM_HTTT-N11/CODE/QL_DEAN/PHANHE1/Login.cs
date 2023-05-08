@@ -24,6 +24,7 @@ namespace PHANHE1
     public partial class Login : Form
     {
         public static string connectionString = "Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)" + "(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = QUANLYNHANVIEN)));";
+        public static string username = "";
         public Login()
         {
             InitializeComponent();
@@ -61,7 +62,7 @@ namespace PHANHE1
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            string username = textBoxTaiKhoan.Text;
+            username = textBoxTaiKhoan.Text;
             string password = textBoxMatKhau.Text;
             connectionString = connectionString + "User ID = " + username + "; Password = " + password + ";";
 

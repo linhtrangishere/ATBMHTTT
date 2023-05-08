@@ -29,7 +29,7 @@ namespace PHANHE1
         private void buttonXemTatCa_Click(object sender, EventArgs e)
         {
             OracleCommand getListPrivilegeUser = conn.CreateCommand();
-            getListPrivilegeUser.CommandText = "SELECT * FROM USER_TAB_PRIVS WHERE GRANTEE IN (SELECT USERNAME FROM DBA_USERS WHERE ACCOUNT_STATUS = 'OPEN')";
+            getListPrivilegeUser.CommandText = "SELECT * FROM USER_TAB_PRIVS WHERE GRANTEE IN (SELECT USERNAME FROM DBA_USERS) AND GRANTEE != '" + Login.username + "'";
             getListPrivilegeUser.CommandType = CommandType.Text;
             OracleDataReader temp = getListPrivilegeUser.ExecuteReader();
             DataTable table_DSQuyenCuaUser = new DataTable();

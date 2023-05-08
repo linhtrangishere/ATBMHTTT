@@ -88,7 +88,7 @@ namespace PHANHE1
         {
             OracleConnection conn = new OracleConnection(Login.connectionString);
             conn.Open();
-            string temp = "SELECT * FROM USER_TAB_PRIVS";
+            string temp = "SELECT * FROM USER_TAB_PRIVS WHERE GRANTEE IN (SELECT USERNAME FROM DBA_USERS) AND GRANTEE != '" + Login.username + "'";
             OracleDataAdapter adp = new OracleDataAdapter(temp, conn);
             DataTable dt = new DataTable();
             adp.Fill(dt);
