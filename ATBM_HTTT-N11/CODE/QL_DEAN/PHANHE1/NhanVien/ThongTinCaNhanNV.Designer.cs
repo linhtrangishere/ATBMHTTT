@@ -60,7 +60,7 @@
             // 
             this.buttonCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(189)))));
             this.buttonCapNhat.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonCapNhat.Location = new System.Drawing.Point(680, 295);
+            this.buttonCapNhat.Location = new System.Drawing.Point(660, 380);
             this.buttonCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCapNhat.Name = "buttonCapNhat";
             this.buttonCapNhat.Size = new System.Drawing.Size(200, 70);
@@ -136,7 +136,7 @@
             this.textBoxDiaChi.Location = new System.Drawing.Point(330, 296);
             this.textBoxDiaChi.Multiline = true;
             this.textBoxDiaChi.Name = "textBoxDiaChi";
-            this.textBoxDiaChi.Size = new System.Drawing.Size(300, 50);
+            this.textBoxDiaChi.Size = new System.Drawing.Size(500, 50);
             this.textBoxDiaChi.TabIndex = 43;
             // 
             // labelDiaChi
