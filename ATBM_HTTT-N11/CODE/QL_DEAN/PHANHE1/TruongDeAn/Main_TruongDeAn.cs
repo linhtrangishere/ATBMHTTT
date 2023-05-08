@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PHANHE1.TruongDeAn
 {
     public partial class Main_TruongDeAn : Form
     {
         String username = "";
-        public Main_TruongDeAn(String usr_name)
+        String userAdmin = "";
+        public Main_TruongDeAn(String usr_name, string userAdmin)
         {
-            InitializeComponent();
             this.username = usr_name;
+            InitializeComponent();
             labelNguyenVanA.Text = username;
+            this.userAdmin = userAdmin;
         }
 
         private Form formchild = null;
@@ -66,25 +67,25 @@ namespace PHANHE1.TruongDeAn
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanTDA());
+            OpenChildForm(new ThongTinCaNhanTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhanCongTDA());
+            OpenChildForm(new ThongTinPhanCongTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhongBanTDA());
+            OpenChildForm(new ThongTinPhongBanTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinDeAnTDA());
+            OpenChildForm(new ThongTinDeAnTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 

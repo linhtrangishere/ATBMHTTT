@@ -2,16 +2,11 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PHANHE1
 {
     public partial class Main : Form
     {
-        //public Main()
-        //{
-        //    InitializeComponent();
-        //}
         String username = "";
         public Main(String usr_name)
         {

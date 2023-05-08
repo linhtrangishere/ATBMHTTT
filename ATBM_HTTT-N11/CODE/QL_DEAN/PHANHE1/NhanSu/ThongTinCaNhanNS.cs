@@ -43,57 +43,7 @@ namespace PHANHE1.NhanSu
                 labelMaPhongValue.Text = dataReader["PHG"].ToString();
             }
         }
-        private void ThongTinCaNhanNS_Load(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
-        private void labelMaNVValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelTenNVValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPhaiValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerNgaySinh_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxDiaChi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxSDT_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelLuongValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPhuCapValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelNQLValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelMaPhongValue_Click(object sender, EventArgs e)
+        private void panelThongTinCaNhanQLTT_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -123,6 +73,11 @@ namespace PHANHE1.NhanSu
             {
                 MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ThongTinCaNhanNS_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

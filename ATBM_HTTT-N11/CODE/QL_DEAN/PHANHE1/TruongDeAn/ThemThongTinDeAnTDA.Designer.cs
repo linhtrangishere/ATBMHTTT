@@ -158,6 +158,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonThem
             // 
@@ -170,6 +171,7 @@
             this.buttonThem.TabIndex = 66;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // textBoxTenDeAn
             // 
@@ -199,6 +201,7 @@
             this.Controls.Add(this.panelThemThongTinDeAnTDA);
             this.Name = "ThemThongTinDeAnTDA";
             this.Text = "ThemThongTinDeAnTDA";
+            this.Load += new System.EventHandler(this.ThemThongTinDeAnTDA_Load);
             this.panelThemThongTinDeAnTDA.ResumeLayout(false);
             this.panelThemThongTinDeAnTDA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThemThongTinDeAnTDA)).EndInit();

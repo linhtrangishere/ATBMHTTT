@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PHANHE1.QLTrucTiep
 {
     public partial class Main_QLTrucTiep : Form
     {
-        public Main_QLTrucTiep()
+        String username = "";
+        String userAdmin = "";
+        public Main_QLTrucTiep(String usr_name, string userAdmin)
         {
+            this.username = usr_name;
             InitializeComponent();
+            labelNguyenVanA.Text = username;
+            this.userAdmin = userAdmin;
         }
 
         private Form formchild = null;
@@ -62,25 +68,25 @@ namespace PHANHE1.QLTrucTiep
 
         private void buttonThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhanQLTT());
+            OpenChildForm(new ThongTinCaNhanQLTT(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhanCongQLTT());
+            OpenChildForm(new ThongTinPhanCongQLTT(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinPhongBan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinPhongBanQLTT());
+            OpenChildForm(new ThongTinPhongBanQLTT(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonThongTinDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinDeAnQLTT());
+            OpenChildForm(new ThongTinDeAnQLTT(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
@@ -116,13 +122,13 @@ namespace PHANHE1.QLTrucTiep
 
         private void buttonThongTinNhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinNhanVienQLTT());
+            OpenChildForm(new ThongTinNhanVienQLTT(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonQuanLyPhanCong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyPhanCongQLTT());
+            OpenChildForm(new QuanLyPhanCongQLTT(userAdmin));
             SwitchColorMenu(sender, e);
         }
     }

@@ -24,6 +24,7 @@ namespace PHANHE1
     public partial class Login : Form
     {
         public static string connectionString = "Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)" + "(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = QUANLYNHANVIEN)));";
+        public static string username = "";
         public Login()
         {
             InitializeComponent();
@@ -61,7 +62,7 @@ namespace PHANHE1
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            string username = textBoxTaiKhoan.Text;
+            username = textBoxTaiKhoan.Text;
             string password = textBoxMatKhau.Text;
             connectionString = connectionString + "User ID = " + username + "; Password = " + password + ";";
 
@@ -88,7 +89,7 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_TRUONGDA")) 
                     {
-                        TruongDeAn.Main_TruongDeAn openTruongDean = new Main_TruongDeAn(username);
+                        TruongDeAn.Main_TruongDeAn openTruongDean = new Main_TruongDeAn(username, userAdmin);
                         openTruongDean.Show();
                     }
                     else if (IsUserRole(username, "RL_NHANVIEN"))
@@ -103,12 +104,12 @@ namespace PHANHE1
                     }
                     else if (IsUserRole(username, "RL_QLTRUCTIEP"))
                     {
-                        QLTrucTiep.Main_QLTrucTiep openQLTrucTiep = new Main_QLTrucTiep();
+                        QLTrucTiep.Main_QLTrucTiep openQLTrucTiep = new Main_QLTrucTiep(username, userAdmin);
                         openQLTrucTiep.Show();
                     }
                     else if (IsUserRole(username, "RL_TAICHINH"))
                     {
-                        TaiChinh.Main_TaiChinh openTaiChinh = new Main_TaiChinh();
+                        TaiChinh.Main_TaiChinh openTaiChinh = new Main_TaiChinh(username, userAdmin);
                         openTaiChinh.Show();
                     }
                     else if (IsUserRole(username, "RL_TRUONGPHONG"))

@@ -1,4 +1,5 @@
-﻿using PHANHE1.TaiChinh;
+﻿using Oracle.ManagedDataAccess.Client;
+using PHANHE1.TaiChinh;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,13 @@ namespace PHANHE1.TruongDeAn
 {
     public partial class ThongTinDeAnTDA : Form
     {
-        public ThongTinDeAnTDA()
+        OracleConnection conn = new OracleConnection(Login.connectionString);
+        String userAdmin = "";
+        public ThongTinDeAnTDA(String usrAdmin)
         {
             InitializeComponent();
+            conn.Open();
+            this.userAdmin = usrAdmin;
         }
 
         private Form formchild = null;
@@ -69,19 +74,19 @@ namespace PHANHE1.TruongDeAn
 
         private void buttonThemDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThemThongTinDeAnTDA());
+            OpenChildForm(new ThemThongTinDeAnTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonXoaDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new XoaThongTinDeAnTDA());
+            OpenChildForm(new XoaThongTinDeAnTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 
         private void buttonChinhSuaDeAn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChinhSuaThongTinDeAnTDA());
+            OpenChildForm(new ChinhSuaThongTinDeAnTDA(userAdmin));
             SwitchColorMenu(sender, e);
         }
 

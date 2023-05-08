@@ -34,8 +34,8 @@
             this.dataGridViewQuanLyPhanCongQLTT = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.textBoxNhapMaNhanVien = new System.Windows.Forms.TextBox();
             this.labelNhapMaNhanVien = new System.Windows.Forms.Label();
+            this.comboBoxMaNhanVien = new System.Windows.Forms.ComboBox();
             this.panelQuanLyPhanCongQLTT.SuspendLayout();
             this.panelChildFormQLPC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuanLyPhanCongQLTT)).BeginInit();
@@ -64,10 +64,10 @@
             // panelChildFormQLPC
             // 
             this.panelChildFormQLPC.BackColor = System.Drawing.Color.White;
+            this.panelChildFormQLPC.Controls.Add(this.comboBoxMaNhanVien);
             this.panelChildFormQLPC.Controls.Add(this.dataGridViewQuanLyPhanCongQLTT);
             this.panelChildFormQLPC.Controls.Add(this.buttonXemTatCa);
             this.panelChildFormQLPC.Controls.Add(this.buttonTimKiem);
-            this.panelChildFormQLPC.Controls.Add(this.textBoxNhapMaNhanVien);
             this.panelChildFormQLPC.Controls.Add(this.labelNhapMaNhanVien);
             this.panelChildFormQLPC.Location = new System.Drawing.Point(0, 120);
             this.panelChildFormQLPC.Name = "panelChildFormQLPC";
@@ -95,6 +95,7 @@
             this.buttonXemTatCa.TabIndex = 56;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonTimKiem
             // 
@@ -107,17 +108,7 @@
             this.buttonTimKiem.TabIndex = 55;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // textBoxNhapMaNhanVien
-            // 
-            this.textBoxNhapMaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNhapMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxNhapMaNhanVien.Location = new System.Drawing.Point(152, 280);
-            this.textBoxNhapMaNhanVien.Multiline = true;
-            this.textBoxNhapMaNhanVien.Name = "textBoxNhapMaNhanVien";
-            this.textBoxNhapMaNhanVien.Size = new System.Drawing.Size(300, 50);
-            this.textBoxNhapMaNhanVien.TabIndex = 1;
-            this.textBoxNhapMaNhanVien.TextChanged += new System.EventHandler(this.textBoxMaNV_TextChanged);
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // labelNhapMaNhanVien
             // 
@@ -129,6 +120,15 @@
             this.labelNhapMaNhanVien.TabIndex = 0;
             this.labelNhapMaNhanVien.Text = "Nhập mã nhân viên";
             // 
+            // comboBoxMaNhanVien
+            // 
+            this.comboBoxMaNhanVien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMaNhanVien.FormattingEnabled = true;
+            this.comboBoxMaNhanVien.Location = new System.Drawing.Point(152, 281);
+            this.comboBoxMaNhanVien.Name = "comboBoxMaNhanVien";
+            this.comboBoxMaNhanVien.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxMaNhanVien.TabIndex = 60;
+            // 
             // QuanLyPhanCongQLTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,6 +138,7 @@
             this.Controls.Add(this.panelQuanLyPhanCongQLTT);
             this.Name = "QuanLyPhanCongQLTT";
             this.Text = "QuanLyPhanCongQLTT";
+            this.Load += new System.EventHandler(this.QuanLyPhanCongQLTT_Load);
             this.panelQuanLyPhanCongQLTT.ResumeLayout(false);
             this.panelChildFormQLPC.ResumeLayout(false);
             this.panelChildFormQLPC.PerformLayout();
@@ -151,10 +152,10 @@
         private System.Windows.Forms.Panel panelQuanLyPhanCongQLTT;
         private System.Windows.Forms.Panel panelChildFormQLPC;
         private System.Windows.Forms.Label labelQuanLyPhanCongQLTT;
-        private System.Windows.Forms.TextBox textBoxNhapMaNhanVien;
         private System.Windows.Forms.Label labelNhapMaNhanVien;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.DataGridView dataGridViewQuanLyPhanCongQLTT;
         private System.Windows.Forms.Button buttonXemTatCa;
+        private System.Windows.Forms.ComboBox comboBoxMaNhanVien;
     }
 }

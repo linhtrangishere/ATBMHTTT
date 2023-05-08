@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panelXoaThongTinDeAnTDA = new System.Windows.Forms.Panel();
-            this.textBoxMaDeAn = new System.Windows.Forms.TextBox();
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.dataGridViewXoaThongTinDeAnTDA = new System.Windows.Forms.DataGridView();
             this.buttonXemTatCa = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.labelMaDeAn = new System.Windows.Forms.Label();
+            this.comboBoxDeAn = new System.Windows.Forms.ComboBox();
             this.panelXoaThongTinDeAnTDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXoaThongTinDeAnTDA)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             // panelXoaThongTinDeAnTDA
             // 
             this.panelXoaThongTinDeAnTDA.BackColor = System.Drawing.Color.White;
-            this.panelXoaThongTinDeAnTDA.Controls.Add(this.textBoxMaDeAn);
+            this.panelXoaThongTinDeAnTDA.Controls.Add(this.comboBoxDeAn);
             this.panelXoaThongTinDeAnTDA.Controls.Add(this.buttonQuayLai);
             this.panelXoaThongTinDeAnTDA.Controls.Add(this.dataGridViewXoaThongTinDeAnTDA);
             this.panelXoaThongTinDeAnTDA.Controls.Add(this.buttonXemTatCa);
@@ -52,16 +52,6 @@
             this.panelXoaThongTinDeAnTDA.Name = "panelXoaThongTinDeAnTDA";
             this.panelXoaThongTinDeAnTDA.Size = new System.Drawing.Size(935, 750);
             this.panelXoaThongTinDeAnTDA.TabIndex = 0;
-            // 
-            // textBoxMaDeAn
-            // 
-            this.textBoxMaDeAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMaDeAn.Location = new System.Drawing.Point(430, 121);
-            this.textBoxMaDeAn.Multiline = true;
-            this.textBoxMaDeAn.Name = "textBoxMaDeAn";
-            this.textBoxMaDeAn.Size = new System.Drawing.Size(300, 50);
-            this.textBoxMaDeAn.TabIndex = 71;
             // 
             // buttonQuayLai
             // 
@@ -122,6 +112,16 @@
             this.labelMaDeAn.TabIndex = 64;
             this.labelMaDeAn.Text = "Mã đề án";
             // 
+            // comboBoxDeAn
+            // 
+            this.comboBoxDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxDeAn.FormattingEnabled = true;
+            this.comboBoxDeAn.Location = new System.Drawing.Point(415, 122);
+            this.comboBoxDeAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxDeAn.Name = "comboBoxDeAn";
+            this.comboBoxDeAn.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxDeAn.TabIndex = 74;
+            // 
             // XoaThongTinDeAnTDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -130,6 +130,7 @@
             this.Controls.Add(this.panelXoaThongTinDeAnTDA);
             this.Name = "XoaThongTinDeAnTDA";
             this.Text = "XoaThongTinDeAnTDA";
+            this.Load += new System.EventHandler(this.XoaThongTinDeAnTDA_Load);
             this.panelXoaThongTinDeAnTDA.ResumeLayout(false);
             this.panelXoaThongTinDeAnTDA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXoaThongTinDeAnTDA)).EndInit();
@@ -145,6 +146,6 @@
         private System.Windows.Forms.Button buttonXemTatCa;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Label labelMaDeAn;
-        private System.Windows.Forms.TextBox textBoxMaDeAn;
+        private System.Windows.Forms.ComboBox comboBoxDeAn;
     }
 }

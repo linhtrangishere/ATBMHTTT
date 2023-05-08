@@ -123,6 +123,7 @@
             this.dataGridViewChinhSuaThongTinNhanVienTC.RowTemplate.Height = 24;
             this.dataGridViewChinhSuaThongTinNhanVienTC.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewChinhSuaThongTinNhanVienTC.TabIndex = 68;
+            this.dataGridViewChinhSuaThongTinNhanVienTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChinhSuaThongTinNhanVienTC_CellClick);
             // 
             // buttonXemTatCa
             // 
@@ -135,6 +136,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonCapNhat
             // 
@@ -147,6 +149,7 @@
             this.buttonCapNhat.TabIndex = 66;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // textBoxLuong
             // 
@@ -176,6 +179,7 @@
             this.Controls.Add(this.panelChinhSuaThongTinNhanVienTC);
             this.Name = "ChinhSuaThongTinNhanVienTC";
             this.Text = "ChinhSuaThongTinNhanVienTC";
+            this.Load += new System.EventHandler(this.ChinhSuaThongTinNhanVienTC_Load);
             this.panelChinhSuaThongTinNhanVienTC.ResumeLayout(false);
             this.panelChinhSuaThongTinNhanVienTC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaThongTinNhanVienTC)).EndInit();
@@ -194,7 +198,7 @@
         private System.Windows.Forms.Label labelMaNhanVien;
         private System.Windows.Forms.TextBox textBoxPhuCap;
         private System.Windows.Forms.Label labelPhuCap;
-        private System.Windows.Forms.ComboBox comboBoxMaNhanVien;
         private System.Windows.Forms.Label labelLuong;
+        private System.Windows.Forms.ComboBox comboBoxMaNhanVien;
     }
 }

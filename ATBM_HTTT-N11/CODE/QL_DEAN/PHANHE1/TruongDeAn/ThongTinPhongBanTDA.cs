@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace PHANHE1.TruongDeAn
 {
     public partial class ThongTinPhongBanTDA : Form
     {
-        public ThongTinPhongBanTDA()
+        OracleConnection conn = new OracleConnection(Login.connectionString);
+        String userAdmin = "";
+        public ThongTinPhongBanTDA(String usrAdmin)
         {
             InitializeComponent();
+            conn.Open();
+            this.userAdmin = usrAdmin;
         }
 
         private void textBoxMaNV_TextChanged(object sender, EventArgs e)
@@ -25,6 +30,53 @@ namespace PHANHE1.TruongDeAn
         private void panelThongTinCaNhanQLTT_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonXemTatCa_Click(object sender, EventArgs e)
+        {
+            OracleCommand getListThongTinPhongBanTC = conn.CreateCommand();
+            getListThongTinPhongBanTC.CommandText = "SELECT * FROM " + userAdmin + " .PHONGBAN";
+            getListThongTinPhongBanTC.CommandType = CommandType.Text;
+            OracleDataReader temp = getListThongTinPhongBanTC.ExecuteReader();
+            DataTable table_DSDeAnTC = new DataTable();
+            table_DSDeAnTC.Load(temp);
+            dataGridViewThongTinPhongBanTDA.DataSource = table_DSDeAnTC;
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(comboBoxMaPhongBan.Text))
+            {
+                MessageBox.Show("Vui lòng chọn phòng ban!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            OracleCommand getListPhongBanTC = conn.CreateCommand();
+            getListPhongBanTC.CommandText = "SELECT * FROM " + userAdmin + " .PHONGBAN " + " WHERE MAPB LIKE UPPER('%" + comboBoxMaPhongBan.Text.Trim() + "%')";
+            getListPhongBanTC.CommandType = CommandType.Text;
+            OracleDataReader temp = getListPhongBanTC.ExecuteReader();
+            DataTable table_DSPhongBanTC = new DataTable();
+            table_DSPhongBanTC.Load(temp);
+            dataGridViewThongTinPhongBanTDA.DataSource = table_DSPhongBanTC;
+        }
+
+        private void ThongTinPhongBanTDA_Load(object sender, EventArgs e)
+        {
+            LoadDataToComboBox();
+        }
+
+        private void LoadDataToComboBox()
+        {
+            OracleCommand getPhongBanDataTC = conn.CreateCommand();
+            getPhongBanDataTC.CommandText = "SELECT MAPB FROM " + userAdmin + " .PHONGBAN";
+            getPhongBanDataTC.CommandType = CommandType.Text;
+            OracleDataReader dataReader = getPhongBanDataTC.ExecuteReader();
+
+            comboBoxMaPhongBan.Items.Clear();
+            while (dataReader.Read())
+            {
+                comboBoxMaPhongBan.Items.Add(dataReader["MAPB"].ToString());
+            }
         }
     }
 }

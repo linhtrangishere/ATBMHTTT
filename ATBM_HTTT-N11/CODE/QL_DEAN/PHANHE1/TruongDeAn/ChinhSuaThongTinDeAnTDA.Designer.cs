@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.panelChinhSuaThongTinDeAnTDA = new System.Windows.Forms.Panel();
+            this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.comboBoxPhongBan = new System.Windows.Forms.ComboBox();
             this.labelTenDeAn = new System.Windows.Forms.Label();
-            this.textBoxMaDeAn = new System.Windows.Forms.TextBox();
             this.labelPhongBan = new System.Windows.Forms.Label();
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.dataGridViewChinhSuaThongTinDeAnTDA = new System.Windows.Forms.DataGridView();
@@ -39,8 +40,7 @@
             this.buttonCapNhat = new System.Windows.Forms.Button();
             this.textBoxTenDeAn = new System.Windows.Forms.TextBox();
             this.labelMaDeAn = new System.Windows.Forms.Label();
-            this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.labelNgayBatDau = new System.Windows.Forms.Label();
+            this.comboBoxDeAn = new System.Windows.Forms.ComboBox();
             this.panelChinhSuaThongTinDeAnTDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaThongTinDeAnTDA)).BeginInit();
             this.SuspendLayout();
@@ -48,11 +48,11 @@
             // panelChinhSuaThongTinDeAnTDA
             // 
             this.panelChinhSuaThongTinDeAnTDA.BackColor = System.Drawing.Color.White;
+            this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.comboBoxDeAn);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.dateTimePickerNgayBatDau);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.labelNgayBatDau);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.comboBoxPhongBan);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.labelTenDeAn);
-            this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.textBoxMaDeAn);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.labelPhongBan);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.buttonQuayLai);
             this.panelChinhSuaThongTinDeAnTDA.Controls.Add(this.dataGridViewChinhSuaThongTinDeAnTDA);
@@ -64,6 +64,25 @@
             this.panelChinhSuaThongTinDeAnTDA.Name = "panelChinhSuaThongTinDeAnTDA";
             this.panelChinhSuaThongTinDeAnTDA.Size = new System.Drawing.Size(935, 750);
             this.panelChinhSuaThongTinDeAnTDA.TabIndex = 0;
+            // 
+            // dateTimePickerNgayBatDau
+            // 
+            this.dateTimePickerNgayBatDau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePickerNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNgayBatDau.Location = new System.Drawing.Point(430, 199);
+            this.dateTimePickerNgayBatDau.Name = "dateTimePickerNgayBatDau";
+            this.dateTimePickerNgayBatDau.Size = new System.Drawing.Size(300, 47);
+            this.dateTimePickerNgayBatDau.TabIndex = 75;
+            // 
+            // labelNgayBatDau
+            // 
+            this.labelNgayBatDau.AutoSize = true;
+            this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelNgayBatDau.Location = new System.Drawing.Point(190, 205);
+            this.labelNgayBatDau.Name = "labelNgayBatDau";
+            this.labelNgayBatDau.Size = new System.Drawing.Size(203, 41);
+            this.labelNgayBatDau.TabIndex = 74;
+            this.labelNgayBatDau.Text = "Ngày bắt đầu";
             // 
             // comboBoxPhongBan
             // 
@@ -84,16 +103,6 @@
             this.labelTenDeAn.Size = new System.Drawing.Size(150, 41);
             this.labelTenDeAn.TabIndex = 72;
             this.labelTenDeAn.Text = "Tên đề án";
-            // 
-            // textBoxMaDeAn
-            // 
-            this.textBoxMaDeAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxMaDeAn.Location = new System.Drawing.Point(430, 36);
-            this.textBoxMaDeAn.Multiline = true;
-            this.textBoxMaDeAn.Name = "textBoxMaDeAn";
-            this.textBoxMaDeAn.Size = new System.Drawing.Size(300, 50);
-            this.textBoxMaDeAn.TabIndex = 71;
             // 
             // labelPhongBan
             // 
@@ -127,6 +136,7 @@
             this.dataGridViewChinhSuaThongTinDeAnTDA.RowTemplate.Height = 24;
             this.dataGridViewChinhSuaThongTinDeAnTDA.Size = new System.Drawing.Size(935, 300);
             this.dataGridViewChinhSuaThongTinDeAnTDA.TabIndex = 68;
+            this.dataGridViewChinhSuaThongTinDeAnTDA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChinhSuaThongTinDeAnTDA_CellClick);
             // 
             // buttonXemTatCa
             // 
@@ -139,6 +149,7 @@
             this.buttonXemTatCa.TabIndex = 67;
             this.buttonXemTatCa.Text = "Xem tất cả";
             this.buttonXemTatCa.UseVisualStyleBackColor = false;
+            this.buttonXemTatCa.Click += new System.EventHandler(this.buttonXemTatCa_Click);
             // 
             // buttonCapNhat
             // 
@@ -151,6 +162,7 @@
             this.buttonCapNhat.TabIndex = 66;
             this.buttonCapNhat.Text = "Cập nhật";
             this.buttonCapNhat.UseVisualStyleBackColor = false;
+            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // textBoxTenDeAn
             // 
@@ -172,24 +184,15 @@
             this.labelMaDeAn.TabIndex = 64;
             this.labelMaDeAn.Text = "Mã đề án";
             // 
-            // dateTimePickerNgayBatDau
+            // comboBoxDeAn
             // 
-            this.dateTimePickerNgayBatDau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayBatDau.Location = new System.Drawing.Point(430, 199);
-            this.dateTimePickerNgayBatDau.Name = "dateTimePickerNgayBatDau";
-            this.dateTimePickerNgayBatDau.Size = new System.Drawing.Size(300, 47);
-            this.dateTimePickerNgayBatDau.TabIndex = 75;
-            // 
-            // labelNgayBatDau
-            // 
-            this.labelNgayBatDau.AutoSize = true;
-            this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelNgayBatDau.Location = new System.Drawing.Point(190, 205);
-            this.labelNgayBatDau.Name = "labelNgayBatDau";
-            this.labelNgayBatDau.Size = new System.Drawing.Size(203, 41);
-            this.labelNgayBatDau.TabIndex = 74;
-            this.labelNgayBatDau.Text = "Ngày bắt đầu";
+            this.comboBoxDeAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxDeAn.FormattingEnabled = true;
+            this.comboBoxDeAn.Location = new System.Drawing.Point(430, 37);
+            this.comboBoxDeAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxDeAn.Name = "comboBoxDeAn";
+            this.comboBoxDeAn.Size = new System.Drawing.Size(300, 49);
+            this.comboBoxDeAn.TabIndex = 76;
             // 
             // ChinhSuaThongTinDeAnTDA
             // 
@@ -199,6 +202,7 @@
             this.Controls.Add(this.panelChinhSuaThongTinDeAnTDA);
             this.Name = "ChinhSuaThongTinDeAnTDA";
             this.Text = "ChinhSuaThongTinDeAnTDA";
+            this.Load += new System.EventHandler(this.ChinhSuaThongTinDeAnTDA_Load);
             this.panelChinhSuaThongTinDeAnTDA.ResumeLayout(false);
             this.panelChinhSuaThongTinDeAnTDA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaThongTinDeAnTDA)).EndInit();
@@ -215,11 +219,11 @@
         private System.Windows.Forms.Button buttonCapNhat;
         private System.Windows.Forms.TextBox textBoxTenDeAn;
         private System.Windows.Forms.Label labelMaDeAn;
-        private System.Windows.Forms.TextBox textBoxMaDeAn;
         private System.Windows.Forms.Label labelPhongBan;
         private System.Windows.Forms.ComboBox comboBoxPhongBan;
         private System.Windows.Forms.Label labelTenDeAn;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayBatDau;
         private System.Windows.Forms.Label labelNgayBatDau;
+        private System.Windows.Forms.ComboBox comboBoxDeAn;
     }
 }
