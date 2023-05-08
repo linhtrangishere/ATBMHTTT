@@ -5560,4 +5560,126 @@ END;
 GRANT EXECUTE ON USP_CAPNHAT_NHANVIEN_NS TO RL_NHANSU;
 /
 
+------------------------------------------- TAICHINH -------------------------------------------
+--1. Cập nhật LUONG, PHUCAP của NHANVIEN
+CREATE OR REPLACE PROCEDURE USP_UPDATE_LUONG_PHUCAP_NHANVIEN (
+    p_manv IN NHANVIEN.MANV%TYPE,
+    p_luong IN NHANVIEN.LUONG%TYPE,
+    p_phucap IN NHANVIEN.PHUCAP%TYPE,
+    p_out_message OUT NVARCHAR2
+)
+AS
+BEGIN
+    UPDATE NHANVIEN
+    SET LUONG = p_luong, PHUCAP = p_phucap
+    WHERE MANV = p_manv;
 
+    IF SQL%ROWCOUNT = 0 THEN
+        p_out_message := 'Không tìm thấy phân công để cập nhật.';
+        ROLLBACK;
+    ELSE
+        COMMIT;
+        p_out_message := 'Cập nhật phân công thành công!';
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
+END;
+/
+GRANT EXECUTE ON USP_UPDATE_LUONG_PHUCAP_NHANVIEN TO RL_TAICHINH;
+/
+
+------------------------------------------- TRUONGDEAN -------------------------------------------
+--1. Thêm, xóa, sửa đề án
+--Thêm đề án
+CREATE OR REPLACE PROCEDURE USP_THEM_DEAN (
+    p_mada IN VARCHAR2,
+    p_tenda IN NVARCHAR2,
+    p_ngaybatdau IN DATE,
+    p_phong IN VARCHAR2,
+    p_out_message OUT NVARCHAR2
+)
+AS
+BEGIN
+    INSERT INTO DEAN (MADA, TENDA, NGAYBD, PHONG)
+    VALUES (p_mada, p_tenda, p_ngaybatdau, p_phong);
+
+    COMMIT;
+    p_out_message := 'Thêm phân công thành công!';
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        ROLLBACK;
+        p_out_message := 'Mã phòng ban đã tồn tại!';
+    WHEN OTHERS THEN
+        ROLLBACK;
+        p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
+END;
+/
+GRANT EXECUTE ON USP_THEM_DEAN TO RL_TRUONGDA;
+/
+
+--Xóa đề án
+CREATE OR REPLACE PROCEDURE USP_XOA_DEAN (
+    p_mada IN VARCHAR2,
+    p_out_message OUT NVARCHAR2
+)
+AS
+    v_count INTEGER;
+BEGIN
+    SELECT COUNT(*) INTO v_count
+    FROM DEAN
+    WHERE MADA = p_mada;
+
+    IF v_count = 0 THEN
+        p_out_message := 'Phân công không tồn tại';
+    ELSE
+        DELETE FROM DEAN
+        WHERE MADA = p_mada;
+
+        IF SQL%ROWCOUNT = 0 THEN
+            ROLLBACK;
+            p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
+        ELSE
+            COMMIT;
+            p_out_message := 'Xóa phân công thành công!';
+        END IF;
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
+END;
+/
+GRANT EXECUTE ON USP_XOA_DEAN TO RL_TRUONGDA;
+/
+
+--Chỉnh sửa đề án
+CREATE OR REPLACE PROCEDURE USP_UPDATE_DEAN (
+    p_mada IN DEAN.MADA%TYPE,
+    p_tenda IN DEAN.TENDA%TYPE,
+    p_ngaybatdau IN DEAN.NGAYBD%TYPE,
+    p_phong IN DEAN.PHONG%TYPE,
+    p_out_message OUT NVARCHAR2
+)
+AS
+BEGIN
+    UPDATE DEAN
+    SET NGAYBD = p_ngaybatdau, TENDA = p_tenda, PHONG = p_phong
+    WHERE MADA = p_mada;
+
+    IF SQL%ROWCOUNT = 0 THEN
+        p_out_message := 'Không tìm thấy phân công để cập nhật.';
+        ROLLBACK;
+    ELSE
+        COMMIT;
+        p_out_message := 'Cập nhật phân công thành công!';
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        p_out_message := 'Có lỗi xảy ra: ' || SQLERRM;
+END;
+/
+GRANT EXECUTE ON USP_UPDATE_DEAN TO RL_TRUONGDA;
+/
