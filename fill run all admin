@@ -2669,7 +2669,6 @@ AS
 END; 
 /
 exec USP_CREATEUSER;
-alter session set "_ORACLE_SCRIPT"=true;
 set serveroutput on;
 
 -------------------------------ENCRYPT FUNCTION---------------------------------
