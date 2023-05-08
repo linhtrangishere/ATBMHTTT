@@ -45,7 +45,7 @@ namespace PHANHE1.TruongDeAn
                 OracleCommand updatePhanCongCmd = new OracleCommand(userAdmin + ".USP_UPDATE_DEAN", conn);
                 updatePhanCongCmd.CommandType = CommandType.StoredProcedure;
 
-                updatePhanCongCmd.Parameters.Add("p_mada", OracleDbType.Varchar2).Value = comboBoxDeAn.SelectedItem.ToString();
+                updatePhanCongCmd.Parameters.Add("p_mada", OracleDbType.Varchar2).Value = comboBoxDeAn.SelectedItem?.ToString() ?? (object)DBNull.Value;
                 updatePhanCongCmd.Parameters.Add("p_tenda", OracleDbType.Varchar2).Value = textBoxTenDeAn.Text.Trim();
                 updatePhanCongCmd.Parameters.Add("p_thoigian", OracleDbType.Date).Value = dateTimePickerNgayBatDau.Value;
                 updatePhanCongCmd.Parameters.Add("p_phong", OracleDbType.Varchar2).Value = comboBoxPhongBan.SelectedItem?.ToString() ?? (object)DBNull.Value;
